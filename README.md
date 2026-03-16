@@ -106,20 +106,38 @@ python soc/dashboard/dashboard.py --logs parsed.json
 
 ## MITRE ATT&CK coverage
 
+| Tactic | Technique ID | Technique Name | Rule |
+|---|---|---|---|
+| Credential Access | T1110 | Brute Force | RULE-001 |
+| Credential Access | T1110.004 | Credential Stuffing | RULE-004 |
+| Initial Access | T1078 | Valid Accounts | RULE-002 |
+| Privilege Escalation | T1078 | Valid Accounts | RULE-003 |
+| Initial Access | T1190 | Exploit Public-Facing Application | RULE-005 |
+| Execution | T1203 | Exploitation for Client Execution | RULE-006 |
+
 ```mermaid
-mindmap
-  root((MITRE ATT&CK))
-    Credential Access
-      T1110 Brute Force
-      T1078 Valid Accounts
-    Initial Access
-      T1190 Exploit Public App
-    Execution
-      T1059 Command and Scripting
-    Discovery
-      T1046 Network Service Scan
-    Impact
-      T1498 Network DoS
+flowchart LR
+    subgraph Credential Access
+        T1110[T1110 Brute Force]
+        T1110b[T1110.004 Credential Stuffing]
+    end
+    subgraph Initial Access
+        T1078[T1078 Valid Accounts]
+        T1190[T1190 Exploit Public App]
+    end
+    subgraph Execution
+        T1203[T1203 Client Exploitation]
+    end
+    subgraph Privilege Escalation
+        T1078b[T1078 Valid Accounts]
+    end
+
+    RULE001[RULE-001] --> T1110
+    RULE004[RULE-004] --> T1110b
+    RULE002[RULE-002] --> T1078
+    RULE003[RULE-003] --> T1078b
+    RULE005[RULE-005] --> T1190
+    RULE006[RULE-006] --> T1203
 ```
 
 ---
