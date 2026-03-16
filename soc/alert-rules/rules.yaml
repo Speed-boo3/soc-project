@@ -1,0 +1,96 @@
+rules:
+  - id: RULE-001
+    name: Brute Force SSH
+    description: Multiple failed SSH login attempts from the same source
+    log_type: auth
+    condition:
+      field: message
+      contains: "Failed password"
+      threshold: 3
+      timewindow_minutes: 5
+    severity: high
+    action: alert
+    mitre:
+      technique_id: T1110
+      technique_name: Brute Force
+      tactic: Credential Access
+
+  - id: RULE-002
+    name: Invalid User Login Attempt
+    description: Login attempt with a username that does not exist on the system
+    log_type: auth
+    condition:
+      field: message
+      contains: "Invalid user"
+      threshold: 1
+      timewindow_minutes: 1
+    severity: medium
+    action: alert
+    mitre:
+      technique_id: T1078
+      technique_name: Valid Accounts
+      tactic: Initial Access
+
+  - id: RULE-003
+    name: Sudo Authentication Failure
+    description: A user failed to authenticate when running sudo
+    log_type: syslog
+    condition:
+      field: message
+      contains: "authentication failure"
+      threshold: 1
+      timewindow_minutes: 1
+    severity: medium
+    action: log
+    mitre:
+      technique_id: T1078
+      technique_name: Valid Accounts
+      tactic: Privilege Escalation
+
+  - id: RULE-004
+    name: HTTP 401 Spike
+    description: Multiple unauthorized HTTP responses, possible credential stuffing
+    log_type: apache
+    condition:
+      field: status
+      equals: "401"
+      threshold: 3
+      timewindow_minutes: 2
+    severity: high
+    action: alert
+    mitre:
+      technique_id: T1110.004
+      technique_name: Credential Stuffing
+      tactic: Credential Access
+
+  - id: RULE-005
+    name: Admin Path Access Attempt
+    description: Request to the /admin endpoint was blocked with 403
+    log_type: apache
+    condition:
+      field: request
+      contains: "/admin"
+      threshold: 1
+      timewindow_minutes: 1
+    severity: low
+    action: log
+    mitre:
+      technique_id: T1190
+      technique_name: Exploit Public-Facing Application
+      tactic: Initial Access
+
+  - id: RULE-006
+    name: Segfault Detected
+    description: A program crashed with a segmentation fault, possible exploitation attempt
+    log_type: syslog
+    condition:
+      field: message
+      contains: "segfault"
+      threshold: 1
+      timewindow_minutes: 1
+    severity: medium
+    action: alert
+    mitre:
+      technique_id: T1203
+      technique_name: Exploitation for Client Execution
+      tactic: Execution
