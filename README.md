@@ -220,11 +220,21 @@ python soc/alert-rules/threat_intel.py --logs parsed.json
 python soc/dashboard/dashboard.py --logs parsed.json
 ```
 
+**Step 5 — Check a file hash**
+```bash
+python soc/hash-checker/hash_checker.py --hash d41d8cd98f00b204e9800998ecf8427e
+```
+
+**Step 6 — Detect brute force attempts**
+```bash
+python soc/brute-force-detector/detector.py --file soc/log-parser/sample.log --threshold 3
+```
+
 ---
 
 ## Tests
 
-11 tests covering the parser and alert engine. Runs automatically on every push.
+11 tests covering the parser and alert engine. Runs automatically on every push. Hash checker and brute force detector can be tested manually using the sample log.
 
 ```bash
 pytest tests/ -v
