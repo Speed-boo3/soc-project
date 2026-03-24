@@ -54,9 +54,9 @@ flowchart LR
     ASSETS -->|Logs and alerts| SOC
     SOC -->|Contain and fix| ASSETS
 
-    style SOC fill:#0a0a1a,stroke:#4488ff,color:#88aaff
-    style OUTSIDE fill:#1a0000,stroke:#ff4444,color:#ff8888
-    style ASSETS fill:#0a1a0a,stroke:#00ff41,color:#66ff88
+    style SOC fill:#1a3a8a,stroke:#4488ff,color:#ffffff
+    style OUTSIDE fill:#8a1a1a,stroke:#ff4444,color:#ffffff
+    style ASSETS fill:#1a5a2a,stroke:#00ff41,color:#ffffff
 ```
 
 A SOC analyst's job is to:
@@ -72,33 +72,70 @@ A SOC analyst's job is to:
 
 A real SOC is split into several focus areas. This project covers all of them:
 
+| Category | Focus areas |
+|---|---|
+| Log Analysis | Parse raw logs, detect log types, flag suspicious lines |
+| Detection Engineering | Write YAML rules, map to MITRE ATT&CK, tune thresholds |
+| Threat Intelligence | Check IP reputation, identify bad actors, enrich alerts |
+| Incident Response | Triage alerts, contain threats, eradicate and recover |
+| Network Security | Scan for open ports, identify exposure, feed risk register |
+| Forensics | Identify file hashes, check for known malware, analyse artifacts |
+
 ```mermaid
-mindmap
-  root((SOC))
-    Log Analysis
-      Parse raw log files
-      Detect log types
-      Flag suspicious lines
-    Detection Engineering
-      Write detection rules
-      Map rules to MITRE ATT&CK
-      Tune alert thresholds
-    Threat Intelligence
-      Check IP reputation
-      Identify known bad actors
-      Enrich alerts with context
-    Incident Response
-      Triage alerts
-      Contain the threat
-      Eradicate and recover
-    Network Security
-      Scan for open ports
-      Identify exposure
-      Feed findings into risk register
-    Forensics
-      Identify file hashes
-      Check for known malware
-      Analyse artifacts
+flowchart TD
+    SOC[SOC]
+    SOC --> LA[Log Analysis]
+    SOC --> DE[Detection Engineering]
+    SOC --> TI[Threat Intelligence]
+    SOC --> IR[Incident Response]
+    SOC --> NS[Network Security]
+    SOC --> FO[Forensics]
+
+    LA --> LA1[Parse raw logs]
+    LA --> LA2[Detect log types]
+    LA --> LA3[Flag suspicious lines]
+
+    DE --> DE1[Write YAML rules]
+    DE --> DE2[Map to MITRE ATT&CK]
+    DE --> DE3[Tune alert thresholds]
+
+    TI --> TI1[Check IP reputation]
+    TI --> TI2[Identify bad actors]
+    TI --> TI3[Enrich alerts]
+
+    IR --> IR1[Triage alerts]
+    IR --> IR2[Contain threats]
+    IR --> IR3[Eradicate and recover]
+
+    NS --> NS1[Scan open ports]
+    NS --> NS2[Identify exposure]
+
+    FO --> FO1[Identify file hashes]
+    FO --> FO2[Check for malware]
+
+    style SOC fill:#ffffff,color:#000000,stroke:#000000
+    style LA fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
+    style DE fill:#fef3c7,color:#713f12,stroke:#f59e0b
+    style TI fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
+    style IR fill:#dcfce7,color:#14532d,stroke:#22c55e
+    style NS fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
+    style FO fill:#ffedd5,color:#7c2d12,stroke:#f97316
+    style LA1 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
+    style LA2 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
+    style LA3 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
+    style DE1 fill:#fef3c7,color:#713f12,stroke:#f59e0b
+    style DE2 fill:#fef3c7,color:#713f12,stroke:#f59e0b
+    style DE3 fill:#fef3c7,color:#713f12,stroke:#f59e0b
+    style TI1 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
+    style TI2 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
+    style TI3 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
+    style IR1 fill:#dcfce7,color:#14532d,stroke:#22c55e
+    style IR2 fill:#dcfce7,color:#14532d,stroke:#22c55e
+    style IR3 fill:#dcfce7,color:#14532d,stroke:#22c55e
+    style NS1 fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
+    style NS2 fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
+    style FO1 fill:#ffedd5,color:#7c2d12,stroke:#f97316
+    style FO2 fill:#ffedd5,color:#7c2d12,stroke:#f97316
 ```
 
 ---
@@ -127,11 +164,11 @@ flowchart TD
     L & N --> O[Terminal Dashboard]
     J --> Q[IR Playbook triggered]
 
-    style A fill:#1a0a0a,color:#ff6666,stroke:#ff4444
-    style J fill:#1a0000,color:#ff4444,stroke:#ff0000
-    style G fill:#0a1a0a,color:#66ff88,stroke:#00ff41
-    style O fill:#0a0a1a,color:#88aaff,stroke:#4488ff
-    style Q fill:#1a1000,color:#ffcc66,stroke:#ffaa00
+    style A fill:#ff4444,color:#ffffff,stroke:#cc0000
+    style J fill:#ff0000,color:#ffffff,stroke:#cc0000
+    style G fill:#00aa33,color:#ffffff,stroke:#007722
+    style O fill:#2255cc,color:#ffffff,stroke:#113399
+    style Q fill:#cc8800,color:#ffffff,stroke:#996600
 ```
 
 ---
@@ -189,10 +226,10 @@ flowchart LR
     R3[RULE-003] --> T1078b
     R6[RULE-006] --> T1203
 
-    style CA fill:#1a0000,stroke:#ff4444,color:#ff8888
-    style IA fill:#1a1000,stroke:#ffaa00,color:#ffcc66
-    style PE fill:#001a00,stroke:#00ff41,color:#66ff88
-    style EX fill:#00001a,stroke:#4488ff,color:#88aaff
+    style CA fill:#cc2200,stroke:#ff4444,color:#ffffff
+    style IA fill:#bb7700,stroke:#ffaa00,color:#ffffff
+    style PE fill:#007722,stroke:#00ff41,color:#ffffff
+    style EX fill:#1133aa,stroke:#4488ff,color:#ffffff
 ```
 
 ---
@@ -207,12 +244,13 @@ flowchart LR
     M[Medium] -->|Respond in 4 hours| MA[Sudo failures, segfaults, invalid users]
     L[Low] -->|Log and review| LA[Admin path access, informational]
 
-    style H fill:#1a0000,stroke:#ff0000,color:#ff6666
-    style M fill:#1a1000,stroke:#ffaa00,color:#ffcc66
-    style L fill:#001a00,stroke:#00ff41,color:#66ff88
+    style H fill:#cc2200,stroke:#ff0000,color:#ffffff
+    style M fill:#bb7700,stroke:#ffaa00,color:#ffffff
+    style L fill:#007722,stroke:#00ff41,color:#ffffff
 ```
 
 ```mermaid
+%%{init: {'pie': {'textPosition': 0.5}, 'themeVariables': {'pie1': '#ff4444', 'pie2': '#ffaa00', 'pie3': '#00cc44', 'pieTextColor': '#ffffff', 'pieTitleTextColor': '#ffffff', 'pieSectionTextColor': '#ffffff', 'pieLegendTextColor': '#ffffff', 'pieStrokeColor': '#ffffff'}}}%%
 pie title Alert Severity Distribution
     "High"   : 35
     "Medium" : 45
@@ -236,10 +274,10 @@ flowchart TD
     G --> H[Post-incident report]
     H --> I[Improve detection rules]
 
-    style A fill:#1a0000,color:#ff4444,stroke:#ff0000
-    style D fill:#0a1a0a,color:#66ff88,stroke:#00ff41
-    style H fill:#0a0a1a,color:#88aaff,stroke:#4488ff
-    style I fill:#0a1a0a,color:#66ff88,stroke:#00ff41
+    style A fill:#cc2200,color:#ffffff,stroke:#ff0000
+    style D fill:#007722,color:#ffffff,stroke:#00ff41
+    style H fill:#1133aa,color:#ffffff,stroke:#4488ff
+    style I fill:#007722,color:#ffffff,stroke:#00ff41
 ```
 
 Full playbooks for each scenario are in `soc/incident-response/playbook.md`.
