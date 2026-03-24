@@ -416,6 +416,20 @@ pytest tests/ -v
 
 ---
 
+## Test your knowledge
+
+Built this quiz specifically for students learning SOC. 20 questions across all 8 categories — each question comes with a full explanation so you learn as you go.
+
+<div align="center">
+
+[![TAKE THE SOC QUIZ](https://img.shields.io/badge/TAKE%20THE%20SOC%20QUIZ-%20START%20%E2%86%92-ff4444?style=for-the-badge&labelColor=0d1117&color=ff4444)](https://speed-boo3.github.io/soc-project/quiz/)
+
+</div>
+
+Topics covered: What is a SOC, Log Analysis, MITRE ATT&CK, Threat Intelligence, Incident Response, Detection Engineering, Network Security, Forensics.
+
+---
+
 ## Want to learn more about SOC?
 
 If this project got you interested in blue team security, here are some good starting points:

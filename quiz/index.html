@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SOC Quiz — Test your knowledge</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    color: #ff4444;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  .header .sub {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .category-badge {
+    display: inline-block;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.78rem;
+    color: #ff4444;
+    margin: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .category-badge:hover,
+  .category-badge.active {
+    background: #ff4444;
+    color: #ffffff;
+    border-color: #ff4444;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .progress-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .progress-bar-bg {
+    flex: 1;
+    background: #161b22;
+    border-radius: 4px;
+    height: 6px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+  }
+
+  .progress-bar {
+    height: 100%;
+    background: #ff4444;
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+
+  .progress-text {
+    color: #8b949e;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .score-live {
+    color: #00ff41;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 34px;
+    margin-bottom: 20px;
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .q-number {
+    color: #ff4444;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+  }
+
+  .q-category {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    color: #8b949e;
+  }
+
+  .hint {
+    color: #8b949e;
+    font-size: 0.78rem;
+    margin-bottom: 18px;
+    font-style: italic;
+  }
+
+  .q-text {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: #e6edf3;
+    margin-bottom: 28px;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .option {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 9px;
+    padding: 14px 18px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.93rem;
+    color: #e6edf3;
+    text-align: left;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .option-letter {
+    background: #30363d;
+    border-radius: 5px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+
+  .option:hover:not(:disabled) {
+    border-color: #ff4444;
+    background: #1a0a0a;
+    transform: translateX(5px);
+  }
+
+  .option:hover:not(:disabled) .option-letter {
+    background: #ff4444;
+  }
+
+  .option.correct {
+    border-color: #00ff41;
+    background: #0a2e0a;
+  }
+
+  .option.correct .option-letter {
+    background: #00ff41;
+    color: #000;
+  }
+
+  .option.wrong {
+    border-color: #ff4444;
+    background: #2e0a0a;
+  }
+
+  .option.wrong .option-letter {
+    background: #ff4444;
+    color: #fff;
+  }
+
+  .option:disabled { cursor: default; }
+
+  .feedback {
+    margin-top: 20px;
+    padding: 16px 18px;
+    border-radius: 9px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    display: none;
+  }
+
+  .feedback.correct {
+    background: #0a2e0a;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    display: block;
+  }
+
+  .feedback.wrong {
+    background: #2e0a0a;
+    border: 1px solid #ff4444;
+    color: #ff8888;
+    display: block;
+  }
+
+  .feedback .learn-more {
+    margin-top: 8px;
+    color: #8b949e;
+    font-size: 0.82rem;
+  }
+
+  .next-btn {
+    margin-top: 22px;
+    background: #ff4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 1px;
+  }
+
+  .next-btn:hover {
+    background: #cc2200;
+    transform: translateY(-2px);
+  }
+
+  .results {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 44px 36px;
+    text-align: center;
+    display: none;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .results h2 {
+    font-size: 1.8rem;
+    color: #ff4444;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+  }
+
+  .results .subtitle {
+    color: #8b949e;
+    margin-bottom: 36px;
+    font-size: 0.85rem;
+  }
+
+  .score-ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ff4444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 36px;
+  }
+
+  .score-number {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ff4444;
+  }
+
+  .score-label {
+    font-size: 0.72rem;
+    color: #8b949e;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+
+  .stat { text-align: center; }
+
+  .stat-n { font-size: 2rem; font-weight: bold; display: block; }
+  .stat-n.green { color: #00ff41; }
+  .stat-n.red { color: #ff4444; }
+  .stat-label { color: #8b949e; font-size: 0.78rem; }
+
+  .grade-box {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 9px;
+    padding: 18px;
+    margin-bottom: 30px;
+    font-size: 0.92rem;
+    color: #e6edf3;
+    line-height: 1.6;
+  }
+
+  .cat-breakdown {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  .cat-breakdown h3 {
+    color: #8b949e;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+
+  .cat-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .cat-name {
+    font-size: 0.82rem;
+    color: #e6edf3;
+    width: 180px;
+    flex-shrink: 0;
+  }
+
+  .cat-bar-bg {
+    flex: 1;
+    background: #0d1117;
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+  }
+
+  .cat-bar {
+    height: 100%;
+    border-radius: 4px;
+    background: #00ff41;
+  }
+
+  .cat-score {
+    font-size: 0.8rem;
+    color: #8b949e;
+    width: 40px;
+    text-align: right;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .restart-btn {
+    background: transparent;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    border-radius: 9px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 1px;
+  }
+
+  .restart-btn:hover { background: #1a0a0a; }
+
+  .back-btn {
+    background: transparent;
+    border: 1px solid #30363d;
+    color: #8b949e;
+    border-radius: 9px;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: 1px;
+  }
+
+  .back-btn:hover { background: #161b22; color: #e6edf3; }
+
+  .start-screen {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 14px;
+    padding: 44px 36px;
+    text-align: center;
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .start-screen h2 {
+    color: #ff4444;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+
+  .start-screen p {
+    color: #8b949e;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .topic-item {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.83rem;
+    color: #e6edf3;
+  }
+
+  .topic-item span {
+    color: #ff4444;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
+  .start-btn {
+    background: #ff4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    padding: 15px 40px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.1s;
+  }
+
+  .start-btn:hover {
+    background: #cc2200;
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>// SOC QUIZ</h1>
+  <p class="sub">Security Operations Center — for students learning blue team security</p>
+</div>
+
+<div class="start-screen" id="startScreen">
+  <h2>// READY TO TEST YOUR SOC KNOWLEDGE?</h2>
+  <p>This quiz covers the core concepts every SOC analyst needs to know. It is built for students learning blue team security from scratch. Each question comes with an explanation so you learn as you go.</p>
+
+  <div class="topic-grid">
+    <div class="topic-item"><span>01</span> What is a SOC</div>
+    <div class="topic-item"><span>02</span> Log Analysis</div>
+    <div class="topic-item"><span>03</span> MITRE ATT&CK</div>
+    <div class="topic-item"><span>04</span> Threat Intelligence</div>
+    <div class="topic-item"><span>05</span> Incident Response</div>
+    <div class="topic-item"><span>06</span> Detection Engineering</div>
+    <div class="topic-item"><span>07</span> Network Security</div>
+    <div class="topic-item"><span>08</span> Forensics</div>
+  </div>
+
+  <button class="start-btn" onclick="startQuiz()">START QUIZ &rarr;</button>
+</div>
+
+<div class="container" id="quizContainer" style="display:none">
+  <div class="progress-wrap">
+    <div class="progress-bar-bg">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <span class="progress-text" id="progressText"></span>
+    <span class="score-live" id="scoreLive"></span>
+  </div>
+
+  <div class="card" id="card">
+    <div class="card-top">
+      <span class="q-number" id="qNumber"></span>
+      <span class="q-category" id="qCategory"></span>
+    </div>
+    <p class="hint" id="qHint"></p>
+    <p class="q-text" id="qText"></p>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="next-btn" id="nextBtn" onclick="nextQuestion()">NEXT &rarr;</button>
+  </div>
+</div>
+
+<div class="results" id="results">
+  <h2>// RESULTS</h2>
+  <p class="subtitle">Quiz complete</p>
+  <div class="score-ring">
+    <span class="score-number" id="scorePercent"></span>
+    <span class="score-label">score</span>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-n green" id="correctCount"></span>
+      <span class="stat-label">Correct</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n red" id="wrongCount"></span>
+      <span class="stat-label">Wrong</span>
+    </div>
+  </div>
+  <div class="grade-box" id="gradeText"></div>
+
+  <div class="cat-breakdown">
+    <h3>Score by category</h3>
+    <div id="catBreakdown"></div>
+  </div>
+
+  <div class="btn-row">
+    <a class="back-btn" href="https://github.com/Speed-boo3/soc-project">Back to project</a>
+    <button class="restart-btn" onclick="restart()">TRY AGAIN</button>
+  </div>
+</div>
+
+<script>
+const questions = [
+  {
+    category: "What is a SOC",
+    hint: "Think about what defensive security teams do every day.",
+    q: "What is the primary job of a SOC analyst?",
+    options: ["Develop new software features", "Monitor, detect and respond to security threats", "Manage company finances", "Write company HR policies"],
+    answer: 1,
+    explanation: "A SOC analyst monitors systems 24/7 for threats, investigates alerts and responds to confirmed incidents. It is the front line of an organisation's cyber defense."
+  },
+  {
+    category: "What is a SOC",
+    hint: "NIST SP 800-61 defines the standard phases.",
+    q: "Which of the following is NOT one of the four phases in the NIST incident response lifecycle?",
+    options: ["Preparation", "Detection and Analysis", "Negotiation", "Post-Incident Activity"],
+    answer: 2,
+    explanation: "The four NIST phases are: Preparation, Detection and Analysis, Containment/Eradication/Recovery, and Post-Incident Activity. Negotiation is not part of it."
+  },
+  {
+    category: "What is a SOC",
+    hint: "Think about the difference between spotting and stopping.",
+    q: "What is the difference between an IDS and an IPS?",
+    options: ["They are the same thing", "IDS blocks traffic, IPS only detects", "IDS detects threats and alerts, IPS detects and actively blocks them", "IPS only works on endpoints"],
+    answer: 2,
+    explanation: "An IDS (Intrusion Detection System) detects and alerts. An IPS (Intrusion Prevention System) goes a step further and can automatically block the malicious traffic."
+  },
+  {
+    category: "Log Analysis",
+    hint: "Failed SSH logins are recorded in a specific log on Linux.",
+    q: "Which log file on Linux contains SSH authentication attempts?",
+    options: ["/var/log/syslog", "/var/log/auth.log", "/var/log/apache2/access.log", "/var/log/kern.log"],
+    answer: 1,
+    explanation: "/var/log/auth.log records all authentication events including SSH login attempts, sudo usage and PAM events. This is the first place to look when investigating brute force attacks."
+  },
+  {
+    category: "Log Analysis",
+    hint: "What does a SOC analyst check first when an alert fires?",
+    q: "An alert fires for multiple failed SSH logins. What is the first thing a SOC analyst should do?",
+    options: ["Immediately block the IP", "Restart the affected server", "Triage — determine if this is a real threat or a false positive", "Notify the press"],
+    answer: 2,
+    explanation: "Triage comes first. The analyst checks if the alert represents real malicious activity or a false positive before taking any action. Acting too fast can cause unnecessary disruption."
+  },
+  {
+    category: "Log Analysis",
+    hint: "This tool collects and correlates logs from across an environment.",
+    q: "What does a SIEM do in a SOC?",
+    options: ["Encrypts all network traffic", "Collects and correlates log data from multiple sources to surface threats", "Scans for open ports on the network", "Manages user passwords"],
+    answer: 1,
+    explanation: "A SIEM (Security Information and Event Management) aggregates logs from servers, firewalls, endpoints and applications, then uses correlation rules to detect suspicious patterns across all of them."
+  },
+  {
+    category: "MITRE ATT&CK",
+    hint: "MITRE ATT&CK uses T-numbers to identify techniques.",
+    q: "What MITRE ATT&CK technique ID covers Brute Force attacks?",
+    options: ["T1059", "T1190", "T1110", "T1078"],
+    answer: 2,
+    explanation: "T1110 is the Brute Force technique under the Credential Access tactic. Sub-techniques include T1110.001 (Password Guessing), T1110.003 (Password Spraying) and T1110.004 (Credential Stuffing)."
+  },
+  {
+    category: "MITRE ATT&CK",
+    hint: "Think about the big picture — what is the attacker trying to achieve?",
+    q: "In MITRE ATT&CK, what is the difference between a tactic and a technique?",
+    options: ["They mean the same thing", "A tactic is the goal, a technique is how the attacker achieves it", "A technique is broader than a tactic", "Tactics are only used for malware"],
+    answer: 1,
+    explanation: "Tactics represent the adversary's goal — for example Credential Access or Lateral Movement. Techniques describe the specific method used to achieve that goal, like Brute Force (T1110) or Pass the Hash (T1550.002)."
+  },
+  {
+    category: "MITRE ATT&CK",
+    hint: "Living-off-the-land means using tools already on the system.",
+    q: "An attacker uses PowerShell to run malicious commands on a compromised host. Which MITRE ATT&CK tactic does this fall under?",
+    options: ["Initial Access", "Execution", "Exfiltration", "Impact"],
+    answer: 1,
+    explanation: "Using PowerShell to run commands on a system is covered by the Execution tactic. The specific technique is T1059.001 — Command and Scripting Interpreter: PowerShell."
+  },
+  {
+    category: "Threat Intelligence",
+    hint: "Think about what tells you a system has already been attacked.",
+    q: "What does IOC stand for in threat intelligence?",
+    options: ["Internal Operations Center", "Indicator of Compromise", "Intrusion on Connection", "Index of Correlation"],
+    answer: 1,
+    explanation: "An IOC (Indicator of Compromise) is evidence that a system has been attacked — such as a malicious IP address, domain name, file hash or suspicious registry key."
+  },
+  {
+    category: "Threat Intelligence",
+    hint: "AbuseIPDB is one example of this type of service.",
+    q: "What is IP reputation checking used for in a SOC?",
+    options: ["Blocking all foreign IP addresses", "Checking if a source IP is known for malicious activity", "Verifying that an IP address is formatted correctly", "Assigning IP addresses to users"],
+    answer: 1,
+    explanation: "IP reputation services like AbuseIPDB track IPs that have been reported for malicious activity. When an alert fires, checking the source IP's reputation helps analysts quickly assess whether it comes from a known threat actor."
+  },
+  {
+    category: "Incident Response",
+    hint: "This is step three after containment.",
+    q: "In incident response, what does eradication mean?",
+    options: ["Documenting the incident", "Removing the threat from the environment", "Notifying users of the breach", "Monitoring for reinfection"],
+    answer: 1,
+    explanation: "Eradication means completely removing the threat — deleting malware, closing compromised accounts, patching the vulnerability that was exploited. It comes after containment and before recovery."
+  },
+  {
+    category: "Incident Response",
+    hint: "This is the most important document in incident response.",
+    q: "What is the purpose of an IR playbook?",
+    options: ["To train new employees on company culture", "To define step-by-step response procedures for specific incident types", "To list all the software used in the SOC", "To track employee vacation days"],
+    answer: 1,
+    explanation: "An IR playbook documents exactly what steps an analyst should follow for each type of incident. It ensures consistent, fast and correct response even under pressure."
+  },
+  {
+    category: "Detection Engineering",
+    hint: "A detection engineer writes the rules that make the alerts fire.",
+    q: "What is the main job of a detection engineer in a SOC?",
+    options: ["Build company websites", "Write and maintain detection rules that identify malicious behaviour", "Manage network cables and hardware", "Write compliance reports"],
+    answer: 1,
+    explanation: "A detection engineer creates the rules, queries and logic that make the SIEM fire alerts when something suspicious happens. They constantly tune rules to reduce false positives and improve detection coverage."
+  },
+  {
+    category: "Detection Engineering",
+    hint: "Think about what a rule needs to specify beyond just what to look for.",
+    q: "When writing a brute force detection rule, why is a threshold and time window important?",
+    options: ["To make the rule look more professional", "To avoid alerting on a single failed login, and only flag repeated failures within a short period", "To slow down the alert engine", "Thresholds are not used in detection rules"],
+    answer: 1,
+    explanation: "A single failed login is normal. The threat is many failed logins in a short time. A threshold (e.g. 5 failures) within a time window (e.g. 60 seconds) makes the rule accurate and avoids flooding the SOC with false positives."
+  },
+  {
+    category: "Network Security",
+    hint: "Think about which service is known for being a ransomware vector.",
+    q: "Why is port 445 (SMB) considered a high-risk open port?",
+    options: ["It uses too much bandwidth", "It is the primary vector for ransomware like WannaCry and lateral movement attacks", "It disables the firewall when open", "It only works on outdated hardware"],
+    answer: 1,
+    explanation: "SMB (Server Message Block) on port 445 has been exploited by some of the most damaging attacks in history, including WannaCry ransomware. It should never be exposed publicly."
+  },
+  {
+    category: "Network Security",
+    hint: "Think about what port 3389 is used for.",
+    q: "What service runs on port 3389 and why is it dangerous when exposed to the internet?",
+    options: ["HTTP — because websites should use HTTPS", "RDP — because it is a constant target for brute force and has known critical vulnerabilities", "DNS — because it leaks internal hostnames", "SMTP — because it allows open email relay"],
+    answer: 1,
+    explanation: "Port 3389 runs RDP (Remote Desktop Protocol). When exposed publicly, it is constantly scanned and attacked. Known vulnerabilities like BlueKeep allowed unauthenticated remote code execution on vulnerable systems."
+  },
+  {
+    category: "Forensics",
+    hint: "MD5 is still widely used despite being considered cryptographically broken.",
+    q: "Why is MD5 not recommended for security-critical hashing?",
+    options: ["It is too slow to compute", "It produces hashes that are too short", "It is vulnerable to collision attacks where two different inputs produce the same hash", "It can only hash text, not files"],
+    answer: 2,
+    explanation: "MD5 is vulnerable to collision attacks — two different inputs can be crafted to produce the same MD5 hash. This makes it unsuitable for digital signatures or integrity verification in security contexts."
+  },
+  {
+    category: "Forensics",
+    hint: "Think about what you would find by looking at RAM during an active attack.",
+    q: "What does memory forensics help a SOC analyst find during incident response?",
+    options: ["Deleted files on disk", "Malware running only in RAM, encryption keys, attacker commands and network connections", "Firewall configuration errors", "Patch levels on endpoints"],
+    answer: 1,
+    explanation: "Memory forensics (using tools like Volatility) analyses a RAM dump to find malware that never touches disk, active network connections, decrypted data and attacker artifacts that would disappear when the system is rebooted."
+  },
+  {
+    category: "What is a SOC",
+    hint: "Think about the difference between fixing a vulnerability and responding to an active attack.",
+    q: "What is the difference between a vulnerability and an exploit?",
+    options: ["They mean the same thing", "A vulnerability is a weakness in a system. An exploit is code or a technique that takes advantage of that weakness", "An exploit is a patch, a vulnerability is a threat", "Vulnerabilities only exist in software, not hardware"],
+    answer: 1,
+    explanation: "A vulnerability is a flaw or weakness. An exploit is the actual tool or method an attacker uses to take advantage of that vulnerability. A system can have a vulnerability without anyone exploiting it — but once an exploit exists, the risk becomes much higher."
+  },
+];
+
+let current = 0;
+let correct = 0;
+let wrong = 0;
+let answered = false;
+const letters = ["A", "B", "C", "D"];
+const catScores = {};
+
+function startQuiz() {
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("quizContainer").style.display = "block";
+  load();
+}
+
+function load() {
+  answered = false;
+  const q = questions[current];
+  const total = questions.length;
+
+  document.getElementById("qNumber").textContent = "QUESTION " + (current + 1) + " OF " + total;
+  document.getElementById("qCategory").textContent = q.category;
+  document.getElementById("qHint").textContent = "Hint: " + q.hint;
+  document.getElementById("qText").textContent = q.q;
+  document.getElementById("feedback").className = "feedback";
+  document.getElementById("feedback").innerHTML = "";
+  document.getElementById("nextBtn").style.display = "none";
+
+  const pct = (current / total) * 100;
+  document.getElementById("progressBar").style.width = pct + "%";
+  document.getElementById("progressText").textContent = current + "/" + total;
+  document.getElementById("scoreLive").textContent = correct + " correct";
+
+  const optDiv = document.getElementById("options");
+  optDiv.innerHTML = "";
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement("button");
+    btn.className = "option";
+    btn.innerHTML = '<span class="option-letter">' + letters[i] + '</span>' + opt;
+    btn.onclick = () => select(i, btn);
+    optDiv.appendChild(btn);
+  });
+}
+
+function select(index, btn) {
+  if (answered) return;
+  answered = true;
+
+  const q = questions[current];
+  const allBtns = document.querySelectorAll(".option");
+  allBtns.forEach(b => b.disabled = true);
+
+  const feedback = document.getElementById("feedback");
+  const nextBtn = document.getElementById("nextBtn");
+  const cat = q.category;
+
+  if (!catScores[cat]) catScores[cat] = { correct: 0, total: 0 };
+  catScores[cat].total++;
+
+  if (index === q.answer) {
+    btn.classList.add("correct");
+    feedback.className = "feedback correct";
+    feedback.innerHTML = "Correct — " + q.explanation;
+    correct++;
+    catScores[cat].correct++;
+  } else {
+    btn.classList.add("wrong");
+    allBtns[q.answer].classList.add("correct");
+    feedback.className = "feedback wrong";
+    feedback.innerHTML = "Not quite — " + q.explanation;
+    wrong++;
+  }
+
+  nextBtn.style.display = "inline-block";
+  nextBtn.textContent = current === questions.length - 1 ? "SEE RESULTS" : "NEXT";
+}
+
+function nextQuestion() {
+  current++;
+  if (current >= questions.length) {
+    showResults();
+  } else {
+    load();
+  }
+}
+
+function showResults() {
+  document.getElementById("quizContainer").style.display = "none";
+  document.getElementById("results").style.display = "block";
+
+  const pct = Math.round((correct / questions.length) * 100);
+  document.getElementById("scorePercent").textContent = pct + "%";
+  document.getElementById("correctCount").textContent = correct;
+  document.getElementById("wrongCount").textContent = wrong;
+  document.getElementById("progressBar").style.width = "100%";
+
+  let grade = "";
+  if (pct === 100) grade = "Perfect. You know your SOC fundamentals cold.";
+  else if (pct >= 80) grade = "Strong result. You have solid SOC knowledge. Keep building on it.";
+  else if (pct >= 60) grade = "Good effort. A few areas to review — check the explanations for the ones you missed.";
+  else if (pct >= 40) grade = "Getting there. The fundamentals are starting to click — keep studying.";
+  else grade = "This is a hard field. Read through the explanations, revisit the material and try again.";
+
+  document.getElementById("gradeText").textContent = grade;
+
+  const breakdown = document.getElementById("catBreakdown");
+  breakdown.innerHTML = "";
+  for (const [cat, data] of Object.entries(catScores)) {
+    const pctCat = Math.round((data.correct / data.total) * 100);
+    const row = document.createElement("div");
+    row.className = "cat-row";
+    row.innerHTML =
+      '<span class="cat-name">' + cat + '</span>' +
+      '<div class="cat-bar-bg"><div class="cat-bar" style="width:' + pctCat + '%"></div></div>' +
+      '<span class="cat-score">' + data.correct + '/' + data.total + '</span>';
+    breakdown.appendChild(row);
+  }
+}
+
+function restart() {
+  current = 0;
+  correct = 0;
+  wrong = 0;
+  answered = false;
+  Object.keys(catScores).forEach(k => delete catScores[k]);
+  document.getElementById("results").style.display = "none";
+  document.getElementById("quizContainer").style.display = "block";
+  load();
+}
+</script>
+</body>
+</html>
