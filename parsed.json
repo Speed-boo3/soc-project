@@ -1,0 +1,161 @@
+[
+  {
+    "timestamp": "Mar 25 18:53:34",
+    "host": "webserver",
+    "process": "sudo[3927]",
+    "message": "pam_unix(sudo:auth): authentication failure; logname= uid=1005",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "timestamp": "Mar 25 18:46:34",
+    "host": "webserver",
+    "process": "kernel",
+    "message": "program[9708]: segfault at 0 ip 00007f rsp 00007f error 4",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "ip": "10.0.0.5",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /index.html HTTP/1.1",
+    "status": "200",
+    "size": "1566",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 18:52:34",
+    "host": "webserver",
+    "process": "sshd[3982]",
+    "message": "Accepted password for alice from 192.168.0.50 port 52278 ssh2",
+    "type": "syslog",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 19:03:34",
+    "host": "webserver",
+    "process": "sshd[8304]",
+    "message": "Failed password for git from 45.33.32.156 port 44405 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "timestamp": "Mar 25 19:04:34",
+    "host": "webserver",
+    "process": "sshd[5274]",
+    "message": "Failed password for user from 45.33.32.156 port 50272 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "timestamp": "Mar 25 18:57:34",
+    "host": "webserver",
+    "process": "sshd[8756]",
+    "message": "Invalid user ftpuser from 45.33.32.156",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "timestamp": "Mar 25 19:04:34",
+    "host": "webserver",
+    "process": "sshd[3284]",
+    "message": "Failed password for test from 45.33.32.156 port 49863 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "ip": "185.220.101.45",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /phpmyadmin HTTP/1.1",
+    "status": "404",
+    "size": "1300",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "ip": "185.220.101.45",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /phpmyadmin HTTP/1.1",
+    "status": "404",
+    "size": "4081",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "ip": "172.16.0.10",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /about HTTP/1.1",
+    "status": "200",
+    "size": "4964",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 18:59:34",
+    "host": "webserver",
+    "process": "sshd[8845]",
+    "message": "Failed password for deploy from 45.33.32.156 port 56856 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "ip": "185.220.101.45",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /index.html HTTP/1.1",
+    "status": "200",
+    "size": "882",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 19:05:34",
+    "host": "webserver",
+    "process": "sshd[9861]",
+    "message": "Failed password for user from 45.33.32.156 port 59633 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "ip": "185.220.101.45",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /index.html HTTP/1.1",
+    "status": "403",
+    "size": "3971",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 19:01:34",
+    "host": "webserver",
+    "process": "sshd[8171]",
+    "message": "Failed password for admin from 45.33.32.156 port 41006 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "ip": "10.0.0.5",
+    "timestamp": "25/Mar/2026:19:06:34 +0000",
+    "request": "GET /contact HTTP/1.1",
+    "status": "200",
+    "size": "1737",
+    "type": "apache",
+    "suspicious": false
+  },
+  {
+    "timestamp": "Mar 25 18:58:34",
+    "host": "webserver",
+    "process": "sshd[3482]",
+    "message": "Invalid user hadoop from 45.33.32.156",
+    "type": "syslog",
+    "suspicious": true
+  },
+  {
+    "timestamp": "Mar 25 19:01:34",
+    "host": "webserver",
+    "process": "sshd[4038]",
+    "message": "Failed password for root from 45.33.32.156 port 55018 ssh2",
+    "type": "syslog",
+    "suspicious": true
+  }
+]

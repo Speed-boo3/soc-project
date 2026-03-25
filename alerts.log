@@ -1,0 +1,19 @@
+
+=== Run: 2026-03-25 19:06:34 ===
+
+3 alert(s) triggered:
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1005
+
+[MEDIUM] Segfault Detected (RULE-006)
+  MITRE ATT&CK : T1203 - Exploitation for Client Execution (Execution)
+  Action       : alert
+  Log entry    : program[9708]: segfault at 0 ip 00007f rsp 00007f error 4
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 45.33.32.156 had 9 failed login attempts
