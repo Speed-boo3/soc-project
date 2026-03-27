@@ -1,207 +1,190 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:0a0a2e,100:ff0000&height=220&section=header&text=SOC%20Project&fontSize=65&fontColor=ff4444&animation=fadeIn&fontAlignY=42&desc=Security%20Operations%20Center%20%7C%20Built%20from%20scratch%20in%20Python&descAlignY=66&descColor=aaaaaa&descSize=15"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:1a0000,100:ff0000&height=180&section=header&text=SOC%20Project&fontSize=55&fontColor=ff4444&animation=fadeIn&fontAlignY=45&desc=Security%20Operations%20Center%20%7C%20Built%20from%20scratch%20in%20Python&descAlignY=68&descColor=888888&descSize=14"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=2500&pause=800&color=FF4444&center=true&vCenter=true&width=650&lines=What+is+a+SOC+and+how+does+it+work%3F;Log+Analysis+%26+Threat+Detection;MITRE+ATT%26CK+Detection+Engineering;Threat+Intelligence+%26+IP+Reputation;Brute+Force+Detection+%26+IR+Playbooks;Built+for+students+learning+blue+team+security"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2800&pause=900&color=FF4444&center=true&vCenter=true&width=600&lines=Log+parsing+and+alert+detection;MITRE+ATT%26CK+detection+engineering;Live+threat+intelligence+via+AbuseIPDB;Brute+force+detection+with+time+windows;Built+for+students+learning+blue+team+security"/>
 
 <br/>
 
-![Python](https://img.shields.io/badge/Python-3.8+-0d1117?style=for-the-badge&logo=python&logoColor=00ff41)
-![Tests](https://img.shields.io/badge/Tests-11%20passing-0d1117?style=for-the-badge&logo=pytest&logoColor=00ff41)
-![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-0d1117?style=for-the-badge&logoColor=ff4444)
-![License](https://img.shields.io/badge/License-MIT-0d1117?style=for-the-badge&logoColor=white)
-![AbuseIPDB](https://img.shields.io/badge/Threat%20Intel-AbuseIPDB-0d1117?style=for-the-badge&logoColor=ff9900)
+![Python](https://img.shields.io/badge/Python-3.8+-0d1117?style=flat-square&logo=python&logoColor=00ff41)
+![Tests](https://img.shields.io/badge/tests-11%20passing-0d1117?style=flat-square&logo=pytest&logoColor=00ff41)
+![License](https://img.shields.io/badge/license-MIT-0d1117?style=flat-square)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-0d1117?style=flat-square&logoColor=ff4444)
 
 </div>
 
 ---
 
-## What is this project?
+## What is this
 
-This is a hands-on SOC project built from scratch in Python. It is designed for students and anyone curious about how security operations actually work — not just in theory, but in practice.
+A Security Operations Center project built from scratch in Python. It is designed for students who want to understand how SOC work actually looks in practice — not just theory.
 
-Every tool in this project solves a real problem that a SOC analyst faces daily. You can run it yourself, break it, modify it and learn from it.
-
----
-
-## What is a SOC?
-
-A **Security Operations Center** is a team of security analysts who monitor, detect and respond to threats against an organisation 24/7. Think of it as the defensive nerve center of a company's security.
-
-```mermaid
-flowchart LR
-    subgraph OUTSIDE[Outside threats]
-        ATK[Attackers]
-        MAL[Malware]
-        PHI[Phishing]
-    end
-
-    subgraph SOC[Security Operations Center]
-        MON[Monitor]
-        DET[Detect]
-        RES[Respond]
-        REP[Report]
-        MON --> DET --> RES --> REP
-    end
-
-    subgraph ASSETS[Organisation]
-        SRV[Servers]
-        USR[Users]
-        NET[Network]
-    end
-
-    OUTSIDE --> ASSETS
-    ASSETS -->|Logs and alerts| SOC
-    SOC -->|Contain and fix| ASSETS
-
-    style SOC fill:#1a3a8a,stroke:#4488ff,color:#ffffff
-    style OUTSIDE fill:#8a1a1a,stroke:#ff4444,color:#ffffff
-    style ASSETS fill:#1a5a2a,stroke:#00ff41,color:#ffffff
-```
-
-A SOC analyst's job is to:
-- Collect logs from servers, firewalls, endpoints and applications
-- Detect suspicious patterns using rules and threat intelligence
-- Investigate alerts to determine if they are real threats or false positives
-- Respond to confirmed incidents following structured playbooks
-- Document findings and improve detection over time
+Every tool here solves a real problem. The log parser, the alert engine, the threat intelligence lookup, the brute force detector — these are simplified versions of what real analysts use every day. You can run them, read the code and understand exactly what is happening at each step.
 
 ---
 
-## SOC categories — what a SOC covers
+## What is a SOC
 
-A real SOC is split into several focus areas. This project covers all of them:
+A Security Operations Center is a team that monitors an organisation's systems around the clock, looking for signs of attack. When something suspicious shows up in the logs, the SOC investigates it, decides if it is a real threat, and responds accordingly.
 
-| Category | Focus areas |
-|---|---|
-| Log Analysis | Parse raw logs, detect log types, flag suspicious lines |
-| Detection Engineering | Write YAML rules, map to MITRE ATT&CK, tune thresholds |
-| Threat Intelligence | Check IP reputation, identify bad actors, enrich alerts |
-| Incident Response | Triage alerts, contain threats, eradicate and recover |
-| Network Security | Scan for open ports, identify exposure, feed risk register |
-| Forensics | Identify file hashes, check for known malware, analyse artifacts |
+The core job of a SOC analyst breaks down into four things:
+
+**Collect** — gather logs from servers, firewalls, endpoints and applications into one place
+
+**Detect** — run those logs through detection rules that flag suspicious patterns
+
+**Investigate** — figure out whether an alert is a real attack or a false positive
+
+**Respond** — if it is real, contain it, remove it and recover from it
+
+This project covers all four.
+
+---
+
+## How the tools connect
 
 ```mermaid
 flowchart TD
-    SOC[SOC]
-    SOC --> LA[Log Analysis]
-    SOC --> DE[Detection Engineering]
-    SOC --> TI[Threat Intelligence]
-    SOC --> IR[Incident Response]
-    SOC --> NS[Network Security]
-    SOC --> FO[Forensics]
+    A[Raw log file] --> B[Log Parser]
+    B --> C[Parsed JSON]
+    C --> D[Alert Engine]
+    C --> E[Brute Force Detector]
+    D --> F{Rule matches?}
+    F -->|Yes| G[Alert fired]
+    F -->|No| H[Skipped]
+    E --> G
+    G --> I[MITRE ATT&CK tag]
+    G --> J[Threat Intel lookup]
+    J --> K[AbuseIPDB score]
+    I & K --> L[Terminal Dashboard]
+    G --> M[alerts.log]
 
-    LA --> LA1[Parse raw logs]
-    LA --> LA2[Detect log types]
-    LA --> LA3[Flag suspicious lines]
-
-    DE --> DE1[Write YAML rules]
-    DE --> DE2[Map to MITRE ATT&CK]
-    DE --> DE3[Tune alert thresholds]
-
-    TI --> TI1[Check IP reputation]
-    TI --> TI2[Identify bad actors]
-    TI --> TI3[Enrich alerts]
-
-    IR --> IR1[Triage alerts]
-    IR --> IR2[Contain threats]
-    IR --> IR3[Eradicate and recover]
-
-    NS --> NS1[Scan open ports]
-    NS --> NS2[Identify exposure]
-
-    FO --> FO1[Identify file hashes]
-    FO --> FO2[Check for malware]
-
-    style SOC fill:#ffffff,color:#000000,stroke:#000000
-    style LA fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
-    style DE fill:#fef3c7,color:#713f12,stroke:#f59e0b
-    style TI fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
-    style IR fill:#dcfce7,color:#14532d,stroke:#22c55e
-    style NS fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
-    style FO fill:#ffedd5,color:#7c2d12,stroke:#f97316
-    style LA1 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
-    style LA2 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
-    style LA3 fill:#dbeafe,color:#1e3a5f,stroke:#3b82f6
-    style DE1 fill:#fef3c7,color:#713f12,stroke:#f59e0b
-    style DE2 fill:#fef3c7,color:#713f12,stroke:#f59e0b
-    style DE3 fill:#fef3c7,color:#713f12,stroke:#f59e0b
-    style TI1 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
-    style TI2 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
-    style TI3 fill:#ffe4e6,color:#7f1d1d,stroke:#ef4444
-    style IR1 fill:#dcfce7,color:#14532d,stroke:#22c55e
-    style IR2 fill:#dcfce7,color:#14532d,stroke:#22c55e
-    style IR3 fill:#dcfce7,color:#14532d,stroke:#22c55e
-    style NS1 fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
-    style NS2 fill:#f3e8ff,color:#4a1d96,stroke:#a855f7
-    style FO1 fill:#ffedd5,color:#7c2d12,stroke:#f97316
-    style FO2 fill:#ffedd5,color:#7c2d12,stroke:#f97316
-```
-
----
-
-## The detection pipeline
-
-This is how raw logs become actionable alerts:
-
-```mermaid
-flowchart TD
-    A[Raw Log File] --> B[Log Parser]
-    B --> C{Log type?}
-    C -->|SSH and Auth| D[Auth Entry]
-    C -->|Apache| E[Web Entry]
-    C -->|Syslog| F[System Entry]
-    D & E & F --> G[Parsed JSON]
-    G --> H[Alert Engine]
-    G --> P[Brute Force Detector]
-    H --> I{Rule match?}
-    I -->|Yes| J[Alert fired]
-    I -->|No| K[Skipped]
-    P --> J
-    J --> L[MITRE ATT&CK tag]
-    J --> M[Threat Intel lookup]
-    M --> N[AbuseIPDB score]
-    L & N --> O[Terminal Dashboard]
-    J --> Q[IR Playbook triggered]
-
-    style A fill:#ff4444,color:#ffffff,stroke:#cc0000
-    style J fill:#ff0000,color:#ffffff,stroke:#cc0000
-    style G fill:#00aa33,color:#ffffff,stroke:#007722
-    style O fill:#2255cc,color:#ffffff,stroke:#113399
-    style Q fill:#cc8800,color:#ffffff,stroke:#996600
+    style A fill:#cc2200,stroke:#ff0000,color:#ffffff
+    style G fill:#cc2200,stroke:#ff0000,color:#ffffff
+    style C fill:#007722,stroke:#00ff41,color:#ffffff
+    style L fill:#1a3a8a,stroke:#4488ff,color:#ffffff
+    style M fill:#1a3a8a,stroke:#4488ff,color:#ffffff
 ```
 
 ---
 
 ## Tools
 
-| Tool | File | Category | What it does |
-|---|---|---|---|
-| Log Parser | `soc/log-parser/parser.py` | Log Analysis | Reads log files, detects type, flags suspicious entries |
-| Alert Engine | `soc/alert-rules/alert_engine.py` | Detection Engineering | Runs parsed logs through MITRE ATT&CK-mapped rules |
-| Detection Rules | `soc/alert-rules/rules.yaml` | Detection Engineering | YAML rules — one per threat scenario |
-| Threat Intel | `soc/alert-rules/threat_intel.py` | Threat Intelligence | Checks source IPs against AbuseIPDB in real time |
-| Dashboard | `soc/dashboard/dashboard.py` | Monitoring | Terminal overview of log stats and live alerts |
-| IR Playbook | `soc/incident-response/playbook.md` | Incident Response | Step-by-step response per MITRE technique |
-| Hash Checker | `soc/hash-checker/hash_checker.py` | Forensics | Identifies hash type and checks against malware database |
-| Brute Force Detector | `soc/brute-force-detector/detector.py` | Detection | Flags IPs with too many failed login attempts |
+### Log Parser `soc/log-parser/parser.py`
+
+Reads a log file line by line, figures out what type each line is — SSH auth, Apache access log or syslog — and flags anything suspicious. Outputs a structured JSON file that the rest of the tools can use.
+
+```bash
+python soc/log-parser/parser.py --file soc/log-parser/sample.log --output parsed.json
+```
+
+Output:
+```
+Total log entries : 19
+Suspicious events : 11
+
+--- Suspicious entries ---
+  [syslog] Failed password for root from 45.33.32.156 port 55018 ssh2
+  [syslog] Invalid user ftpuser from 45.33.32.156
+  [syslog] pam_unix(sudo:auth): authentication failure
+```
+
+### Alert Engine `soc/alert-rules/alert_engine.py`
+
+Matches parsed log entries against detection rules written in YAML. Every rule maps to a MITRE ATT&CK technique, so every alert tells you not just what happened but what kind of attack it fits.
+
+```bash
+python soc/alert-rules/alert_engine.py \
+  --logs parsed.json \
+  --rules soc/alert-rules/rules.yaml \
+  --output alerts.log
+```
+
+Output:
+```
+3 alert(s) triggered:
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 45.33.32.156 had 9 failed login attempts
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure
+
+[MEDIUM] Segfault Detected (RULE-006)
+  MITRE ATT&CK : T1203 - Exploitation for Client Execution (Execution)
+  Action       : alert
+  Log entry    : program[9708]: segfault at 0 ip 00007f
+```
+
+### Brute Force Detector `soc/brute-force-detector/detector.py`
+
+Reads auth logs and flags IPs with too many failed login attempts within a configurable time window. Uses an actual sliding window — not just a total count — so it catches attacks that happen quickly even if there are long gaps between them.
+
+```bash
+python soc/brute-force-detector/detector.py \
+  --file soc/log-parser/sample.log \
+  --threshold 5 \
+  --window 300
+```
+
+Output:
+```
+Brute Force Detection Report
+============================================================
+Threshold : 5 attempts within 300 seconds
+
+FLAGGED IPs:
+  45.33.32.156        9 in window / 9 total   BLOCK RECOMMENDED
+```
+
+### Threat Intel `soc/alert-rules/threat_intel.py`
+
+Pulls all unique IPs from a parsed log file and checks each one against AbuseIPDB. Returns an abuse confidence score, total number of reports and the categories of abuse.
+
+```bash
+export ABUSEIPDB_KEY=your_key_here
+python soc/alert-rules/threat_intel.py --logs parsed.json
+```
+
+Get a free key at [abuseipdb.com/register](https://www.abuseipdb.com/register).
+
+### Dashboard `soc/dashboard/dashboard.py`
+
+Terminal overview of everything in one place — log volume by type, top source IPs, HTTP status codes and the most recent suspicious events.
+
+```bash
+python soc/dashboard/dashboard.py --logs parsed.json
+```
+
+### IR Playbook `soc/incident-response/playbook.md`
+
+Step-by-step response procedures for each alert type, based on NIST SP 800-61. Covers what to do when each rule fires, how to escalate, and what the post-incident report should include.
+
+### Hash Checker `soc/hash-checker/hash_checker.py`
+
+Identifies hash algorithm type and checks a hash against a local database of known malware hashes. Useful during incident response when you need to quickly assess a suspicious file.
+
+```bash
+python soc/hash-checker/hash_checker.py --hash d41d8cd98f00b204e9800998ecf8427e
+```
+
+### Log Generator `soc/log-parser/generate_logs.py`
+
+Generates realistic log files with random IPs, usernames, ports and attack patterns for testing. The daily GitHub Actions workflow uses this to create a fresh log file every morning and run the full pipeline against it.
+
+```bash
+python soc/log-parser/generate_logs.py
+```
 
 ---
 
-## MITRE ATT&CK
+## MITRE ATT&CK coverage
 
-MITRE ATT&CK is a globally recognised framework that maps attacker behaviour to specific techniques. Every detection rule in this project is tagged with a technique ID so you always know what attack you are looking at.
-
-> For example: when a rule fires for repeated failed SSH logins, it is tagged as **T1110 — Brute Force** under the **Credential Access** tactic. This tells you immediately what the attacker is trying to do.
-
-| Rule | Name | Severity | Technique | Tactic |
-|---|---|---|---|---|
-| RULE-001 | Brute Force SSH | High | T1110 | Credential Access |
-| RULE-002 | Invalid User Login | Medium | T1078 | Initial Access |
-| RULE-003 | Sudo Auth Failure | Medium | T1078 | Privilege Escalation |
-| RULE-004 | HTTP Credential Stuffing | High | T1110.004 | Credential Access |
-| RULE-005 | Admin Path Access | Low | T1190 | Initial Access |
-| RULE-006 | Segfault Detected | Medium | T1203 | Execution |
+Every detection rule is mapped to a technique. When an alert fires you immediately know what category of attack you are looking at.
 
 ```mermaid
 flowchart LR
@@ -219,6 +202,7 @@ flowchart LR
     subgraph EX[Execution]
         T1203[T1203 Client Exploitation]
     end
+
     R1[RULE-001] --> T1110
     R4[RULE-004] --> T1110b
     R2[RULE-002] --> T1078
@@ -229,42 +213,17 @@ flowchart LR
     style CA fill:#cc2200,stroke:#ff4444,color:#ffffff
     style IA fill:#bb7700,stroke:#ffaa00,color:#ffffff
     style PE fill:#007722,stroke:#00ff41,color:#ffffff
-    style EX fill:#1133aa,stroke:#4488ff,color:#ffffff
-```
-
----
-
-## Alert severity levels
-
-Not every alert is equally urgent. This project uses three severity levels:
-
-```mermaid
-flowchart LR
-    H[High] -->|Respond in 30 min| HA[Brute force, credential stuffing]
-    M[Medium] -->|Respond in 4 hours| MA[Sudo failures, segfaults, invalid users]
-    L[Low] -->|Log and review| LA[Admin path access, informational]
-
-    style H fill:#cc2200,stroke:#ff0000,color:#ffffff
-    style M fill:#bb7700,stroke:#ffaa00,color:#ffffff
-    style L fill:#007722,stroke:#00ff41,color:#ffffff
-```
-
-```mermaid
-%%{init: {'pie': {'textPosition': 0.5}, 'themeVariables': {'pie1': '#ff4444', 'pie2': '#ffaa00', 'pie3': '#00cc44', 'pieTextColor': '#ffffff', 'pieTitleTextColor': '#ffffff', 'pieSectionTextColor': '#ffffff', 'pieLegendTextColor': '#ffffff', 'pieStrokeColor': '#ffffff'}}}%%
-pie title Alert Severity Distribution
-    "High"   : 35
-    "Medium" : 45
-    "Low"    : 20
+    style EX fill:#1a3a8a,stroke:#4488ff,color:#ffffff
 ```
 
 ---
 
 ## Incident response
 
-When an alert fires, the SOC follows a structured response process. This is based on NIST SP 800-61 — the industry standard for incident response.
+When an alert fires, the response follows the NIST SP 800-61 lifecycle.
 
 ```mermaid
-flowchart TD
+flowchart LR
     A[Alert fires] --> B[Triage]
     B --> C{Real threat?}
     C -->|No| D[Close as false positive]
@@ -272,64 +231,23 @@ flowchart TD
     E --> F[Eradicate]
     F --> G[Recover]
     G --> H[Post-incident report]
-    H --> I[Improve detection rules]
+    H --> I[Improve rules]
 
-    style A fill:#cc2200,color:#ffffff,stroke:#ff0000
-    style D fill:#007722,color:#ffffff,stroke:#00ff41
-    style H fill:#1133aa,color:#ffffff,stroke:#4488ff
-    style I fill:#007722,color:#ffffff,stroke:#00ff41
+    style A fill:#cc2200,stroke:#ff0000,color:#ffffff
+    style D fill:#007722,stroke:#00ff41,color:#ffffff
+    style H fill:#1a3a8a,stroke:#4488ff,color:#ffffff
+    style I fill:#007722,stroke:#00ff41,color:#ffffff
 ```
 
-Full playbooks for each scenario are in `soc/incident-response/playbook.md`.
+The full playbook with step-by-step procedures for each scenario is in `soc/incident-response/playbook.md`.
 
 ---
 
-## What alerts look like
+## Daily automated scan
 
-This is what the alert engine outputs when it detects something:
+GitHub Actions runs every morning at 07:00 UTC. It generates a fresh log file, runs the full pipeline and commits the results. This keeps the project active and builds up `alerts.log` over time as a running record of detections.
 
-```
-3 alert(s) triggered:
-
-[HIGH] Brute Force SSH (RULE-001)
-  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
-  Action       : alert
-  Log entry    : Failed password for root from 192.168.1.100 port 22
-
-[HIGH] HTTP Credential Stuffing (RULE-004)
-  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
-  Action       : alert
-  Log entry    : POST /login HTTP/1.1
-
-[MEDIUM] Invalid User Login (RULE-002)
-  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
-  Action       : alert
-  Log entry    : Invalid user admin from 192.168.1.100
-```
-
----
-
-## Full detection sequence
-
-This diagram shows every step from raw log to analyst — including the threat intelligence lookup:
-
-```mermaid
-sequenceDiagram
-    participant Log as Log File
-    participant Parser as Log Parser
-    participant Engine as Alert Engine
-    participant Intel as Threat Intel
-    participant Analyst as Analyst
-
-    Log->>Parser: Raw log lines
-    Parser->>Parser: Detect type and flag suspicious
-    Parser->>Engine: Parsed JSON entries
-    Engine->>Engine: Match against rules.yaml
-    Engine->>Intel: Source IP address
-    Intel->>Intel: AbuseIPDB lookup
-    Intel->>Engine: Abuse confidence score
-    Engine->>Analyst: Alert with severity, MITRE tag and IP score
-```
+The workflow file is in `.github/workflows/daily-scan.yml`.
 
 ---
 
@@ -339,25 +257,28 @@ sequenceDiagram
 soc-project/
 ├── soc/
 │   ├── log-parser/
-│   │   ├── parser.py               <- reads and classifies log lines
-│   │   └── sample.log              <- sample log for testing
+│   │   ├── parser.py                ← reads and classifies log lines
+│   │   ├── generate_logs.py         ← generates realistic test logs
+│   │   └── sample.log               ← latest generated log file
 │   ├── alert-rules/
-│   │   ├── rules.yaml              <- detection rules with MITRE mapping
-│   │   ├── alert_engine.py         <- runs logs against the rules
-│   │   └── threat_intel.py         <- AbuseIPDB IP reputation lookup
+│   │   ├── rules.yaml               ← detection rules with MITRE mapping
+│   │   ├── alert_engine.py          ← runs logs against the rules
+│   │   └── threat_intel.py          ← AbuseIPDB IP reputation lookup
 │   ├── dashboard/
-│   │   └── dashboard.py            <- terminal dashboard
+│   │   └── dashboard.py             ← terminal overview
 │   ├── incident-response/
-│   │   └── playbook.md             <- IR playbook per incident type
+│   │   └── playbook.md              ← IR playbook per incident type
 │   ├── hash-checker/
-│   │   └── hash_checker.py         <- identifies hash type, checks malware db
+│   │   └── hash_checker.py          ← hash type detection and malware check
 │   └── brute-force-detector/
-│       └── detector.py             <- flags IPs with too many failed logins
+│       └── detector.py              ← sliding window brute force detection
 ├── tests/
-│   ├── test_parser.py              <- 6 parser tests
-│   └── test_alert_engine.py        <- 5 engine tests
+│   ├── test_parser.py
+│   └── test_alert_engine.py
 ├── .github/workflows/
-│   └── tests.yml                   <- runs on every push
+│   ├── tests.yml                    ← runs on every push
+│   └── daily-scan.yml               ← runs every morning at 07:00 UTC
+├── alerts.log                       ← cumulative alert history
 ├── requirements.txt
 ├── CONTRIBUTING.md
 └── CHANGELOG.md
@@ -373,78 +294,48 @@ cd soc-project
 pip install -r requirements.txt
 ```
 
-**Step 1 — Parse a log file**
+Run the full pipeline:
+
 ```bash
+python soc/log-parser/generate_logs.py
 python soc/log-parser/parser.py --file soc/log-parser/sample.log --output parsed.json
-```
-
-**Step 2 — Run detection rules**
-```bash
 python soc/alert-rules/alert_engine.py --logs parsed.json --rules soc/alert-rules/rules.yaml
-```
-
-**Step 3 — Check threat intel**
-```bash
-export ABUSEIPDB_KEY=your_key_here
-python soc/alert-rules/threat_intel.py --logs parsed.json
-```
-
-**Step 4 — View dashboard**
-```bash
 python soc/dashboard/dashboard.py --logs parsed.json
 ```
 
-**Step 5 — Check a file hash**
-```bash
-python soc/hash-checker/hash_checker.py --hash d41d8cd98f00b204e9800998ecf8427e
-```
-
-**Step 6 — Detect brute force attempts**
-```bash
-python soc/brute-force-detector/detector.py --file soc/log-parser/sample.log --threshold 3
-```
-
----
-
-## Tests
+Run the tests:
 
 ```bash
 pytest tests/ -v
 ```
 
-11 tests covering the log parser and alert engine. Runs automatically on every push via GitHub Actions.
-
 ---
 
 ## Test your knowledge
 
-Built this quiz specifically for students learning SOC. 20 questions across all 8 categories — each question comes with a full explanation so you learn as you go.
+20 questions covering SOC fundamentals — what is a SOC, log analysis, MITRE ATT&CK, threat intelligence, incident response, detection engineering, network security and forensics.
 
 <div align="center">
 
-[![TAKE THE SOC QUIZ](https://img.shields.io/badge/TAKE%20THE%20SOC%20QUIZ-%20START%20%E2%86%92-ff4444?style=for-the-badge&labelColor=0d1117&color=ff4444)](https://speed-boo3.github.io/soc-project/quiz/)
+[![Take the SOC Quiz](https://img.shields.io/badge/Take%20the%20SOC%20Quiz-→-ff4444?style=for-the-badge&labelColor=0d1117)](https://speed-boo3.github.io/soc-project/quiz/)
 
 </div>
 
-Topics covered: What is a SOC, Log Analysis, MITRE ATT&CK, Threat Intelligence, Incident Response, Detection Engineering, Network Security, Forensics.
+---
+
+## Learn more
+
+- [MITRE ATT&CK](https://attack.mitre.org) — the full technique and tactic library
+- [NIST SP 800-61](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) — incident handling guide
+- [AbuseIPDB](https://www.abuseipdb.com) — IP reputation database
+- [Sigma HQ](https://github.com/SigmaHQ/sigma) — community detection rules
+- [LetsDefend](https://letsdefend.io) — SOC analyst training platform
+- [Blue Team Notes](https://github.com/Purp1eW0lf/Blue-Team-Notes) — practical blue team reference
 
 ---
 
-## Want to learn more about SOC?
-
-If this project got you interested in blue team security, here are some good starting points:
-
-- [MITRE ATT&CK Framework](https://attack.mitre.org) — the full technique library
-- [NIST SP 800-61](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) — incident response guide
-- [AbuseIPDB](https://www.abuseipdb.com) — free threat intelligence API
-- [OWASP WSTG](https://owasp.org/www-project-web-security-testing-guide/) — web security testing guide
-
----
-
-## Related
-
-The GRC side of this work is in [grc-project](https://github.com/Speed-boo3/grc-project). SOC detects what is happening. GRC tracks whether the controls that should prevent it are actually in place.
+The GRC side of this project is in [grc-project](https://github.com/Speed-boo3/grc-project). SOC detects what is happening. GRC tracks whether the controls that should prevent it are actually in place.
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff0000,50:0a0a2e,100:0d1117&height=120&section=footer&text=Detect.%20Respond.%20Improve.&fontSize=20&fontColor=ff4444&animation=twinkling"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff0000,50:1a0000,100:0d1117&height=100&section=footer&text=Detect.%20Investigate.%20Respond.&fontSize=16&fontColor=ff4444&animation=twinkling"/>
 </div>
