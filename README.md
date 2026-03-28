@@ -15,6 +15,18 @@
 
 ---
 
+## Interactive learning site
+
+<div align="center">
+
+[![Open the interactive guide](https://img.shields.io/badge/Interactive%20Guide-Learn%20SOC%20from%20scratch-ff4444?style=for-the-badge&labelColor=0d1117)](https://speed-boo3.github.io/soc-project/explain/)
+
+</div>
+
+Six modules covering everything from what a SOC is to MITRE ATT&CK, live threat intel lookups and an analyst skills checklist. With matrix rain animation and a live alert ticker.
+
+---
+
 ## What is this
 
 A Security Operations Center project built from scratch in Python. It is designed for students who want to understand how SOC work actually looks in practice — not just theory.

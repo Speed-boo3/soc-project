@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SOC — Security Operations Center</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;700;800&display=swap');
+
+  :root {
+    --red: #ff4444;
+    --green: #00ff41;
+    --blue: #4488ff;
+    --orange: #ff8800;
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #e6edf3;
+    --muted: #8b949e;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── MATRIX RAIN BACKGROUND ── */
+  #matrix-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .main-wrap { position: relative; z-index: 1; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px 60px;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0d1117 0%, #0a0505 100%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 30%, rgba(255,68,68,0.08) 0%, transparent 60%);
+  }
+
+  /* Scanline */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,68,68,0.012) 2px, rgba(255,68,68,0.012) 4px);
+    pointer-events: none;
+  }
+
+  /* Animated border bottom */
+  .hero-border {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff4444, #ff8800, #ff4444, transparent);
+    background-size: 200% 100%;
+    animation: border-slide 3s linear infinite;
+  }
+
+  @keyframes border-slide {
+    0%   { background-position: -100% 0; }
+    100% { background-position: 100% 0; }
+  }
+
+  .hero-content { position: relative; z-index: 2; }
+
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,68,68,0.1);
+    border: 1px solid rgba(255,68,68,0.4);
+    border-radius: 4px;
+    padding: 5px 16px;
+    font-size: 0.75rem;
+    color: var(--red);
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+    animation: blink-border 2s ease-in-out infinite;
+  }
+
+  @keyframes blink-border {
+    0%, 100% { border-color: rgba(255,68,68,0.4); }
+    50% { border-color: rgba(255,68,68,0.9); box-shadow: 0 0 16px rgba(255,68,68,0.2); }
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #fff;
+    margin-bottom: 4px;
+    text-shadow: 0 0 40px rgba(255,68,68,0.4);
+    animation: text-glow 3s ease-in-out infinite;
+  }
+
+  @keyframes text-glow {
+    0%, 100% { text-shadow: 0 0 40px rgba(255,68,68,0.3); }
+    50% { text-shadow: 0 0 60px rgba(255,68,68,0.6), 0 0 100px rgba(255,68,68,0.2); }
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    color: var(--red);
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .hero p {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto 32px;
+    line-height: 1.75;
+  }
+
+  /* Typing cursor */
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--red);
+    margin-left: 2px;
+    animation: blink-cursor 1s step-end infinite;
+    vertical-align: text-bottom;
+  }
+
+  @keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* ── LIVE ALERT TICKER ── */
+  .ticker-wrap {
+    background: rgba(255,68,68,0.06);
+    border-top: 1px solid rgba(255,68,68,0.2);
+    border-bottom: 1px solid rgba(255,68,68,0.2);
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ticker-label {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--red);
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 1px;
+    z-index: 2;
+    white-space: nowrap;
+  }
+
+  .ticker-track {
+    display: flex;
+    animation: ticker 30s linear infinite;
+    padding-left: 120px;
+  }
+
+  .ticker-item {
+    white-space: nowrap;
+    padding: 0 40px;
+    font-size: 0.8rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: #aaa;
+  }
+
+  .ticker-item span { color: var(--red); }
+
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ── STATS ── */
+  .stats-strip {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item { text-align: center; }
+
+  .stat-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--red);
+    display: block;
+  }
+
+  .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 2px; letter-spacing: 0.5px; }
+
+  /* ── TABS ── */
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .tab {
+    padding: 15px 22px;
+    cursor: pointer;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: var(--muted);
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+    background: none;
+    border-top: none; border-left: none; border-right: none;
+    font-family: inherit;
+  }
+
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--red); border-bottom-color: var(--red); }
+
+  .section { display: none; padding: 40px 20px; max-width: 940px; margin: 0 auto; }
+  .section.active { display: block; animation: fade-in 0.35s ease; }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: var(--red);
+  }
+
+  .section-intro {
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.75;
+    margin-bottom: 32px;
+    max-width: 720px;
+  }
+
+  /* ── IMAGE CARDS ── */
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .img-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .img-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(255,68,68,0.15);
+    border-color: rgba(255,68,68,0.4);
+  }
+
+  .img-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.55) saturate(0.8);
+    transition: filter 0.3s;
+  }
+
+  .img-card:hover img { filter: brightness(0.8) saturate(1); }
+
+  .img-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 18px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  }
+
+  .img-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
+  .img-body { font-size: 0.79rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
+  /* ── SOC ROLE CARDS ── */
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .role-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .role-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+
+  .role-card:hover { border-color: rgba(255,68,68,0.4); transform: translateY(-3px); }
+  .role-card:hover::after { transform: scaleX(1); }
+
+  .role-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+  .role-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--text); }
+  .role-body { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── LIVE SCANNER TERMINAL ── */
+  .terminal {
+    background: #010409;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 0 40px rgba(255,68,68,0.05);
+  }
+
+  .terminal-bar {
+    background: #161b22;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tdot { width: 12px; height: 12px; border-radius: 50%; }
+  .tdot.r { background: #ff5f56; }
+  .tdot.y { background: #ffbd2e; }
+  .tdot.g { background: #27c93f; }
+
+  .terminal-title {
+    margin-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  .terminal-body {
+    padding: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    line-height: 1.9;
+    min-height: 200px;
+  }
+
+  .t-prompt { color: var(--red); }
+  .t-cmd { color: #fff; }
+  .t-out { color: #aaa; }
+  .t-critical { color: #ff4444; font-weight: 700; }
+  .t-high { color: #ff8800; }
+  .t-medium { color: #ffcc00; }
+  .t-ok { color: var(--green); }
+  .t-mitre { color: var(--blue); font-size: 0.78rem; }
+
+  .scan-btn {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .scan-btn:hover { background: #cc0000; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,68,68,0.3); }
+
+  .scan-btn .dot-anim {
+    width: 8px; height: 8px;
+    background: #fff;
+    border-radius: 50%;
+    animation: pulse-dot 1s ease-in-out infinite;
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.6); }
+  }
+
+  .finding-line {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s;
+    padding: 2px 0;
+  }
+
+  .finding-line.show { opacity: 1; transform: translateX(0); }
+
+  /* ── MITRE CARDS ── */
+  .mitre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .mitre-card {
+    border-radius: 10px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mitre-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: linear-gradient(135deg, rgba(255,68,68,0.1), transparent);
+    transition: opacity 0.3s;
+  }
+
+  .mitre-card:hover { border-color: var(--red); transform: scale(1.02); }
+  .mitre-card:hover::before { opacity: 1; }
+
+  .mitre-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--red);
+    font-weight: 700;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+
+  .mitre-name { font-size: 0.88rem; font-weight: 700; margin-bottom: 4px; }
+  .mitre-tactic { font-size: 0.75rem; color: var(--muted); margin-bottom: 8px; }
+  .mitre-rule {
+    font-size: 0.72rem;
+    background: rgba(255,68,68,0.1);
+    color: var(--red);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    display: inline-block;
+  }
+
+  /* ── IR TIMELINE ── */
+  .timeline { position: relative; margin-bottom: 32px; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--red), #ff8800, #ffcc00, var(--green));
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    transition: transform 0.2s;
+  }
+
+  .tl-item:hover { transform: translateX(6px); }
+
+  .tl-dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    margin-top: 2px;
+  }
+
+  .tl-content { flex: 1; }
+
+  .tl-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .tl-body { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+  .tl-time { font-size: 0.72rem; font-family: 'JetBrains Mono', monospace; margin-top: 4px; }
+
+  /* ── THREAT INTEL DEMO ── */
+  .ip-demo {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  .ip-header {
+    background: #010409;
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ip-body { padding: 24px; }
+
+  .ip-input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .ip-input {
+    flex: 1;
+    background: #010409;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .ip-input:focus { border-color: var(--red); }
+
+  .ip-btn {
+    background: var(--red);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .ip-btn:hover { background: #cc0000; }
+
+  .ip-result {
+    background: #010409;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    line-height: 1.8;
+    min-height: 60px;
+    color: #aaa;
+    display: none;
+  }
+
+  /* ── CHECKLIST ── */
+  .check-list { list-style: none; margin-bottom: 32px; }
+
+  .check-item {
+    display: flex;
+    gap: 14px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: var(--card);
+    transition: all 0.2s;
+  }
+
+  .check-item:hover { border-color: var(--red); transform: translateX(4px); }
+  .check-item.done { border-color: var(--green); background: rgba(0,255,65,0.04); }
+
+  .check-box {
+    width: 22px; height: 22px;
+    border: 2px solid var(--border);
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+    margin-top: 1px;
+  }
+
+  .check-item.done .check-box { background: var(--green); border-color: var(--green); color: #000; }
+  .check-title { font-size: 0.92rem; font-weight: 600; margin-bottom: 3px; }
+  .check-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+  .progress-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 8px; height: 8px; margin-bottom: 8px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--red), var(--orange)); border-radius: 8px; transition: width 0.4s ease; width: 0%; }
+  .progress-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 20px; font-family: 'JetBrains Mono', monospace; }
+
+  footer { text-align: center; padding: 40px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; }
+  footer a { color: var(--red); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+
+<div class="main-wrap">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-border"></div>
+  <div class="hero-content">
+    <div class="hero-tag">// SECURITY OPERATIONS CENTER</div>
+    <h1>SOC</h1>
+    <div class="hero-sub">DETECT. INVESTIGATE. RESPOND.</div>
+    <p>The front line of cyber defense. Learn what a SOC is, how alerts become investigations and why detection engineering is one of the most in-demand skills in cybersecurity.</p>
+  </div>
+</div>
+
+<!-- ALERT TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-label">LIVE ALERTS</div>
+  <div class="ticker-track">
+    <span class="ticker-item"><span>[HIGH]</span> Brute force SSH from 45.33.32.156 — T1110</span>
+    <span class="ticker-item"><span>[CRITICAL]</span> Credential stuffing on /login — T1110.004</span>
+    <span class="ticker-item"><span>[MEDIUM]</span> Sudo auth failure — T1078</span>
+    <span class="ticker-item"><span>[HIGH]</span> Port scan detected — T1046</span>
+    <span class="ticker-item"><span>[MEDIUM]</span> Segfault in production — T1203</span>
+    <span class="ticker-item"><span>[HIGH]</span> Invalid user enumeration — T1078</span>
+    <span class="ticker-item"><span>[LOW]</span> Admin path access blocked — T1190</span>
+    <span class="ticker-item"><span>[HIGH]</span> Brute force SSH from 45.33.32.156 — T1110</span>
+    <span class="ticker-item"><span>[CRITICAL]</span> Credential stuffing on /login — T1110.004</span>
+    <span class="ticker-item"><span>[MEDIUM]</span> Sudo auth failure — T1078</span>
+    <span class="ticker-item"><span>[HIGH]</span> Port scan detected — T1046</span>
+    <span class="ticker-item"><span>[MEDIUM]</span> Segfault in production — T1203</span>
+    <span class="ticker-item"><span>[HIGH]</span> Invalid user enumeration — T1078</span>
+    <span class="ticker-item"><span>[LOW]</span> Admin path access blocked — T1190</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item">
+    <span class="stat-number" data-target="24">0</span>
+    <div class="stat-label">Hours monitored daily</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="6">0</span>
+    <div class="stat-label">MITRE ATT&amp;CK rules</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="11">0</span>
+    <div class="stat-label">Tests passing</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-number" data-target="30">0</span>
+    <div class="stat-label">Min response to HIGH alert</div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="show('intro')">What is a SOC?</button>
+  <button class="tab" onclick="show('scanner')">Live scanner</button>
+  <button class="tab" onclick="show('mitre')">MITRE ATT&amp;CK</button>
+  <button class="tab" onclick="show('ir')">Incident response</button>
+  <button class="tab" onclick="show('intel')">Threat intel</button>
+  <button class="tab" onclick="show('analyst')">Become an analyst</button>
+</div>
+
+<!-- INTRO -->
+<div class="section active" id="intro">
+  <div class="section-title">What is a SOC?</div>
+  <div class="section-intro">A Security Operations Center is a team that monitors an organisation's systems 24/7. They look for signs of attack in logs, alerts and network traffic. When something fires, they investigate, decide if it is real and respond. This project builds the core tools a SOC analyst uses daily.</div>
+
+  <div class="img-grid">
+    <div class="img-card">
+      <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=80" alt="SOC"/>
+      <div class="img-overlay">
+        <div class="img-title">Monitor</div>
+        <div class="img-body">Logs from servers, firewalls and endpoints flow into a central location and are checked continuously.</div>
+      </div>
+    </div>
+    <div class="img-card">
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80" alt="Detect"/>
+      <div class="img-overlay">
+        <div class="img-title">Detect</div>
+        <div class="img-body">Detection rules run against every log entry. When a pattern matches, an alert fires with a severity level.</div>
+      </div>
+    </div>
+    <div class="img-card">
+      <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80" alt="Respond"/>
+      <div class="img-overlay">
+        <div class="img-title">Respond</div>
+        <div class="img-body">Analysts investigate, contain the threat and document what happened. Then improve the rules so it is caught earlier next time.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-grid">
+    <div class="role-card">
+      <span class="role-icon">🔍</span>
+      <div class="role-title">Log Parser</div>
+      <div class="role-body">Reads raw log files line by line. Detects whether each line is SSH auth, Apache access or syslog. Flags anything suspicious for the alert engine.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">🚨</span>
+      <div class="role-title">Alert Engine</div>
+      <div class="role-body">Matches parsed log entries against YAML detection rules. Every match fires an alert with a severity level and a MITRE ATT&CK technique ID.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">🌐</span>
+      <div class="role-title">Threat Intel</div>
+      <div class="role-body">Pulls source IPs from the logs and checks each one against AbuseIPDB. Returns an abuse confidence score so analysts know if the source is a known bad actor.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">🛡️</span>
+      <div class="role-title">Brute Force Detector</div>
+      <div class="role-body">Uses a sliding time window to count failed login attempts per IP. Flags sources that exceed the threshold within the window — not just total count.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">📊</span>
+      <div class="role-title">Dashboard</div>
+      <div class="role-body">Terminal overview showing log volume by type, top source IPs, HTTP status codes and the most recent suspicious events — all in one view.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">📋</span>
+      <div class="role-title">IR Playbook</div>
+      <div class="role-body">Step-by-step response procedures for each alert type, based on NIST SP 800-61. Tells the analyst exactly what to do when a rule fires.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SCANNER -->
+<div class="section" id="scanner">
+  <div class="section-title">Live scanner simulation</div>
+  <div class="section-intro">This simulates exactly what the real parser and alert engine output. Click Run to see a fresh scan — with random IPs, attack patterns and MITRE tags.</div>
+
+  <div class="img-card" style="margin-bottom:28px">
+    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Scanner" style="height:180px"/>
+    <div class="img-overlay">
+      <div class="img-title">Every line of every log is checked against every rule</div>
+      <div class="img-body">The alert engine runs in milliseconds. Humans investigate what it flags.</div>
+    </div>
+  </div>
+
+  <div class="terminal">
+    <div class="terminal-bar">
+      <div class="tdot r"></div><div class="tdot y"></div><div class="tdot g"></div>
+      <span class="terminal-title">soc-scanner — bash</span>
+    </div>
+    <div class="terminal-body" id="termBody">
+      <div><span class="t-prompt">$</span> <span class="t-cmd">python soc/log-parser/generate_logs.py && python soc/log-parser/parser.py --file sample.log --output parsed.json && python soc/alert-rules/alert_engine.py --logs parsed.json --rules rules.yaml</span><span class="cursor"></span></div>
+      <br/>
+      <div style="color:#555">Click Run Scan to execute...</div>
+    </div>
+  </div>
+
+  <button class="scan-btn" onclick="runScan()" id="scanBtn">
+    <div class="dot-anim"></div>
+    RUN SCAN
+  </button>
+
+  <div id="scanOutput"></div>
+</div>
+
+<!-- MITRE -->
+<div class="section" id="mitre">
+  <div class="section-title">MITRE ATT&amp;CK</div>
+  <div class="section-intro">MITRE ATT&CK is a globally recognised framework that maps attacker behaviour to specific techniques. Every detection rule in this project is tagged with a technique ID — so every alert tells you not just what happened, but what type of attack it is.</div>
+
+  <div class="img-card" style="margin-bottom:28px">
+    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" alt="MITRE" style="height:180px"/>
+    <div class="img-overlay">
+      <div class="img-title">MITRE ATT&amp;CK is the common language of detection engineering</div>
+      <div class="img-body">When an alert fires, the technique ID tells you exactly what the attacker is doing and what comes next.</div>
+    </div>
+  </div>
+
+  <div class="mitre-grid">
+    <div class="mitre-card">
+      <div class="mitre-id">T1110</div>
+      <div class="mitre-name">Brute Force</div>
+      <div class="mitre-tactic">Credential Access</div>
+      <div class="mitre-rule">RULE-001</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Repeated failed logins from one source. The attacker is trying to guess credentials.</div>
+    </div>
+    <div class="mitre-card">
+      <div class="mitre-id">T1110.004</div>
+      <div class="mitre-name">Credential Stuffing</div>
+      <div class="mitre-tactic">Credential Access</div>
+      <div class="mitre-rule">RULE-004</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Multiple 401 responses to /login. Attacker is trying leaked username/password pairs.</div>
+    </div>
+    <div class="mitre-card">
+      <div class="mitre-id">T1078</div>
+      <div class="mitre-name">Valid Accounts</div>
+      <div class="mitre-tactic">Initial Access</div>
+      <div class="mitre-rule">RULE-002</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Login attempt with a username that does not exist. Often a sign of enumeration.</div>
+    </div>
+    <div class="mitre-card">
+      <div class="mitre-id">T1078</div>
+      <div class="mitre-name">Valid Accounts</div>
+      <div class="mitre-tactic">Privilege Escalation</div>
+      <div class="mitre-rule">RULE-003</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Sudo authentication failure. Someone tried to escalate privileges and failed.</div>
+    </div>
+    <div class="mitre-card">
+      <div class="mitre-id">T1190</div>
+      <div class="mitre-name">Exploit Public App</div>
+      <div class="mitre-tactic">Initial Access</div>
+      <div class="mitre-rule">RULE-005</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Request to /admin was blocked. Could be a scanner probing for admin interfaces.</div>
+    </div>
+    <div class="mitre-card">
+      <div class="mitre-id">T1203</div>
+      <div class="mitre-name">Client Exploitation</div>
+      <div class="mitre-tactic">Execution</div>
+      <div class="mitre-rule">RULE-006</div>
+      <div style="font-size:0.78rem;color:#888;margin-top:8px">Segmentation fault detected. Could indicate an exploitation attempt against a process.</div>
+    </div>
+  </div>
+
+  <div style="background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.25);border-radius:10px;padding:20px;font-size:0.88rem;line-height:1.75;color:#ccc">
+    <strong style="color:#ff4444">Why does this matter for a job?</strong><br/>
+    MITRE ATT&CK appears in almost every SOC and detection engineering job description. Knowing the tactic-technique hierarchy, being able to map a log entry to a technique, and understanding what the attacker does next in the chain — these are interview questions you will face. This project gives you direct hands-on experience with all of it.
+  </div>
+</div>
+
+<!-- IR -->
+<div class="section" id="ir">
+  <div class="section-title">Incident response</div>
+  <div class="section-intro">When an alert fires, the SOC follows a structured process. Based on NIST SP 800-61 — the industry standard for incident handling. Every step matters because doing the wrong thing in the wrong order can make a breach worse.</div>
+
+  <div class="img-card" style="margin-bottom:32px">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80" alt="Incident Response" style="height:180px"/>
+    <div class="img-overlay">
+      <div class="img-title">Every second counts in incident response</div>
+      <div class="img-body">The playbook exists so analysts do not have to think under pressure. The steps are already decided.</div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#1a0000;border-color:#ff4444;color:#ff4444">1</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#ff4444">Triage</div>
+        <div class="tl-body">Alert fires. First question: is this real or a false positive? Check the source IP, the time, the context. Do not act until you know what you are dealing with.</div>
+        <div class="tl-time" style="color:#ff4444">Target: within 5 minutes</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#1a0800;border-color:#ff8800;color:#ff8800">2</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#ff8800">Contain</div>
+        <div class="tl-body">Stop the bleeding. Block the source IP. Isolate the affected system if needed. The goal is to prevent the attacker from moving further into the network.</div>
+        <div class="tl-time" style="color:#ff8800">For HIGH alerts: within 30 minutes</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#1a1800;border-color:#ffcc00;color:#ffcc00">3</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#ffcc00">Investigate</div>
+        <div class="tl-body">Dig into the logs. What did the attacker do? Did they succeed? What other systems were touched? Build a timeline of events from the evidence.</div>
+        <div class="tl-time" style="color:#ffcc00">Duration depends on complexity</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#001a00;border-color:#00ff41;color:#00ff41">4</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#00ff41">Eradicate</div>
+        <div class="tl-body">Remove the threat. Delete the malware, close the compromised account, patch the vulnerability. Make sure the attacker has no way back in.</div>
+        <div class="tl-time" style="color:#00ff41">Before recovery begins</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#001a00;border-color:#00ff41;color:#00ff41">5</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#00ff41">Recover</div>
+        <div class="tl-body">Bring affected systems back online. Verify they are clean. Monitor for recurrence. Get the business back to normal operation.</div>
+        <div class="tl-time" style="color:#00ff41">With continuous monitoring</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:#001a1a;border-color:#4488ff;color:#4488ff">6</div>
+      <div class="tl-content">
+        <div class="tl-title" style="color:#4488ff">Post-Incident Report</div>
+        <div class="tl-body">Write it up within 5 business days. What happened? What worked? What failed? What should be improved? Update the detection rules so it is caught faster next time.</div>
+        <div class="tl-time" style="color:#4488ff">Within 5 business days</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INTEL -->
+<div class="section" id="intel">
+  <div class="section-title">Threat intelligence</div>
+  <div class="section-intro">Threat intelligence enriches alerts with context. When an IP address shows up in your logs, knowing whether it is a known attacker changes everything about how you respond. Try the demo below.</div>
+
+  <div class="img-card" style="margin-bottom:28px">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=900&q=80" alt="Threat Intel" style="height:180px"/>
+    <div class="img-overlay">
+      <div class="img-title">Context turns alerts into intelligence</div>
+      <div class="img-body">An IP with a 97% abuse confidence score is not a failed login. It is a targeted attack from a known threat actor.</div>
+    </div>
+  </div>
+
+  <div class="ip-demo">
+    <div class="ip-header">
+      <div class="tdot r"></div><div class="tdot y"></div><div class="tdot g"></div>
+      <span style="margin-left:8px">AbuseIPDB threat intelligence lookup</span>
+    </div>
+    <div class="ip-body">
+      <div class="ip-input-row">
+        <input class="ip-input" id="ipInput" type="text" placeholder="Enter an IP address e.g. 45.33.32.156" value="45.33.32.156"/>
+        <button class="ip-btn" onclick="checkIP()">Check IP</button>
+      </div>
+      <div class="ip-result" id="ipResult"></div>
+    </div>
+  </div>
+
+  <div class="role-grid">
+    <div class="role-card">
+      <span class="role-icon">🔴</span>
+      <div class="role-title">Abuse confidence score</div>
+      <div class="role-body">AbuseIPDB returns a score from 0 to 100. Above 80 means the IP is almost certainly malicious. The score is based on community reports from security teams worldwide.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">📍</span>
+      <div class="role-title">IP geolocation</div>
+      <div class="role-body">Knowing where an attack originates helps with attribution. Combined with the abuse score it tells you whether to escalate or treat as noise.</div>
+    </div>
+    <div class="role-card">
+      <span class="role-icon">📂</span>
+      <div class="role-title">Abuse categories</div>
+      <div class="role-body">Reports are categorised: SSH brute force, port scan, web attack, spam. This tells you what the IP is known for — which helps predict what it will try on your systems.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ANALYST -->
+<div class="section" id="analyst">
+  <div class="section-title">Become a SOC analyst</div>
+  <div class="section-intro">Work through this checklist to see how much you already know. Each item maps to something this project covers. In a real interview, these are exactly the topics you will be asked about.</div>
+
+  <div class="img-card" style="margin-bottom:28px">
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80" alt="Career" style="height:160px"/>
+    <div class="img-overlay">
+      <div class="img-title">SOC analyst is one of the most in-demand entry-level cybersecurity roles</div>
+    </div>
+  </div>
+
+  <div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-label" id="progressLabel">0 / 10 skills covered</div>
+
+  <ul class="check-list">
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Understand what logs are and why they matter</div>
+        <div class="check-desc">Logs are the primary data source for a SOC. Without them, you have no visibility into what is happening on your systems.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Know the difference between a false positive and a real threat</div>
+        <div class="check-desc">Triage is the first skill every analyst develops. The ability to quickly assess an alert and determine if it deserves further investigation.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Understand MITRE ATT&CK tactics and techniques</div>
+        <div class="check-desc">Being able to map an event to a tactic and technique shows you understand attacker behaviour, not just tool output.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Know what brute force looks like in logs</div>
+        <div class="check-desc">Repeated failed SSH logins from one IP. Failed password for root. Invalid user attempts. These are the patterns you need to recognise instantly.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Understand threat intelligence and IP reputation</div>
+        <div class="check-desc">Knowing how to enrich an alert with external context — AbuseIPDB, VirusTotal, Shodan — is a core analyst skill that separates good from average.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Know the NIST incident response lifecycle</div>
+        <div class="check-desc">Preparation, Detection, Containment, Eradication, Recovery, Post-Incident. Every SOC team uses some version of this framework.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Understand what a SIEM does</div>
+        <div class="check-desc">A SIEM collects logs from everywhere and correlates them to surface suspicious patterns. Splunk and Elastic are the most common. Know the concept even if you have not used one.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Can read and write basic Python</div>
+        <div class="check-desc">Not every analyst codes but being able to read the tools you use, modify a script or write a quick parser is a major differentiator in interviews.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Know what a detection rule looks like</div>
+        <div class="check-desc">Being able to read a YAML detection rule, understand what it matches and explain why the threshold is set where it is shows detection engineering awareness.</div>
+      </div>
+    </li>
+    <li class="check-item" onclick="tick(this)">
+      <div class="check-box"></div>
+      <div>
+        <div class="check-title">Understand the principle of least privilege</div>
+        <div class="check-desc">Why do so many incidents involve compromised accounts with too much access? Because access control failed. Understanding this connects SOC work to the broader security picture.</div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+</div>
+
+<footer>
+  Built by <a href="https://github.com/Speed-boo3">Speed-boo3</a> as part of a SOC learning project.
+  Full project at <a href="https://github.com/Speed-boo3/soc-project">github.com/Speed-boo3/soc-project</a>
+</footer>
+
+<script>
+// MATRIX RAIN
+const canvas = document.getElementById('matrix-canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+const cols = Math.floor(canvas.width / 16);
+const drops = Array(cols).fill(1);
+const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%^&*(){}[]|<>';
+function drawMatrix() {
+  ctx.fillStyle = 'rgba(13,17,23,0.05)';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#ff4444';
+  ctx.font = '14px JetBrains Mono, monospace';
+  drops.forEach((y, i) => {
+    ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * 16, y * 16);
+    if (y * 16 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+  });
+}
+setInterval(drawMatrix, 50);
+window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+
+// COUNTERS
+document.querySelectorAll('.stat-number').forEach(el => {
+  const target = parseInt(el.dataset.target);
+  let cur = 0;
+  const step = Math.max(1, Math.ceil(target / 40));
+  const t = setInterval(() => {
+    cur = Math.min(cur + step, target);
+    el.textContent = cur;
+    if (cur >= target) clearInterval(t);
+  }, 40);
+});
+
+// TABS
+function show(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+// SCANNER
+const IPS = ['45.33.32.156','185.220.101.45','198.20.69.74','192.168.1.100','10.0.0.99'];
+const USERS = ['root','admin','ubuntu','postgres','deploy','git'];
+
+const FINDINGS = [
+  () => { const ip = IPS[Math.floor(Math.random()*IPS.length)]; const u = USERS[Math.floor(Math.random()*USERS.length)]; return {level:'HIGH', cls:'t-critical', rule:'RULE-001 / BRUTE-FORCE-DETECTOR', mitre:'T1110 - Brute Force (Credential Access)', log:`Failed password for ${u} from ${ip} port ${22000+Math.floor(Math.random()*40000)} ssh2 — ${3+Math.floor(Math.random()*10)} attempts detected`}; },
+  () => { const ip = IPS[Math.floor(Math.random()*IPS.length)]; return {level:'HIGH', cls:'t-high', rule:'RULE-004', mitre:'T1110.004 - Credential Stuffing (Credential Access)', log:`POST /login HTTP/1.1 — 401 responses from ${ip}: ${3+Math.floor(Math.random()*8)} in 60s`}; },
+  () => ({level:'MEDIUM', cls:'t-medium', rule:'RULE-003', mitre:'T1078 - Valid Accounts (Privilege Escalation)', log:`pam_unix(sudo:auth): authentication failure; logname= uid=${1001+Math.floor(Math.random()*5)}`}),
+  () => { const u = ['oracle','ftpuser','nagios','jenkins'][Math.floor(Math.random()*4)]; const ip = IPS[Math.floor(Math.random()*IPS.length)]; return {level:'MEDIUM', cls:'t-medium', rule:'RULE-002', mitre:'T1078 - Valid Accounts (Initial Access)', log:`Invalid user ${u} from ${ip}`}; },
+  () => ({level:'MEDIUM', cls:'t-medium', rule:'RULE-006', mitre:'T1203 - Client Exploitation (Execution)', log:`kernel: program[${1000+Math.floor(Math.random()*9000)}]: segfault at 0x0 ip 00007f rsp 00007f error 4`}),
+];
+
+let scanning = false;
+
+function runScan() {
+  if (scanning) return;
+  scanning = true;
+  const btn = document.getElementById('scanBtn');
+  btn.disabled = true;
+  const out = document.getElementById('scanOutput');
+  out.innerHTML = '';
+
+  const term = document.getElementById('termBody');
+  term.innerHTML = `
+    <div><span class="t-prompt">$</span> <span class="t-cmd">python soc/log-parser/generate_logs.py</span></div>
+    <div class="t-out finding-line show">Generating realistic log file...</div>
+    <div class="t-ok finding-line show">Generated 19 log lines → sample.log</div>
+    <br/>
+    <div><span class="t-prompt">$</span> <span class="t-cmd">python soc/log-parser/parser.py --file sample.log --output parsed.json</span></div>
+  `;
+
+  setTimeout(() => {
+    term.innerHTML += `
+      <div class="t-out finding-line show">Total log entries : 19</div>
+      <div class="t-out finding-line show">Suspicious events : ${8+Math.floor(Math.random()*5)}</div>
+      <br/>
+      <div><span class="t-prompt">$</span> <span class="t-cmd">python soc/alert-rules/alert_engine.py --logs parsed.json --rules rules.yaml</span></div>
+    `;
+
+    const chosen = [...FINDINGS].sort(() => Math.random()-0.5).slice(0, 3+Math.floor(Math.random()*2));
+
+    chosen.forEach((fn, i) => {
+      setTimeout(() => {
+        const f = fn();
+        const div = document.createElement('div');
+        div.style.cssText = 'opacity:0;transform:translateX(-10px);transition:all 0.3s;margin:10px 0;';
+        div.innerHTML = `
+          <div class="${f.cls} finding-line" style="font-weight:700">[${f.level}] ${f.rule}</div>
+          <div class="t-mitre finding-line">  MITRE ATT&CK : ${f.mitre}</div>
+          <div class="t-out finding-line">  Log entry    : ${f.log}</div>
+        `;
+        term.appendChild(div);
+        setTimeout(() => { div.style.opacity='1'; div.style.transform='translateX(0)'; }, 50);
+
+        if (i === chosen.length - 1) {
+          setTimeout(() => {
+            const sum = document.createElement('div');
+            sum.style.cssText = 'opacity:0;margin-top:16px;padding:12px;background:rgba(255,68,68,0.08);border:1px solid rgba(255,68,68,0.3);border-radius:6px;font-family:JetBrains Mono,monospace;font-size:0.8rem;color:#ff9999;transition:opacity 0.4s';
+            sum.textContent = `Scan complete. ${chosen.length} alert(s) triggered. Start with HIGH and CRITICAL findings.`;
+            term.appendChild(sum);
+            setTimeout(() => { sum.style.opacity='1'; }, 50);
+            scanning = false;
+            btn.disabled = false;
+          }, 600);
+        }
+      }, (i+1) * 700);
+    });
+  }, 1200);
+}
+
+// THREAT INTEL DEMO
+const IP_DATA = {
+  '45.33.32.156':   { score: 97, reports: 312, country: 'US', category: 'SSH Brute-Force, Port Scan', isp: 'Linode LLC' },
+  '185.220.101.45': { score: 100, reports: 2847, country: 'DE', category: 'Hacking, DDoS Attack', isp: 'Tor Exit Node' },
+  '198.20.69.74':   { score: 89, reports: 156, country: 'US', category: 'Web Attack, Port Scan', isp: 'Shodan.io' },
+  '8.8.8.8':        { score: 0, reports: 0, country: 'US', category: 'None', isp: 'Google LLC — DNS' },
+  '1.1.1.1':        { score: 0, reports: 0, country: 'AU', category: 'None', isp: 'Cloudflare — DNS' },
+};
+
+function checkIP() {
+  const ip = document.getElementById('ipInput').value.trim();
+  const res = document.getElementById('ipResult');
+  res.style.display = 'block';
+  res.innerHTML = '<span style="color:#888">Looking up...</span>';
+
+  setTimeout(() => {
+    const data = IP_DATA[ip];
+    if (!data) {
+      res.innerHTML = `<span style="color:#ffcc00">[UNKNOWN]</span> ${ip}\n  No data in demo database. Try: 45.33.32.156, 185.220.101.45, 8.8.8.8`;
+      return;
+    }
+    const scoreColor = data.score >= 80 ? '#ff4444' : data.score >= 40 ? '#ffcc00' : '#00ff41';
+    const label = data.score >= 80 ? 'MALICIOUS' : data.score >= 40 ? 'SUSPICIOUS' : 'CLEAN';
+    res.innerHTML = `<span style="color:${scoreColor};font-weight:700">[${label}] ${ip}</span>
+  Abuse Score  : <span style="color:${scoreColor}">${data.score}%</span>
+  Total Reports: ${data.reports}
+  Country      : ${data.country}
+  ISP          : ${data.isp}
+  Categories   : ${data.category}
+  
+<span style="color:#888">${data.score >= 80 ? 'Recommend: block at firewall and escalate' : data.score >= 40 ? 'Recommend: monitor closely' : 'No action required — clean source'}</span>`;
+  }, 800);
+}
+
+document.getElementById('ipInput').addEventListener('keydown', e => { if (e.key === 'Enter') checkIP(); });
+
+// CHECKLIST
+function tick(item) {
+  item.classList.toggle('done');
+  item.querySelector('.check-box').textContent = item.classList.contains('done') ? '✓' : '';
+  const total = document.querySelectorAll('.check-item').length;
+  const checked = document.querySelectorAll('.check-item.done').length;
+  const pct = Math.round(checked/total*100);
+  document.getElementById('progressFill').style.width = pct+'%';
+  document.getElementById('progressLabel').textContent = `${checked} / ${total} skills covered (${pct}%)`;
+}
+</script>
+</body>
+</html>
