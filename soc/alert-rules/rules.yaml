@@ -1,13 +1,11 @@
 rules:
   - id: RULE-001
-    name: Brute Force SSH
-    description: Multiple failed SSH login attempts from the same source
-    log_type: auth
+    name: SSH Brute Force
+    log_type: syslog
     condition:
       field: message
       contains: "Failed password"
       threshold: 3
-      timewindow_minutes: 5
     severity: high
     action: alert
     mitre:
@@ -17,15 +15,12 @@ rules:
 
   - id: RULE-002
     name: Invalid User Login Attempt
-    description: Login attempt with a username that does not exist on the system
-    log_type: auth
+    log_type: syslog
     condition:
       field: message
       contains: "Invalid user"
-      threshold: 1
-      timewindow_minutes: 1
     severity: medium
-    action: alert
+    action: log
     mitre:
       technique_id: T1078
       technique_name: Valid Accounts
@@ -33,13 +28,10 @@ rules:
 
   - id: RULE-003
     name: Sudo Authentication Failure
-    description: A user failed to authenticate when running sudo
     log_type: syslog
     condition:
       field: message
       contains: "authentication failure"
-      threshold: 1
-      timewindow_minutes: 1
     severity: medium
     action: log
     mitre:
@@ -48,14 +40,13 @@ rules:
       tactic: Privilege Escalation
 
   - id: RULE-004
-    name: HTTP 401 Spike
-    description: Multiple unauthorized HTTP responses, possible credential stuffing
+    name: Credential Stuffing Attempt
     log_type: apache
     condition:
-      field: status
-      equals: "401"
+      field: request
+      contains: "/login"
+      status_code: 401
       threshold: 3
-      timewindow_minutes: 2
     severity: high
     action: alert
     mitre:
@@ -64,15 +55,12 @@ rules:
       tactic: Credential Access
 
   - id: RULE-005
-    name: Admin Path Access Attempt
-    description: Request to the /admin endpoint was blocked with 403
+    name: Admin Path Probe
     log_type: apache
     condition:
       field: request
       contains: "/admin"
-      threshold: 1
-      timewindow_minutes: 1
-    severity: low
+    severity: medium
     action: log
     mitre:
       technique_id: T1190
@@ -81,16 +69,65 @@ rules:
 
   - id: RULE-006
     name: Segfault Detected
-    description: A program crashed with a segmentation fault, possible exploitation attempt
     log_type: syslog
     condition:
       field: message
       contains: "segfault"
-      threshold: 1
-      timewindow_minutes: 1
     severity: medium
     action: alert
     mitre:
       technique_id: T1203
       technique_name: Exploitation for Client Execution
       tactic: Execution
+
+  - id: RULE-007
+    name: Root Login Attempt
+    log_type: syslog
+    condition:
+      field: message
+      contains: "Failed password for root"
+    severity: high
+    action: alert
+    mitre:
+      technique_id: T1110
+      technique_name: Brute Force
+      tactic: Credential Access
+
+  - id: RULE-008
+    name: Port Scan Detected
+    log_type: syslog
+    condition:
+      field: message
+      contains: "SCAN"
+    severity: medium
+    action: log
+    mitre:
+      technique_id: T1046
+      technique_name: Network Service Discovery
+      tactic: Discovery
+
+  - id: RULE-009
+    name: Suspicious User Agent
+    log_type: apache
+    condition:
+      field: user_agent
+      contains: "sqlmap"
+    severity: critical
+    action: block
+    mitre:
+      technique_id: T1190
+      technique_name: Exploit Public-Facing Application
+      tactic: Initial Access
+
+  - id: RULE-010
+    name: Directory Traversal Attempt
+    log_type: apache
+    condition:
+      field: request
+      contains: "../"
+    severity: high
+    action: alert
+    mitre:
+      technique_id: T1083
+      technique_name: File and Directory Discovery
+      tactic: Discovery

@@ -10,6 +10,7 @@
 ![Tests](https://img.shields.io/badge/tests-11%20passing-0d1117?style=flat-square&logo=pytest&logoColor=00ff41)
 ![License](https://img.shields.io/badge/license-MIT-0d1117?style=flat-square)
 ![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-0d1117?style=flat-square&logoColor=ff4444)
+![Rules](https://img.shields.io/badge/detection%20rules-10-0d1117?style=flat-square&logoColor=ff4444)
 
 </div>
 
