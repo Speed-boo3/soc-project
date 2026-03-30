@@ -97,15 +97,15 @@ def generate():
         lines.append(make_apache(random.choice(IPS_CLEAN), path, 200))
 
     # Suspicious web traffic
-    lines.append(make_apache(web_ip, "/login", 401, user_agent="Mozilla/5.0"))
-    lines.append(make_apache(web_ip, "/login", 401, user_agent="Mozilla/5.0"))
-    lines.append(make_apache(web_ip, "/login", 401, user_agent="Mozilla/5.0"))
+    lines.append(make_apache(web_ip, "/login", 401, "Mozilla/5.0"))
+    lines.append(make_apache(web_ip, "/login", 401, "Mozilla/5.0"))
+    lines.append(make_apache(web_ip, "/login", 401, "Mozilla/5.0"))
     lines.append(make_apache(web_ip, "/admin", 403))
     lines.append(make_apache(web_ip, "/../etc/passwd", 400))
 
     # SQLmap probe
     sqli_ip = random.choice(IPS_SUSPICIOUS)
-    lines.append(make_apache(sqli_ip, "/search?q=1' OR '1'='1", 200, ua="sqlmap/1.7"))
+    lines.append(make_apache(sqli_ip, "/search?q=1' OR '1'='1", 200, "sqlmap/1.7"))
 
     # Optional segfault
     if random.random() > 0.4:

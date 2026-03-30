@@ -1,19 +1,22 @@
-Mar 25 18:53:34 webserver sudo[3927]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Mar 25 18:46:34 webserver kernel: program[9708]: segfault at 0 ip 00007f rsp 00007f error 4
-10.0.0.5 - - [25/Mar/2026:19:06:34 +0000] "GET /index.html HTTP/1.1" 200 1566
-Mar 25 18:52:34 webserver sshd[3982]: Accepted password for alice from 192.168.0.50 port 52278 ssh2
-Mar 25 19:03:34 webserver sshd[8304]: Failed password for git from 45.33.32.156 port 44405 ssh2
-Mar 25 19:04:34 webserver sshd[5274]: Failed password for user from 45.33.32.156 port 50272 ssh2
-Mar 25 18:57:34 webserver sshd[8756]: Invalid user ftpuser from 45.33.32.156
-Mar 25 19:04:34 webserver sshd[3284]: Failed password for test from 45.33.32.156 port 49863 ssh2
-185.220.101.45 - - [25/Mar/2026:19:06:34 +0000] "GET /phpmyadmin HTTP/1.1" 404 1300
-185.220.101.45 - - [25/Mar/2026:19:06:34 +0000] "GET /phpmyadmin HTTP/1.1" 404 4081
-172.16.0.10 - - [25/Mar/2026:19:06:34 +0000] "GET /about HTTP/1.1" 200 4964
-Mar 25 18:59:34 webserver sshd[8845]: Failed password for deploy from 45.33.32.156 port 56856 ssh2
-185.220.101.45 - - [25/Mar/2026:19:06:34 +0000] "GET /index.html HTTP/1.1" 200 882
-Mar 25 19:05:34 webserver sshd[9861]: Failed password for user from 45.33.32.156 port 59633 ssh2
-185.220.101.45 - - [25/Mar/2026:19:06:34 +0000] "GET /index.html HTTP/1.1" 403 3971
-Mar 25 19:01:34 webserver sshd[8171]: Failed password for admin from 45.33.32.156 port 41006 ssh2
-10.0.0.5 - - [25/Mar/2026:19:06:34 +0000] "GET /contact HTTP/1.1" 200 1737
-Mar 25 18:58:34 webserver sshd[3482]: Invalid user hadoop from 45.33.32.156
-Mar 25 19:01:34 webserver sshd[4038]: Failed password for root from 45.33.32.156 port 55018 ssh2
+Mar 30 07:42:09 webserver sshd[3230]: Failed password for root from 89.248.167.131 port 60728 ssh2
+Mar 30 07:44:09 webserver sshd[5319]: Failed password for root from 89.248.167.131 port 43517 ssh2
+Mar 30 07:41:09 webserver sshd[6956]: Invalid user oracle from 89.248.167.131
+Mar 30 07:40:09 webserver sshd[1024]: Invalid user ftpuser from 89.248.167.131
+Mar 30 07:42:09 webserver sshd[9829]: Failed password for root from 89.248.167.131 port 52283 ssh2
+Mar 30 07:39:09 webserver sudo[1338]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+192.168.0.50 - - [30/Mar/2026:07:45:09 +0000] "GET /about HTTP/1.1" 200 2690 "-" "Mozilla/5.0"
+192.168.1.100 - - [30/Mar/2026:07:45:09 +0000] "GET /login HTTP/1.1" 401 1555 "-" "Mozilla/5.0"
+192.168.1.10 - - [30/Mar/2026:07:45:09 +0000] "GET /contact HTTP/1.1" 200 1024 "-" "Mozilla/5.0"
+Mar 30 07:44:09 webserver sshd[5848]: Failed password for oracle from 89.248.167.131 port 44446 ssh2
+Mar 30 07:38:09 webserver sshd[2790]: Accepted publickey for deploy from 192.168.1.10 port 46461 ssh2
+Mar 30 07:45:09 webserver sshd[1233]: Failed password for root from 89.248.167.131 port 53588 ssh2
+192.168.0.50 - - [30/Mar/2026:07:45:09 +0000] "GET /index.html HTTP/1.1" 200 1096 "-" "Mozilla/5.0"
+Mar 30 07:43:09 webserver sshd[6231]: Failed password for ubuntu from 89.248.167.131 port 58290 ssh2
+192.168.1.100 - - [30/Mar/2026:07:45:09 +0000] "GET /admin HTTP/1.1" 403 3269 "-" "python-requests/2.28"
+Mar 30 07:45:09 webserver kernel: program[3517]: segfault at 0 ip 00007f rsp 00007f error 4
+192.168.1.100 - - [30/Mar/2026:07:45:09 +0000] "GET /login HTTP/1.1" 401 1691 "-" "Mozilla/5.0"
+10.0.0.99 - - [30/Mar/2026:07:45:09 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1856 "-" "sqlmap/1.7"
+Mar 30 07:43:09 webserver sshd[6869]: Failed password for postgres from 89.248.167.131 port 59015 ssh2
+Mar 30 07:43:09 webserver sshd[7686]: Failed password for root from 89.248.167.131 port 54297 ssh2
+192.168.1.100 - - [30/Mar/2026:07:45:09 +0000] "GET /login HTTP/1.1" 401 732 "-" "Mozilla/5.0"
+192.168.1.100 - - [30/Mar/2026:07:45:09 +0000] "GET /../etc/passwd HTTP/1.1" 400 1216 "-" "python-requests/2.28"
