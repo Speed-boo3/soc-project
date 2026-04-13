@@ -1,25 +1,18 @@
-Apr 12 08:00:46 webserver sshd[1258]: Failed password for deploy from 10.0.0.99 port 48582 ssh2
-Apr 12 08:04:46 webserver sshd[3071]: Failed password for root from 10.0.0.99 port 45670 ssh2
-Apr 12 08:03:46 webserver sshd[1729]: Failed password for root from 10.0.0.99 port 61259 ssh2
-Apr 12 07:58:46 webserver sshd[1283]: Invalid user hadoop from 10.0.0.99
-Apr 12 08:02:46 webserver sshd[2112]: Failed password for ubuntu from 10.0.0.99 port 42736 ssh2
-192.168.1.100 - - [12/Apr/2026:08:04:46 +0000] "GET /admin HTTP/1.1" 403 4563 "-" "Nikto/2.1.6"
-Apr 12 07:57:46 webserver sshd[7206]: Invalid user ftpuser from 10.0.0.99
-192.168.1.100 - - [12/Apr/2026:08:04:46 +0000] "GET /login HTTP/1.1" 401 444 "-" "Mozilla/5.0"
-192.168.1.100 - - [12/Apr/2026:08:04:46 +0000] "GET /login HTTP/1.1" 401 369 "-" "Mozilla/5.0"
-Apr 12 08:04:46 webserver sshd[8097]: Failed password for oracle from 10.0.0.99 port 49998 ssh2
-Apr 12 07:59:46 webserver sshd[6307]: Failed password for deploy from 10.0.0.99 port 58767 ssh2
-Apr 12 07:54:46 webserver sudo[5461]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-172.16.0.10 - - [12/Apr/2026:08:04:46 +0000] "GET /index.html HTTP/1.1" 200 1985 "-" "curl/7.68.0"
-Apr 12 07:51:46 webserver sshd[5976]: Accepted publickey for deploy from 192.168.0.50 port 43032 ssh2
-Apr 12 07:59:46 webserver sshd[7511]: Failed password for root from 10.0.0.99 port 45710 ssh2
-Apr 12 08:00:46 webserver sshd[5404]: Failed password for root from 10.0.0.99 port 53115 ssh2
-Apr 12 08:04:46 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
-192.168.1.100 - - [12/Apr/2026:08:04:46 +0000] "GET /../etc/passwd HTTP/1.1" 400 3810 "-" "python-requests/2.28"
-185.220.101.45 - - [12/Apr/2026:08:04:46 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2861 "-" "sqlmap/1.7"
-192.168.0.50 - - [12/Apr/2026:08:04:46 +0000] "GET /contact HTTP/1.1" 200 2068 "-" "masscan/1.0"
-Apr 12 07:56:46 webserver sshd[4008]: Invalid user hadoop from 10.0.0.99
-Apr 12 08:04:46 webserver kernel: program[9052]: segfault at 0 ip 00007f rsp 00007f error 4
-192.168.1.100 - - [12/Apr/2026:08:04:46 +0000] "GET /login HTTP/1.1" 401 2119 "-" "Mozilla/5.0"
-192.168.0.50 - - [12/Apr/2026:08:04:46 +0000] "GET /about HTTP/1.1" 200 1447 "-" "curl/7.68.0"
-Apr 12 08:01:46 webserver sshd[6085]: Failed password for nagios from 10.0.0.99 port 64611 ssh2
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /login HTTP/1.1" 401 3655 "-" "Mozilla/5.0"
+Apr 13 09:00:27 webserver sshd[5205]: Failed password for ubuntu from 198.20.69.74 port 45284 ssh2
+192.168.1.10 - - [13/Apr/2026:09:03:27 +0000] "GET /about HTTP/1.1" 200 4252 "-" "masscan/1.0"
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /login HTTP/1.1" 401 933 "-" "Mozilla/5.0"
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /admin HTTP/1.1" 403 4306 "-" "masscan/1.0"
+Apr 13 08:55:27 webserver sudo[5964]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Apr 13 08:59:27 webserver sshd[8593]: Invalid user elasticsearch from 198.20.69.74
+Apr 13 09:01:27 webserver sshd[1146]: Failed password for root from 198.20.69.74 port 60513 ssh2
+Apr 13 09:02:27 webserver sshd[2006]: Failed password for root from 198.20.69.74 port 51245 ssh2
+192.168.0.50 - - [13/Apr/2026:09:03:27 +0000] "GET /index.html HTTP/1.1" 200 2426 "-" "curl/7.68.0"
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3297 "-" "sqlmap/1.7"
+Apr 13 09:03:27 webserver kernel: program[9707]: segfault at 0 ip 00007f rsp 00007f error 4
+Apr 13 09:02:27 webserver sshd[9883]: Failed password for root from 198.20.69.74 port 44416 ssh2
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /../etc/passwd HTTP/1.1" 400 341 "-" "python-requests/2.28"
+Apr 13 08:58:27 webserver sshd[2369]: Invalid user ftpuser from 198.20.69.74
+192.168.1.100 - - [13/Apr/2026:09:03:27 +0000] "GET /login HTTP/1.1" 401 1365 "-" "Mozilla/5.0"
+Apr 13 08:54:27 webserver sshd[2413]: Accepted publickey for deploy from 192.168.1.10 port 61922 ssh2
+192.168.1.10 - - [13/Apr/2026:09:03:27 +0000] "GET /contact HTTP/1.1" 200 4023 "-" "curl/7.68.0"
