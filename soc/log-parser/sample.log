@@ -1,19 +1,19 @@
-Apr 14 08:16:25 webserver sshd[4856]: Accepted publickey for deploy from 10.0.0.5 port 64725 ssh2
-Apr 14 08:25:25 webserver sshd[6050]: Failed password for root from 192.168.1.100 port 49231 ssh2
-Apr 14 08:24:25 webserver sshd[2943]: Failed password for test from 192.168.1.100 port 57926 ssh2
-185.220.101.45 - - [14/Apr/2026:08:27:25 +0000] "GET /../etc/passwd HTTP/1.1" 400 993 "-" "curl/7.68.0"
-185.220.101.45 - - [14/Apr/2026:08:27:25 +0000] "GET /login HTTP/1.1" 401 3932 "-" "Mozilla/5.0"
-185.220.101.45 - - [14/Apr/2026:08:27:25 +0000] "GET /login HTTP/1.1" 401 4610 "-" "Mozilla/5.0"
-Apr 14 08:22:25 webserver sshd[2529]: Invalid user elasticsearch from 192.168.1.100
-192.168.0.50 - - [14/Apr/2026:08:27:25 +0000] "GET /index.html HTTP/1.1" 200 3333 "-" "masscan/1.0"
-Apr 14 08:26:25 webserver sshd[2079]: Failed password for git from 192.168.1.100 port 59727 ssh2
-172.16.0.10 - - [14/Apr/2026:08:27:25 +0000] "GET /about HTTP/1.1" 200 3610 "-" "python-requests/2.28"
-192.168.1.10 - - [14/Apr/2026:08:27:25 +0000] "GET /contact HTTP/1.1" 200 4181 "-" "python-requests/2.28"
-Apr 14 08:26:25 webserver sshd[6190]: Failed password for ubuntu from 192.168.1.100 port 61293 ssh2
-Apr 14 08:23:25 webserver sshd[7507]: Invalid user oracle from 192.168.1.100
-Apr 14 08:19:25 webserver sudo[5728]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-194.165.16.11 - - [14/Apr/2026:08:27:25 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2163 "-" "sqlmap/1.7"
-185.220.101.45 - - [14/Apr/2026:08:27:25 +0000] "GET /admin HTTP/1.1" 403 1186 "-" "sqlmap/1.7"
-185.220.101.45 - - [14/Apr/2026:08:27:25 +0000] "GET /login HTTP/1.1" 401 3010 "-" "Mozilla/5.0"
-Apr 14 08:26:25 webserver sshd[9284]: Failed password for root from 192.168.1.100 port 53763 ssh2
-Apr 14 08:25:25 webserver sshd[3809]: Failed password for deploy from 192.168.1.100 port 58833 ssh2
+Apr 15 08:46:55 webserver sshd[7192]: Failed password for user from 89.248.167.131 port 63180 ssh2
+Apr 15 08:45:55 webserver sshd[6914]: Failed password for admin from 89.248.167.131 port 47007 ssh2
+192.168.1.10 - - [15/Apr/2026:08:46:55 +0000] "GET /contact HTTP/1.1" 200 2970 "-" "python-requests/2.28"
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /login HTTP/1.1" 401 904 "-" "Mozilla/5.0"
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /admin HTTP/1.1" 403 4007 "-" "Nikto/2.1.6"
+Apr 15 08:44:55 webserver sshd[9540]: Failed password for root from 89.248.167.131 port 41317 ssh2
+Apr 15 08:45:55 webserver sshd[1220]: Failed password for jenkins from 89.248.167.131 port 52494 ssh2
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /../etc/passwd HTTP/1.1" 400 3552 "-" "Nikto/2.1.6"
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2596 "-" "sqlmap/1.7"
+192.168.0.50 - - [15/Apr/2026:08:46:55 +0000] "GET /about HTTP/1.1" 200 2500 "-" "Mozilla/5.0"
+Apr 15 08:46:55 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+Apr 15 08:43:55 webserver sshd[8706]: Invalid user ftpuser from 89.248.167.131
+Apr 15 08:37:55 webserver sshd[6281]: Accepted publickey for deploy from 192.168.0.50 port 60669 ssh2
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /login HTTP/1.1" 401 3986 "-" "Mozilla/5.0"
+Apr 15 08:39:55 webserver sudo[9508]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+10.0.0.5 - - [15/Apr/2026:08:46:55 +0000] "GET /index.html HTTP/1.1" 200 2202 "-" "python-requests/2.28"
+89.248.167.131 - - [15/Apr/2026:08:46:55 +0000] "GET /login HTTP/1.1" 401 2320 "-" "Mozilla/5.0"
+Apr 15 08:46:55 webserver sshd[3010]: Failed password for admin from 89.248.167.131 port 47889 ssh2
+Apr 15 08:46:55 webserver sshd[6179]: Failed password for root from 89.248.167.131 port 62729 ssh2
