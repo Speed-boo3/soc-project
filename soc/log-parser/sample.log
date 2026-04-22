@@ -1,23 +1,22 @@
-Apr 21 08:51:35 webserver sshd[4257]: Failed password for admin from 10.0.0.99 port 63146 ssh2
-194.165.16.11 - - [21/Apr/2026:08:54:35 +0000] "GET /../etc/passwd HTTP/1.1" 400 2910 "-" "Mozilla/5.0"
-Apr 21 08:53:35 webserver sshd[4299]: Failed password for postgres from 10.0.0.99 port 46037 ssh2
-Apr 21 08:48:35 webserver sshd[1945]: Invalid user nagios from 10.0.0.99
-Apr 21 08:44:35 webserver sshd[1986]: Accepted publickey for deploy from 10.0.0.5 port 58283 ssh2
-Apr 21 08:52:35 webserver sshd[6839]: Failed password for oracle from 10.0.0.99 port 64523 ssh2
-194.165.16.11 - - [21/Apr/2026:08:54:35 +0000] "GET /admin HTTP/1.1" 403 4457 "-" "sqlmap/1.7"
-192.168.1.10 - - [21/Apr/2026:08:54:35 +0000] "GET /about HTTP/1.1" 200 2075 "-" "sqlmap/1.7"
-Apr 21 08:49:35 webserver sshd[2658]: Failed password for user from 10.0.0.99 port 48582 ssh2
-Apr 21 08:47:35 webserver sshd[7568]: Invalid user ftpuser from 10.0.0.99
-Apr 21 08:54:35 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
-Apr 21 08:51:35 webserver sshd[5675]: Failed password for user from 10.0.0.99 port 53195 ssh2
-192.168.0.50 - - [21/Apr/2026:08:54:35 +0000] "GET /index.html HTTP/1.1" 200 1907 "-" "Mozilla/5.0"
-Apr 21 08:51:35 webserver sshd[2896]: Failed password for git from 10.0.0.99 port 62827 ssh2
-192.168.0.50 - - [21/Apr/2026:08:54:35 +0000] "GET /contact HTTP/1.1" 200 2921 "-" "Nikto/2.1.6"
-Apr 21 08:46:35 webserver sudo[4460]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Apr 21 08:50:35 webserver sshd[5003]: Failed password for root from 10.0.0.99 port 42584 ssh2
-192.168.1.100 - - [21/Apr/2026:08:54:35 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4323 "-" "sqlmap/1.7"
-194.165.16.11 - - [21/Apr/2026:08:54:35 +0000] "GET /login HTTP/1.1" 401 4797 "-" "Mozilla/5.0"
-194.165.16.11 - - [21/Apr/2026:08:54:35 +0000] "GET /login HTTP/1.1" 401 497 "-" "Mozilla/5.0"
-Apr 21 08:52:35 webserver sshd[3607]: Failed password for test from 10.0.0.99 port 58860 ssh2
-194.165.16.11 - - [21/Apr/2026:08:54:35 +0000] "GET /login HTTP/1.1" 401 506 "-" "Mozilla/5.0"
-Apr 21 08:50:35 webserver sshd[3736]: Failed password for ubuntu from 10.0.0.99 port 46943 ssh2
+192.168.0.50 - - [22/Apr/2026:08:50:39 +0000] "GET /index.html HTTP/1.1" 200 4158 "-" "Nikto/2.1.6"
+Apr 22 08:49:39 webserver sshd[4488]: Failed password for admin from 89.248.167.131 port 55922 ssh2
+Apr 22 08:50:39 webserver sshd[5397]: Failed password for user from 89.248.167.131 port 41479 ssh2
+Apr 22 08:39:39 webserver sshd[8953]: Accepted publickey for deploy from 192.168.1.10 port 54912 ssh2
+Apr 22 08:41:39 webserver sudo[1927]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Apr 22 08:48:39 webserver sshd[6016]: Failed password for root from 89.248.167.131 port 61265 ssh2
+Apr 22 08:50:39 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+194.165.16.11 - - [22/Apr/2026:08:50:39 +0000] "GET /login HTTP/1.1" 401 4603 "-" "Mozilla/5.0"
+Apr 22 08:44:39 webserver sshd[3802]: Invalid user oracle from 89.248.167.131
+Apr 22 08:45:39 webserver sshd[6059]: Invalid user elasticsearch from 89.248.167.131
+Apr 22 08:46:39 webserver sshd[3053]: Invalid user hadoop from 89.248.167.131
+Apr 22 08:48:39 webserver sshd[7342]: Failed password for postgres from 89.248.167.131 port 42713 ssh2
+Apr 22 08:47:39 webserver sshd[3242]: Failed password for deploy from 89.248.167.131 port 59204 ssh2
+198.20.69.74 - - [22/Apr/2026:08:50:39 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2125 "-" "sqlmap/1.7"
+194.165.16.11 - - [22/Apr/2026:08:50:39 +0000] "GET /admin HTTP/1.1" 403 2627 "-" "Mozilla/5.0"
+192.168.0.50 - - [22/Apr/2026:08:50:39 +0000] "GET /contact HTTP/1.1" 200 1013 "-" "python-requests/2.28"
+194.165.16.11 - - [22/Apr/2026:08:50:39 +0000] "GET /login HTTP/1.1" 401 2639 "-" "Mozilla/5.0"
+194.165.16.11 - - [22/Apr/2026:08:50:39 +0000] "GET /login HTTP/1.1" 401 798 "-" "Mozilla/5.0"
+192.168.0.50 - - [22/Apr/2026:08:50:39 +0000] "GET /about HTTP/1.1" 200 2826 "-" "python-requests/2.28"
+Apr 22 08:47:39 webserver sshd[5323]: Failed password for admin from 89.248.167.131 port 56789 ssh2
+194.165.16.11 - - [22/Apr/2026:08:50:39 +0000] "GET /../etc/passwd HTTP/1.1" 400 4503 "-" "Mozilla/5.0"
+Apr 22 08:50:39 webserver sshd[8997]: Failed password for git from 89.248.167.131 port 48056 ssh2

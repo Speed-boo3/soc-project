@@ -762,3 +762,82 @@
   MITRE ATT&CK : T1110 - Brute Force (Credential Access)
   Action       : alert
   Log entry    : Source IP 10.0.0.99 had 11 failed login attempts
+
+=== Run: 2026-04-22 08:50:39 ===
+
+15 alert(s) triggered:
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1004
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 89.248.167.131 port 61265 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 89.248.167.131 port 61265 ssh2
+
+[MEDIUM] Port Scan Detected (RULE-008)
+  MITRE ATT&CK : T1046 - Network Service Discovery (Discovery)
+  Action       : log
+  Log entry    : [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user oracle from 89.248.167.131
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user elasticsearch from 89.248.167.131
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user hadoop from 89.248.167.131
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for postgres from 89.248.167.131 port 42713 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for deploy from 89.248.167.131 port 59204 ssh2
+
+[MEDIUM] Admin Path Probe (RULE-005)
+  MITRE ATT&CK : T1190 - Exploit Public-Facing Application (Initial Access)
+  Action       : log
+  Log entry    : GET /admin HTTP/1.1
+
+[HIGH] Credential Stuffing Attempt (RULE-004)
+  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
+  Action       : alert
+  Log entry    : GET /login HTTP/1.1
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for admin from 89.248.167.131 port 56789 ssh2
+
+[HIGH] Directory Traversal Attempt (RULE-010)
+  MITRE ATT&CK : T1083 - File and Directory Discovery (Discovery)
+  Action       : alert
+  Log entry    : GET /../etc/passwd HTTP/1.1
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for git from 89.248.167.131 port 48056 ssh2
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 89.248.167.131 had 10 failed login attempts
