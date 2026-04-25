@@ -1,22 +1,20 @@
-Apr 24 09:00:12 webserver sshd[1736]: Failed password for nagios from 192.168.1.100 port 55616 ssh2
-192.168.1.100 - - [24/Apr/2026:09:03:12 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1635 "-" "sqlmap/1.7"
-45.33.32.156 - - [24/Apr/2026:09:03:12 +0000] "GET /login HTTP/1.1" 401 2201 "-" "Mozilla/5.0"
-Apr 24 08:58:12 webserver sshd[3291]: Failed password for jenkins from 192.168.1.100 port 45160 ssh2
-172.16.0.10 - - [24/Apr/2026:09:03:12 +0000] "GET /index.html HTTP/1.1" 200 4876 "-" "masscan/1.0"
-Apr 24 09:02:12 webserver sshd[5374]: Failed password for deploy from 192.168.1.100 port 42954 ssh2
-Apr 24 08:58:12 webserver sshd[9483]: Failed password for postgres from 192.168.1.100 port 42290 ssh2
-Apr 24 08:52:12 webserver sudo[6122]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-Apr 24 08:56:12 webserver sshd[6658]: Invalid user oracle from 192.168.1.100
-172.16.0.10 - - [24/Apr/2026:09:03:12 +0000] "GET /about HTTP/1.1" 200 475 "-" "curl/7.68.0"
-Apr 24 08:59:12 webserver sshd[8924]: Failed password for root from 192.168.1.100 port 48657 ssh2
-45.33.32.156 - - [24/Apr/2026:09:03:12 +0000] "GET /../etc/passwd HTTP/1.1" 400 1547 "-" "Mozilla/5.0"
-Apr 24 08:49:12 webserver sshd[4655]: Accepted publickey for deploy from 10.0.0.5 port 54557 ssh2
-Apr 24 09:02:12 webserver sshd[6782]: Failed password for admin from 192.168.1.100 port 58573 ssh2
-Apr 24 09:01:12 webserver sshd[9757]: Failed password for root from 192.168.1.100 port 47811 ssh2
-172.16.0.10 - - [24/Apr/2026:09:03:12 +0000] "GET /contact HTTP/1.1" 200 3856 "-" "python-requests/2.28"
-45.33.32.156 - - [24/Apr/2026:09:03:12 +0000] "GET /admin HTTP/1.1" 403 4237 "-" "curl/7.68.0"
-Apr 24 09:03:12 webserver sshd[4555]: Failed password for postgres from 192.168.1.100 port 58243 ssh2
-Apr 24 08:57:12 webserver sshd[1609]: Invalid user jenkins from 192.168.1.100
-45.33.32.156 - - [24/Apr/2026:09:03:12 +0000] "GET /login HTTP/1.1" 401 3925 "-" "Mozilla/5.0"
-45.33.32.156 - - [24/Apr/2026:09:03:12 +0000] "GET /login HTTP/1.1" 401 2678 "-" "Mozilla/5.0"
-Apr 24 08:55:12 webserver sshd[6480]: Invalid user jenkins from 192.168.1.100
+Apr 25 08:06:28 webserver sshd[6771]: Failed password for deploy from 198.20.69.74 port 59046 ssh2
+192.168.1.10 - - [25/Apr/2026:08:07:28 +0000] "GET /index.html HTTP/1.1" 200 2388 "-" "Nikto/2.1.6"
+Apr 25 08:01:28 webserver sshd[5765]: Invalid user oracle from 198.20.69.74
+Apr 25 08:04:28 webserver sshd[8333]: Failed password for test from 198.20.69.74 port 64807 ssh2
+185.220.101.45 - - [25/Apr/2026:08:07:28 +0000] "GET /login HTTP/1.1" 401 4817 "-" "Mozilla/5.0"
+Apr 25 07:58:28 webserver sudo[1154]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+185.220.101.45 - - [25/Apr/2026:08:07:28 +0000] "GET /login HTTP/1.1" 401 2632 "-" "Mozilla/5.0"
+10.0.0.5 - - [25/Apr/2026:08:07:28 +0000] "GET /contact HTTP/1.1" 200 4572 "-" "python-requests/2.28"
+192.168.1.100 - - [25/Apr/2026:08:07:28 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4529 "-" "sqlmap/1.7"
+Apr 25 08:02:28 webserver sshd[4556]: Failed password for root from 198.20.69.74 port 48890 ssh2
+172.16.0.10 - - [25/Apr/2026:08:07:28 +0000] "GET /about HTTP/1.1" 200 3234 "-" "Nikto/2.1.6"
+Apr 25 08:04:28 webserver sshd[2934]: Failed password for root from 198.20.69.74 port 61447 ssh2
+Apr 25 08:05:28 webserver sshd[4389]: Failed password for root from 198.20.69.74 port 41998 ssh2
+Apr 25 07:55:28 webserver sshd[4057]: Accepted publickey for deploy from 192.168.0.50 port 54506 ssh2
+185.220.101.45 - - [25/Apr/2026:08:07:28 +0000] "GET /login HTTP/1.1" 401 3047 "-" "Mozilla/5.0"
+185.220.101.45 - - [25/Apr/2026:08:07:28 +0000] "GET /admin HTTP/1.1" 403 648 "-" "Mozilla/5.0"
+Apr 25 08:03:28 webserver sshd[4846]: Failed password for root from 198.20.69.74 port 64221 ssh2
+185.220.101.45 - - [25/Apr/2026:08:07:28 +0000] "GET /../etc/passwd HTTP/1.1" 400 517 "-" "masscan/1.0"
+Apr 25 08:02:28 webserver sshd[5058]: Failed password for postgres from 198.20.69.74 port 47744 ssh2
+Apr 25 08:04:28 webserver sshd[8691]: Failed password for root from 198.20.69.74 port 63225 ssh2
