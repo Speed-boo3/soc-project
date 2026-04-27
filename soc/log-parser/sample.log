@@ -1,23 +1,23 @@
-194.165.16.11 - - [26/Apr/2026:08:17:45 +0000] "GET /login HTTP/1.1" 401 3097 "-" "Mozilla/5.0"
-Apr 26 08:14:45 webserver sshd[6862]: Failed password for root from 185.220.101.45 port 58337 ssh2
-Apr 26 08:09:45 webserver sudo[9834]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-194.165.16.11 - - [26/Apr/2026:08:17:45 +0000] "GET /../etc/passwd HTTP/1.1" 400 2495 "-" "python-requests/2.28"
-10.0.0.5 - - [26/Apr/2026:08:17:45 +0000] "GET /index.html HTTP/1.1" 200 1433 "-" "python-requests/2.28"
-Apr 26 08:15:45 webserver sshd[6089]: Failed password for oracle from 185.220.101.45 port 42105 ssh2
-Apr 26 08:17:45 webserver sshd[9304]: Failed password for root from 185.220.101.45 port 63730 ssh2
-Apr 26 08:16:45 webserver sshd[9763]: Failed password for admin from 185.220.101.45 port 40473 ssh2
-194.165.16.11 - - [26/Apr/2026:08:17:45 +0000] "GET /login HTTP/1.1" 401 3582 "-" "Mozilla/5.0"
-Apr 26 08:07:45 webserver sshd[4889]: Accepted publickey for deploy from 192.168.1.10 port 42600 ssh2
-Apr 26 08:12:45 webserver sshd[6583]: Invalid user jenkins from 185.220.101.45
-194.165.16.11 - - [26/Apr/2026:08:17:45 +0000] "GET /login HTTP/1.1" 401 847 "-" "Mozilla/5.0"
-Apr 26 08:15:45 webserver sshd[4625]: Failed password for root from 185.220.101.45 port 43914 ssh2
-192.168.1.10 - - [26/Apr/2026:08:17:45 +0000] "GET /about HTTP/1.1" 200 3025 "-" "masscan/1.0"
-Apr 26 08:14:45 webserver sshd[8099]: Failed password for root from 185.220.101.45 port 50599 ssh2
-Apr 26 08:17:45 webserver kernel: [UFW BLOCK] IN=eth0 SRC=198.20.69.74 SCAN flags=S
-Apr 26 08:13:45 webserver sshd[9777]: Failed password for root from 185.220.101.45 port 43845 ssh2
-194.165.16.11 - - [26/Apr/2026:08:17:45 +0000] "GET /admin HTTP/1.1" 403 1681 "-" "masscan/1.0"
-10.0.0.99 - - [26/Apr/2026:08:17:45 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2786 "-" "sqlmap/1.7"
-Apr 26 08:13:45 webserver sshd[5113]: Failed password for root from 185.220.101.45 port 60716 ssh2
-172.16.0.10 - - [26/Apr/2026:08:17:45 +0000] "GET /contact HTTP/1.1" 200 4237 "-" "masscan/1.0"
-Apr 26 08:11:45 webserver sshd[7014]: Invalid user nagios from 185.220.101.45
-Apr 26 08:17:45 webserver sshd[2836]: Failed password for git from 185.220.101.45 port 52124 ssh2
+Apr 27 09:09:14 webserver sshd[6024]: Accepted publickey for deploy from 172.16.0.10 port 53418 ssh2
+Apr 27 09:17:14 webserver sshd[9715]: Invalid user elasticsearch from 194.165.16.11
+185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 1657 "-" "Mozilla/5.0"
+185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 686 "-" "Mozilla/5.0"
+192.168.0.50 - - [27/Apr/2026:09:23:14 +0000] "GET /contact HTTP/1.1" 200 4530 "-" "masscan/1.0"
+Apr 27 09:21:14 webserver sshd[5345]: Failed password for nagios from 194.165.16.11 port 64745 ssh2
+Apr 27 09:19:14 webserver sshd[1906]: Failed password for root from 194.165.16.11 port 62636 ssh2
+Apr 27 09:12:14 webserver sudo[4329]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+Apr 27 09:20:14 webserver sshd[7320]: Failed password for test from 194.165.16.11 port 44301 ssh2
+192.168.1.100 - - [27/Apr/2026:09:23:14 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3846 "-" "sqlmap/1.7"
+192.168.1.10 - - [27/Apr/2026:09:23:14 +0000] "GET /index.html HTTP/1.1" 200 2399 "-" "Nikto/2.1.6"
+185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /admin HTTP/1.1" 403 1529 "-" "Mozilla/5.0"
+Apr 27 09:22:14 webserver sshd[4309]: Failed password for ubuntu from 194.165.16.11 port 47211 ssh2
+192.168.0.50 - - [27/Apr/2026:09:23:14 +0000] "GET /about HTTP/1.1" 200 2586 "-" "Mozilla/5.0"
+185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /../etc/passwd HTTP/1.1" 400 1282 "-" "python-requests/2.28"
+Apr 27 09:23:14 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
+Apr 27 09:20:14 webserver sshd[1271]: Failed password for deploy from 194.165.16.11 port 57826 ssh2
+Apr 27 09:23:14 webserver kernel: program[7320]: segfault at 0 ip 00007f rsp 00007f error 4
+Apr 27 09:16:14 webserver sshd[4282]: Invalid user ftpuser from 194.165.16.11
+Apr 27 09:18:14 webserver sshd[2343]: Invalid user ftpuser from 194.165.16.11
+Apr 27 09:21:14 webserver sshd[2905]: Failed password for root from 194.165.16.11 port 41616 ssh2
+Apr 27 09:20:14 webserver sshd[4225]: Failed password for ubuntu from 194.165.16.11 port 55171 ssh2
+185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 3742 "-" "Mozilla/5.0"
