@@ -1,23 +1,19 @@
-Apr 27 09:09:14 webserver sshd[6024]: Accepted publickey for deploy from 172.16.0.10 port 53418 ssh2
-Apr 27 09:17:14 webserver sshd[9715]: Invalid user elasticsearch from 194.165.16.11
-185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 1657 "-" "Mozilla/5.0"
-185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 686 "-" "Mozilla/5.0"
-192.168.0.50 - - [27/Apr/2026:09:23:14 +0000] "GET /contact HTTP/1.1" 200 4530 "-" "masscan/1.0"
-Apr 27 09:21:14 webserver sshd[5345]: Failed password for nagios from 194.165.16.11 port 64745 ssh2
-Apr 27 09:19:14 webserver sshd[1906]: Failed password for root from 194.165.16.11 port 62636 ssh2
-Apr 27 09:12:14 webserver sudo[4329]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-Apr 27 09:20:14 webserver sshd[7320]: Failed password for test from 194.165.16.11 port 44301 ssh2
-192.168.1.100 - - [27/Apr/2026:09:23:14 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3846 "-" "sqlmap/1.7"
-192.168.1.10 - - [27/Apr/2026:09:23:14 +0000] "GET /index.html HTTP/1.1" 200 2399 "-" "Nikto/2.1.6"
-185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /admin HTTP/1.1" 403 1529 "-" "Mozilla/5.0"
-Apr 27 09:22:14 webserver sshd[4309]: Failed password for ubuntu from 194.165.16.11 port 47211 ssh2
-192.168.0.50 - - [27/Apr/2026:09:23:14 +0000] "GET /about HTTP/1.1" 200 2586 "-" "Mozilla/5.0"
-185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /../etc/passwd HTTP/1.1" 400 1282 "-" "python-requests/2.28"
-Apr 27 09:23:14 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
-Apr 27 09:20:14 webserver sshd[1271]: Failed password for deploy from 194.165.16.11 port 57826 ssh2
-Apr 27 09:23:14 webserver kernel: program[7320]: segfault at 0 ip 00007f rsp 00007f error 4
-Apr 27 09:16:14 webserver sshd[4282]: Invalid user ftpuser from 194.165.16.11
-Apr 27 09:18:14 webserver sshd[2343]: Invalid user ftpuser from 194.165.16.11
-Apr 27 09:21:14 webserver sshd[2905]: Failed password for root from 194.165.16.11 port 41616 ssh2
-Apr 27 09:20:14 webserver sshd[4225]: Failed password for ubuntu from 194.165.16.11 port 55171 ssh2
-185.220.101.45 - - [27/Apr/2026:09:23:14 +0000] "GET /login HTTP/1.1" 401 3742 "-" "Mozilla/5.0"
+Apr 28 09:26:27 webserver kernel: program[9398]: segfault at 0 ip 00007f rsp 00007f error 4
+10.0.0.5 - - [28/Apr/2026:09:26:27 +0000] "GET /contact HTTP/1.1" 200 247 "-" "Mozilla/5.0"
+Apr 28 09:23:27 webserver sshd[2809]: Invalid user jenkins from 89.248.167.131
+Apr 28 09:26:27 webserver sshd[6383]: Failed password for root from 89.248.167.131 port 45145 ssh2
+Apr 28 09:16:27 webserver sshd[4824]: Accepted publickey for deploy from 10.0.0.5 port 47034 ssh2
+89.248.167.131 - - [28/Apr/2026:09:26:27 +0000] "GET /login HTTP/1.1" 401 4630 "-" "Mozilla/5.0"
+194.165.16.11 - - [28/Apr/2026:09:26:27 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 504 "-" "sqlmap/1.7"
+Apr 28 09:21:27 webserver sshd[1836]: Invalid user hadoop from 89.248.167.131
+10.0.0.5 - - [28/Apr/2026:09:26:27 +0000] "GET /about HTTP/1.1" 200 4233 "-" "python-requests/2.28"
+Apr 28 09:22:27 webserver sshd[1956]: Invalid user nagios from 89.248.167.131
+89.248.167.131 - - [28/Apr/2026:09:26:27 +0000] "GET /login HTTP/1.1" 401 4617 "-" "Mozilla/5.0"
+89.248.167.131 - - [28/Apr/2026:09:26:27 +0000] "GET /admin HTTP/1.1" 403 2215 "-" "masscan/1.0"
+Apr 28 09:24:27 webserver sshd[3451]: Failed password for jenkins from 89.248.167.131 port 50643 ssh2
+Apr 28 09:25:27 webserver sshd[7614]: Failed password for root from 89.248.167.131 port 46584 ssh2
+Apr 28 09:18:27 webserver sudo[7296]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+172.16.0.10 - - [28/Apr/2026:09:26:27 +0000] "GET /index.html HTTP/1.1" 200 3809 "-" "sqlmap/1.7"
+89.248.167.131 - - [28/Apr/2026:09:26:27 +0000] "GET /../etc/passwd HTTP/1.1" 400 202 "-" "python-requests/2.28"
+89.248.167.131 - - [28/Apr/2026:09:26:27 +0000] "GET /login HTTP/1.1" 401 1208 "-" "Mozilla/5.0"
+Apr 28 09:25:27 webserver sshd[8546]: Failed password for root from 89.248.167.131 port 60096 ssh2
