@@ -1335,3 +1335,77 @@
   MITRE ATT&CK : T1110 - Brute Force (Credential Access)
   Action       : alert
   Log entry    : Source IP 89.248.167.131 had 7 failed login attempts
+
+=== Run: 2026-04-29 09:12:41 ===
+
+14 alert(s) triggered:
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 89.248.167.131 port 59544 ssh2
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1005
+
+[MEDIUM] Admin Path Probe (RULE-005)
+  MITRE ATT&CK : T1190 - Exploit Public-Facing Application (Initial Access)
+  Action       : log
+  Log entry    : GET /admin HTTP/1.1
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user hadoop from 89.248.167.131
+
+[MEDIUM] Port Scan Detected (RULE-008)
+  MITRE ATT&CK : T1046 - Network Service Discovery (Discovery)
+  Action       : log
+  Log entry    : [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for nagios from 89.248.167.131 port 54693 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for user from 89.248.167.131 port 63916 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 89.248.167.131 port 53342 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 89.248.167.131 port 53342 ssh2
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user oracle from 89.248.167.131
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user elasticsearch from 89.248.167.131
+
+[HIGH] Credential Stuffing Attempt (RULE-004)
+  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
+  Action       : alert
+  Log entry    : GET /login HTTP/1.1
+
+[HIGH] Directory Traversal Attempt (RULE-010)
+  MITRE ATT&CK : T1083 - File and Directory Discovery (Discovery)
+  Action       : alert
+  Log entry    : GET /../etc/passwd HTTP/1.1
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 89.248.167.131 had 8 failed login attempts
