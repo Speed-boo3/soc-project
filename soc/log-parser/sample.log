@@ -1,24 +1,22 @@
-May 01 09:03:18 webserver sshd[8255]: Failed password for root from 10.0.0.99 port 49173 ssh2
-May 01 09:04:18 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-May 01 09:02:18 webserver sshd[9256]: Failed password for jenkins from 10.0.0.99 port 61567 ssh2
-172.16.0.10 - - [01/May/2026:09:04:18 +0000] "GET /contact HTTP/1.1" 200 3465 "-" "masscan/1.0"
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /../etc/passwd HTTP/1.1" 400 1132 "-" "curl/7.68.0"
-May 01 09:01:18 webserver sshd[7233]: Failed password for deploy from 10.0.0.99 port 59143 ssh2
-May 01 08:58:18 webserver sshd[9537]: Invalid user nagios from 10.0.0.99
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /login HTTP/1.1" 401 2579 "-" "Mozilla/5.0"
-May 01 09:04:18 webserver kernel: program[9956]: segfault at 0 ip 00007f rsp 00007f error 4
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /login HTTP/1.1" 401 795 "-" "Mozilla/5.0"
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /admin HTTP/1.1" 403 4487 "-" "curl/7.68.0"
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /login HTTP/1.1" 401 761 "-" "Mozilla/5.0"
-May 01 09:02:18 webserver sshd[3765]: Failed password for root from 10.0.0.99 port 46706 ssh2
-May 01 08:59:18 webserver sshd[3613]: Failed password for jenkins from 10.0.0.99 port 56936 ssh2
-May 01 09:02:18 webserver sshd[8987]: Failed password for user from 10.0.0.99 port 51424 ssh2
-May 01 09:00:18 webserver sshd[4756]: Failed password for deploy from 10.0.0.99 port 41362 ssh2
-May 01 08:57:18 webserver sshd[4955]: Invalid user ftpuser from 10.0.0.99
-May 01 08:59:18 webserver sshd[8200]: Failed password for admin from 10.0.0.99 port 48321 ssh2
-May 01 08:55:18 webserver sshd[9020]: Accepted publickey for deploy from 192.168.1.10 port 40540 ssh2
-May 01 08:56:18 webserver sudo[5509]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-198.20.69.74 - - [01/May/2026:09:04:18 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3886 "-" "sqlmap/1.7"
-May 01 09:00:18 webserver sshd[2206]: Failed password for root from 10.0.0.99 port 60610 ssh2
-192.168.0.50 - - [01/May/2026:09:04:18 +0000] "GET /index.html HTTP/1.1" 200 2425 "-" "masscan/1.0"
-172.16.0.10 - - [01/May/2026:09:04:18 +0000] "GET /about HTTP/1.1" 200 740 "-" "curl/7.68.0"
+89.248.167.131 - - [02/May/2026:08:22:56 +0000] "GET /../etc/passwd HTTP/1.1" 400 458 "-" "python-requests/2.28"
+89.248.167.131 - - [02/May/2026:08:22:56 +0000] "GET /login HTTP/1.1" 401 363 "-" "Mozilla/5.0"
+May 02 08:19:56 webserver sshd[6073]: Failed password for user from 10.0.0.99 port 53216 ssh2
+May 02 08:20:56 webserver sshd[7511]: Failed password for postgres from 10.0.0.99 port 50812 ssh2
+May 02 08:21:56 webserver sshd[2296]: Failed password for admin from 10.0.0.99 port 54576 ssh2
+192.168.0.50 - - [02/May/2026:08:22:56 +0000] "GET /contact HTTP/1.1" 200 1331 "-" "masscan/1.0"
+192.168.1.10 - - [02/May/2026:08:22:56 +0000] "GET /about HTTP/1.1" 200 4785 "-" "Mozilla/5.0"
+192.168.1.10 - - [02/May/2026:08:22:56 +0000] "GET /index.html HTTP/1.1" 200 1575 "-" "Nikto/2.1.6"
+May 02 08:22:56 webserver kernel: program[2614]: segfault at 0 ip 00007f rsp 00007f error 4
+45.33.32.156 - - [02/May/2026:08:22:56 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 247 "-" "sqlmap/1.7"
+89.248.167.131 - - [02/May/2026:08:22:56 +0000] "GET /login HTTP/1.1" 401 2642 "-" "Mozilla/5.0"
+May 02 08:14:56 webserver sudo[6883]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+May 02 08:20:56 webserver sshd[1448]: Failed password for root from 10.0.0.99 port 46523 ssh2
+May 02 08:11:56 webserver sshd[6123]: Accepted publickey for deploy from 192.168.1.10 port 49887 ssh2
+May 02 08:21:56 webserver sshd[3452]: Failed password for root from 10.0.0.99 port 59048 ssh2
+89.248.167.131 - - [02/May/2026:08:22:56 +0000] "GET /admin HTTP/1.1" 403 1966 "-" "sqlmap/1.7"
+89.248.167.131 - - [02/May/2026:08:22:56 +0000] "GET /login HTTP/1.1" 401 2128 "-" "Mozilla/5.0"
+May 02 08:20:56 webserver sshd[9886]: Failed password for root from 10.0.0.99 port 44091 ssh2
+May 02 08:18:56 webserver sshd[4886]: Invalid user elasticsearch from 10.0.0.99
+May 02 08:17:56 webserver sshd[8600]: Invalid user ftpuser from 10.0.0.99
+May 02 08:20:56 webserver sshd[4674]: Failed password for test from 10.0.0.99 port 42505 ssh2
+May 02 08:16:56 webserver sshd[2596]: Invalid user ftpuser from 10.0.0.99
