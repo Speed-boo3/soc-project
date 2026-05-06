@@ -1,22 +1,21 @@
-172.16.0.10 - - [05/May/2026:09:10:11 +0000] "GET /about HTTP/1.1" 200 2820 "-" "curl/7.68.0"
-May 05 09:08:11 webserver sshd[4848]: Failed password for jenkins from 89.248.167.131 port 51465 ssh2
-May 05 09:08:11 webserver sshd[4393]: Failed password for root from 89.248.167.131 port 55123 ssh2
-194.165.16.11 - - [05/May/2026:09:10:11 +0000] "GET /../etc/passwd HTTP/1.1" 400 4615 "-" "curl/7.68.0"
-May 05 09:03:11 webserver sshd[3342]: Invalid user nagios from 89.248.167.131
-192.168.1.10 - - [05/May/2026:09:10:11 +0000] "GET /contact HTTP/1.1" 200 3818 "-" "curl/7.68.0"
-May 05 09:04:11 webserver sshd[9490]: Invalid user elasticsearch from 89.248.167.131
-194.165.16.11 - - [05/May/2026:09:10:11 +0000] "GET /login HTTP/1.1" 401 2422 "-" "Mozilla/5.0"
-May 05 09:02:11 webserver sshd[9609]: Invalid user ftpuser from 89.248.167.131
-194.165.16.11 - - [05/May/2026:09:10:11 +0000] "GET /login HTTP/1.1" 401 2187 "-" "Mozilla/5.0"
-May 05 09:09:11 webserver sshd[8642]: Failed password for root from 89.248.167.131 port 60952 ssh2
-May 05 09:09:11 webserver sshd[8315]: Failed password for root from 89.248.167.131 port 44859 ssh2
-May 05 09:10:11 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
-194.165.16.11 - - [05/May/2026:09:10:11 +0000] "GET /login HTTP/1.1" 401 4939 "-" "Mozilla/5.0"
-May 05 09:07:11 webserver sshd[9837]: Failed password for root from 89.248.167.131 port 46178 ssh2
-May 05 08:59:11 webserver sudo[3816]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-185.220.101.45 - - [05/May/2026:09:10:11 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1856 "-" "sqlmap/1.7"
-May 05 08:58:11 webserver sshd[4777]: Accepted publickey for deploy from 10.0.0.5 port 64515 ssh2
-May 05 09:05:11 webserver sshd[7180]: Failed password for oracle from 89.248.167.131 port 63156 ssh2
-10.0.0.5 - - [05/May/2026:09:10:11 +0000] "GET /index.html HTTP/1.1" 200 4745 "-" "Mozilla/5.0"
-194.165.16.11 - - [05/May/2026:09:10:11 +0000] "GET /admin HTTP/1.1" 403 2189 "-" "sqlmap/1.7"
-May 05 09:06:11 webserver sshd[3606]: Failed password for admin from 89.248.167.131 port 47234 ssh2
+May 06 09:19:43 webserver sudo[1557]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+192.168.1.100 - - [06/May/2026:09:27:43 +0000] "GET /login HTTP/1.1" 401 4984 "-" "Mozilla/5.0"
+192.168.1.100 - - [06/May/2026:09:27:43 +0000] "GET /../etc/passwd HTTP/1.1" 400 4350 "-" "masscan/1.0"
+185.220.101.45 - - [06/May/2026:09:27:43 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 477 "-" "sqlmap/1.7"
+192.168.1.10 - - [06/May/2026:09:27:43 +0000] "GET /about HTTP/1.1" 200 4240 "-" "python-requests/2.28"
+172.16.0.10 - - [06/May/2026:09:27:43 +0000] "GET /index.html HTTP/1.1" 200 4233 "-" "Nikto/2.1.6"
+192.168.1.100 - - [06/May/2026:09:27:43 +0000] "GET /login HTTP/1.1" 401 3050 "-" "Mozilla/5.0"
+May 06 09:26:43 webserver sshd[1552]: Failed password for root from 45.33.32.156 port 51405 ssh2
+192.168.1.100 - - [06/May/2026:09:27:43 +0000] "GET /admin HTTP/1.1" 403 270 "-" "sqlmap/1.7"
+May 06 09:16:43 webserver sshd[6397]: Accepted publickey for deploy from 172.16.0.10 port 62264 ssh2
+May 06 09:26:43 webserver sshd[6955]: Failed password for user from 45.33.32.156 port 63505 ssh2
+May 06 09:23:43 webserver sshd[6608]: Invalid user nagios from 45.33.32.156
+May 06 09:27:43 webserver kernel: program[7266]: segfault at 0 ip 00007f rsp 00007f error 4
+192.168.1.100 - - [06/May/2026:09:27:43 +0000] "GET /login HTTP/1.1" 401 2140 "-" "Mozilla/5.0"
+May 06 09:26:43 webserver sshd[4808]: Failed password for deploy from 45.33.32.156 port 58895 ssh2
+10.0.0.5 - - [06/May/2026:09:27:43 +0000] "GET /contact HTTP/1.1" 200 4644 "-" "python-requests/2.28"
+May 06 09:24:43 webserver sshd[1238]: Failed password for root from 45.33.32.156 port 45628 ssh2
+May 06 09:26:43 webserver sshd[1335]: Failed password for root from 45.33.32.156 port 58450 ssh2
+May 06 09:26:43 webserver sshd[8959]: Failed password for root from 45.33.32.156 port 56214 ssh2
+May 06 09:26:43 webserver sshd[1866]: Failed password for nagios from 45.33.32.156 port 45931 ssh2
+May 06 09:25:43 webserver sshd[6584]: Failed password for admin from 45.33.32.156 port 62647 ssh2
