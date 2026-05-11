@@ -1,18 +1,23 @@
-192.168.1.100 - - [10/May/2026:08:57:49 +0000] "GET /login HTTP/1.1" 401 4185 "-" "Mozilla/5.0"
-May 10 08:57:49 webserver sshd[6349]: Failed password for oracle from 10.0.0.99 port 63725 ssh2
-172.16.0.10 - - [10/May/2026:08:57:49 +0000] "GET /about HTTP/1.1" 200 1121 "-" "curl/7.68.0"
-192.168.1.100 - - [10/May/2026:08:57:49 +0000] "GET /login HTTP/1.1" 401 2129 "-" "Mozilla/5.0"
-192.168.1.100 - - [10/May/2026:08:57:49 +0000] "GET /../etc/passwd HTTP/1.1" 400 585 "-" "Mozilla/5.0"
-May 10 08:55:49 webserver sshd[3990]: Failed password for test from 10.0.0.99 port 61842 ssh2
-May 10 08:50:49 webserver sudo[2780]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-192.168.1.10 - - [10/May/2026:08:57:49 +0000] "GET /index.html HTTP/1.1" 200 4579 "-" "curl/7.68.0"
-May 10 08:53:49 webserver sshd[2220]: Invalid user ftpuser from 10.0.0.99
-172.16.0.10 - - [10/May/2026:08:57:49 +0000] "GET /contact HTTP/1.1" 200 372 "-" "Mozilla/5.0"
-May 10 08:56:49 webserver sshd[9825]: Failed password for postgres from 10.0.0.99 port 40355 ssh2
-May 10 08:57:49 webserver kernel: program[1678]: segfault at 0 ip 00007f rsp 00007f error 4
-192.168.1.100 - - [10/May/2026:08:57:49 +0000] "GET /login HTTP/1.1" 401 4787 "-" "Mozilla/5.0"
-May 10 08:54:49 webserver sshd[4991]: Failed password for jenkins from 10.0.0.99 port 43028 ssh2
-May 10 08:48:49 webserver sshd[9706]: Accepted publickey for deploy from 172.16.0.10 port 56205 ssh2
-192.168.1.100 - - [10/May/2026:08:57:49 +0000] "GET /admin HTTP/1.1" 403 381 "-" "sqlmap/1.7"
-May 10 08:56:49 webserver sshd[7056]: Failed password for root from 10.0.0.99 port 61643 ssh2
-185.220.101.45 - - [10/May/2026:08:57:49 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1216 "-" "sqlmap/1.7"
+45.33.32.156 - - [11/May/2026:10:39:57 +0000] "GET /admin HTTP/1.1" 403 1563 "-" "Nikto/2.1.6"
+May 11 10:27:57 webserver sshd[6966]: Accepted publickey for deploy from 10.0.0.5 port 45022 ssh2
+May 11 10:36:57 webserver sshd[1979]: Failed password for root from 192.168.1.100 port 55230 ssh2
+May 11 10:29:57 webserver sudo[1145]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+May 11 10:35:57 webserver sshd[4663]: Failed password for root from 192.168.1.100 port 63349 ssh2
+45.33.32.156 - - [11/May/2026:10:39:57 +0000] "GET /../etc/passwd HTTP/1.1" 400 319 "-" "Nikto/2.1.6"
+192.168.0.50 - - [11/May/2026:10:39:57 +0000] "GET /contact HTTP/1.1" 200 4562 "-" "masscan/1.0"
+May 11 10:37:57 webserver sshd[4912]: Failed password for nagios from 192.168.1.100 port 60672 ssh2
+89.248.167.131 - - [11/May/2026:10:39:57 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1143 "-" "sqlmap/1.7"
+45.33.32.156 - - [11/May/2026:10:39:57 +0000] "GET /login HTTP/1.1" 401 1494 "-" "Mozilla/5.0"
+May 11 10:33:57 webserver sshd[7418]: Invalid user jenkins from 192.168.1.100
+May 11 10:34:57 webserver sshd[5193]: Failed password for oracle from 192.168.1.100 port 50880 ssh2
+May 11 10:36:57 webserver sshd[8390]: Failed password for oracle from 192.168.1.100 port 46903 ssh2
+172.16.0.10 - - [11/May/2026:10:39:57 +0000] "GET /index.html HTTP/1.1" 200 1921 "-" "sqlmap/1.7"
+May 11 10:39:57 webserver kernel: program[1925]: segfault at 0 ip 00007f rsp 00007f error 4
+May 11 10:37:57 webserver sshd[3746]: Failed password for root from 192.168.1.100 port 47618 ssh2
+May 11 10:35:57 webserver sshd[8367]: Failed password for oracle from 192.168.1.100 port 58183 ssh2
+May 11 10:37:57 webserver sshd[3659]: Failed password for nagios from 192.168.1.100 port 44894 ssh2
+45.33.32.156 - - [11/May/2026:10:39:57 +0000] "GET /login HTTP/1.1" 401 4794 "-" "Mozilla/5.0"
+May 11 10:39:57 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
+45.33.32.156 - - [11/May/2026:10:39:57 +0000] "GET /login HTTP/1.1" 401 317 "-" "Mozilla/5.0"
+172.16.0.10 - - [11/May/2026:10:39:57 +0000] "GET /about HTTP/1.1" 200 1140 "-" "Mozilla/5.0"
+May 11 10:38:57 webserver sshd[4824]: Failed password for root from 192.168.1.100 port 52321 ssh2
