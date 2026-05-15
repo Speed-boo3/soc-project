@@ -1,21 +1,22 @@
-192.168.0.50 - - [14/May/2026:09:36:25 +0000] "GET /index.html HTTP/1.1" 200 2526 "-" "masscan/1.0"
-45.33.32.156 - - [14/May/2026:09:36:25 +0000] "GET /../etc/passwd HTTP/1.1" 400 354 "-" "sqlmap/1.7"
-May 14 09:36:25 webserver kernel: program[2428]: segfault at 0 ip 00007f rsp 00007f error 4
-May 14 09:27:25 webserver sshd[5883]: Accepted publickey for deploy from 172.16.0.10 port 53128 ssh2
-192.168.0.50 - - [14/May/2026:09:36:25 +0000] "GET /contact HTTP/1.1" 200 2197 "-" "curl/7.68.0"
-May 14 09:32:25 webserver sshd[3997]: Failed password for jenkins from 198.20.69.74 port 53741 ssh2
-45.33.32.156 - - [14/May/2026:09:36:25 +0000] "GET /login HTTP/1.1" 401 4759 "-" "Mozilla/5.0"
-192.168.0.50 - - [14/May/2026:09:36:25 +0000] "GET /about HTTP/1.1" 200 318 "-" "masscan/1.0"
-May 14 09:32:25 webserver sshd[3511]: Failed password for root from 198.20.69.74 port 42699 ssh2
-May 14 09:34:25 webserver sshd[6061]: Failed password for nagios from 198.20.69.74 port 43963 ssh2
-May 14 09:30:25 webserver sudo[8808]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-45.33.32.156 - - [14/May/2026:09:36:25 +0000] "GET /admin HTTP/1.1" 403 842 "-" "Mozilla/5.0"
-May 14 09:31:25 webserver sshd[2262]: Invalid user ftpuser from 198.20.69.74
-May 14 09:33:25 webserver sshd[9977]: Failed password for root from 198.20.69.74 port 59159 ssh2
-May 14 09:36:25 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-198.20.69.74 - - [14/May/2026:09:36:25 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3757 "-" "sqlmap/1.7"
-May 14 09:32:25 webserver sshd[8123]: Failed password for root from 198.20.69.74 port 62985 ssh2
-45.33.32.156 - - [14/May/2026:09:36:25 +0000] "GET /login HTTP/1.1" 401 3167 "-" "Mozilla/5.0"
-May 14 09:33:25 webserver sshd[9088]: Failed password for test from 198.20.69.74 port 40973 ssh2
-45.33.32.156 - - [14/May/2026:09:36:25 +0000] "GET /login HTTP/1.1" 401 4574 "-" "Mozilla/5.0"
-May 14 09:35:25 webserver sshd[1961]: Failed password for root from 198.20.69.74 port 55354 ssh2
+May 15 09:46:52 webserver sshd[5650]: Invalid user nagios from 198.20.69.74
+May 15 09:45:52 webserver sshd[4252]: Invalid user jenkins from 198.20.69.74
+May 15 09:44:52 webserver sshd[9955]: Invalid user hadoop from 198.20.69.74
+198.20.69.74 - - [15/May/2026:09:49:52 +0000] "GET /login HTTP/1.1" 401 1405 "-" "Mozilla/5.0"
+May 15 09:48:52 webserver sshd[2036]: Failed password for jenkins from 198.20.69.74 port 55280 ssh2
+185.220.101.45 - - [15/May/2026:09:49:52 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2078 "-" "sqlmap/1.7"
+May 15 09:47:52 webserver sshd[3974]: Failed password for root from 198.20.69.74 port 58513 ssh2
+May 15 09:47:52 webserver sshd[1908]: Failed password for admin from 198.20.69.74 port 54884 ssh2
+May 15 09:48:52 webserver sshd[5911]: Failed password for user from 198.20.69.74 port 54844 ssh2
+May 15 09:48:52 webserver sshd[5714]: Failed password for test from 198.20.69.74 port 61536 ssh2
+198.20.69.74 - - [15/May/2026:09:49:52 +0000] "GET /login HTTP/1.1" 401 217 "-" "Mozilla/5.0"
+May 15 09:49:52 webserver kernel: program[5421]: segfault at 0 ip 00007f rsp 00007f error 4
+May 15 09:37:52 webserver sshd[6811]: Accepted publickey for deploy from 192.168.0.50 port 57867 ssh2
+192.168.1.10 - - [15/May/2026:09:49:52 +0000] "GET /about HTTP/1.1" 200 2372 "-" "python-requests/2.28"
+198.20.69.74 - - [15/May/2026:09:49:52 +0000] "GET /admin HTTP/1.1" 403 265 "-" "sqlmap/1.7"
+May 15 09:47:52 webserver sshd[4515]: Failed password for admin from 198.20.69.74 port 50373 ssh2
+May 15 09:49:52 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+198.20.69.74 - - [15/May/2026:09:49:52 +0000] "GET /../etc/passwd HTTP/1.1" 400 906 "-" "python-requests/2.28"
+172.16.0.10 - - [15/May/2026:09:49:52 +0000] "GET /index.html HTTP/1.1" 200 1859 "-" "Mozilla/5.0"
+198.20.69.74 - - [15/May/2026:09:49:52 +0000] "GET /login HTTP/1.1" 401 932 "-" "Mozilla/5.0"
+May 15 09:40:52 webserver sudo[8384]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+10.0.0.5 - - [15/May/2026:09:49:52 +0000] "GET /contact HTTP/1.1" 200 2815 "-" "Nikto/2.1.6"
