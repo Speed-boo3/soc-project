@@ -1,21 +1,19 @@
-May 18 11:02:58 webserver sudo[9581]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-194.165.16.11 - - [18/May/2026:11:08:58 +0000] "GET /login HTTP/1.1" 401 1825 "-" "Mozilla/5.0"
-May 18 11:06:58 webserver sshd[1338]: Failed password for root from 194.165.16.11 port 49796 ssh2
-May 18 11:06:58 webserver sshd[5591]: Failed password for ubuntu from 194.165.16.11 port 47205 ssh2
-May 18 11:01:58 webserver sshd[9815]: Accepted publickey for deploy from 192.168.1.10 port 62264 ssh2
-May 18 11:07:58 webserver sshd[8724]: Failed password for root from 194.165.16.11 port 45076 ssh2
-172.16.0.10 - - [18/May/2026:11:08:58 +0000] "GET /about HTTP/1.1" 200 734 "-" "Nikto/2.1.6"
-May 18 11:03:58 webserver sshd[3699]: Invalid user jenkins from 194.165.16.11
-194.165.16.11 - - [18/May/2026:11:08:58 +0000] "GET /admin HTTP/1.1" 403 1574 "-" "python-requests/2.28"
-194.165.16.11 - - [18/May/2026:11:08:58 +0000] "GET /../etc/passwd HTTP/1.1" 400 3985 "-" "Nikto/2.1.6"
-May 18 11:08:58 webserver sshd[8625]: Failed password for nagios from 194.165.16.11 port 54554 ssh2
-May 18 11:08:58 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
-May 18 11:07:58 webserver sshd[9590]: Failed password for root from 194.165.16.11 port 41022 ssh2
-192.168.0.50 - - [18/May/2026:11:08:58 +0000] "GET /contact HTTP/1.1" 200 3902 "-" "Mozilla/5.0"
-192.168.1.10 - - [18/May/2026:11:08:58 +0000] "GET /index.html HTTP/1.1" 200 3949 "-" "masscan/1.0"
-89.248.167.131 - - [18/May/2026:11:08:58 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4888 "-" "sqlmap/1.7"
-May 18 11:05:58 webserver sshd[4079]: Failed password for test from 194.165.16.11 port 45445 ssh2
-194.165.16.11 - - [18/May/2026:11:08:58 +0000] "GET /login HTTP/1.1" 401 1279 "-" "Mozilla/5.0"
-194.165.16.11 - - [18/May/2026:11:08:58 +0000] "GET /login HTTP/1.1" 401 1761 "-" "Mozilla/5.0"
-May 18 11:04:58 webserver sshd[7250]: Invalid user nagios from 194.165.16.11
-May 18 11:07:58 webserver sshd[4756]: Failed password for root from 194.165.16.11 port 53193 ssh2
+May 19 10:37:40 webserver sshd[2821]: Failed password for oracle from 45.33.32.156 port 55199 ssh2
+185.220.101.45 - - [19/May/2026:10:38:40 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3280 "-" "sqlmap/1.7"
+May 19 10:38:40 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+172.16.0.10 - - [19/May/2026:10:38:40 +0000] "GET /contact HTTP/1.1" 200 2536 "-" "masscan/1.0"
+May 19 10:35:40 webserver sshd[3883]: Invalid user jenkins from 45.33.32.156
+194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /admin HTTP/1.1" 403 1506 "-" "curl/7.68.0"
+194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /../etc/passwd HTTP/1.1" 400 4007 "-" "Mozilla/5.0"
+10.0.0.5 - - [19/May/2026:10:38:40 +0000] "GET /index.html HTTP/1.1" 200 4953 "-" "curl/7.68.0"
+194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 271 "-" "Mozilla/5.0"
+194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 3381 "-" "Mozilla/5.0"
+May 19 10:36:40 webserver sshd[3089]: Invalid user hadoop from 45.33.32.156
+May 19 10:37:40 webserver sshd[2353]: Failed password for root from 45.33.32.156 port 44247 ssh2
+May 19 10:38:40 webserver sshd[5803]: Failed password for ubuntu from 45.33.32.156 port 57100 ssh2
+May 19 10:38:40 webserver kernel: program[2552]: segfault at 0 ip 00007f rsp 00007f error 4
+May 19 10:38:40 webserver sshd[8422]: Failed password for oracle from 45.33.32.156 port 42130 ssh2
+194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 977 "-" "Mozilla/5.0"
+10.0.0.5 - - [19/May/2026:10:38:40 +0000] "GET /about HTTP/1.1" 200 2062 "-" "curl/7.68.0"
+May 19 10:32:40 webserver sshd[9466]: Accepted publickey for deploy from 10.0.0.5 port 61248 ssh2
+May 19 10:33:40 webserver sudo[1594]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
