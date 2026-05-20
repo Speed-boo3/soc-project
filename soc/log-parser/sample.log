@@ -1,19 +1,24 @@
-May 19 10:37:40 webserver sshd[2821]: Failed password for oracle from 45.33.32.156 port 55199 ssh2
-185.220.101.45 - - [19/May/2026:10:38:40 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3280 "-" "sqlmap/1.7"
-May 19 10:38:40 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-172.16.0.10 - - [19/May/2026:10:38:40 +0000] "GET /contact HTTP/1.1" 200 2536 "-" "masscan/1.0"
-May 19 10:35:40 webserver sshd[3883]: Invalid user jenkins from 45.33.32.156
-194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /admin HTTP/1.1" 403 1506 "-" "curl/7.68.0"
-194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /../etc/passwd HTTP/1.1" 400 4007 "-" "Mozilla/5.0"
-10.0.0.5 - - [19/May/2026:10:38:40 +0000] "GET /index.html HTTP/1.1" 200 4953 "-" "curl/7.68.0"
-194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 271 "-" "Mozilla/5.0"
-194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 3381 "-" "Mozilla/5.0"
-May 19 10:36:40 webserver sshd[3089]: Invalid user hadoop from 45.33.32.156
-May 19 10:37:40 webserver sshd[2353]: Failed password for root from 45.33.32.156 port 44247 ssh2
-May 19 10:38:40 webserver sshd[5803]: Failed password for ubuntu from 45.33.32.156 port 57100 ssh2
-May 19 10:38:40 webserver kernel: program[2552]: segfault at 0 ip 00007f rsp 00007f error 4
-May 19 10:38:40 webserver sshd[8422]: Failed password for oracle from 45.33.32.156 port 42130 ssh2
-194.165.16.11 - - [19/May/2026:10:38:40 +0000] "GET /login HTTP/1.1" 401 977 "-" "Mozilla/5.0"
-10.0.0.5 - - [19/May/2026:10:38:40 +0000] "GET /about HTTP/1.1" 200 2062 "-" "curl/7.68.0"
-May 19 10:32:40 webserver sshd[9466]: Accepted publickey for deploy from 10.0.0.5 port 61248 ssh2
-May 19 10:33:40 webserver sudo[1594]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+May 20 10:23:01 webserver sshd[1909]: Failed password for postgres from 194.165.16.11 port 43874 ssh2
+May 20 10:18:01 webserver sshd[9766]: Invalid user oracle from 194.165.16.11
+May 20 10:26:01 webserver sshd[1707]: Failed password for postgres from 194.165.16.11 port 52800 ssh2
+172.16.0.10 - - [20/May/2026:10:26:01 +0000] "GET /index.html HTTP/1.1" 200 4755 "-" "sqlmap/1.7"
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 1472 "-" "Mozilla/5.0"
+192.168.1.10 - - [20/May/2026:10:26:01 +0000] "GET /about HTTP/1.1" 200 4454 "-" "python-requests/2.28"
+May 20 10:20:01 webserver sshd[1062]: Invalid user oracle from 194.165.16.11
+May 20 10:19:01 webserver sshd[6491]: Invalid user nagios from 194.165.16.11
+May 20 10:23:01 webserver sshd[7052]: Failed password for root from 194.165.16.11 port 44386 ssh2
+May 20 10:12:01 webserver sshd[5154]: Accepted publickey for deploy from 10.0.0.5 port 56051 ssh2
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /admin HTTP/1.1" 403 2611 "-" "curl/7.68.0"
+May 20 10:24:01 webserver sshd[2946]: Failed password for root from 194.165.16.11 port 49596 ssh2
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 2858 "-" "Mozilla/5.0"
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /../etc/passwd HTTP/1.1" 400 1966 "-" "sqlmap/1.7"
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 999 "-" "sqlmap/1.7"
+May 20 10:21:01 webserver sshd[6754]: Failed password for root from 194.165.16.11 port 55354 ssh2
+May 20 10:22:01 webserver sshd[6821]: Failed password for nagios from 194.165.16.11 port 54092 ssh2
+May 20 10:14:01 webserver sudo[1570]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+192.168.1.10 - - [20/May/2026:10:26:01 +0000] "GET /contact HTTP/1.1" 200 2522 "-" "sqlmap/1.7"
+May 20 10:22:01 webserver sshd[4822]: Failed password for root from 194.165.16.11 port 50786 ssh2
+May 20 10:26:01 webserver kernel: program[9431]: segfault at 0 ip 00007f rsp 00007f error 4
+May 20 10:21:01 webserver sshd[1512]: Failed password for root from 194.165.16.11 port 40510 ssh2
+10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 4317 "-" "Mozilla/5.0"
+May 20 10:25:01 webserver sshd[6977]: Failed password for postgres from 194.165.16.11 port 47706 ssh2
