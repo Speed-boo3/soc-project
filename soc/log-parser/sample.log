@@ -1,24 +1,21 @@
-May 20 10:23:01 webserver sshd[1909]: Failed password for postgres from 194.165.16.11 port 43874 ssh2
-May 20 10:18:01 webserver sshd[9766]: Invalid user oracle from 194.165.16.11
-May 20 10:26:01 webserver sshd[1707]: Failed password for postgres from 194.165.16.11 port 52800 ssh2
-172.16.0.10 - - [20/May/2026:10:26:01 +0000] "GET /index.html HTTP/1.1" 200 4755 "-" "sqlmap/1.7"
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 1472 "-" "Mozilla/5.0"
-192.168.1.10 - - [20/May/2026:10:26:01 +0000] "GET /about HTTP/1.1" 200 4454 "-" "python-requests/2.28"
-May 20 10:20:01 webserver sshd[1062]: Invalid user oracle from 194.165.16.11
-May 20 10:19:01 webserver sshd[6491]: Invalid user nagios from 194.165.16.11
-May 20 10:23:01 webserver sshd[7052]: Failed password for root from 194.165.16.11 port 44386 ssh2
-May 20 10:12:01 webserver sshd[5154]: Accepted publickey for deploy from 10.0.0.5 port 56051 ssh2
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /admin HTTP/1.1" 403 2611 "-" "curl/7.68.0"
-May 20 10:24:01 webserver sshd[2946]: Failed password for root from 194.165.16.11 port 49596 ssh2
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 2858 "-" "Mozilla/5.0"
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /../etc/passwd HTTP/1.1" 400 1966 "-" "sqlmap/1.7"
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 999 "-" "sqlmap/1.7"
-May 20 10:21:01 webserver sshd[6754]: Failed password for root from 194.165.16.11 port 55354 ssh2
-May 20 10:22:01 webserver sshd[6821]: Failed password for nagios from 194.165.16.11 port 54092 ssh2
-May 20 10:14:01 webserver sudo[1570]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-192.168.1.10 - - [20/May/2026:10:26:01 +0000] "GET /contact HTTP/1.1" 200 2522 "-" "sqlmap/1.7"
-May 20 10:22:01 webserver sshd[4822]: Failed password for root from 194.165.16.11 port 50786 ssh2
-May 20 10:26:01 webserver kernel: program[9431]: segfault at 0 ip 00007f rsp 00007f error 4
-May 20 10:21:01 webserver sshd[1512]: Failed password for root from 194.165.16.11 port 40510 ssh2
-10.0.0.99 - - [20/May/2026:10:26:01 +0000] "GET /login HTTP/1.1" 401 4317 "-" "Mozilla/5.0"
-May 20 10:25:01 webserver sshd[6977]: Failed password for postgres from 194.165.16.11 port 47706 ssh2
+89.248.167.131 - - [21/May/2026:10:41:33 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3282 "-" "sqlmap/1.7"
+May 21 10:30:33 webserver sshd[2434]: Accepted publickey for deploy from 192.168.0.50 port 45715 ssh2
+May 21 10:36:33 webserver sshd[4423]: Failed password for jenkins from 10.0.0.99 port 47154 ssh2
+198.20.69.74 - - [21/May/2026:10:41:33 +0000] "GET /login HTTP/1.1" 401 4202 "-" "Mozilla/5.0"
+May 21 10:31:33 webserver sudo[3888]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+May 21 10:34:33 webserver sshd[3908]: Invalid user nagios from 10.0.0.99
+May 21 10:40:33 webserver sshd[9127]: Failed password for root from 10.0.0.99 port 43051 ssh2
+May 21 10:39:33 webserver sshd[9133]: Failed password for root from 10.0.0.99 port 41234 ssh2
+192.168.0.50 - - [21/May/2026:10:41:33 +0000] "GET /about HTTP/1.1" 200 3175 "-" "sqlmap/1.7"
+198.20.69.74 - - [21/May/2026:10:41:33 +0000] "GET /login HTTP/1.1" 401 582 "-" "Mozilla/5.0"
+May 21 10:39:33 webserver sshd[3652]: Failed password for nagios from 10.0.0.99 port 61559 ssh2
+May 21 10:41:33 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+198.20.69.74 - - [21/May/2026:10:41:33 +0000] "GET /admin HTTP/1.1" 403 4960 "-" "python-requests/2.28"
+198.20.69.74 - - [21/May/2026:10:41:33 +0000] "GET /../etc/passwd HTTP/1.1" 400 1530 "-" "masscan/1.0"
+198.20.69.74 - - [21/May/2026:10:41:33 +0000] "GET /login HTTP/1.1" 401 707 "-" "Mozilla/5.0"
+May 21 10:38:33 webserver sshd[7515]: Failed password for oracle from 10.0.0.99 port 43043 ssh2
+May 21 10:37:33 webserver sshd[9609]: Failed password for ubuntu from 10.0.0.99 port 56025 ssh2
+May 21 10:35:33 webserver sshd[7337]: Invalid user elasticsearch from 10.0.0.99
+May 21 10:41:33 webserver kernel: program[9897]: segfault at 0 ip 00007f rsp 00007f error 4
+192.168.0.50 - - [21/May/2026:10:41:33 +0000] "GET /contact HTTP/1.1" 200 4559 "-" "python-requests/2.28"
+192.168.0.50 - - [21/May/2026:10:41:33 +0000] "GET /index.html HTTP/1.1" 200 2706 "-" "Mozilla/5.0"
