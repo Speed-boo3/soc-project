@@ -1,18 +1,19 @@
-May 28 10:55:43 webserver sshd[6807]: Invalid user hadoop from 198.20.69.74
-May 28 10:50:43 webserver sshd[3472]: Accepted publickey for deploy from 192.168.1.10 port 57808 ssh2
-May 28 10:56:43 webserver sshd[6683]: Failed password for oracle from 198.20.69.74 port 55298 ssh2
-192.168.1.100 - - [28/May/2026:10:58:43 +0000] "GET /admin HTTP/1.1" 403 2487 "-" "Mozilla/5.0"
-192.168.0.50 - - [28/May/2026:10:58:43 +0000] "GET /about HTTP/1.1" 200 662 "-" "masscan/1.0"
-May 28 10:58:43 webserver kernel: program[7510]: segfault at 0 ip 00007f rsp 00007f error 4
-192.168.1.100 - - [28/May/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 4666 "-" "Mozilla/5.0"
-May 28 10:56:43 webserver sshd[8828]: Failed password for root from 198.20.69.74 port 53592 ssh2
-May 28 10:57:43 webserver sshd[3292]: Failed password for root from 198.20.69.74 port 50277 ssh2
-May 28 10:56:43 webserver sshd[4315]: Failed password for test from 198.20.69.74 port 51248 ssh2
-192.168.0.50 - - [28/May/2026:10:58:43 +0000] "GET /contact HTTP/1.1" 200 2576 "-" "masscan/1.0"
-192.168.1.100 - - [28/May/2026:10:58:43 +0000] "GET /../etc/passwd HTTP/1.1" 400 3044 "-" "Nikto/2.1.6"
-May 28 10:56:43 webserver sshd[8579]: Failed password for nagios from 198.20.69.74 port 47578 ssh2
-198.20.69.74 - - [28/May/2026:10:58:43 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3559 "-" "sqlmap/1.7"
-192.168.1.100 - - [28/May/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 4822 "-" "Mozilla/5.0"
-May 28 10:53:43 webserver sudo[7230]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-192.168.1.100 - - [28/May/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 3474 "-" "Mozilla/5.0"
-192.168.1.10 - - [28/May/2026:10:58:43 +0000] "GET /index.html HTTP/1.1" 200 4281 "-" "python-requests/2.28"
+May 29 10:44:41 webserver sudo[3201]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+192.168.1.10 - - [29/May/2026:10:50:41 +0000] "GET /about HTTP/1.1" 200 2067 "-" "curl/7.68.0"
+89.248.167.131 - - [29/May/2026:10:50:41 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 288 "-" "sqlmap/1.7"
+45.33.32.156 - - [29/May/2026:10:50:41 +0000] "GET /admin HTTP/1.1" 403 3406 "-" "sqlmap/1.7"
+45.33.32.156 - - [29/May/2026:10:50:41 +0000] "GET /login HTTP/1.1" 401 3735 "-" "Mozilla/5.0"
+May 29 10:48:41 webserver sshd[6455]: Failed password for postgres from 10.0.0.99 port 41789 ssh2
+45.33.32.156 - - [29/May/2026:10:50:41 +0000] "GET /login HTTP/1.1" 401 2529 "-" "Mozilla/5.0"
+192.168.1.10 - - [29/May/2026:10:50:41 +0000] "GET /index.html HTTP/1.1" 200 4466 "-" "sqlmap/1.7"
+May 29 10:50:41 webserver sshd[2582]: Failed password for test from 10.0.0.99 port 61625 ssh2
+May 29 10:47:41 webserver sshd[6832]: Failed password for jenkins from 10.0.0.99 port 43007 ssh2
+192.168.0.50 - - [29/May/2026:10:50:41 +0000] "GET /contact HTTP/1.1" 200 3665 "-" "sqlmap/1.7"
+45.33.32.156 - - [29/May/2026:10:50:41 +0000] "GET /../etc/passwd HTTP/1.1" 400 1767 "-" "Nikto/2.1.6"
+45.33.32.156 - - [29/May/2026:10:50:41 +0000] "GET /login HTTP/1.1" 401 4673 "-" "Mozilla/5.0"
+May 29 10:48:41 webserver sshd[9306]: Failed password for oracle from 10.0.0.99 port 58681 ssh2
+May 29 10:45:41 webserver sshd[5430]: Invalid user jenkins from 10.0.0.99
+May 29 10:42:41 webserver sshd[2949]: Accepted publickey for deploy from 172.16.0.10 port 49247 ssh2
+May 29 10:46:41 webserver sshd[4261]: Invalid user ftpuser from 10.0.0.99
+May 29 10:50:41 webserver sshd[7949]: Failed password for jenkins from 10.0.0.99 port 59751 ssh2
+May 29 10:49:41 webserver sshd[5480]: Failed password for ubuntu from 10.0.0.99 port 55199 ssh2
