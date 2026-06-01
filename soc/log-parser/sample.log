@@ -1,20 +1,20 @@
-194.165.16.11 - - [31/May/2026:09:48:18 +0000] "GET /login HTTP/1.1" 401 4639 "-" "Mozilla/5.0"
-May 31 09:44:18 webserver sshd[8890]: Failed password for oracle from 45.33.32.156 port 45829 ssh2
-May 31 09:44:18 webserver sshd[3325]: Failed password for root from 45.33.32.156 port 48548 ssh2
-172.16.0.10 - - [31/May/2026:09:48:18 +0000] "GET /index.html HTTP/1.1" 200 4085 "-" "sqlmap/1.7"
-May 31 09:45:18 webserver sshd[3038]: Failed password for root from 45.33.32.156 port 50705 ssh2
-194.165.16.11 - - [31/May/2026:09:48:18 +0000] "GET /../etc/passwd HTTP/1.1" 400 4093 "-" "masscan/1.0"
-May 31 09:47:18 webserver sshd[7519]: Failed password for root from 45.33.32.156 port 43013 ssh2
-192.168.1.10 - - [31/May/2026:09:48:18 +0000] "GET /contact HTTP/1.1" 200 1526 "-" "curl/7.68.0"
-May 31 09:46:18 webserver sshd[6706]: Failed password for deploy from 45.33.32.156 port 54999 ssh2
-May 31 09:47:18 webserver sshd[8403]: Failed password for postgres from 45.33.32.156 port 54417 ssh2
-10.0.0.99 - - [31/May/2026:09:48:18 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3309 "-" "sqlmap/1.7"
-194.165.16.11 - - [31/May/2026:09:48:18 +0000] "GET /login HTTP/1.1" 401 1538 "-" "Mozilla/5.0"
-192.168.0.50 - - [31/May/2026:09:48:18 +0000] "GET /about HTTP/1.1" 200 3665 "-" "Nikto/2.1.6"
-194.165.16.11 - - [31/May/2026:09:48:18 +0000] "GET /login HTTP/1.1" 401 4535 "-" "Mozilla/5.0"
-May 31 09:36:18 webserver sshd[6001]: Accepted publickey for deploy from 10.0.0.5 port 54103 ssh2
-May 31 09:47:18 webserver sshd[9778]: Failed password for root from 45.33.32.156 port 62355 ssh2
-May 31 09:44:18 webserver sshd[3203]: Failed password for root from 45.33.32.156 port 40379 ssh2
-194.165.16.11 - - [31/May/2026:09:48:18 +0000] "GET /admin HTTP/1.1" 403 1422 "-" "Mozilla/5.0"
-May 31 09:43:18 webserver sshd[5429]: Invalid user oracle from 45.33.32.156
-May 31 09:39:18 webserver sudo[9150]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Jun 01 12:39:29 webserver sshd[6904]: Failed password for root from 185.220.101.45 port 63769 ssh2
+194.165.16.11 - - [01/Jun/2026:12:41:29 +0000] "GET /../etc/passwd HTTP/1.1" 400 4667 "-" "sqlmap/1.7"
+194.165.16.11 - - [01/Jun/2026:12:41:29 +0000] "GET /login HTTP/1.1" 401 2154 "-" "Mozilla/5.0"
+194.165.16.11 - - [01/Jun/2026:12:41:29 +0000] "GET /login HTTP/1.1" 401 3506 "-" "Mozilla/5.0"
+198.20.69.74 - - [01/Jun/2026:12:41:29 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 806 "-" "sqlmap/1.7"
+Jun 01 12:41:29 webserver kernel: program[7912]: segfault at 0 ip 00007f rsp 00007f error 4
+Jun 01 12:39:29 webserver sshd[2095]: Failed password for oracle from 185.220.101.45 port 54460 ssh2
+Jun 01 12:38:29 webserver sshd[9280]: Invalid user elasticsearch from 185.220.101.45
+Jun 01 12:40:29 webserver sshd[1050]: Failed password for git from 185.220.101.45 port 52189 ssh2
+Jun 01 12:39:29 webserver sshd[6316]: Failed password for root from 185.220.101.45 port 59728 ssh2
+194.165.16.11 - - [01/Jun/2026:12:41:29 +0000] "GET /login HTTP/1.1" 401 4436 "-" "Mozilla/5.0"
+192.168.0.50 - - [01/Jun/2026:12:41:29 +0000] "GET /about HTTP/1.1" 200 4168 "-" "Nikto/2.1.6"
+Jun 01 12:41:29 webserver sshd[7201]: Failed password for root from 185.220.101.45 port 47014 ssh2
+192.168.1.10 - - [01/Jun/2026:12:41:29 +0000] "GET /index.html HTTP/1.1" 200 1603 "-" "sqlmap/1.7"
+Jun 01 12:37:29 webserver sudo[3485]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Jun 01 12:39:29 webserver sshd[2192]: Failed password for root from 185.220.101.45 port 62592 ssh2
+194.165.16.11 - - [01/Jun/2026:12:41:29 +0000] "GET /admin HTTP/1.1" 403 549 "-" "Nikto/2.1.6"
+Jun 01 12:36:29 webserver sshd[4822]: Accepted publickey for deploy from 192.168.1.10 port 47059 ssh2
+Jun 01 12:40:29 webserver sshd[4576]: Failed password for root from 185.220.101.45 port 59576 ssh2
+192.168.0.50 - - [01/Jun/2026:12:41:29 +0000] "GET /contact HTTP/1.1" 200 446 "-" "python-requests/2.28"
