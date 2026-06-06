@@ -1,24 +1,24 @@
-Jun 05 10:50:52 webserver kernel: [UFW BLOCK] IN=eth0 SRC=198.20.69.74 SCAN flags=S
-Jun 05 10:39:52 webserver sshd[9747]: Accepted publickey for deploy from 10.0.0.5 port 53121 ssh2
-Jun 05 10:46:52 webserver sshd[7144]: Failed password for root from 194.165.16.11 port 60141 ssh2
-10.0.0.5 - - [05/Jun/2026:10:50:52 +0000] "GET /index.html HTTP/1.1" 200 490 "-" "Mozilla/5.0"
-Jun 05 10:47:52 webserver sshd[6724]: Failed password for deploy from 194.165.16.11 port 59399 ssh2
-Jun 05 10:44:52 webserver sshd[6610]: Invalid user jenkins from 194.165.16.11
-Jun 05 10:50:52 webserver kernel: program[9057]: segfault at 0 ip 00007f rsp 00007f error 4
-Jun 05 10:46:52 webserver sshd[3965]: Failed password for user from 194.165.16.11 port 46232 ssh2
-45.33.32.156 - - [05/Jun/2026:10:50:52 +0000] "GET /login HTTP/1.1" 401 3028 "-" "Mozilla/5.0"
-Jun 05 10:49:52 webserver sshd[3112]: Failed password for root from 194.165.16.11 port 45868 ssh2
-45.33.32.156 - - [05/Jun/2026:10:50:52 +0000] "GET /login HTTP/1.1" 401 840 "-" "Mozilla/5.0"
-Jun 05 10:47:52 webserver sshd[3962]: Failed password for root from 194.165.16.11 port 56025 ssh2
-Jun 05 10:46:52 webserver sshd[7948]: Failed password for deploy from 194.165.16.11 port 44051 ssh2
-45.33.32.156 - - [05/Jun/2026:10:50:52 +0000] "GET /../etc/passwd HTTP/1.1" 400 243 "-" "Nikto/2.1.6"
-45.33.32.156 - - [05/Jun/2026:10:50:52 +0000] "GET /login HTTP/1.1" 401 973 "-" "Mozilla/5.0"
-Jun 05 10:48:52 webserver sshd[8997]: Failed password for ubuntu from 194.165.16.11 port 41161 ssh2
-45.33.32.156 - - [05/Jun/2026:10:50:52 +0000] "GET /admin HTTP/1.1" 403 2324 "-" "Nikto/2.1.6"
-192.168.0.50 - - [05/Jun/2026:10:50:52 +0000] "GET /contact HTTP/1.1" 200 1276 "-" "Mozilla/5.0"
-192.168.1.10 - - [05/Jun/2026:10:50:52 +0000] "GET /about HTTP/1.1" 200 439 "-" "Nikto/2.1.6"
-Jun 05 10:40:52 webserver sudo[3004]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Jun 05 10:47:52 webserver sshd[2732]: Failed password for user from 194.165.16.11 port 48202 ssh2
-198.20.69.74 - - [05/Jun/2026:10:50:52 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4558 "-" "sqlmap/1.7"
-Jun 05 10:45:52 webserver sshd[7749]: Invalid user elasticsearch from 194.165.16.11
-Jun 05 10:46:52 webserver sshd[2118]: Failed password for admin from 194.165.16.11 port 44970 ssh2
+Jun 06 09:27:55 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+Jun 06 09:21:55 webserver sshd[7376]: Invalid user elasticsearch from 198.20.69.74
+10.0.0.99 - - [06/Jun/2026:09:27:55 +0000] "GET /admin HTTP/1.1" 403 2700 "-" "python-requests/2.28"
+Jun 06 09:19:55 webserver sshd[7617]: Invalid user elasticsearch from 198.20.69.74
+192.168.1.10 - - [06/Jun/2026:09:27:55 +0000] "GET /contact HTTP/1.1" 200 3013 "-" "sqlmap/1.7"
+10.0.0.99 - - [06/Jun/2026:09:27:55 +0000] "GET /login HTTP/1.1" 401 531 "-" "Mozilla/5.0"
+10.0.0.99 - - [06/Jun/2026:09:27:55 +0000] "GET /../etc/passwd HTTP/1.1" 400 4571 "-" "python-requests/2.28"
+192.168.1.10 - - [06/Jun/2026:09:27:55 +0000] "GET /index.html HTTP/1.1" 200 2547 "-" "masscan/1.0"
+89.248.167.131 - - [06/Jun/2026:09:27:55 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 889 "-" "sqlmap/1.7"
+Jun 06 09:25:55 webserver sshd[5926]: Failed password for root from 198.20.69.74 port 58826 ssh2
+Jun 06 09:22:55 webserver sshd[2302]: Failed password for user from 198.20.69.74 port 51066 ssh2
+Jun 06 09:25:55 webserver sshd[5962]: Failed password for root from 198.20.69.74 port 55172 ssh2
+Jun 06 09:20:55 webserver sshd[6380]: Invalid user hadoop from 198.20.69.74
+Jun 06 09:14:55 webserver sshd[6249]: Accepted publickey for deploy from 192.168.1.10 port 55402 ssh2
+Jun 06 09:26:55 webserver sshd[9488]: Failed password for git from 198.20.69.74 port 55916 ssh2
+10.0.0.99 - - [06/Jun/2026:09:27:55 +0000] "GET /login HTTP/1.1" 401 2504 "-" "Mozilla/5.0"
+10.0.0.99 - - [06/Jun/2026:09:27:55 +0000] "GET /login HTTP/1.1" 401 3007 "-" "Mozilla/5.0"
+Jun 06 09:23:55 webserver sshd[8744]: Failed password for root from 198.20.69.74 port 52497 ssh2
+Jun 06 09:25:55 webserver sshd[8822]: Failed password for admin from 198.20.69.74 port 58747 ssh2
+Jun 06 09:24:55 webserver sshd[6822]: Failed password for nagios from 198.20.69.74 port 63541 ssh2
+Jun 06 09:27:55 webserver sshd[8413]: Failed password for root from 198.20.69.74 port 45307 ssh2
+172.16.0.10 - - [06/Jun/2026:09:27:55 +0000] "GET /about HTTP/1.1" 200 3309 "-" "python-requests/2.28"
+Jun 06 09:25:55 webserver sshd[7037]: Failed password for postgres from 198.20.69.74 port 49153 ssh2
+Jun 06 09:15:55 webserver sudo[4700]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
