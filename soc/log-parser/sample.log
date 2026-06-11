@@ -1,22 +1,21 @@
-172.16.0.10 - - [10/Jun/2026:10:58:43 +0000] "GET /contact HTTP/1.1" 200 3758 "-" "masscan/1.0"
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 3064 "-" "Mozilla/5.0"
-Jun 10 10:57:43 webserver sshd[4276]: Failed password for root from 10.0.0.99 port 55311 ssh2
-Jun 10 10:50:43 webserver sshd[1907]: Invalid user jenkins from 10.0.0.99
-Jun 10 10:46:43 webserver sudo[8912]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-192.168.0.50 - - [10/Jun/2026:10:58:43 +0000] "GET /about HTTP/1.1" 200 1327 "-" "python-requests/2.28"
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 1938 "-" "Mozilla/5.0"
-Jun 10 10:51:43 webserver sshd[9460]: Invalid user elasticsearch from 10.0.0.99
-Jun 10 10:54:43 webserver sshd[7863]: Failed password for root from 10.0.0.99 port 49391 ssh2
-Jun 10 10:49:43 webserver sshd[9723]: Invalid user nagios from 10.0.0.99
-Jun 10 10:45:43 webserver sshd[1441]: Accepted publickey for deploy from 192.168.1.10 port 48132 ssh2
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3022 "-" "sqlmap/1.7"
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /../etc/passwd HTTP/1.1" 400 1222 "-" "masscan/1.0"
-Jun 10 10:57:43 webserver sshd[9373]: Failed password for root from 10.0.0.99 port 50563 ssh2
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /admin HTTP/1.1" 403 2684 "-" "Nikto/2.1.6"
-Jun 10 10:58:43 webserver kernel: program[6061]: segfault at 0 ip 00007f rsp 00007f error 4
-Jun 10 10:53:43 webserver sshd[5780]: Failed password for root from 10.0.0.99 port 45201 ssh2
-45.33.32.156 - - [10/Jun/2026:10:58:43 +0000] "GET /login HTTP/1.1" 401 4396 "-" "Mozilla/5.0"
-Jun 10 10:56:43 webserver sshd[6111]: Failed password for postgres from 10.0.0.99 port 49040 ssh2
-192.168.1.10 - - [10/Jun/2026:10:58:43 +0000] "GET /index.html HTTP/1.1" 200 840 "-" "Mozilla/5.0"
-Jun 10 10:55:43 webserver sshd[8409]: Failed password for root from 10.0.0.99 port 49812 ssh2
-Jun 10 10:52:43 webserver sshd[5028]: Failed password for nagios from 10.0.0.99 port 53459 ssh2
+192.168.1.10 - - [11/Jun/2026:11:24:18 +0000] "GET /contact HTTP/1.1" 200 883 "-" "python-requests/2.28"
+89.248.167.131 - - [11/Jun/2026:11:24:18 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3680 "-" "sqlmap/1.7"
+45.33.32.156 - - [11/Jun/2026:11:24:18 +0000] "GET /../etc/passwd HTTP/1.1" 400 3280 "-" "masscan/1.0"
+45.33.32.156 - - [11/Jun/2026:11:24:18 +0000] "GET /login HTTP/1.1" 401 2508 "-" "Mozilla/5.0"
+Jun 11 11:22:18 webserver sshd[4341]: Failed password for root from 89.248.167.131 port 55381 ssh2
+45.33.32.156 - - [11/Jun/2026:11:24:18 +0000] "GET /login HTTP/1.1" 401 1816 "-" "Mozilla/5.0"
+Jun 11 11:20:18 webserver sshd[7339]: Invalid user jenkins from 89.248.167.131
+192.168.0.50 - - [11/Jun/2026:11:24:18 +0000] "GET /index.html HTTP/1.1" 200 4238 "-" "Nikto/2.1.6"
+Jun 11 11:24:18 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
+Jun 11 11:24:18 webserver sshd[5997]: Failed password for root from 89.248.167.131 port 53822 ssh2
+Jun 11 11:21:18 webserver sshd[1835]: Invalid user nagios from 89.248.167.131
+Jun 11 11:19:18 webserver sshd[6127]: Invalid user nagios from 89.248.167.131
+Jun 11 11:16:18 webserver sudo[6266]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+45.33.32.156 - - [11/Jun/2026:11:24:18 +0000] "GET /admin HTTP/1.1" 403 3658 "-" "curl/7.68.0"
+10.0.0.5 - - [11/Jun/2026:11:24:18 +0000] "GET /about HTTP/1.1" 200 3551 "-" "Nikto/2.1.6"
+Jun 11 11:24:18 webserver sshd[6133]: Failed password for root from 89.248.167.131 port 45926 ssh2
+Jun 11 11:23:18 webserver sshd[8704]: Failed password for root from 89.248.167.131 port 63260 ssh2
+Jun 11 11:22:18 webserver sshd[6461]: Failed password for root from 89.248.167.131 port 46839 ssh2
+Jun 11 11:22:18 webserver sshd[6983]: Failed password for root from 89.248.167.131 port 56840 ssh2
+Jun 11 11:13:18 webserver sshd[7745]: Accepted publickey for deploy from 192.168.0.50 port 43607 ssh2
+45.33.32.156 - - [11/Jun/2026:11:24:18 +0000] "GET /login HTTP/1.1" 401 2079 "-" "Mozilla/5.0"
