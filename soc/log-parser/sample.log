@@ -1,20 +1,22 @@
-Jun 14 10:27:24 webserver sshd[6257]: Failed password for jenkins from 185.220.101.45 port 40343 ssh2
-194.165.16.11 - - [14/Jun/2026:10:27:24 +0000] "GET /login HTTP/1.1" 401 2553 "-" "Mozilla/5.0"
-Jun 14 10:24:24 webserver sudo[6027]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-Jun 14 10:27:24 webserver sshd[9484]: Failed password for root from 185.220.101.45 port 51525 ssh2
-Jun 14 10:27:24 webserver sshd[9731]: Failed password for root from 185.220.101.45 port 55933 ssh2
-Jun 14 10:27:24 webserver sshd[4765]: Failed password for user from 185.220.101.45 port 57291 ssh2
-Jun 14 10:27:24 webserver sshd[3523]: Failed password for root from 185.220.101.45 port 58130 ssh2
-10.0.0.5 - - [14/Jun/2026:10:27:24 +0000] "GET /index.html HTTP/1.1" 200 260 "-" "sqlmap/1.7"
-Jun 14 10:25:24 webserver sshd[6359]: Invalid user elasticsearch from 185.220.101.45
-194.165.16.11 - - [14/Jun/2026:10:27:24 +0000] "GET /login HTTP/1.1" 401 1116 "-" "Mozilla/5.0"
-Jun 14 10:27:24 webserver sshd[4366]: Failed password for jenkins from 185.220.101.45 port 52815 ssh2
-194.165.16.11 - - [14/Jun/2026:10:27:24 +0000] "GET /admin HTTP/1.1" 403 1366 "-" "curl/7.68.0"
-192.168.1.10 - - [14/Jun/2026:10:27:24 +0000] "GET /contact HTTP/1.1" 200 672 "-" "python-requests/2.28"
-Jun 14 10:26:24 webserver sshd[5689]: Invalid user elasticsearch from 185.220.101.45
-10.0.0.5 - - [14/Jun/2026:10:27:24 +0000] "GET /about HTTP/1.1" 200 3978 "-" "curl/7.68.0"
-194.165.16.11 - - [14/Jun/2026:10:27:24 +0000] "GET /login HTTP/1.1" 401 3587 "-" "Mozilla/5.0"
-10.0.0.99 - - [14/Jun/2026:10:27:24 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4601 "-" "sqlmap/1.7"
-Jun 14 10:27:24 webserver kernel: program[7387]: segfault at 0 ip 00007f rsp 00007f error 4
-194.165.16.11 - - [14/Jun/2026:10:27:24 +0000] "GET /../etc/passwd HTTP/1.1" 400 2748 "-" "python-requests/2.28"
-Jun 14 10:22:24 webserver sshd[6621]: Accepted publickey for deploy from 172.16.0.10 port 55169 ssh2
+Jun 15 13:14:57 webserver sshd[9551]: Invalid user jenkins from 185.220.101.45
+192.168.1.10 - - [15/Jun/2026:13:19:57 +0000] "GET /index.html HTTP/1.1" 200 1451 "-" "Nikto/2.1.6"
+Jun 15 13:10:57 webserver sshd[5959]: Accepted publickey for deploy from 172.16.0.10 port 62880 ssh2
+194.165.16.11 - - [15/Jun/2026:13:19:57 +0000] "GET /login HTTP/1.1" 401 1877 "-" "Mozilla/5.0"
+194.165.16.11 - - [15/Jun/2026:13:19:57 +0000] "GET /../etc/passwd HTTP/1.1" 400 2261 "-" "curl/7.68.0"
+Jun 15 13:16:57 webserver sshd[1429]: Invalid user jenkins from 185.220.101.45
+Jun 15 13:11:57 webserver sudo[2284]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Jun 15 13:18:57 webserver sshd[3904]: Failed password for root from 185.220.101.45 port 55914 ssh2
+172.16.0.10 - - [15/Jun/2026:13:19:57 +0000] "GET /about HTTP/1.1" 200 330 "-" "python-requests/2.28"
+Jun 15 13:17:57 webserver sshd[8387]: Failed password for root from 185.220.101.45 port 44491 ssh2
+Jun 15 13:18:57 webserver sshd[6418]: Failed password for ubuntu from 185.220.101.45 port 62024 ssh2
+194.165.16.11 - - [15/Jun/2026:13:19:57 +0000] "GET /login HTTP/1.1" 401 3325 "-" "Mozilla/5.0"
+Jun 15 13:17:57 webserver sshd[4113]: Failed password for test from 185.220.101.45 port 52315 ssh2
+Jun 15 13:19:57 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Jun 15 13:18:57 webserver sshd[6820]: Failed password for root from 185.220.101.45 port 42366 ssh2
+10.0.0.5 - - [15/Jun/2026:13:19:57 +0000] "GET /contact HTTP/1.1" 200 3053 "-" "sqlmap/1.7"
+Jun 15 13:17:57 webserver sshd[6143]: Failed password for root from 185.220.101.45 port 46295 ssh2
+194.165.16.11 - - [15/Jun/2026:13:19:57 +0000] "GET /admin HTTP/1.1" 403 1731 "-" "curl/7.68.0"
+194.165.16.11 - - [15/Jun/2026:13:19:57 +0000] "GET /login HTTP/1.1" 401 3629 "-" "Mozilla/5.0"
+10.0.0.99 - - [15/Jun/2026:13:19:57 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1269 "-" "sqlmap/1.7"
+Jun 15 13:15:57 webserver sshd[1699]: Invalid user nagios from 185.220.101.45
+Jun 15 13:17:57 webserver sshd[9685]: Failed password for root from 185.220.101.45 port 43577 ssh2
