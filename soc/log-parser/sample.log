@@ -1,19 +1,24 @@
-185.220.101.45 - - [17/Jun/2026:11:53:25 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1341 "-" "sqlmap/1.7"
-10.0.0.99 - - [17/Jun/2026:11:53:25 +0000] "GET /../etc/passwd HTTP/1.1" 400 312 "-" "curl/7.68.0"
-192.168.1.10 - - [17/Jun/2026:11:53:25 +0000] "GET /index.html HTTP/1.1" 200 4753 "-" "python-requests/2.28"
-Jun 17 11:45:25 webserver sudo[9847]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Jun 17 11:51:25 webserver sshd[1524]: Failed password for nagios from 185.220.101.45 port 43000 ssh2
-Jun 17 11:53:25 webserver kernel: program[6473]: segfault at 0 ip 00007f rsp 00007f error 4
-10.0.0.99 - - [17/Jun/2026:11:53:25 +0000] "GET /admin HTTP/1.1" 403 3823 "-" "Nikto/2.1.6"
-10.0.0.5 - - [17/Jun/2026:11:53:25 +0000] "GET /contact HTTP/1.1" 200 4102 "-" "python-requests/2.28"
-10.0.0.99 - - [17/Jun/2026:11:53:25 +0000] "GET /login HTTP/1.1" 401 2001 "-" "Mozilla/5.0"
-192.168.0.50 - - [17/Jun/2026:11:53:25 +0000] "GET /about HTTP/1.1" 200 4259 "-" "python-requests/2.28"
-Jun 17 11:52:25 webserver sshd[3247]: Failed password for root from 185.220.101.45 port 46199 ssh2
-Jun 17 11:42:25 webserver sshd[6802]: Accepted publickey for deploy from 10.0.0.5 port 47005 ssh2
-Jun 17 11:52:25 webserver sshd[6808]: Failed password for root from 185.220.101.45 port 46153 ssh2
-10.0.0.99 - - [17/Jun/2026:11:53:25 +0000] "GET /login HTTP/1.1" 401 3062 "-" "Mozilla/5.0"
-Jun 17 11:52:25 webserver sshd[5174]: Failed password for admin from 185.220.101.45 port 50857 ssh2
-Jun 17 11:49:25 webserver sshd[5104]: Invalid user hadoop from 185.220.101.45
-10.0.0.99 - - [17/Jun/2026:11:53:25 +0000] "GET /login HTTP/1.1" 401 1170 "-" "Mozilla/5.0"
-Jun 17 11:52:25 webserver sshd[7197]: Failed password for root from 185.220.101.45 port 52275 ssh2
-Jun 17 11:50:25 webserver sshd[8746]: Invalid user nagios from 185.220.101.45
+Jun 18 11:09:26 webserver sshd[1437]: Failed password for root from 192.168.1.100 port 46957 ssh2
+Jun 18 11:08:26 webserver sshd[3881]: Failed password for root from 192.168.1.100 port 41029 ssh2
+Jun 18 11:09:26 webserver sshd[8682]: Failed password for root from 192.168.1.100 port 48420 ssh2
+Jun 18 11:03:26 webserver sshd[8902]: Invalid user ftpuser from 192.168.1.100
+185.220.101.45 - - [18/Jun/2026:11:10:26 +0000] "GET /admin HTTP/1.1" 403 1093 "-" "masscan/1.0"
+192.168.0.50 - - [18/Jun/2026:11:10:26 +0000] "GET /index.html HTTP/1.1" 200 4013 "-" "Nikto/2.1.6"
+Jun 18 11:09:26 webserver sshd[1490]: Failed password for root from 192.168.1.100 port 58194 ssh2
+Jun 18 11:10:26 webserver kernel: program[2234]: segfault at 0 ip 00007f rsp 00007f error 4
+185.220.101.45 - - [18/Jun/2026:11:10:26 +0000] "GET /login HTTP/1.1" 401 490 "-" "Mozilla/5.0"
+172.16.0.10 - - [18/Jun/2026:11:10:26 +0000] "GET /about HTTP/1.1" 200 2264 "-" "curl/7.68.0"
+Jun 18 11:07:26 webserver sshd[2635]: Failed password for test from 192.168.1.100 port 56849 ssh2
+198.20.69.74 - - [18/Jun/2026:11:10:26 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2116 "-" "sqlmap/1.7"
+Jun 18 11:07:26 webserver sshd[1627]: Failed password for postgres from 192.168.1.100 port 41315 ssh2
+Jun 18 11:05:26 webserver sshd[2773]: Invalid user nagios from 192.168.1.100
+185.220.101.45 - - [18/Jun/2026:11:10:26 +0000] "GET /../etc/passwd HTTP/1.1" 400 3569 "-" "python-requests/2.28"
+Jun 18 11:06:26 webserver sshd[9730]: Failed password for root from 192.168.1.100 port 45821 ssh2
+Jun 18 11:08:26 webserver sshd[5321]: Failed password for jenkins from 192.168.1.100 port 60653 ssh2
+185.220.101.45 - - [18/Jun/2026:11:10:26 +0000] "GET /login HTTP/1.1" 401 4037 "-" "Mozilla/5.0"
+Jun 18 11:00:26 webserver sudo[1957]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+185.220.101.45 - - [18/Jun/2026:11:10:26 +0000] "GET /login HTTP/1.1" 401 2377 "-" "Mozilla/5.0"
+Jun 18 11:04:26 webserver sshd[3033]: Invalid user hadoop from 192.168.1.100
+Jun 18 11:10:26 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+Jun 18 10:59:26 webserver sshd[9791]: Accepted publickey for deploy from 192.168.1.10 port 54302 ssh2
+10.0.0.5 - - [18/Jun/2026:11:10:26 +0000] "GET /contact HTTP/1.1" 200 950 "-" "python-requests/2.28"
