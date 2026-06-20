@@ -1,23 +1,20 @@
-Jun 19 11:26:20 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-Jun 19 11:20:20 webserver sshd[5014]: Invalid user ftpuser from 10.0.0.99
-Jun 19 11:21:20 webserver sshd[9834]: Failed password for ubuntu from 10.0.0.99 port 45359 ssh2
-Jun 19 11:21:20 webserver sshd[1871]: Failed password for oracle from 10.0.0.99 port 46679 ssh2
-Jun 19 11:19:20 webserver sshd[8001]: Invalid user oracle from 10.0.0.99
-10.0.0.99 - - [19/Jun/2026:11:26:20 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3817 "-" "sqlmap/1.7"
-Jun 19 11:24:20 webserver sshd[1912]: Failed password for root from 10.0.0.99 port 57483 ssh2
-192.168.1.10 - - [19/Jun/2026:11:26:20 +0000] "GET /index.html HTTP/1.1" 200 2673 "-" "Nikto/2.1.6"
-Jun 19 11:22:20 webserver sshd[6050]: Failed password for root from 10.0.0.99 port 43564 ssh2
-Jun 19 11:23:20 webserver sshd[1248]: Failed password for root from 10.0.0.99 port 51794 ssh2
-Jun 19 11:15:20 webserver sshd[5926]: Accepted publickey for deploy from 192.168.0.50 port 41750 ssh2
-Jun 19 11:16:20 webserver sudo[5348]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-45.33.32.156 - - [19/Jun/2026:11:26:20 +0000] "GET /login HTTP/1.1" 401 666 "-" "Mozilla/5.0"
-45.33.32.156 - - [19/Jun/2026:11:26:20 +0000] "GET /login HTTP/1.1" 401 2560 "-" "Mozilla/5.0"
-Jun 19 11:23:20 webserver sshd[3151]: Failed password for root from 10.0.0.99 port 49528 ssh2
-45.33.32.156 - - [19/Jun/2026:11:26:20 +0000] "GET /login HTTP/1.1" 401 690 "-" "Mozilla/5.0"
-10.0.0.5 - - [19/Jun/2026:11:26:20 +0000] "GET /about HTTP/1.1" 200 229 "-" "python-requests/2.28"
-Jun 19 11:21:20 webserver sshd[3098]: Failed password for root from 10.0.0.99 port 41953 ssh2
-Jun 19 11:22:20 webserver sshd[6095]: Failed password for jenkins from 10.0.0.99 port 57239 ssh2
-45.33.32.156 - - [19/Jun/2026:11:26:20 +0000] "GET /admin HTTP/1.1" 403 1257 "-" "sqlmap/1.7"
-45.33.32.156 - - [19/Jun/2026:11:26:20 +0000] "GET /../etc/passwd HTTP/1.1" 400 2914 "-" "Nikto/2.1.6"
-Jun 19 11:25:20 webserver sshd[6723]: Failed password for test from 10.0.0.99 port 47629 ssh2
-10.0.0.5 - - [19/Jun/2026:11:26:20 +0000] "GET /contact HTTP/1.1" 200 2782 "-" "python-requests/2.28"
+10.0.0.5 - - [20/Jun/2026:10:10:19 +0000] "GET /about HTTP/1.1" 200 676 "-" "curl/7.68.0"
+Jun 20 10:10:19 webserver sshd[8908]: Failed password for root from 192.168.1.100 port 54450 ssh2
+192.168.1.10 - - [20/Jun/2026:10:10:19 +0000] "GET /index.html HTTP/1.1" 200 278 "-" "python-requests/2.28"
+198.20.69.74 - - [20/Jun/2026:10:10:19 +0000] "GET /login HTTP/1.1" 401 3162 "-" "Mozilla/5.0"
+Jun 20 10:09:19 webserver sshd[6513]: Failed password for root from 192.168.1.100 port 43276 ssh2
+198.20.69.74 - - [20/Jun/2026:10:10:19 +0000] "GET /login HTTP/1.1" 401 1303 "-" "Mozilla/5.0"
+Jun 20 10:07:19 webserver sshd[5055]: Failed password for git from 192.168.1.100 port 44698 ssh2
+185.220.101.45 - - [20/Jun/2026:10:10:19 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4191 "-" "sqlmap/1.7"
+Jun 20 10:10:19 webserver sshd[1927]: Failed password for jenkins from 192.168.1.100 port 48485 ssh2
+198.20.69.74 - - [20/Jun/2026:10:10:19 +0000] "GET /login HTTP/1.1" 401 3824 "-" "Mozilla/5.0"
+Jun 20 10:01:19 webserver sshd[4112]: Accepted publickey for deploy from 192.168.1.10 port 55177 ssh2
+Jun 20 10:03:19 webserver sudo[7052]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+198.20.69.74 - - [20/Jun/2026:10:10:19 +0000] "GET /admin HTTP/1.1" 403 3583 "-" "python-requests/2.28"
+Jun 20 10:06:19 webserver sshd[3054]: Invalid user ftpuser from 192.168.1.100
+Jun 20 10:08:19 webserver sshd[8697]: Failed password for nagios from 192.168.1.100 port 51977 ssh2
+192.168.1.10 - - [20/Jun/2026:10:10:19 +0000] "GET /contact HTTP/1.1" 200 3287 "-" "python-requests/2.28"
+198.20.69.74 - - [20/Jun/2026:10:10:19 +0000] "GET /../etc/passwd HTTP/1.1" 400 1836 "-" "masscan/1.0"
+Jun 20 10:10:19 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Jun 20 10:04:19 webserver sshd[1670]: Invalid user ftpuser from 192.168.1.100
+Jun 20 10:05:19 webserver sshd[4607]: Invalid user hadoop from 192.168.1.100
