@@ -5678,3 +5678,72 @@
   MITRE ATT&CK : T1110 - Brute Force (Credential Access)
   Action       : alert
   Log entry    : Source IP 192.168.1.100 had 8 failed login attempts
+
+=== Run: 2026-06-21 10:33:43 ===
+
+13 alert(s) triggered:
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 59840 ssh2
+
+[MEDIUM] Segfault Detected (RULE-006)
+  MITRE ATT&CK : T1203 - Exploitation for Client Execution (Execution)
+  Action       : alert
+  Log entry    : program[1474]: segfault at 0 ip 00007f rsp 00007f error 4
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user ftpuser from 194.165.16.11
+
+[MEDIUM] Admin Path Probe (RULE-005)
+  MITRE ATT&CK : T1190 - Exploit Public-Facing Application (Initial Access)
+  Action       : log
+  Log entry    : GET /admin HTTP/1.1
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 43098 ssh2
+
+[HIGH] Credential Stuffing Attempt (RULE-004)
+  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
+  Action       : alert
+  Log entry    : GET /login HTTP/1.1
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for admin from 194.165.16.11 port 40252 ssh2
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user oracle from 194.165.16.11
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for postgres from 194.165.16.11 port 51674 ssh2
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1001
+
+[HIGH] Directory Traversal Attempt (RULE-010)
+  MITRE ATT&CK : T1083 - File and Directory Discovery (Discovery)
+  Action       : alert
+  Log entry    : GET /../etc/passwd HTTP/1.1
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for user from 194.165.16.11 port 52530 ssh2
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 194.165.16.11 had 7 failed login attempts
