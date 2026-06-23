@@ -1,18 +1,18 @@
-198.20.69.74 - - [22/Jun/2026:12:52:20 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3437 "-" "sqlmap/1.7"
-194.165.16.11 - - [22/Jun/2026:12:52:20 +0000] "GET /login HTTP/1.1" 401 349 "-" "Mozilla/5.0"
-Jun 22 12:51:20 webserver sshd[9854]: Failed password for deploy from 192.168.1.100 port 53325 ssh2
-Jun 22 12:50:20 webserver sshd[9044]: Failed password for root from 192.168.1.100 port 50308 ssh2
-Jun 22 12:49:20 webserver sshd[8762]: Invalid user oracle from 192.168.1.100
-Jun 22 12:51:20 webserver sshd[3179]: Failed password for nagios from 192.168.1.100 port 54548 ssh2
-10.0.0.5 - - [22/Jun/2026:12:52:20 +0000] "GET /about HTTP/1.1" 200 3529 "-" "masscan/1.0"
-192.168.0.50 - - [22/Jun/2026:12:52:20 +0000] "GET /contact HTTP/1.1" 200 2403 "-" "Mozilla/5.0"
-194.165.16.11 - - [22/Jun/2026:12:52:20 +0000] "GET /login HTTP/1.1" 401 2831 "-" "Mozilla/5.0"
-Jun 22 12:52:20 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
-Jun 22 12:51:20 webserver sshd[8571]: Failed password for root from 192.168.1.100 port 54491 ssh2
-Jun 22 12:52:20 webserver kernel: program[1306]: segfault at 0 ip 00007f rsp 00007f error 4
-194.165.16.11 - - [22/Jun/2026:12:52:20 +0000] "GET /../etc/passwd HTTP/1.1" 400 3354 "-" "python-requests/2.28"
-192.168.1.10 - - [22/Jun/2026:12:52:20 +0000] "GET /index.html HTTP/1.1" 200 4756 "-" "sqlmap/1.7"
-Jun 22 12:44:20 webserver sshd[4287]: Accepted publickey for deploy from 172.16.0.10 port 42296 ssh2
-194.165.16.11 - - [22/Jun/2026:12:52:20 +0000] "GET /admin HTTP/1.1" 403 3808 "-" "Mozilla/5.0"
-Jun 22 12:47:20 webserver sudo[3964]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-194.165.16.11 - - [22/Jun/2026:12:52:20 +0000] "GET /login HTTP/1.1" 401 1390 "-" "Mozilla/5.0"
+Jun 23 10:35:47 webserver sshd[4631]: Failed password for admin from 198.20.69.74 port 41249 ssh2
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /../etc/passwd HTTP/1.1" 400 448 "-" "python-requests/2.28"
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /login HTTP/1.1" 401 1674 "-" "Mozilla/5.0"
+Jun 23 10:30:47 webserver sudo[7623]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+10.0.0.5 - - [23/Jun/2026:10:37:47 +0000] "GET /index.html HTTP/1.1" 200 2183 "-" "masscan/1.0"
+172.16.0.10 - - [23/Jun/2026:10:37:47 +0000] "GET /contact HTTP/1.1" 200 4942 "-" "masscan/1.0"
+Jun 23 10:35:47 webserver sshd[6376]: Failed password for ubuntu from 198.20.69.74 port 57695 ssh2
+Jun 23 10:36:47 webserver sshd[1330]: Failed password for admin from 198.20.69.74 port 50811 ssh2
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /admin HTTP/1.1" 403 668 "-" "sqlmap/1.7"
+Jun 23 10:36:47 webserver sshd[8430]: Failed password for root from 198.20.69.74 port 42564 ssh2
+Jun 23 10:29:47 webserver sshd[1996]: Accepted publickey for deploy from 192.168.1.10 port 54751 ssh2
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /login HTTP/1.1" 401 3812 "-" "Mozilla/5.0"
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2934 "-" "sqlmap/1.7"
+Jun 23 10:36:47 webserver sshd[1350]: Failed password for root from 198.20.69.74 port 51677 ssh2
+10.0.0.5 - - [23/Jun/2026:10:37:47 +0000] "GET /about HTTP/1.1" 200 2092 "-" "Nikto/2.1.6"
+10.0.0.99 - - [23/Jun/2026:10:37:47 +0000] "GET /login HTTP/1.1" 401 2713 "-" "Mozilla/5.0"
+Jun 23 10:37:47 webserver sshd[2777]: Failed password for jenkins from 198.20.69.74 port 43306 ssh2
+Jun 23 10:34:47 webserver sshd[5471]: Invalid user ftpuser from 198.20.69.74
