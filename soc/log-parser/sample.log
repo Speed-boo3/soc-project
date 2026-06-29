@@ -1,22 +1,20 @@
-Jun 28 10:05:31 webserver sshd[9351]: Failed password for admin from 194.165.16.11 port 54806 ssh2
-192.168.1.100 - - [28/Jun/2026:10:05:31 +0000] "GET /admin HTTP/1.1" 403 2228 "-" "curl/7.68.0"
-192.168.0.50 - - [28/Jun/2026:10:05:31 +0000] "GET /index.html HTTP/1.1" 200 3430 "-" "python-requests/2.28"
-Jun 28 10:05:31 webserver sshd[9443]: Failed password for root from 194.165.16.11 port 44047 ssh2
-192.168.1.10 - - [28/Jun/2026:10:05:31 +0000] "GET /contact HTTP/1.1" 200 1062 "-" "masscan/1.0"
-192.168.1.100 - - [28/Jun/2026:10:05:31 +0000] "GET /login HTTP/1.1" 401 2070 "-" "Mozilla/5.0"
-Jun 28 10:05:31 webserver sshd[2488]: Failed password for root from 194.165.16.11 port 48643 ssh2
-Jun 28 10:05:31 webserver kernel: program[7096]: segfault at 0 ip 00007f rsp 00007f error 4
-194.165.16.11 - - [28/Jun/2026:10:05:31 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1801 "-" "sqlmap/1.7"
-192.168.1.100 - - [28/Jun/2026:10:05:31 +0000] "GET /../etc/passwd HTTP/1.1" 400 1831 "-" "masscan/1.0"
-Jun 28 09:59:31 webserver sudo[6715]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-Jun 28 10:04:31 webserver sshd[3719]: Failed password for root from 194.165.16.11 port 60879 ssh2
-192.168.1.100 - - [28/Jun/2026:10:05:31 +0000] "GET /login HTTP/1.1" 401 4533 "-" "Mozilla/5.0"
-192.168.1.10 - - [28/Jun/2026:10:05:31 +0000] "GET /about HTTP/1.1" 200 3816 "-" "masscan/1.0"
-192.168.1.100 - - [28/Jun/2026:10:05:31 +0000] "GET /login HTTP/1.1" 401 2722 "-" "Mozilla/5.0"
-Jun 28 10:05:31 webserver sshd[1774]: Failed password for user from 194.165.16.11 port 45179 ssh2
-Jun 28 10:03:31 webserver sshd[9529]: Invalid user elasticsearch from 194.165.16.11
-Jun 28 10:05:31 webserver sshd[6646]: Failed password for root from 194.165.16.11 port 55026 ssh2
-Jun 28 10:05:31 webserver sshd[4499]: Failed password for root from 194.165.16.11 port 45704 ssh2
-Jun 28 10:05:31 webserver sshd[9486]: Failed password for admin from 194.165.16.11 port 53769 ssh2
-Jun 28 10:05:31 webserver kernel: [UFW BLOCK] IN=eth0 SRC=198.20.69.74 SCAN flags=S
-Jun 28 09:56:31 webserver sshd[1895]: Accepted publickey for deploy from 192.168.1.10 port 54526 ssh2
+194.165.16.11 - - [29/Jun/2026:12:02:21 +0000] "GET /admin HTTP/1.1" 403 1433 "-" "Mozilla/5.0"
+194.165.16.11 - - [29/Jun/2026:12:02:21 +0000] "GET /login HTTP/1.1" 401 1904 "-" "Mozilla/5.0"
+Jun 29 11:54:21 webserver sudo[7087]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Jun 29 11:58:21 webserver sshd[2814]: Invalid user hadoop from 198.20.69.74
+192.168.0.50 - - [29/Jun/2026:12:02:21 +0000] "GET /about HTTP/1.1" 200 3365 "-" "masscan/1.0"
+194.165.16.11 - - [29/Jun/2026:12:02:21 +0000] "GET /../etc/passwd HTTP/1.1" 400 2970 "-" "sqlmap/1.7"
+Jun 29 12:02:21 webserver sshd[2356]: Failed password for oracle from 198.20.69.74 port 64253 ssh2
+Jun 29 12:02:21 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Jun 29 12:01:21 webserver sshd[7985]: Failed password for root from 198.20.69.74 port 41168 ssh2
+Jun 29 12:02:21 webserver kernel: program[4637]: segfault at 0 ip 00007f rsp 00007f error 4
+Jun 29 11:59:21 webserver sshd[4225]: Invalid user hadoop from 198.20.69.74
+194.165.16.11 - - [29/Jun/2026:12:02:21 +0000] "GET /login HTTP/1.1" 401 2697 "-" "Mozilla/5.0"
+Jun 29 12:02:21 webserver sshd[6828]: Failed password for admin from 198.20.69.74 port 45183 ssh2
+Jun 29 11:57:21 webserver sshd[8147]: Invalid user elasticsearch from 198.20.69.74
+10.0.0.5 - - [29/Jun/2026:12:02:21 +0000] "GET /index.html HTTP/1.1" 200 4043 "-" "sqlmap/1.7"
+45.33.32.156 - - [29/Jun/2026:12:02:21 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 513 "-" "sqlmap/1.7"
+Jun 29 11:52:21 webserver sshd[9088]: Accepted publickey for deploy from 172.16.0.10 port 64390 ssh2
+194.165.16.11 - - [29/Jun/2026:12:02:21 +0000] "GET /login HTTP/1.1" 401 2276 "-" "Mozilla/5.0"
+10.0.0.5 - - [29/Jun/2026:12:02:21 +0000] "GET /contact HTTP/1.1" 200 4758 "-" "masscan/1.0"
+Jun 29 12:00:21 webserver sshd[9011]: Failed password for admin from 198.20.69.74 port 64801 ssh2
