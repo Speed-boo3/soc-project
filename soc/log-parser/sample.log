@@ -1,23 +1,20 @@
-Jul 06 11:33:38 webserver sshd[8960]: Failed password for jenkins from 192.168.1.100 port 42711 ssh2
-Jul 06 11:31:38 webserver sshd[2770]: Invalid user ftpuser from 192.168.1.100
-Jul 06 11:32:38 webserver sshd[3674]: Failed password for root from 192.168.1.100 port 54703 ssh2
-Jul 06 11:30:38 webserver sshd[7590]: Invalid user hadoop from 192.168.1.100
-10.0.0.99 - - [06/Jul/2026:11:39:38 +0000] "GET /login HTTP/1.1" 401 2863 "-" "Mozilla/5.0"
-10.0.0.99 - - [06/Jul/2026:11:39:38 +0000] "GET /../etc/passwd HTTP/1.1" 400 1701 "-" "python-requests/2.28"
-172.16.0.10 - - [06/Jul/2026:11:39:38 +0000] "GET /index.html HTTP/1.1" 200 2159 "-" "Nikto/2.1.6"
-10.0.0.99 - - [06/Jul/2026:11:39:38 +0000] "GET /login HTTP/1.1" 401 1673 "-" "Mozilla/5.0"
-185.220.101.45 - - [06/Jul/2026:11:39:38 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1446 "-" "sqlmap/1.7"
-Jul 06 11:37:38 webserver sshd[1482]: Failed password for git from 192.168.1.100 port 49505 ssh2
-10.0.0.99 - - [06/Jul/2026:11:39:38 +0000] "GET /admin HTTP/1.1" 403 3104 "-" "python-requests/2.28"
-Jul 06 11:36:38 webserver sshd[5406]: Failed password for root from 192.168.1.100 port 61648 ssh2
-Jul 06 11:32:38 webserver sshd[3315]: Failed password for root from 192.168.1.100 port 62239 ssh2
-Jul 06 11:39:38 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-192.168.1.10 - - [06/Jul/2026:11:39:38 +0000] "GET /contact HTTP/1.1" 200 2574 "-" "python-requests/2.28"
-Jul 06 11:34:38 webserver sshd[3725]: Failed password for jenkins from 192.168.1.100 port 58805 ssh2
-Jul 06 11:38:38 webserver sshd[9932]: Failed password for root from 192.168.1.100 port 52838 ssh2
-Jul 06 11:32:38 webserver sshd[5125]: Failed password for oracle from 192.168.1.100 port 58256 ssh2
-10.0.0.99 - - [06/Jul/2026:11:39:38 +0000] "GET /login HTTP/1.1" 401 341 "-" "Mozilla/5.0"
-Jul 06 11:27:38 webserver sshd[6962]: Accepted publickey for deploy from 172.16.0.10 port 46674 ssh2
-10.0.0.5 - - [06/Jul/2026:11:39:38 +0000] "GET /about HTTP/1.1" 200 1806 "-" "curl/7.68.0"
-Jul 06 11:35:38 webserver sshd[3685]: Failed password for jenkins from 192.168.1.100 port 57804 ssh2
-Jul 06 11:29:38 webserver sudo[3456]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Jul 07 10:26:39 webserver sshd[5399]: Failed password for admin from 185.220.101.45 port 53656 ssh2
+10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 2591 "-" "Mozilla/5.0"
+Jul 07 10:26:39 webserver sshd[9932]: Failed password for deploy from 185.220.101.45 port 57875 ssh2
+185.220.101.45 - - [07/Jul/2026:10:27:39 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1991 "-" "sqlmap/1.7"
+172.16.0.10 - - [07/Jul/2026:10:27:39 +0000] "GET /index.html HTTP/1.1" 200 509 "-" "python-requests/2.28"
+Jul 07 10:26:39 webserver sshd[9302]: Failed password for root from 185.220.101.45 port 62024 ssh2
+Jul 07 10:26:39 webserver sshd[7257]: Failed password for nagios from 185.220.101.45 port 60888 ssh2
+10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 2506 "-" "Mozilla/5.0"
+Jul 07 10:23:39 webserver sshd[1291]: Invalid user jenkins from 185.220.101.45
+10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /../etc/passwd HTTP/1.1" 400 2405 "-" "sqlmap/1.7"
+Jul 07 10:27:39 webserver kernel: program[4227]: segfault at 0 ip 00007f rsp 00007f error 4
+Jul 07 10:22:39 webserver sudo[9563]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+10.0.0.5 - - [07/Jul/2026:10:27:39 +0000] "GET /about HTTP/1.1" 200 3567 "-" "curl/7.68.0"
+10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 4679 "-" "Mozilla/5.0"
+192.168.1.10 - - [07/Jul/2026:10:27:39 +0000] "GET /contact HTTP/1.1" 200 3295 "-" "Mozilla/5.0"
+Jul 07 10:24:39 webserver sshd[9366]: Failed password for root from 185.220.101.45 port 40025 ssh2
+10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /admin HTTP/1.1" 403 2559 "-" "Mozilla/5.0"
+Jul 07 10:25:39 webserver sshd[1068]: Failed password for postgres from 185.220.101.45 port 44878 ssh2
+Jul 07 10:20:39 webserver sshd[8143]: Accepted publickey for deploy from 172.16.0.10 port 53951 ssh2
+Jul 07 10:26:39 webserver sshd[4401]: Failed password for test from 185.220.101.45 port 41232 ssh2
