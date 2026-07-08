@@ -1,20 +1,22 @@
-Jul 07 10:26:39 webserver sshd[5399]: Failed password for admin from 185.220.101.45 port 53656 ssh2
-10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 2591 "-" "Mozilla/5.0"
-Jul 07 10:26:39 webserver sshd[9932]: Failed password for deploy from 185.220.101.45 port 57875 ssh2
-185.220.101.45 - - [07/Jul/2026:10:27:39 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1991 "-" "sqlmap/1.7"
-172.16.0.10 - - [07/Jul/2026:10:27:39 +0000] "GET /index.html HTTP/1.1" 200 509 "-" "python-requests/2.28"
-Jul 07 10:26:39 webserver sshd[9302]: Failed password for root from 185.220.101.45 port 62024 ssh2
-Jul 07 10:26:39 webserver sshd[7257]: Failed password for nagios from 185.220.101.45 port 60888 ssh2
-10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 2506 "-" "Mozilla/5.0"
-Jul 07 10:23:39 webserver sshd[1291]: Invalid user jenkins from 185.220.101.45
-10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /../etc/passwd HTTP/1.1" 400 2405 "-" "sqlmap/1.7"
-Jul 07 10:27:39 webserver kernel: program[4227]: segfault at 0 ip 00007f rsp 00007f error 4
-Jul 07 10:22:39 webserver sudo[9563]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-10.0.0.5 - - [07/Jul/2026:10:27:39 +0000] "GET /about HTTP/1.1" 200 3567 "-" "curl/7.68.0"
-10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /login HTTP/1.1" 401 4679 "-" "Mozilla/5.0"
-192.168.1.10 - - [07/Jul/2026:10:27:39 +0000] "GET /contact HTTP/1.1" 200 3295 "-" "Mozilla/5.0"
-Jul 07 10:24:39 webserver sshd[9366]: Failed password for root from 185.220.101.45 port 40025 ssh2
-10.0.0.99 - - [07/Jul/2026:10:27:39 +0000] "GET /admin HTTP/1.1" 403 2559 "-" "Mozilla/5.0"
-Jul 07 10:25:39 webserver sshd[1068]: Failed password for postgres from 185.220.101.45 port 44878 ssh2
-Jul 07 10:20:39 webserver sshd[8143]: Accepted publickey for deploy from 172.16.0.10 port 53951 ssh2
-Jul 07 10:26:39 webserver sshd[4401]: Failed password for test from 185.220.101.45 port 41232 ssh2
+Jul 08 09:24:50 webserver sshd[5953]: Failed password for test from 45.33.32.156 port 50747 ssh2
+Jul 08 09:26:50 webserver sshd[2894]: Failed password for postgres from 45.33.32.156 port 41989 ssh2
+Jul 08 09:27:50 webserver sshd[4847]: Failed password for oracle from 45.33.32.156 port 44014 ssh2
+10.0.0.99 - - [08/Jul/2026:09:27:50 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4676 "-" "sqlmap/1.7"
+45.33.32.156 - - [08/Jul/2026:09:27:50 +0000] "GET /../etc/passwd HTTP/1.1" 400 2933 "-" "python-requests/2.28"
+45.33.32.156 - - [08/Jul/2026:09:27:50 +0000] "GET /login HTTP/1.1" 401 1490 "-" "Mozilla/5.0"
+Jul 08 09:20:50 webserver sshd[4968]: Accepted publickey for deploy from 172.16.0.10 port 54552 ssh2
+Jul 08 09:26:50 webserver sshd[3716]: Failed password for root from 45.33.32.156 port 49076 ssh2
+45.33.32.156 - - [08/Jul/2026:09:27:50 +0000] "GET /admin HTTP/1.1" 403 4697 "-" "Mozilla/5.0"
+Jul 08 09:22:50 webserver sshd[2299]: Invalid user jenkins from 45.33.32.156
+Jul 08 09:25:50 webserver sshd[8738]: Failed password for test from 45.33.32.156 port 40991 ssh2
+Jul 08 09:21:50 webserver sudo[6102]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+192.168.1.10 - - [08/Jul/2026:09:27:50 +0000] "GET /about HTTP/1.1" 200 3713 "-" "Mozilla/5.0"
+45.33.32.156 - - [08/Jul/2026:09:27:50 +0000] "GET /login HTTP/1.1" 401 605 "-" "Mozilla/5.0"
+172.16.0.10 - - [08/Jul/2026:09:27:50 +0000] "GET /index.html HTTP/1.1" 200 3642 "-" "sqlmap/1.7"
+45.33.32.156 - - [08/Jul/2026:09:27:50 +0000] "GET /login HTTP/1.1" 401 4203 "-" "Mozilla/5.0"
+Jul 08 09:24:50 webserver sshd[1813]: Failed password for nagios from 45.33.32.156 port 48303 ssh2
+Jul 08 09:24:50 webserver sshd[4417]: Failed password for root from 45.33.32.156 port 45428 ssh2
+Jul 08 09:24:50 webserver sshd[7604]: Failed password for postgres from 45.33.32.156 port 42570 ssh2
+Jul 08 09:23:50 webserver sshd[1130]: Invalid user ftpuser from 45.33.32.156
+Jul 08 09:25:50 webserver sshd[6563]: Failed password for git from 45.33.32.156 port 54226 ssh2
+172.16.0.10 - - [08/Jul/2026:09:27:50 +0000] "GET /contact HTTP/1.1" 200 4765 "-" "sqlmap/1.7"
