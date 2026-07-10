@@ -1,20 +1,22 @@
-Jul 09 10:23:00 webserver sshd[1675]: Failed password for root from 198.20.69.74 port 58754 ssh2
-Jul 09 10:22:00 webserver sshd[2295]: Failed password for root from 198.20.69.74 port 45960 ssh2
-Jul 09 10:18:00 webserver sudo[4727]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Jul 09 10:25:00 webserver sshd[6692]: Failed password for root from 198.20.69.74 port 56105 ssh2
-Jul 09 10:21:00 webserver sshd[9027]: Invalid user oracle from 198.20.69.74
-45.33.32.156 - - [09/Jul/2026:10:27:00 +0000] "GET /login HTTP/1.1" 401 1170 "-" "Mozilla/5.0"
-45.33.32.156 - - [09/Jul/2026:10:27:00 +0000] "GET /../etc/passwd HTTP/1.1" 400 4968 "-" "curl/7.68.0"
-45.33.32.156 - - [09/Jul/2026:10:27:00 +0000] "GET /login HTTP/1.1" 401 3611 "-" "Mozilla/5.0"
-Jul 09 10:26:00 webserver sshd[6952]: Failed password for jenkins from 198.20.69.74 port 53029 ssh2
-Jul 09 10:15:00 webserver sshd[9097]: Accepted publickey for deploy from 172.16.0.10 port 51040 ssh2
-Jul 09 10:24:00 webserver sshd[7473]: Failed password for user from 198.20.69.74 port 57633 ssh2
-10.0.0.5 - - [09/Jul/2026:10:27:00 +0000] "GET /index.html HTTP/1.1" 200 2075 "-" "masscan/1.0"
-Jul 09 10:24:00 webserver sshd[8444]: Failed password for deploy from 198.20.69.74 port 43327 ssh2
-45.33.32.156 - - [09/Jul/2026:10:27:00 +0000] "GET /admin HTTP/1.1" 403 1148 "-" "Nikto/2.1.6"
-192.168.1.10 - - [09/Jul/2026:10:27:00 +0000] "GET /about HTTP/1.1" 200 2732 "-" "sqlmap/1.7"
-45.33.32.156 - - [09/Jul/2026:10:27:00 +0000] "GET /login HTTP/1.1" 401 2928 "-" "Mozilla/5.0"
-194.165.16.11 - - [09/Jul/2026:10:27:00 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2385 "-" "sqlmap/1.7"
-10.0.0.5 - - [09/Jul/2026:10:27:00 +0000] "GET /contact HTTP/1.1" 200 4424 "-" "python-requests/2.28"
-Jul 09 10:23:00 webserver sshd[4779]: Failed password for deploy from 198.20.69.74 port 42202 ssh2
-Jul 09 10:27:00 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
+Jul 10 10:20:28 webserver sshd[7927]: Failed password for root from 89.248.167.131 port 52333 ssh2
+Jul 10 10:16:28 webserver sudo[7493]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+Jul 10 10:24:28 webserver sshd[4497]: Failed password for root from 89.248.167.131 port 49424 ssh2
+Jul 10 10:23:28 webserver sshd[4064]: Failed password for root from 89.248.167.131 port 48427 ssh2
+198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /../etc/passwd HTTP/1.1" 400 3495 "-" "curl/7.68.0"
+192.168.0.50 - - [10/Jul/2026:10:25:28 +0000] "GET /contact HTTP/1.1" 200 1826 "-" "curl/7.68.0"
+Jul 10 10:15:28 webserver sshd[1865]: Accepted publickey for deploy from 192.168.0.50 port 63007 ssh2
+Jul 10 10:20:28 webserver sshd[5614]: Failed password for root from 89.248.167.131 port 52865 ssh2
+Jul 10 10:19:28 webserver sshd[9407]: Invalid user oracle from 89.248.167.131
+198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /admin HTTP/1.1" 403 1809 "-" "Nikto/2.1.6"
+198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 1642 "-" "Mozilla/5.0"
+Jul 10 10:25:28 webserver sshd[1202]: Failed password for root from 89.248.167.131 port 60461 ssh2
+198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 830 "-" "Mozilla/5.0"
+172.16.0.10 - - [10/Jul/2026:10:25:28 +0000] "GET /about HTTP/1.1" 200 2894 "-" "Nikto/2.1.6"
+Jul 10 10:24:28 webserver sshd[7648]: Failed password for root from 89.248.167.131 port 62377 ssh2
+Jul 10 10:22:28 webserver sshd[6936]: Failed password for git from 89.248.167.131 port 59392 ssh2
+192.168.1.10 - - [10/Jul/2026:10:25:28 +0000] "GET /index.html HTTP/1.1" 200 3202 "-" "Mozilla/5.0"
+198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 2723 "-" "Mozilla/5.0"
+Jul 10 10:21:28 webserver sshd[7413]: Failed password for root from 89.248.167.131 port 43011 ssh2
+Jul 10 10:25:28 webserver sshd[4396]: Failed password for admin from 89.248.167.131 port 60027 ssh2
+194.165.16.11 - - [10/Jul/2026:10:25:28 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4672 "-" "sqlmap/1.7"
+Jul 10 10:25:28 webserver kernel: program[4769]: segfault at 0 ip 00007f rsp 00007f error 4
