@@ -1,22 +1,24 @@
-Jul 10 10:20:28 webserver sshd[7927]: Failed password for root from 89.248.167.131 port 52333 ssh2
-Jul 10 10:16:28 webserver sudo[7493]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-Jul 10 10:24:28 webserver sshd[4497]: Failed password for root from 89.248.167.131 port 49424 ssh2
-Jul 10 10:23:28 webserver sshd[4064]: Failed password for root from 89.248.167.131 port 48427 ssh2
-198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /../etc/passwd HTTP/1.1" 400 3495 "-" "curl/7.68.0"
-192.168.0.50 - - [10/Jul/2026:10:25:28 +0000] "GET /contact HTTP/1.1" 200 1826 "-" "curl/7.68.0"
-Jul 10 10:15:28 webserver sshd[1865]: Accepted publickey for deploy from 192.168.0.50 port 63007 ssh2
-Jul 10 10:20:28 webserver sshd[5614]: Failed password for root from 89.248.167.131 port 52865 ssh2
-Jul 10 10:19:28 webserver sshd[9407]: Invalid user oracle from 89.248.167.131
-198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /admin HTTP/1.1" 403 1809 "-" "Nikto/2.1.6"
-198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 1642 "-" "Mozilla/5.0"
-Jul 10 10:25:28 webserver sshd[1202]: Failed password for root from 89.248.167.131 port 60461 ssh2
-198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 830 "-" "Mozilla/5.0"
-172.16.0.10 - - [10/Jul/2026:10:25:28 +0000] "GET /about HTTP/1.1" 200 2894 "-" "Nikto/2.1.6"
-Jul 10 10:24:28 webserver sshd[7648]: Failed password for root from 89.248.167.131 port 62377 ssh2
-Jul 10 10:22:28 webserver sshd[6936]: Failed password for git from 89.248.167.131 port 59392 ssh2
-192.168.1.10 - - [10/Jul/2026:10:25:28 +0000] "GET /index.html HTTP/1.1" 200 3202 "-" "Mozilla/5.0"
-198.20.69.74 - - [10/Jul/2026:10:25:28 +0000] "GET /login HTTP/1.1" 401 2723 "-" "Mozilla/5.0"
-Jul 10 10:21:28 webserver sshd[7413]: Failed password for root from 89.248.167.131 port 43011 ssh2
-Jul 10 10:25:28 webserver sshd[4396]: Failed password for admin from 89.248.167.131 port 60027 ssh2
-194.165.16.11 - - [10/Jul/2026:10:25:28 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4672 "-" "sqlmap/1.7"
-Jul 10 10:25:28 webserver kernel: program[4769]: segfault at 0 ip 00007f rsp 00007f error 4
+198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 2935 "-" "Mozilla/5.0"
+Jul 11 08:49:11 webserver sshd[2556]: Failed password for root from 192.168.1.100 port 63696 ssh2
+192.168.1.10 - - [11/Jul/2026:08:50:11 +0000] "GET /index.html HTTP/1.1" 200 2071 "-" "Nikto/2.1.6"
+198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 4078 "-" "Mozilla/5.0"
+198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /../etc/passwd HTTP/1.1" 400 4080 "-" "Mozilla/5.0"
+Jul 11 08:42:11 webserver sshd[1981]: Invalid user jenkins from 192.168.1.100
+Jul 11 08:44:11 webserver sshd[3870]: Failed password for ubuntu from 192.168.1.100 port 59469 ssh2
+172.16.0.10 - - [11/Jul/2026:08:50:11 +0000] "GET /about HTTP/1.1" 200 2904 "-" "curl/7.68.0"
+Jul 11 08:37:11 webserver sshd[1376]: Accepted publickey for deploy from 172.16.0.10 port 61714 ssh2
+Jul 11 08:48:11 webserver sshd[3387]: Failed password for test from 192.168.1.100 port 61734 ssh2
+Jul 11 08:47:11 webserver sshd[4677]: Failed password for user from 192.168.1.100 port 47590 ssh2
+Jul 11 08:48:11 webserver sshd[4150]: Failed password for ubuntu from 192.168.1.100 port 59109 ssh2
+Jul 11 08:49:11 webserver sshd[6776]: Failed password for root from 192.168.1.100 port 62897 ssh2
+198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 1193 "-" "Mozilla/5.0"
+Jul 11 08:50:11 webserver sshd[9803]: Failed password for root from 192.168.1.100 port 44234 ssh2
+Jul 11 08:46:11 webserver sshd[1072]: Failed password for git from 192.168.1.100 port 52344 ssh2
+Jul 11 08:45:11 webserver sshd[7063]: Failed password for deploy from 192.168.1.100 port 54484 ssh2
+10.0.0.5 - - [11/Jul/2026:08:50:11 +0000] "GET /contact HTTP/1.1" 200 1111 "-" "masscan/1.0"
+Jul 11 08:39:11 webserver sudo[9092]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Jul 11 08:41:11 webserver sshd[3996]: Invalid user elasticsearch from 192.168.1.100
+198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /admin HTTP/1.1" 403 2859 "-" "Mozilla/5.0"
+194.165.16.11 - - [11/Jul/2026:08:50:11 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1517 "-" "sqlmap/1.7"
+Jul 11 08:43:11 webserver sshd[7019]: Invalid user hadoop from 192.168.1.100
+Jul 11 08:50:11 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
