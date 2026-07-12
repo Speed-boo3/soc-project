@@ -1,24 +1,20 @@
-198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 2935 "-" "Mozilla/5.0"
-Jul 11 08:49:11 webserver sshd[2556]: Failed password for root from 192.168.1.100 port 63696 ssh2
-192.168.1.10 - - [11/Jul/2026:08:50:11 +0000] "GET /index.html HTTP/1.1" 200 2071 "-" "Nikto/2.1.6"
-198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 4078 "-" "Mozilla/5.0"
-198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /../etc/passwd HTTP/1.1" 400 4080 "-" "Mozilla/5.0"
-Jul 11 08:42:11 webserver sshd[1981]: Invalid user jenkins from 192.168.1.100
-Jul 11 08:44:11 webserver sshd[3870]: Failed password for ubuntu from 192.168.1.100 port 59469 ssh2
-172.16.0.10 - - [11/Jul/2026:08:50:11 +0000] "GET /about HTTP/1.1" 200 2904 "-" "curl/7.68.0"
-Jul 11 08:37:11 webserver sshd[1376]: Accepted publickey for deploy from 172.16.0.10 port 61714 ssh2
-Jul 11 08:48:11 webserver sshd[3387]: Failed password for test from 192.168.1.100 port 61734 ssh2
-Jul 11 08:47:11 webserver sshd[4677]: Failed password for user from 192.168.1.100 port 47590 ssh2
-Jul 11 08:48:11 webserver sshd[4150]: Failed password for ubuntu from 192.168.1.100 port 59109 ssh2
-Jul 11 08:49:11 webserver sshd[6776]: Failed password for root from 192.168.1.100 port 62897 ssh2
-198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /login HTTP/1.1" 401 1193 "-" "Mozilla/5.0"
-Jul 11 08:50:11 webserver sshd[9803]: Failed password for root from 192.168.1.100 port 44234 ssh2
-Jul 11 08:46:11 webserver sshd[1072]: Failed password for git from 192.168.1.100 port 52344 ssh2
-Jul 11 08:45:11 webserver sshd[7063]: Failed password for deploy from 192.168.1.100 port 54484 ssh2
-10.0.0.5 - - [11/Jul/2026:08:50:11 +0000] "GET /contact HTTP/1.1" 200 1111 "-" "masscan/1.0"
-Jul 11 08:39:11 webserver sudo[9092]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Jul 11 08:41:11 webserver sshd[3996]: Invalid user elasticsearch from 192.168.1.100
-198.20.69.74 - - [11/Jul/2026:08:50:11 +0000] "GET /admin HTTP/1.1" 403 2859 "-" "Mozilla/5.0"
-194.165.16.11 - - [11/Jul/2026:08:50:11 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1517 "-" "sqlmap/1.7"
-Jul 11 08:43:11 webserver sshd[7019]: Invalid user hadoop from 192.168.1.100
-Jul 11 08:50:11 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+Jul 12 09:03:10 webserver sshd[2167]: Invalid user ftpuser from 89.248.167.131
+Jul 12 09:05:10 webserver sshd[1195]: Failed password for root from 89.248.167.131 port 63003 ssh2
+Jul 12 09:05:10 webserver sshd[1178]: Failed password for root from 89.248.167.131 port 43282 ssh2
+Jul 12 09:06:10 webserver sshd[6328]: Failed password for oracle from 89.248.167.131 port 52206 ssh2
+Jul 12 09:02:10 webserver sshd[6831]: Invalid user oracle from 89.248.167.131
+89.248.167.131 - - [12/Jul/2026:09:06:10 +0000] "GET /login HTTP/1.1" 401 551 "-" "Mozilla/5.0"
+89.248.167.131 - - [12/Jul/2026:09:06:10 +0000] "GET /../etc/passwd HTTP/1.1" 400 3316 "-" "curl/7.68.0"
+Jul 12 09:05:10 webserver sshd[6023]: Failed password for root from 89.248.167.131 port 51357 ssh2
+10.0.0.5 - - [12/Jul/2026:09:06:10 +0000] "GET /about HTTP/1.1" 200 4576 "-" "Nikto/2.1.6"
+89.248.167.131 - - [12/Jul/2026:09:06:10 +0000] "GET /login HTTP/1.1" 401 559 "-" "Mozilla/5.0"
+45.33.32.156 - - [12/Jul/2026:09:06:10 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1080 "-" "sqlmap/1.7"
+Jul 12 08:57:10 webserver sshd[6425]: Accepted publickey for deploy from 192.168.1.10 port 63513 ssh2
+89.248.167.131 - - [12/Jul/2026:09:06:10 +0000] "GET /login HTTP/1.1" 401 512 "-" "Mozilla/5.0"
+192.168.1.10 - - [12/Jul/2026:09:06:10 +0000] "GET /contact HTTP/1.1" 200 2551 "-" "Mozilla/5.0"
+172.16.0.10 - - [12/Jul/2026:09:06:10 +0000] "GET /index.html HTTP/1.1" 200 509 "-" "Nikto/2.1.6"
+Jul 12 09:04:10 webserver sshd[2467]: Failed password for root from 89.248.167.131 port 47149 ssh2
+Jul 12 09:06:10 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+Jul 12 09:06:10 webserver sshd[5411]: Failed password for root from 89.248.167.131 port 51034 ssh2
+Jul 12 09:00:10 webserver sudo[8840]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+89.248.167.131 - - [12/Jul/2026:09:06:10 +0000] "GET /admin HTTP/1.1" 403 3482 "-" "curl/7.68.0"
