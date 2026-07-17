@@ -1,21 +1,20 @@
-Jul 16 09:18:16 webserver kernel: program[1151]: segfault at 0 ip 00007f rsp 00007f error 4
-Jul 16 09:17:16 webserver sshd[4428]: Failed password for ubuntu from 185.220.101.45 port 53811 ssh2
-Jul 16 09:16:16 webserver sshd[8145]: Failed password for root from 185.220.101.45 port 40261 ssh2
-89.248.167.131 - - [16/Jul/2026:09:18:16 +0000] "GET /login HTTP/1.1" 401 3955 "-" "Mozilla/5.0"
-Jul 16 09:17:16 webserver sshd[8333]: Failed password for postgres from 185.220.101.45 port 60590 ssh2
-Jul 16 09:17:16 webserver sshd[3437]: Failed password for root from 185.220.101.45 port 42662 ssh2
-89.248.167.131 - - [16/Jul/2026:09:18:16 +0000] "GET /admin HTTP/1.1" 403 2371 "-" "Nikto/2.1.6"
-Jul 16 09:17:16 webserver sshd[9108]: Failed password for postgres from 185.220.101.45 port 47177 ssh2
-89.248.167.131 - - [16/Jul/2026:09:18:16 +0000] "GET /login HTTP/1.1" 401 3063 "-" "Mozilla/5.0"
-10.0.0.5 - - [16/Jul/2026:09:18:16 +0000] "GET /index.html HTTP/1.1" 200 2779 "-" "masscan/1.0"
-192.168.0.50 - - [16/Jul/2026:09:18:16 +0000] "GET /about HTTP/1.1" 200 4522 "-" "sqlmap/1.7"
-Jul 16 09:15:16 webserver sshd[4477]: Invalid user ftpuser from 185.220.101.45
-89.248.167.131 - - [16/Jul/2026:09:18:16 +0000] "GET /../etc/passwd HTTP/1.1" 400 2818 "-" "sqlmap/1.7"
-Jul 16 09:18:16 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
-Jul 16 09:14:16 webserver sshd[8883]: Invalid user jenkins from 185.220.101.45
-45.33.32.156 - - [16/Jul/2026:09:18:16 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2194 "-" "sqlmap/1.7"
-89.248.167.131 - - [16/Jul/2026:09:18:16 +0000] "GET /login HTTP/1.1" 401 3423 "-" "Mozilla/5.0"
-Jul 16 09:08:16 webserver sshd[5192]: Accepted publickey for deploy from 192.168.0.50 port 63259 ssh2
-192.168.1.10 - - [16/Jul/2026:09:18:16 +0000] "GET /contact HTTP/1.1" 200 2480 "-" "Mozilla/5.0"
-Jul 16 09:10:16 webserver sudo[8940]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-Jul 16 09:17:16 webserver sshd[9252]: Failed password for root from 185.220.101.45 port 52982 ssh2
+Jul 17 09:07:00 webserver sshd[5698]: Invalid user elasticsearch from 45.33.32.156
+192.168.1.100 - - [17/Jul/2026:09:12:00 +0000] "GET /login HTTP/1.1" 401 503 "-" "Mozilla/5.0"
+Jul 17 09:09:00 webserver sshd[9468]: Invalid user oracle from 45.33.32.156
+10.0.0.5 - - [17/Jul/2026:09:12:00 +0000] "GET /about HTTP/1.1" 200 2209 "-" "sqlmap/1.7"
+192.168.1.100 - - [17/Jul/2026:09:12:00 +0000] "GET /../etc/passwd HTTP/1.1" 400 4343 "-" "Mozilla/5.0"
+Jul 17 09:01:00 webserver sshd[7623]: Accepted publickey for deploy from 192.168.0.50 port 47167 ssh2
+192.168.1.100 - - [17/Jul/2026:09:12:00 +0000] "GET /login HTTP/1.1" 401 2712 "-" "Mozilla/5.0"
+194.165.16.11 - - [17/Jul/2026:09:12:00 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 983 "-" "sqlmap/1.7"
+Jul 17 09:08:00 webserver sshd[2952]: Invalid user jenkins from 45.33.32.156
+Jul 17 09:12:00 webserver sshd[1016]: Failed password for jenkins from 45.33.32.156 port 50490 ssh2
+Jul 17 09:11:00 webserver sshd[2178]: Failed password for root from 45.33.32.156 port 49943 ssh2
+10.0.0.5 - - [17/Jul/2026:09:12:00 +0000] "GET /index.html HTTP/1.1" 200 4003 "-" "sqlmap/1.7"
+Jul 17 09:12:00 webserver sshd[6782]: Failed password for root from 45.33.32.156 port 59185 ssh2
+Jul 17 09:04:00 webserver sudo[6183]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Jul 17 09:12:00 webserver kernel: program[7560]: segfault at 0 ip 00007f rsp 00007f error 4
+10.0.0.5 - - [17/Jul/2026:09:12:00 +0000] "GET /contact HTTP/1.1" 200 3623 "-" "Mozilla/5.0"
+Jul 17 09:10:00 webserver sshd[9624]: Failed password for admin from 45.33.32.156 port 60262 ssh2
+192.168.1.100 - - [17/Jul/2026:09:12:00 +0000] "GET /login HTTP/1.1" 401 4237 "-" "Mozilla/5.0"
+192.168.1.100 - - [17/Jul/2026:09:12:00 +0000] "GET /admin HTTP/1.1" 403 2730 "-" "curl/7.68.0"
+Jul 17 09:10:00 webserver sshd[7238]: Failed password for test from 45.33.32.156 port 55456 ssh2
