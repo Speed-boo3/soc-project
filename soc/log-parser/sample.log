@@ -1,25 +1,21 @@
-Jul 23 09:24:42 webserver sshd[3665]: Failed password for deploy from 10.0.0.99 port 54218 ssh2
-Jul 23 09:15:42 webserver sshd[4537]: Accepted publickey for deploy from 10.0.0.5 port 55690 ssh2
-Jul 23 09:22:42 webserver sshd[7667]: Failed password for root from 10.0.0.99 port 40394 ssh2
-89.248.167.131 - - [23/Jul/2026:09:26:42 +0000] "GET /login HTTP/1.1" 401 881 "-" "Mozilla/5.0"
-Jul 23 09:26:42 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
-Jul 23 09:25:42 webserver sshd[5096]: Failed password for root from 10.0.0.99 port 58290 ssh2
-Jul 23 09:20:42 webserver sshd[7161]: Invalid user hadoop from 10.0.0.99
-Jul 23 09:23:42 webserver sshd[9033]: Failed password for root from 10.0.0.99 port 45887 ssh2
-89.248.167.131 - - [23/Jul/2026:09:26:42 +0000] "GET /login HTTP/1.1" 401 1651 "-" "Mozilla/5.0"
-89.248.167.131 - - [23/Jul/2026:09:26:42 +0000] "GET /admin HTTP/1.1" 403 370 "-" "Nikto/2.1.6"
-Jul 23 09:23:42 webserver sshd[5175]: Failed password for root from 10.0.0.99 port 49943 ssh2
-89.248.167.131 - - [23/Jul/2026:09:26:42 +0000] "GET /../etc/passwd HTTP/1.1" 400 1900 "-" "curl/7.68.0"
-192.168.1.10 - - [23/Jul/2026:09:26:42 +0000] "GET /about HTTP/1.1" 200 825 "-" "Nikto/2.1.6"
-89.248.167.131 - - [23/Jul/2026:09:26:42 +0000] "GET /login HTTP/1.1" 401 2577 "-" "Mozilla/5.0"
-Jul 23 09:19:42 webserver sshd[6092]: Invalid user oracle from 10.0.0.99
-Jul 23 09:26:42 webserver sshd[5619]: Failed password for git from 10.0.0.99 port 47567 ssh2
-Jul 23 09:24:42 webserver sshd[3577]: Failed password for ubuntu from 10.0.0.99 port 60275 ssh2
-10.0.0.5 - - [23/Jul/2026:09:26:42 +0000] "GET /contact HTTP/1.1" 200 1528 "-" "curl/7.68.0"
-Jul 23 09:21:42 webserver sshd[3279]: Invalid user nagios from 10.0.0.99
-Jul 23 09:23:42 webserver sshd[1003]: Failed password for nagios from 10.0.0.99 port 54288 ssh2
-198.20.69.74 - - [23/Jul/2026:09:26:42 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3190 "-" "sqlmap/1.7"
-Jul 23 09:26:42 webserver kernel: program[4556]: segfault at 0 ip 00007f rsp 00007f error 4
-172.16.0.10 - - [23/Jul/2026:09:26:42 +0000] "GET /index.html HTTP/1.1" 200 434 "-" "Nikto/2.1.6"
-Jul 23 09:16:42 webserver sudo[9903]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Jul 23 09:23:42 webserver sshd[3888]: Failed password for user from 10.0.0.99 port 48072 ssh2
+Jul 24 09:18:22 webserver sshd[8373]: Invalid user elasticsearch from 192.168.1.100
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1546 "-" "sqlmap/1.7"
+10.0.0.5 - - [24/Jul/2026:09:23:22 +0000] "GET /index.html HTTP/1.1" 200 2983 "-" "python-requests/2.28"
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /admin HTTP/1.1" 403 4975 "-" "Mozilla/5.0"
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /login HTTP/1.1" 401 2478 "-" "Mozilla/5.0"
+Jul 24 09:11:22 webserver sshd[3271]: Accepted publickey for deploy from 10.0.0.5 port 59546 ssh2
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /login HTTP/1.1" 401 4374 "-" "Mozilla/5.0"
+192.168.0.50 - - [24/Jul/2026:09:23:22 +0000] "GET /contact HTTP/1.1" 200 2755 "-" "curl/7.68.0"
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /../etc/passwd HTTP/1.1" 400 3473 "-" "sqlmap/1.7"
+Jul 24 09:22:22 webserver sshd[3530]: Failed password for test from 192.168.1.100 port 40609 ssh2
+Jul 24 09:19:22 webserver sshd[2691]: Failed password for oracle from 192.168.1.100 port 61998 ssh2
+Jul 24 09:17:22 webserver sshd[9897]: Invalid user hadoop from 192.168.1.100
+Jul 24 09:23:22 webserver sshd[4782]: Failed password for root from 192.168.1.100 port 40628 ssh2
+172.16.0.10 - - [24/Jul/2026:09:23:22 +0000] "GET /about HTTP/1.1" 200 1742 "-" "Nikto/2.1.6"
+Jul 24 09:21:22 webserver sshd[9143]: Failed password for root from 192.168.1.100 port 54842 ssh2
+Jul 24 09:16:22 webserver sshd[1735]: Invalid user hadoop from 192.168.1.100
+194.165.16.11 - - [24/Jul/2026:09:23:22 +0000] "GET /login HTTP/1.1" 401 1796 "-" "Mozilla/5.0"
+Jul 24 09:21:22 webserver sshd[6407]: Failed password for root from 192.168.1.100 port 43416 ssh2
+Jul 24 09:23:22 webserver sshd[8311]: Failed password for root from 192.168.1.100 port 53345 ssh2
+Jul 24 09:14:22 webserver sudo[5839]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+Jul 24 09:20:22 webserver sshd[9748]: Failed password for root from 192.168.1.100 port 63003 ssh2
