@@ -1,20 +1,18 @@
-Jul 27 10:39:42 webserver sshd[8468]: Accepted publickey for deploy from 192.168.0.50 port 62395 ssh2
-Jul 27 10:45:42 webserver sshd[9608]: Failed password for root from 185.220.101.45 port 60770 ssh2
-Jul 27 10:46:42 webserver kernel: program[1293]: segfault at 0 ip 00007f rsp 00007f error 4
-Jul 27 10:41:42 webserver sudo[7863]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-Jul 27 10:45:42 webserver sshd[6669]: Failed password for deploy from 185.220.101.45 port 48520 ssh2
-10.0.0.5 - - [27/Jul/2026:10:46:42 +0000] "GET /about HTTP/1.1" 200 3717 "-" "python-requests/2.28"
-45.33.32.156 - - [27/Jul/2026:10:46:42 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3155 "-" "sqlmap/1.7"
-Jul 27 10:45:42 webserver sshd[5955]: Failed password for test from 185.220.101.45 port 45951 ssh2
-Jul 27 10:45:42 webserver sshd[7498]: Failed password for root from 185.220.101.45 port 62680 ssh2
-198.20.69.74 - - [27/Jul/2026:10:46:42 +0000] "GET /admin HTTP/1.1" 403 2342 "-" "Nikto/2.1.6"
-Jul 27 10:44:42 webserver sshd[3369]: Invalid user jenkins from 185.220.101.45
-198.20.69.74 - - [27/Jul/2026:10:46:42 +0000] "GET /../etc/passwd HTTP/1.1" 400 1692 "-" "curl/7.68.0"
-Jul 27 10:45:42 webserver sshd[7861]: Failed password for user from 185.220.101.45 port 41310 ssh2
-198.20.69.74 - - [27/Jul/2026:10:46:42 +0000] "GET /login HTTP/1.1" 401 891 "-" "Mozilla/5.0"
-192.168.0.50 - - [27/Jul/2026:10:46:42 +0000] "GET /index.html HTTP/1.1" 200 779 "-" "python-requests/2.28"
-Jul 27 10:43:42 webserver sshd[7509]: Invalid user oracle from 185.220.101.45
-198.20.69.74 - - [27/Jul/2026:10:46:42 +0000] "GET /login HTTP/1.1" 401 372 "-" "Mozilla/5.0"
-198.20.69.74 - - [27/Jul/2026:10:46:42 +0000] "GET /login HTTP/1.1" 401 571 "-" "Mozilla/5.0"
-Jul 27 10:42:42 webserver sshd[5422]: Invalid user oracle from 185.220.101.45
-172.16.0.10 - - [27/Jul/2026:10:46:42 +0000] "GET /contact HTTP/1.1" 200 3314 "-" "curl/7.68.0"
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /login HTTP/1.1" 401 1992 "-" "Mozilla/5.0"
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /../etc/passwd HTTP/1.1" 400 3596 "-" "masscan/1.0"
+Jul 28 09:33:02 webserver sshd[6170]: Accepted publickey for deploy from 192.168.1.10 port 64080 ssh2
+Jul 28 09:36:02 webserver sshd[9755]: Invalid user oracle from 45.33.32.156
+Jul 28 09:38:02 webserver kernel: program[9739]: segfault at 0 ip 00007f rsp 00007f error 4
+Jul 28 09:35:02 webserver sudo[6373]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Jul 28 09:37:02 webserver sshd[1166]: Failed password for deploy from 45.33.32.156 port 61927 ssh2
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /admin HTTP/1.1" 403 2462 "-" "masscan/1.0"
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /login HTTP/1.1" 401 1620 "-" "Mozilla/5.0"
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /login HTTP/1.1" 401 3490 "-" "Mozilla/5.0"
+185.220.101.45 - - [28/Jul/2026:09:38:02 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2437 "-" "sqlmap/1.7"
+Jul 28 09:38:02 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
+192.168.0.50 - - [28/Jul/2026:09:38:02 +0000] "GET /index.html HTTP/1.1" 200 3860 "-" "Mozilla/5.0"
+Jul 28 09:37:02 webserver sshd[1594]: Failed password for oracle from 45.33.32.156 port 53054 ssh2
+Jul 28 09:38:02 webserver sshd[8229]: Failed password for admin from 45.33.32.156 port 47627 ssh2
+10.0.0.5 - - [28/Jul/2026:09:38:02 +0000] "GET /about HTTP/1.1" 200 575 "-" "Nikto/2.1.6"
+10.0.0.5 - - [28/Jul/2026:09:38:02 +0000] "GET /contact HTTP/1.1" 200 3931 "-" "Nikto/2.1.6"
+Jul 28 09:38:02 webserver sshd[8014]: Failed password for postgres from 45.33.32.156 port 63660 ssh2
