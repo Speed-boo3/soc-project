@@ -1,21 +1,19 @@
-10.0.0.5 - - [30/Jul/2026:09:33:00 +0000] "GET /about HTTP/1.1" 200 3706 "-" "curl/7.68.0"
-Jul 30 09:33:00 webserver sshd[8724]: Failed password for root from 185.220.101.45 port 58354 ssh2
-Jul 30 09:29:00 webserver sshd[3286]: Invalid user ftpuser from 185.220.101.45
-Jul 30 09:32:00 webserver sshd[7007]: Failed password for git from 185.220.101.45 port 56688 ssh2
-198.20.69.74 - - [30/Jul/2026:09:33:00 +0000] "GET /login HTTP/1.1" 401 4884 "-" "Mozilla/5.0"
-198.20.69.74 - - [30/Jul/2026:09:33:00 +0000] "GET /login HTTP/1.1" 401 4278 "-" "Mozilla/5.0"
-10.0.0.5 - - [30/Jul/2026:09:33:00 +0000] "GET /contact HTTP/1.1" 200 250 "-" "Mozilla/5.0"
-Jul 30 09:31:00 webserver sshd[9824]: Failed password for nagios from 185.220.101.45 port 48337 ssh2
-Jul 30 09:33:00 webserver kernel: program[5431]: segfault at 0 ip 00007f rsp 00007f error 4
-198.20.69.74 - - [30/Jul/2026:09:33:00 +0000] "GET /login HTTP/1.1" 401 3930 "-" "Mozilla/5.0"
-Jul 30 09:27:00 webserver sudo[8022]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-198.20.69.74 - - [30/Jul/2026:09:33:00 +0000] "GET /admin HTTP/1.1" 403 4348 "-" "Nikto/2.1.6"
-Jul 30 09:32:00 webserver sshd[4168]: Failed password for root from 185.220.101.45 port 45876 ssh2
-89.248.167.131 - - [30/Jul/2026:09:33:00 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2334 "-" "sqlmap/1.7"
-198.20.69.74 - - [30/Jul/2026:09:33:00 +0000] "GET /../etc/passwd HTTP/1.1" 400 2481 "-" "Nikto/2.1.6"
-Jul 30 09:33:00 webserver sshd[7752]: Failed password for root from 185.220.101.45 port 64205 ssh2
-Jul 30 09:30:00 webserver sshd[5657]: Invalid user ftpuser from 185.220.101.45
-Jul 30 09:25:00 webserver sshd[5263]: Accepted publickey for deploy from 172.16.0.10 port 62764 ssh2
-172.16.0.10 - - [30/Jul/2026:09:33:00 +0000] "GET /index.html HTTP/1.1" 200 3087 "-" "masscan/1.0"
-Jul 30 09:31:00 webserver sshd[3225]: Failed password for root from 185.220.101.45 port 50872 ssh2
-Jul 30 09:28:00 webserver sshd[4549]: Invalid user nagios from 185.220.101.45
+198.20.69.74 - - [31/Jul/2026:09:48:16 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 318 "-" "sqlmap/1.7"
+10.0.0.99 - - [31/Jul/2026:09:48:16 +0000] "GET /admin HTTP/1.1" 403 613 "-" "Mozilla/5.0"
+Jul 31 09:42:16 webserver sshd[1950]: Accepted publickey for deploy from 172.16.0.10 port 43867 ssh2
+192.168.1.10 - - [31/Jul/2026:09:48:16 +0000] "GET /index.html HTTP/1.1" 200 4456 "-" "Mozilla/5.0"
+Jul 31 09:48:16 webserver sshd[8270]: Failed password for nagios from 185.220.101.45 port 43129 ssh2
+10.0.0.99 - - [31/Jul/2026:09:48:16 +0000] "GET /../etc/passwd HTTP/1.1" 400 1115 "-" "masscan/1.0"
+10.0.0.99 - - [31/Jul/2026:09:48:16 +0000] "GET /login HTTP/1.1" 401 2004 "-" "Mozilla/5.0"
+172.16.0.10 - - [31/Jul/2026:09:48:16 +0000] "GET /about HTTP/1.1" 200 4068 "-" "Nikto/2.1.6"
+Jul 31 09:48:16 webserver sshd[6705]: Failed password for root from 185.220.101.45 port 47609 ssh2
+Jul 31 09:44:16 webserver sudo[4346]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+Jul 31 09:48:16 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Jul 31 09:46:16 webserver sshd[1319]: Invalid user elasticsearch from 185.220.101.45
+192.168.0.50 - - [31/Jul/2026:09:48:16 +0000] "GET /contact HTTP/1.1" 200 1731 "-" "curl/7.68.0"
+Jul 31 09:47:16 webserver sshd[9396]: Failed password for nagios from 185.220.101.45 port 41260 ssh2
+Jul 31 09:48:16 webserver sshd[2794]: Failed password for root from 185.220.101.45 port 53383 ssh2
+Jul 31 09:48:16 webserver sshd[2367]: Failed password for git from 185.220.101.45 port 63783 ssh2
+10.0.0.99 - - [31/Jul/2026:09:48:16 +0000] "GET /login HTTP/1.1" 401 4568 "-" "Mozilla/5.0"
+Jul 31 09:48:16 webserver kernel: program[9903]: segfault at 0 ip 00007f rsp 00007f error 4
+10.0.0.99 - - [31/Jul/2026:09:48:16 +0000] "GET /login HTTP/1.1" 401 4582 "-" "Mozilla/5.0"
