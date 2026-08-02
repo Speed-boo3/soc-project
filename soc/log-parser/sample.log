@@ -1,22 +1,22 @@
-Aug 01 09:03:52 webserver sshd[9778]: Invalid user nagios from 10.0.0.99
-Aug 01 09:07:52 webserver sshd[7038]: Failed password for root from 10.0.0.99 port 40300 ssh2
-Aug 01 09:05:52 webserver sshd[1983]: Failed password for root from 10.0.0.99 port 43957 ssh2
-Aug 01 09:07:52 webserver sshd[5901]: Failed password for root from 10.0.0.99 port 63778 ssh2
-192.168.1.100 - - [01/Aug/2026:09:08:52 +0000] "GET /login HTTP/1.1" 401 4053 "-" "Mozilla/5.0"
-192.168.1.100 - - [01/Aug/2026:09:08:52 +0000] "GET /../etc/passwd HTTP/1.1" 400 4395 "-" "sqlmap/1.7"
-Aug 01 09:04:52 webserver sshd[2776]: Invalid user jenkins from 10.0.0.99
-Aug 01 09:00:52 webserver sshd[5714]: Accepted publickey for deploy from 172.16.0.10 port 42011 ssh2
-Aug 01 09:08:52 webserver kernel: program[1375]: segfault at 0 ip 00007f rsp 00007f error 4
-Aug 01 09:06:52 webserver sshd[9490]: Failed password for jenkins from 10.0.0.99 port 61727 ssh2
-192.168.1.100 - - [01/Aug/2026:09:08:52 +0000] "GET /login HTTP/1.1" 401 3648 "-" "Mozilla/5.0"
-192.168.0.50 - - [01/Aug/2026:09:08:52 +0000] "GET /index.html HTTP/1.1" 200 340 "-" "curl/7.68.0"
-Aug 01 09:07:52 webserver sshd[2057]: Failed password for root from 10.0.0.99 port 59952 ssh2
-192.168.1.100 - - [01/Aug/2026:09:08:52 +0000] "GET /login HTTP/1.1" 401 3775 "-" "Mozilla/5.0"
-Aug 01 09:08:52 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
-172.16.0.10 - - [01/Aug/2026:09:08:52 +0000] "GET /about HTTP/1.1" 200 502 "-" "masscan/1.0"
-89.248.167.131 - - [01/Aug/2026:09:08:52 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2161 "-" "sqlmap/1.7"
-Aug 01 09:02:52 webserver sudo[9103]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Aug 01 09:08:52 webserver sshd[2564]: Failed password for postgres from 10.0.0.99 port 44968 ssh2
-192.168.1.100 - - [01/Aug/2026:09:08:52 +0000] "GET /admin HTTP/1.1" 403 286 "-" "masscan/1.0"
-192.168.1.10 - - [01/Aug/2026:09:08:52 +0000] "GET /contact HTTP/1.1" 200 2115 "-" "python-requests/2.28"
-Aug 01 09:08:52 webserver sshd[6919]: Failed password for deploy from 10.0.0.99 port 64271 ssh2
+Aug 02 09:10:48 webserver sshd[7461]: Failed password for root from 194.165.16.11 port 51494 ssh2
+Aug 02 09:03:48 webserver sshd[8700]: Accepted publickey for deploy from 192.168.0.50 port 49270 ssh2
+Aug 02 09:10:48 webserver sshd[4467]: Failed password for root from 194.165.16.11 port 52388 ssh2
+Aug 02 09:10:48 webserver sshd[2735]: Failed password for postgres from 194.165.16.11 port 43329 ssh2
+Aug 02 09:06:48 webserver sshd[4061]: Invalid user hadoop from 194.165.16.11
+185.220.101.45 - - [02/Aug/2026:09:11:48 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1033 "-" "sqlmap/1.7"
+Aug 02 09:07:48 webserver sshd[5853]: Invalid user oracle from 194.165.16.11
+Aug 02 09:08:48 webserver sshd[6613]: Failed password for postgres from 194.165.16.11 port 57343 ssh2
+Aug 02 09:11:48 webserver kernel: program[5016]: segfault at 0 ip 00007f rsp 00007f error 4
+192.168.1.100 - - [02/Aug/2026:09:11:48 +0000] "GET /login HTTP/1.1" 401 213 "-" "Mozilla/5.0"
+192.168.1.100 - - [02/Aug/2026:09:11:48 +0000] "GET /../etc/passwd HTTP/1.1" 400 2611 "-" "Nikto/2.1.6"
+10.0.0.5 - - [02/Aug/2026:09:11:48 +0000] "GET /about HTTP/1.1" 200 3202 "-" "masscan/1.0"
+Aug 02 09:09:48 webserver sshd[3275]: Failed password for root from 194.165.16.11 port 52242 ssh2
+Aug 02 09:04:48 webserver sudo[5612]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Aug 02 09:10:48 webserver sshd[6087]: Failed password for ubuntu from 194.165.16.11 port 42356 ssh2
+172.16.0.10 - - [02/Aug/2026:09:11:48 +0000] "GET /index.html HTTP/1.1" 200 4207 "-" "sqlmap/1.7"
+Aug 02 09:10:48 webserver sshd[9306]: Failed password for root from 194.165.16.11 port 41199 ssh2
+Aug 02 09:08:48 webserver sshd[6863]: Failed password for ubuntu from 194.165.16.11 port 58367 ssh2
+192.168.1.100 - - [02/Aug/2026:09:11:48 +0000] "GET /login HTTP/1.1" 401 3820 "-" "Mozilla/5.0"
+172.16.0.10 - - [02/Aug/2026:09:11:48 +0000] "GET /contact HTTP/1.1" 200 4114 "-" "masscan/1.0"
+192.168.1.100 - - [02/Aug/2026:09:11:48 +0000] "GET /admin HTTP/1.1" 403 1818 "-" "masscan/1.0"
+192.168.1.100 - - [02/Aug/2026:09:11:48 +0000] "GET /login HTTP/1.1" 401 3865 "-" "Mozilla/5.0"
