@@ -1,22 +1,22 @@
-Aug 15 07:32:40 webserver sshd[3251]: Failed password for deploy from 192.168.1.100 port 41240 ssh2
-Aug 15 07:31:40 webserver sshd[8606]: Failed password for git from 192.168.1.100 port 40671 ssh2
-194.165.16.11 - - [15/Aug/2026:07:33:40 +0000] "GET /../etc/passwd HTTP/1.1" 400 3068 "-" "Mozilla/5.0"
-Aug 15 07:33:40 webserver sshd[2235]: Failed password for root from 192.168.1.100 port 45580 ssh2
-Aug 15 07:33:40 webserver sshd[3601]: Failed password for git from 192.168.1.100 port 47930 ssh2
-Aug 15 07:24:40 webserver sshd[5393]: Accepted publickey for deploy from 192.168.1.10 port 52498 ssh2
-Aug 15 07:30:40 webserver sshd[1423]: Invalid user ftpuser from 192.168.1.100
-Aug 15 07:28:40 webserver sshd[1478]: Invalid user ftpuser from 192.168.1.100
-185.220.101.45 - - [15/Aug/2026:07:33:40 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4846 "-" "sqlmap/1.7"
-Aug 15 07:33:40 webserver sshd[4700]: Failed password for oracle from 192.168.1.100 port 46888 ssh2
-Aug 15 07:29:40 webserver sshd[5562]: Invalid user oracle from 192.168.1.100
-Aug 15 07:32:40 webserver sshd[4239]: Failed password for root from 192.168.1.100 port 50125 ssh2
-194.165.16.11 - - [15/Aug/2026:07:33:40 +0000] "GET /login HTTP/1.1" 401 3685 "-" "Mozilla/5.0"
-194.165.16.11 - - [15/Aug/2026:07:33:40 +0000] "GET /login HTTP/1.1" 401 3924 "-" "Mozilla/5.0"
-172.16.0.10 - - [15/Aug/2026:07:33:40 +0000] "GET /index.html HTTP/1.1" 200 1968 "-" "masscan/1.0"
-192.168.1.10 - - [15/Aug/2026:07:33:40 +0000] "GET /contact HTTP/1.1" 200 2062 "-" "Nikto/2.1.6"
-192.168.1.10 - - [15/Aug/2026:07:33:40 +0000] "GET /about HTTP/1.1" 200 4296 "-" "masscan/1.0"
-Aug 15 07:27:40 webserver sudo[5270]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-194.165.16.11 - - [15/Aug/2026:07:33:40 +0000] "GET /admin HTTP/1.1" 403 2902 "-" "curl/7.68.0"
-Aug 15 07:31:40 webserver sshd[9295]: Failed password for git from 192.168.1.100 port 43118 ssh2
-Aug 15 07:33:40 webserver sshd[8165]: Failed password for test from 192.168.1.100 port 49096 ssh2
-194.165.16.11 - - [15/Aug/2026:07:33:40 +0000] "GET /login HTTP/1.1" 401 3732 "-" "Mozilla/5.0"
+Aug 16 07:33:17 webserver sshd[8487]: Failed password for user from 45.33.32.156 port 46964 ssh2
+172.16.0.10 - - [16/Aug/2026:07:34:17 +0000] "GET /index.html HTTP/1.1" 200 4545 "-" "curl/7.68.0"
+Aug 16 07:32:17 webserver sshd[3300]: Failed password for ubuntu from 45.33.32.156 port 44672 ssh2
+Aug 16 07:30:17 webserver sshd[7937]: Failed password for root from 45.33.32.156 port 43668 ssh2
+Aug 16 07:23:17 webserver sudo[7978]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+Aug 16 07:31:17 webserver sshd[7283]: Failed password for root from 45.33.32.156 port 48028 ssh2
+45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 1577 "-" "Mozilla/5.0"
+Aug 16 07:20:17 webserver sshd[6385]: Accepted publickey for deploy from 192.168.1.10 port 54788 ssh2
+45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /../etc/passwd HTTP/1.1" 400 233 "-" "sqlmap/1.7"
+192.168.1.10 - - [16/Aug/2026:07:34:17 +0000] "GET /contact HTTP/1.1" 200 4557 "-" "masscan/1.0"
+45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 968 "-" "Mozilla/5.0"
+Aug 16 07:29:17 webserver sshd[5185]: Failed password for root from 45.33.32.156 port 57778 ssh2
+Aug 16 07:34:17 webserver kernel: program[5474]: segfault at 0 ip 00007f rsp 00007f error 4
+45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 912 "-" "Mozilla/5.0"
+Aug 16 07:28:17 webserver sshd[2986]: Invalid user oracle from 45.33.32.156
+45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /admin HTTP/1.1" 403 1621 "-" "Mozilla/5.0"
+198.20.69.74 - - [16/Aug/2026:07:34:17 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2658 "-" "sqlmap/1.7"
+Aug 16 07:31:17 webserver sshd[5853]: Failed password for root from 45.33.32.156 port 58371 ssh2
+10.0.0.5 - - [16/Aug/2026:07:34:17 +0000] "GET /about HTTP/1.1" 200 3227 "-" "curl/7.68.0"
+Aug 16 07:27:17 webserver sshd[7122]: Invalid user hadoop from 45.33.32.156
+Aug 16 07:26:17 webserver sshd[3381]: Invalid user hadoop from 45.33.32.156
+Aug 16 07:31:17 webserver sshd[9400]: Failed password for postgres from 45.33.32.156 port 58360 ssh2
