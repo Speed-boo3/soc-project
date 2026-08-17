@@ -1,22 +1,21 @@
-Aug 16 07:33:17 webserver sshd[8487]: Failed password for user from 45.33.32.156 port 46964 ssh2
-172.16.0.10 - - [16/Aug/2026:07:34:17 +0000] "GET /index.html HTTP/1.1" 200 4545 "-" "curl/7.68.0"
-Aug 16 07:32:17 webserver sshd[3300]: Failed password for ubuntu from 45.33.32.156 port 44672 ssh2
-Aug 16 07:30:17 webserver sshd[7937]: Failed password for root from 45.33.32.156 port 43668 ssh2
-Aug 16 07:23:17 webserver sudo[7978]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-Aug 16 07:31:17 webserver sshd[7283]: Failed password for root from 45.33.32.156 port 48028 ssh2
-45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 1577 "-" "Mozilla/5.0"
-Aug 16 07:20:17 webserver sshd[6385]: Accepted publickey for deploy from 192.168.1.10 port 54788 ssh2
-45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /../etc/passwd HTTP/1.1" 400 233 "-" "sqlmap/1.7"
-192.168.1.10 - - [16/Aug/2026:07:34:17 +0000] "GET /contact HTTP/1.1" 200 4557 "-" "masscan/1.0"
-45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 968 "-" "Mozilla/5.0"
-Aug 16 07:29:17 webserver sshd[5185]: Failed password for root from 45.33.32.156 port 57778 ssh2
-Aug 16 07:34:17 webserver kernel: program[5474]: segfault at 0 ip 00007f rsp 00007f error 4
-45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /login HTTP/1.1" 401 912 "-" "Mozilla/5.0"
-Aug 16 07:28:17 webserver sshd[2986]: Invalid user oracle from 45.33.32.156
-45.33.32.156 - - [16/Aug/2026:07:34:17 +0000] "GET /admin HTTP/1.1" 403 1621 "-" "Mozilla/5.0"
-198.20.69.74 - - [16/Aug/2026:07:34:17 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2658 "-" "sqlmap/1.7"
-Aug 16 07:31:17 webserver sshd[5853]: Failed password for root from 45.33.32.156 port 58371 ssh2
-10.0.0.5 - - [16/Aug/2026:07:34:17 +0000] "GET /about HTTP/1.1" 200 3227 "-" "curl/7.68.0"
-Aug 16 07:27:17 webserver sshd[7122]: Invalid user hadoop from 45.33.32.156
-Aug 16 07:26:17 webserver sshd[3381]: Invalid user hadoop from 45.33.32.156
-Aug 16 07:31:17 webserver sshd[9400]: Failed password for postgres from 45.33.32.156 port 58360 ssh2
+89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /admin HTTP/1.1" 403 1602 "-" "masscan/1.0"
+Aug 17 07:54:46 webserver sshd[6327]: Failed password for oracle from 185.220.101.45 port 45865 ssh2
+89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 2762 "-" "Mozilla/5.0"
+10.0.0.5 - - [17/Aug/2026:07:54:46 +0000] "GET /index.html HTTP/1.1" 200 1511 "-" "masscan/1.0"
+Aug 17 07:49:46 webserver sshd[7069]: Invalid user hadoop from 185.220.101.45
+Aug 17 07:52:46 webserver sshd[2986]: Failed password for root from 185.220.101.45 port 49919 ssh2
+Aug 17 07:53:46 webserver sshd[4290]: Failed password for root from 185.220.101.45 port 61359 ssh2
+10.0.0.5 - - [17/Aug/2026:07:54:46 +0000] "GET /about HTTP/1.1" 200 3254 "-" "Nikto/2.1.6"
+194.165.16.11 - - [17/Aug/2026:07:54:46 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1285 "-" "sqlmap/1.7"
+Aug 17 07:54:46 webserver sshd[5912]: Failed password for jenkins from 185.220.101.45 port 41428 ssh2
+Aug 17 07:42:46 webserver sshd[7488]: Accepted publickey for deploy from 10.0.0.5 port 62902 ssh2
+Aug 17 07:48:46 webserver sshd[4537]: Invalid user oracle from 185.220.101.45
+89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 4882 "-" "Mozilla/5.0"
+Aug 17 07:50:46 webserver sshd[9384]: Failed password for git from 185.220.101.45 port 63698 ssh2
+Aug 17 07:51:46 webserver sshd[8931]: Failed password for admin from 185.220.101.45 port 50972 ssh2
+Aug 17 07:44:46 webserver sudo[5973]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+192.168.0.50 - - [17/Aug/2026:07:54:46 +0000] "GET /contact HTTP/1.1" 200 714 "-" "curl/7.68.0"
+89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /../etc/passwd HTTP/1.1" 400 3884 "-" "Nikto/2.1.6"
+Aug 17 07:52:46 webserver sshd[4036]: Failed password for root from 185.220.101.45 port 43478 ssh2
+Aug 17 07:50:46 webserver sshd[1542]: Failed password for oracle from 185.220.101.45 port 55664 ssh2
+89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 4397 "-" "Mozilla/5.0"
