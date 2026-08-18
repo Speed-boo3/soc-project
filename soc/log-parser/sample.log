@@ -1,21 +1,19 @@
-89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /admin HTTP/1.1" 403 1602 "-" "masscan/1.0"
-Aug 17 07:54:46 webserver sshd[6327]: Failed password for oracle from 185.220.101.45 port 45865 ssh2
-89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 2762 "-" "Mozilla/5.0"
-10.0.0.5 - - [17/Aug/2026:07:54:46 +0000] "GET /index.html HTTP/1.1" 200 1511 "-" "masscan/1.0"
-Aug 17 07:49:46 webserver sshd[7069]: Invalid user hadoop from 185.220.101.45
-Aug 17 07:52:46 webserver sshd[2986]: Failed password for root from 185.220.101.45 port 49919 ssh2
-Aug 17 07:53:46 webserver sshd[4290]: Failed password for root from 185.220.101.45 port 61359 ssh2
-10.0.0.5 - - [17/Aug/2026:07:54:46 +0000] "GET /about HTTP/1.1" 200 3254 "-" "Nikto/2.1.6"
-194.165.16.11 - - [17/Aug/2026:07:54:46 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1285 "-" "sqlmap/1.7"
-Aug 17 07:54:46 webserver sshd[5912]: Failed password for jenkins from 185.220.101.45 port 41428 ssh2
-Aug 17 07:42:46 webserver sshd[7488]: Accepted publickey for deploy from 10.0.0.5 port 62902 ssh2
-Aug 17 07:48:46 webserver sshd[4537]: Invalid user oracle from 185.220.101.45
-89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 4882 "-" "Mozilla/5.0"
-Aug 17 07:50:46 webserver sshd[9384]: Failed password for git from 185.220.101.45 port 63698 ssh2
-Aug 17 07:51:46 webserver sshd[8931]: Failed password for admin from 185.220.101.45 port 50972 ssh2
-Aug 17 07:44:46 webserver sudo[5973]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-192.168.0.50 - - [17/Aug/2026:07:54:46 +0000] "GET /contact HTTP/1.1" 200 714 "-" "curl/7.68.0"
-89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /../etc/passwd HTTP/1.1" 400 3884 "-" "Nikto/2.1.6"
-Aug 17 07:52:46 webserver sshd[4036]: Failed password for root from 185.220.101.45 port 43478 ssh2
-Aug 17 07:50:46 webserver sshd[1542]: Failed password for oracle from 185.220.101.45 port 55664 ssh2
-89.248.167.131 - - [17/Aug/2026:07:54:46 +0000] "GET /login HTTP/1.1" 401 4397 "-" "Mozilla/5.0"
+192.168.0.50 - - [18/Aug/2026:07:40:56 +0000] "GET /contact HTTP/1.1" 200 1526 "-" "sqlmap/1.7"
+Aug 18 07:37:56 webserver sshd[7887]: Failed password for root from 192.168.1.100 port 44772 ssh2
+Aug 18 07:28:56 webserver sshd[5099]: Accepted publickey for deploy from 192.168.0.50 port 45830 ssh2
+45.33.32.156 - - [18/Aug/2026:07:40:56 +0000] "GET /login HTTP/1.1" 401 4124 "-" "Mozilla/5.0"
+172.16.0.10 - - [18/Aug/2026:07:40:56 +0000] "GET /index.html HTTP/1.1" 200 3165 "-" "curl/7.68.0"
+45.33.32.156 - - [18/Aug/2026:07:40:56 +0000] "GET /login HTTP/1.1" 401 3885 "-" "Mozilla/5.0"
+Aug 18 07:40:56 webserver sshd[5108]: Failed password for test from 192.168.1.100 port 45750 ssh2
+Aug 18 07:31:56 webserver sudo[7431]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+Aug 18 07:39:56 webserver sshd[7582]: Failed password for root from 192.168.1.100 port 48781 ssh2
+45.33.32.156 - - [18/Aug/2026:07:40:56 +0000] "GET /login HTTP/1.1" 401 591 "-" "Mozilla/5.0"
+10.0.0.99 - - [18/Aug/2026:07:40:56 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3571 "-" "sqlmap/1.7"
+Aug 18 07:35:56 webserver sshd[4821]: Invalid user elasticsearch from 192.168.1.100
+45.33.32.156 - - [18/Aug/2026:07:40:56 +0000] "GET /admin HTTP/1.1" 403 2914 "-" "Nikto/2.1.6"
+Aug 18 07:38:56 webserver sshd[2903]: Failed password for root from 192.168.1.100 port 50338 ssh2
+Aug 18 07:40:56 webserver sshd[1093]: Failed password for root from 192.168.1.100 port 61959 ssh2
+192.168.1.10 - - [18/Aug/2026:07:40:56 +0000] "GET /about HTTP/1.1" 200 3276 "-" "Nikto/2.1.6"
+45.33.32.156 - - [18/Aug/2026:07:40:56 +0000] "GET /../etc/passwd HTTP/1.1" 400 510 "-" "masscan/1.0"
+Aug 18 07:39:56 webserver sshd[6509]: Failed password for git from 192.168.1.100 port 61260 ssh2
+Aug 18 07:36:56 webserver sshd[1047]: Invalid user hadoop from 192.168.1.100
