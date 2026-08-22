@@ -1,19 +1,21 @@
-Aug 21 07:47:05 webserver sshd[4897]: Failed password for root from 198.20.69.74 port 46196 ssh2
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /login HTTP/1.1" 401 4028 "-" "Mozilla/5.0"
-Aug 21 07:45:05 webserver sshd[8711]: Invalid user oracle from 198.20.69.74
-Aug 21 07:47:05 webserver kernel: program[9689]: segfault at 0 ip 00007f rsp 00007f error 4
-10.0.0.5 - - [21/Aug/2026:07:47:05 +0000] "GET /index.html HTTP/1.1" 200 2953 "-" "Mozilla/5.0"
-192.168.0.50 - - [21/Aug/2026:07:47:05 +0000] "GET /about HTTP/1.1" 200 2448 "-" "curl/7.68.0"
-Aug 21 07:47:05 webserver sshd[3698]: Failed password for root from 198.20.69.74 port 47876 ssh2
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /../etc/passwd HTTP/1.1" 400 216 "-" "masscan/1.0"
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /login HTTP/1.1" 401 4232 "-" "Mozilla/5.0"
-Aug 21 07:47:05 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /login HTTP/1.1" 401 4448 "-" "Mozilla/5.0"
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /admin HTTP/1.1" 403 4786 "-" "masscan/1.0"
-89.248.167.131 - - [21/Aug/2026:07:47:05 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3821 "-" "sqlmap/1.7"
-Aug 21 07:46:05 webserver sshd[3962]: Failed password for root from 198.20.69.74 port 52111 ssh2
-Aug 21 07:44:05 webserver sshd[6713]: Invalid user ftpuser from 198.20.69.74
-172.16.0.10 - - [21/Aug/2026:07:47:05 +0000] "GET /contact HTTP/1.1" 200 986 "-" "curl/7.68.0"
-Aug 21 07:39:05 webserver sshd[8290]: Accepted publickey for deploy from 172.16.0.10 port 59289 ssh2
-Aug 21 07:40:05 webserver sudo[1285]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Aug 21 07:46:05 webserver sshd[5053]: Failed password for user from 198.20.69.74 port 41775 ssh2
+Aug 22 07:28:53 webserver sudo[7746]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Aug 22 07:34:53 webserver kernel: program[7209]: segfault at 0 ip 00007f rsp 00007f error 4
+89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 3569 "-" "Mozilla/5.0"
+192.168.0.50 - - [22/Aug/2026:07:34:53 +0000] "GET /about HTTP/1.1" 200 462 "-" "masscan/1.0"
+89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 4425 "-" "Mozilla/5.0"
+172.16.0.10 - - [22/Aug/2026:07:34:53 +0000] "GET /index.html HTTP/1.1" 200 1869 "-" "python-requests/2.28"
+Aug 22 07:33:53 webserver sshd[5884]: Failed password for git from 10.0.0.99 port 53483 ssh2
+172.16.0.10 - - [22/Aug/2026:07:34:53 +0000] "GET /contact HTTP/1.1" 200 4987 "-" "masscan/1.0"
+89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /../etc/passwd HTTP/1.1" 400 464 "-" "sqlmap/1.7"
+Aug 22 07:29:53 webserver sshd[2893]: Invalid user ftpuser from 10.0.0.99
+Aug 22 07:31:53 webserver sshd[4738]: Invalid user jenkins from 10.0.0.99
+Aug 22 07:30:53 webserver sshd[3617]: Invalid user oracle from 10.0.0.99
+Aug 22 07:25:53 webserver sshd[5181]: Accepted publickey for deploy from 192.168.1.10 port 59860 ssh2
+Aug 22 07:32:53 webserver sshd[1545]: Failed password for root from 10.0.0.99 port 45231 ssh2
+Aug 22 07:32:53 webserver sshd[3989]: Failed password for oracle from 10.0.0.99 port 54597 ssh2
+Aug 22 07:34:53 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /admin HTTP/1.1" 403 2321 "-" "curl/7.68.0"
+192.168.1.100 - - [22/Aug/2026:07:34:53 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4448 "-" "sqlmap/1.7"
+89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 3328 "-" "Mozilla/5.0"
+Aug 22 07:32:53 webserver sshd[3118]: Failed password for jenkins from 10.0.0.99 port 61052 ssh2
+Aug 22 07:34:53 webserver sshd[5851]: Failed password for deploy from 10.0.0.99 port 60451 ssh2
