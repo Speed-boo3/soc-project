@@ -1,21 +1,18 @@
-Aug 22 07:28:53 webserver sudo[7746]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Aug 22 07:34:53 webserver kernel: program[7209]: segfault at 0 ip 00007f rsp 00007f error 4
-89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 3569 "-" "Mozilla/5.0"
-192.168.0.50 - - [22/Aug/2026:07:34:53 +0000] "GET /about HTTP/1.1" 200 462 "-" "masscan/1.0"
-89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 4425 "-" "Mozilla/5.0"
-172.16.0.10 - - [22/Aug/2026:07:34:53 +0000] "GET /index.html HTTP/1.1" 200 1869 "-" "python-requests/2.28"
-Aug 22 07:33:53 webserver sshd[5884]: Failed password for git from 10.0.0.99 port 53483 ssh2
-172.16.0.10 - - [22/Aug/2026:07:34:53 +0000] "GET /contact HTTP/1.1" 200 4987 "-" "masscan/1.0"
-89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /../etc/passwd HTTP/1.1" 400 464 "-" "sqlmap/1.7"
-Aug 22 07:29:53 webserver sshd[2893]: Invalid user ftpuser from 10.0.0.99
-Aug 22 07:31:53 webserver sshd[4738]: Invalid user jenkins from 10.0.0.99
-Aug 22 07:30:53 webserver sshd[3617]: Invalid user oracle from 10.0.0.99
-Aug 22 07:25:53 webserver sshd[5181]: Accepted publickey for deploy from 192.168.1.10 port 59860 ssh2
-Aug 22 07:32:53 webserver sshd[1545]: Failed password for root from 10.0.0.99 port 45231 ssh2
-Aug 22 07:32:53 webserver sshd[3989]: Failed password for oracle from 10.0.0.99 port 54597 ssh2
-Aug 22 07:34:53 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
-89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /admin HTTP/1.1" 403 2321 "-" "curl/7.68.0"
-192.168.1.100 - - [22/Aug/2026:07:34:53 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4448 "-" "sqlmap/1.7"
-89.248.167.131 - - [22/Aug/2026:07:34:53 +0000] "GET /login HTTP/1.1" 401 3328 "-" "Mozilla/5.0"
-Aug 22 07:32:53 webserver sshd[3118]: Failed password for jenkins from 10.0.0.99 port 61052 ssh2
-Aug 22 07:34:53 webserver sshd[5851]: Failed password for deploy from 10.0.0.99 port 60451 ssh2
+Aug 23 07:35:38 webserver sshd[2809]: Failed password for root from 192.168.1.100 port 46276 ssh2
+Aug 23 07:34:38 webserver sshd[1313]: Failed password for admin from 192.168.1.100 port 60537 ssh2
+Aug 23 07:33:38 webserver sshd[5408]: Invalid user ftpuser from 192.168.1.100
+Aug 23 07:35:38 webserver sshd[8994]: Failed password for root from 192.168.1.100 port 62710 ssh2
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /../etc/passwd HTTP/1.1" 400 223 "-" "python-requests/2.28"
+172.16.0.10 - - [23/Aug/2026:07:36:38 +0000] "GET /contact HTTP/1.1" 200 1690 "-" "python-requests/2.28"
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2288 "-" "sqlmap/1.7"
+Aug 23 07:30:38 webserver sshd[8217]: Accepted publickey for deploy from 172.16.0.10 port 45023 ssh2
+Aug 23 07:36:38 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Aug 23 07:32:38 webserver sudo[7492]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+192.168.1.10 - - [23/Aug/2026:07:36:38 +0000] "GET /about HTTP/1.1" 200 3515 "-" "curl/7.68.0"
+192.168.1.10 - - [23/Aug/2026:07:36:38 +0000] "GET /index.html HTTP/1.1" 200 2837 "-" "curl/7.68.0"
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /login HTTP/1.1" 401 3099 "-" "Mozilla/5.0"
+Aug 23 07:36:38 webserver sshd[3616]: Failed password for root from 192.168.1.100 port 44858 ssh2
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /login HTTP/1.1" 401 1843 "-" "Mozilla/5.0"
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /login HTTP/1.1" 401 4794 "-" "Mozilla/5.0"
+Aug 23 07:36:38 webserver sshd[2126]: Failed password for root from 192.168.1.100 port 47799 ssh2
+10.0.0.99 - - [23/Aug/2026:07:36:38 +0000] "GET /admin HTTP/1.1" 403 1086 "-" "sqlmap/1.7"
