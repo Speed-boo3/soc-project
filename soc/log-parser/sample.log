@@ -1,20 +1,19 @@
-Aug 25 07:41:31 webserver sudo[4431]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-192.168.0.50 - - [25/Aug/2026:07:48:31 +0000] "GET /index.html HTTP/1.1" 200 4339 "-" "curl/7.68.0"
-Aug 25 07:42:31 webserver sshd[2463]: Invalid user jenkins from 194.165.16.11
-198.20.69.74 - - [25/Aug/2026:07:48:31 +0000] "GET /../etc/passwd HTTP/1.1" 400 1559 "-" "Mozilla/5.0"
-192.168.0.50 - - [25/Aug/2026:07:48:31 +0000] "GET /about HTTP/1.1" 200 2455 "-" "Mozilla/5.0"
-Aug 25 07:46:31 webserver sshd[2704]: Failed password for ubuntu from 194.165.16.11 port 64882 ssh2
-198.20.69.74 - - [25/Aug/2026:07:48:31 +0000] "GET /login HTTP/1.1" 401 3239 "-" "Mozilla/5.0"
-Aug 25 07:45:31 webserver sshd[5261]: Failed password for root from 194.165.16.11 port 55242 ssh2
-Aug 25 07:46:31 webserver sshd[3197]: Failed password for user from 194.165.16.11 port 48073 ssh2
-Aug 25 07:38:31 webserver sshd[7323]: Accepted publickey for deploy from 192.168.1.10 port 57455 ssh2
-89.248.167.131 - - [25/Aug/2026:07:48:31 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3003 "-" "sqlmap/1.7"
-198.20.69.74 - - [25/Aug/2026:07:48:31 +0000] "GET /login HTTP/1.1" 401 1746 "-" "Mozilla/5.0"
-192.168.1.10 - - [25/Aug/2026:07:48:31 +0000] "GET /contact HTTP/1.1" 200 1880 "-" "sqlmap/1.7"
-198.20.69.74 - - [25/Aug/2026:07:48:31 +0000] "GET /login HTTP/1.1" 401 655 "-" "Mozilla/5.0"
-Aug 25 07:44:31 webserver sshd[5781]: Invalid user elasticsearch from 194.165.16.11
-198.20.69.74 - - [25/Aug/2026:07:48:31 +0000] "GET /admin HTTP/1.1" 403 1263 "-" "Mozilla/5.0"
-Aug 25 07:47:31 webserver sshd[1931]: Failed password for root from 194.165.16.11 port 61218 ssh2
-Aug 25 07:43:31 webserver sshd[9642]: Invalid user jenkins from 194.165.16.11
-Aug 25 07:46:31 webserver sshd[9675]: Failed password for root from 194.165.16.11 port 47298 ssh2
-Aug 25 07:48:31 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+Aug 26 07:49:10 webserver sshd[6670]: Failed password for test from 192.168.1.100 port 50623 ssh2
+89.248.167.131 - - [26/Aug/2026:07:50:10 +0000] "GET /login HTTP/1.1" 401 1507 "-" "Mozilla/5.0"
+Aug 26 07:48:10 webserver sshd[6595]: Failed password for root from 192.168.1.100 port 63967 ssh2
+192.168.0.50 - - [26/Aug/2026:07:50:10 +0000] "GET /about HTTP/1.1" 200 4817 "-" "Mozilla/5.0"
+Aug 26 07:50:10 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
+10.0.0.5 - - [26/Aug/2026:07:50:10 +0000] "GET /index.html HTTP/1.1" 200 2474 "-" "masscan/1.0"
+89.248.167.131 - - [26/Aug/2026:07:50:10 +0000] "GET /login HTTP/1.1" 401 4043 "-" "Mozilla/5.0"
+Aug 26 07:50:10 webserver kernel: program[1225]: segfault at 0 ip 00007f rsp 00007f error 4
+192.168.0.50 - - [26/Aug/2026:07:50:10 +0000] "GET /contact HTTP/1.1" 200 3571 "-" "curl/7.68.0"
+Aug 26 07:48:10 webserver sshd[8612]: Failed password for postgres from 192.168.1.100 port 54713 ssh2
+198.20.69.74 - - [26/Aug/2026:07:50:10 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4811 "-" "sqlmap/1.7"
+Aug 26 07:47:10 webserver sshd[5779]: Invalid user elasticsearch from 192.168.1.100
+Aug 26 07:48:10 webserver sshd[7315]: Failed password for test from 192.168.1.100 port 44668 ssh2
+89.248.167.131 - - [26/Aug/2026:07:50:10 +0000] "GET /../etc/passwd HTTP/1.1" 400 725 "-" "masscan/1.0"
+Aug 26 07:44:10 webserver sudo[9191]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+89.248.167.131 - - [26/Aug/2026:07:50:10 +0000] "GET /admin HTTP/1.1" 403 3759 "-" "curl/7.68.0"
+Aug 26 07:46:10 webserver sshd[1512]: Invalid user elasticsearch from 192.168.1.100
+89.248.167.131 - - [26/Aug/2026:07:50:10 +0000] "GET /login HTTP/1.1" 401 2139 "-" "Mozilla/5.0"
+Aug 26 07:43:10 webserver sshd[8766]: Accepted publickey for deploy from 192.168.1.10 port 61552 ssh2
