@@ -1,21 +1,17 @@
-Aug 31 14:55:24 webserver sshd[2303]: Failed password for root from 10.0.0.99 port 45770 ssh2
-192.168.1.10 - - [31/Aug/2026:14:57:24 +0000] "GET /about HTTP/1.1" 200 3818 "-" "sqlmap/1.7"
-Aug 31 14:54:24 webserver sshd[1267]: Invalid user hadoop from 10.0.0.99
-Aug 31 14:53:24 webserver sudo[4503]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-Aug 31 14:55:24 webserver sshd[8818]: Failed password for root from 10.0.0.99 port 48662 ssh2
-Aug 31 14:55:24 webserver sshd[4638]: Failed password for nagios from 10.0.0.99 port 43097 ssh2
-194.165.16.11 - - [31/Aug/2026:14:57:24 +0000] "GET /login HTTP/1.1" 401 680 "-" "Mozilla/5.0"
-192.168.1.10 - - [31/Aug/2026:14:57:24 +0000] "GET /index.html HTTP/1.1" 200 3924 "-" "python-requests/2.28"
-Aug 31 14:57:24 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
-Aug 31 14:55:24 webserver sshd[9985]: Failed password for ubuntu from 10.0.0.99 port 64269 ssh2
-Aug 31 14:55:24 webserver sshd[3774]: Failed password for deploy from 10.0.0.99 port 45527 ssh2
-Aug 31 14:57:24 webserver kernel: program[1804]: segfault at 0 ip 00007f rsp 00007f error 4
-Aug 31 14:56:24 webserver sshd[1257]: Failed password for root from 10.0.0.99 port 59221 ssh2
-Aug 31 14:57:24 webserver sshd[8237]: Failed password for root from 10.0.0.99 port 60252 ssh2
-194.165.16.11 - - [31/Aug/2026:14:57:24 +0000] "GET /../etc/passwd HTTP/1.1" 400 4856 "-" "Nikto/2.1.6"
-192.168.0.50 - - [31/Aug/2026:14:57:24 +0000] "GET /contact HTTP/1.1" 200 1648 "-" "Nikto/2.1.6"
-185.220.101.45 - - [31/Aug/2026:14:57:24 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3609 "-" "sqlmap/1.7"
-194.165.16.11 - - [31/Aug/2026:14:57:24 +0000] "GET /admin HTTP/1.1" 403 3197 "-" "Nikto/2.1.6"
-194.165.16.11 - - [31/Aug/2026:14:57:24 +0000] "GET /login HTTP/1.1" 401 971 "-" "Mozilla/5.0"
-194.165.16.11 - - [31/Aug/2026:14:57:24 +0000] "GET /login HTTP/1.1" 401 3278 "-" "Mozilla/5.0"
-Aug 31 14:51:24 webserver sshd[2301]: Accepted publickey for deploy from 10.0.0.5 port 60946 ssh2
+194.165.16.11 - - [01/Sep/2026:12:28:00 +0000] "GET /admin HTTP/1.1" 403 275 "-" "Nikto/2.1.6"
+192.168.0.50 - - [01/Sep/2026:12:28:00 +0000] "GET /contact HTTP/1.1" 200 502 "-" "sqlmap/1.7"
+194.165.16.11 - - [01/Sep/2026:12:28:00 +0000] "GET /login HTTP/1.1" 401 305 "-" "Mozilla/5.0"
+194.165.16.11 - - [01/Sep/2026:12:28:00 +0000] "GET /../etc/passwd HTTP/1.1" 400 3681 "-" "masscan/1.0"
+172.16.0.10 - - [01/Sep/2026:12:28:00 +0000] "GET /about HTTP/1.1" 200 1309 "-" "masscan/1.0"
+Sep 01 12:23:00 webserver sudo[7986]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+192.168.1.100 - - [01/Sep/2026:12:28:00 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4175 "-" "sqlmap/1.7"
+Sep 01 12:28:00 webserver sshd[4001]: Failed password for root from 10.0.0.99 port 42853 ssh2
+Sep 01 12:20:00 webserver sshd[5527]: Accepted publickey for deploy from 192.168.1.10 port 45454 ssh2
+Sep 01 12:26:00 webserver sshd[5589]: Invalid user elasticsearch from 10.0.0.99
+Sep 01 12:27:00 webserver sshd[2122]: Failed password for root from 10.0.0.99 port 56700 ssh2
+194.165.16.11 - - [01/Sep/2026:12:28:00 +0000] "GET /login HTTP/1.1" 401 1494 "-" "Mozilla/5.0"
+Sep 01 12:27:00 webserver sshd[6874]: Failed password for root from 10.0.0.99 port 62305 ssh2
+Sep 01 12:27:00 webserver sshd[8473]: Failed password for git from 10.0.0.99 port 44823 ssh2
+Sep 01 12:27:00 webserver sshd[3282]: Failed password for root from 10.0.0.99 port 49770 ssh2
+194.165.16.11 - - [01/Sep/2026:12:28:00 +0000] "GET /login HTTP/1.1" 401 3667 "-" "Mozilla/5.0"
+172.16.0.10 - - [01/Sep/2026:12:28:00 +0000] "GET /index.html HTTP/1.1" 200 1300 "-" "Mozilla/5.0"
