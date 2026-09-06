@@ -1,23 +1,21 @@
-Sep 05 10:59:33 webserver sshd[6927]: Accepted publickey for deploy from 172.16.0.10 port 54246 ssh2
-45.33.32.156 - - [05/Sep/2026:11:11:33 +0000] "GET /../etc/passwd HTTP/1.1" 400 2078 "-" "curl/7.68.0"
-45.33.32.156 - - [05/Sep/2026:11:11:33 +0000] "GET /login HTTP/1.1" 401 1400 "-" "Mozilla/5.0"
-Sep 05 11:03:33 webserver sshd[2986]: Invalid user hadoop from 10.0.0.99
-Sep 05 11:06:33 webserver sshd[5667]: Failed password for root from 10.0.0.99 port 40126 ssh2
-45.33.32.156 - - [05/Sep/2026:11:11:33 +0000] "GET /login HTTP/1.1" 401 3078 "-" "Mozilla/5.0"
-192.168.0.50 - - [05/Sep/2026:11:11:33 +0000] "GET /index.html HTTP/1.1" 200 3078 "-" "masscan/1.0"
-Sep 05 11:11:33 webserver kernel: program[7018]: segfault at 0 ip 00007f rsp 00007f error 4
-Sep 05 11:04:33 webserver sshd[8720]: Invalid user nagios from 10.0.0.99
-Sep 05 11:09:33 webserver sshd[7205]: Failed password for oracle from 10.0.0.99 port 49883 ssh2
-Sep 05 11:07:33 webserver sshd[3014]: Failed password for root from 10.0.0.99 port 53900 ssh2
-Sep 05 11:08:33 webserver sshd[9682]: Failed password for root from 10.0.0.99 port 43804 ssh2
-Sep 05 11:10:33 webserver sshd[1050]: Failed password for deploy from 10.0.0.99 port 44751 ssh2
-Sep 05 11:08:33 webserver sshd[8378]: Failed password for ubuntu from 10.0.0.99 port 62505 ssh2
-Sep 05 11:00:33 webserver sudo[3454]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-45.33.32.156 - - [05/Sep/2026:11:11:33 +0000] "GET /admin HTTP/1.1" 403 4617 "-" "Nikto/2.1.6"
-Sep 05 11:11:33 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
-45.33.32.156 - - [05/Sep/2026:11:11:33 +0000] "GET /login HTTP/1.1" 401 4526 "-" "Mozilla/5.0"
-Sep 05 11:09:33 webserver sshd[3967]: Failed password for root from 10.0.0.99 port 40781 ssh2
-192.168.0.50 - - [05/Sep/2026:11:11:33 +0000] "GET /contact HTTP/1.1" 200 4854 "-" "masscan/1.0"
-89.248.167.131 - - [05/Sep/2026:11:11:33 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4345 "-" "sqlmap/1.7"
-Sep 05 11:05:33 webserver sshd[6947]: Invalid user ftpuser from 10.0.0.99
-192.168.1.10 - - [05/Sep/2026:11:11:33 +0000] "GET /about HTTP/1.1" 200 665 "-" "python-requests/2.28"
+Sep 06 11:30:22 webserver sshd[4120]: Failed password for root from 45.33.32.156 port 57472 ssh2
+172.16.0.10 - - [06/Sep/2026:11:34:22 +0000] "GET /about HTTP/1.1" 200 2562 "-" "python-requests/2.28"
+Sep 06 11:33:22 webserver sshd[2343]: Failed password for deploy from 45.33.32.156 port 59949 ssh2
+Sep 06 11:34:22 webserver kernel: [UFW BLOCK] IN=eth0 SRC=194.165.16.11 SCAN flags=S
+Sep 06 11:28:22 webserver sshd[4217]: Invalid user nagios from 45.33.32.156
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4545 "-" "sqlmap/1.7"
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /../etc/passwd HTTP/1.1" 400 3537 "-" "curl/7.68.0"
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /login HTTP/1.1" 401 4814 "-" "Mozilla/5.0"
+Sep 06 11:32:22 webserver sshd[2114]: Failed password for oracle from 45.33.32.156 port 41740 ssh2
+192.168.0.50 - - [06/Sep/2026:11:34:22 +0000] "GET /index.html HTTP/1.1" 200 4256 "-" "sqlmap/1.7"
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /admin HTTP/1.1" 403 3824 "-" "curl/7.68.0"
+Sep 06 11:27:22 webserver sshd[8897]: Invalid user elasticsearch from 45.33.32.156
+Sep 06 11:26:22 webserver sudo[5477]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+Sep 06 11:33:22 webserver sshd[8891]: Failed password for postgres from 45.33.32.156 port 50399 ssh2
+Sep 06 11:24:22 webserver sshd[7926]: Accepted publickey for deploy from 192.168.1.10 port 48269 ssh2
+Sep 06 11:30:22 webserver sshd[3156]: Failed password for postgres from 45.33.32.156 port 57112 ssh2
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /login HTTP/1.1" 401 2656 "-" "Mozilla/5.0"
+Sep 06 11:31:22 webserver sshd[1211]: Failed password for test from 45.33.32.156 port 60837 ssh2
+Sep 06 11:29:22 webserver sshd[6729]: Invalid user oracle from 45.33.32.156
+192.168.1.10 - - [06/Sep/2026:11:34:22 +0000] "GET /contact HTTP/1.1" 200 4940 "-" "curl/7.68.0"
+192.168.1.100 - - [06/Sep/2026:11:34:22 +0000] "GET /login HTTP/1.1" 401 2349 "-" "Mozilla/5.0"
