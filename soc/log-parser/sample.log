@@ -1,21 +1,23 @@
-194.165.16.11 - - [13/Sep/2026:12:37:44 +0000] "GET /login HTTP/1.1" 401 3048 "-" "Mozilla/5.0"
-194.165.16.11 - - [13/Sep/2026:12:37:44 +0000] "GET /../etc/passwd HTTP/1.1" 400 2851 "-" "Nikto/2.1.6"
-Sep 13 12:27:44 webserver sudo[6550]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-Sep 13 12:34:44 webserver sshd[6084]: Failed password for user from 89.248.167.131 port 49132 ssh2
-194.165.16.11 - - [13/Sep/2026:12:37:44 +0000] "GET /login HTTP/1.1" 401 1080 "-" "Mozilla/5.0"
-192.168.0.50 - - [13/Sep/2026:12:37:44 +0000] "GET /about HTTP/1.1" 200 4820 "-" "sqlmap/1.7"
-Sep 13 12:34:44 webserver sshd[1231]: Failed password for postgres from 89.248.167.131 port 63471 ssh2
-Sep 13 12:34:44 webserver sshd[5932]: Failed password for postgres from 89.248.167.131 port 57659 ssh2
-Sep 13 12:35:44 webserver sshd[2080]: Failed password for root from 89.248.167.131 port 40650 ssh2
-198.20.69.74 - - [13/Sep/2026:12:37:44 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1184 "-" "sqlmap/1.7"
-194.165.16.11 - - [13/Sep/2026:12:37:44 +0000] "GET /login HTTP/1.1" 401 4225 "-" "Mozilla/5.0"
-Sep 13 12:32:44 webserver sshd[2492]: Failed password for postgres from 89.248.167.131 port 50903 ssh2
-Sep 13 12:25:44 webserver sshd[4785]: Accepted publickey for deploy from 172.16.0.10 port 41066 ssh2
-Sep 13 12:36:44 webserver sshd[8313]: Failed password for root from 89.248.167.131 port 48275 ssh2
-Sep 13 12:37:44 webserver sshd[6048]: Failed password for ubuntu from 89.248.167.131 port 40007 ssh2
-Sep 13 12:31:44 webserver sshd[7364]: Invalid user elasticsearch from 89.248.167.131
-194.165.16.11 - - [13/Sep/2026:12:37:44 +0000] "GET /admin HTTP/1.1" 403 2779 "-" "Mozilla/5.0"
-172.16.0.10 - - [13/Sep/2026:12:37:44 +0000] "GET /index.html HTTP/1.1" 200 2701 "-" "masscan/1.0"
-192.168.1.10 - - [13/Sep/2026:12:37:44 +0000] "GET /contact HTTP/1.1" 200 2918 "-" "curl/7.68.0"
-Sep 13 12:33:44 webserver sshd[3848]: Failed password for postgres from 89.248.167.131 port 46829 ssh2
-Sep 13 12:33:44 webserver sshd[8472]: Failed password for root from 89.248.167.131 port 61891 ssh2
+Sep 14 13:43:30 webserver sshd[6627]: Failed password for root from 45.33.32.156 port 58165 ssh2
+Sep 14 13:45:30 webserver sshd[8771]: Failed password for admin from 45.33.32.156 port 58032 ssh2
+198.20.69.74 - - [14/Sep/2026:13:46:30 +0000] "GET /admin HTTP/1.1" 403 2836 "-" "Nikto/2.1.6"
+Sep 14 13:46:30 webserver kernel: program[3173]: segfault at 0 ip 00007f rsp 00007f error 4
+198.20.69.74 - - [14/Sep/2026:13:46:30 +0000] "GET /../etc/passwd HTTP/1.1" 400 3551 "-" "masscan/1.0"
+Sep 14 13:44:30 webserver sshd[8291]: Failed password for nagios from 45.33.32.156 port 48915 ssh2
+10.0.0.5 - - [14/Sep/2026:13:46:30 +0000] "GET /index.html HTTP/1.1" 200 4413 "-" "Nikto/2.1.6"
+Sep 14 13:42:30 webserver sshd[1167]: Failed password for git from 45.33.32.156 port 55313 ssh2
+198.20.69.74 - - [14/Sep/2026:13:46:30 +0000] "GET /login HTTP/1.1" 401 1324 "-" "Mozilla/5.0"
+185.220.101.45 - - [14/Sep/2026:13:46:30 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 985 "-" "sqlmap/1.7"
+198.20.69.74 - - [14/Sep/2026:13:46:30 +0000] "GET /login HTTP/1.1" 401 971 "-" "Mozilla/5.0"
+Sep 14 13:43:30 webserver sshd[7742]: Failed password for root from 45.33.32.156 port 49937 ssh2
+Sep 14 13:40:30 webserver sshd[5912]: Invalid user jenkins from 45.33.32.156
+192.168.1.10 - - [14/Sep/2026:13:46:30 +0000] "GET /about HTTP/1.1" 200 346 "-" "python-requests/2.28"
+Sep 14 13:34:30 webserver sshd[5634]: Accepted publickey for deploy from 172.16.0.10 port 64615 ssh2
+192.168.1.10 - - [14/Sep/2026:13:46:30 +0000] "GET /contact HTTP/1.1" 200 3249 "-" "sqlmap/1.7"
+Sep 14 13:41:30 webserver sshd[9536]: Failed password for root from 45.33.32.156 port 50536 ssh2
+Sep 14 13:42:30 webserver sshd[9311]: Failed password for root from 45.33.32.156 port 49691 ssh2
+Sep 14 13:36:30 webserver sudo[3733]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+Sep 14 13:39:30 webserver sshd[4263]: Invalid user nagios from 45.33.32.156
+Sep 14 13:46:30 webserver sshd[4079]: Failed password for ubuntu from 45.33.32.156 port 62921 ssh2
+198.20.69.74 - - [14/Sep/2026:13:46:30 +0000] "GET /login HTTP/1.1" 401 775 "-" "Mozilla/5.0"
+Sep 14 13:41:30 webserver sshd[9013]: Failed password for root from 45.33.32.156 port 51795 ssh2
