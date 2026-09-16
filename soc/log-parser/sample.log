@@ -1,18 +1,21 @@
-194.165.16.11 - - [15/Sep/2026:12:33:09 +0000] "GET /login HTTP/1.1" 401 724 "-" "Mozilla/5.0"
-Sep 15 12:32:09 webserver sshd[1389]: Failed password for root from 198.20.69.74 port 46870 ssh2
-Sep 15 12:32:09 webserver sshd[5843]: Failed password for root from 198.20.69.74 port 55073 ssh2
-Sep 15 12:30:09 webserver sshd[1545]: Invalid user elasticsearch from 198.20.69.74
-Sep 15 12:32:09 webserver sshd[6623]: Failed password for postgres from 198.20.69.74 port 51765 ssh2
-192.168.0.50 - - [15/Sep/2026:12:33:09 +0000] "GET /index.html HTTP/1.1" 200 1563 "-" "sqlmap/1.7"
-Sep 15 12:33:09 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
-Sep 15 12:28:09 webserver sudo[1670]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-172.16.0.10 - - [15/Sep/2026:12:33:09 +0000] "GET /about HTTP/1.1" 200 1555 "-" "sqlmap/1.7"
-194.165.16.11 - - [15/Sep/2026:12:33:09 +0000] "GET /../etc/passwd HTTP/1.1" 400 3629 "-" "Nikto/2.1.6"
-194.165.16.11 - - [15/Sep/2026:12:33:09 +0000] "GET /login HTTP/1.1" 401 3084 "-" "Mozilla/5.0"
-185.220.101.45 - - [15/Sep/2026:12:33:09 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1133 "-" "sqlmap/1.7"
-192.168.0.50 - - [15/Sep/2026:12:33:09 +0000] "GET /contact HTTP/1.1" 200 3924 "-" "curl/7.68.0"
-Sep 15 12:25:09 webserver sshd[3540]: Accepted publickey for deploy from 192.168.1.10 port 43734 ssh2
-194.165.16.11 - - [15/Sep/2026:12:33:09 +0000] "GET /login HTTP/1.1" 401 868 "-" "Mozilla/5.0"
-194.165.16.11 - - [15/Sep/2026:12:33:09 +0000] "GET /admin HTTP/1.1" 403 293 "-" "Nikto/2.1.6"
-Sep 15 12:31:09 webserver sshd[2915]: Failed password for postgres from 198.20.69.74 port 60855 ssh2
-Sep 15 12:33:09 webserver sshd[7047]: Failed password for deploy from 198.20.69.74 port 42243 ssh2
+Sep 16 12:24:05 webserver sudo[2742]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Sep 16 12:29:05 webserver sshd[1975]: Failed password for user from 45.33.32.156 port 47094 ssh2
+Sep 16 12:21:05 webserver sshd[1715]: Accepted publickey for deploy from 172.16.0.10 port 64994 ssh2
+Sep 16 12:25:05 webserver sshd[4684]: Invalid user elasticsearch from 45.33.32.156
+45.33.32.156 - - [16/Sep/2026:12:30:05 +0000] "GET /login HTTP/1.1" 401 2925 "-" "Mozilla/5.0"
+Sep 16 12:30:05 webserver kernel: program[3653]: segfault at 0 ip 00007f rsp 00007f error 4
+45.33.32.156 - - [16/Sep/2026:12:30:05 +0000] "GET /login HTTP/1.1" 401 2105 "-" "Mozilla/5.0"
+Sep 16 12:28:05 webserver sshd[8538]: Failed password for root from 45.33.32.156 port 58791 ssh2
+192.168.0.50 - - [16/Sep/2026:12:30:05 +0000] "GET /contact HTTP/1.1" 200 4902 "-" "Nikto/2.1.6"
+Sep 16 12:26:05 webserver sshd[2258]: Invalid user ftpuser from 45.33.32.156
+Sep 16 12:28:05 webserver sshd[7163]: Failed password for jenkins from 45.33.32.156 port 44212 ssh2
+Sep 16 12:30:05 webserver kernel: [UFW BLOCK] IN=eth0 SRC=198.20.69.74 SCAN flags=S
+Sep 16 12:27:05 webserver sshd[1803]: Invalid user jenkins from 45.33.32.156
+Sep 16 12:28:05 webserver sshd[7908]: Failed password for postgres from 45.33.32.156 port 44865 ssh2
+45.33.32.156 - - [16/Sep/2026:12:30:05 +0000] "GET /login HTTP/1.1" 401 3736 "-" "Mozilla/5.0"
+192.168.1.10 - - [16/Sep/2026:12:30:05 +0000] "GET /about HTTP/1.1" 200 1850 "-" "Mozilla/5.0"
+Sep 16 12:28:05 webserver sshd[4122]: Failed password for admin from 45.33.32.156 port 64265 ssh2
+89.248.167.131 - - [16/Sep/2026:12:30:05 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2884 "-" "sqlmap/1.7"
+45.33.32.156 - - [16/Sep/2026:12:30:05 +0000] "GET /../etc/passwd HTTP/1.1" 400 775 "-" "python-requests/2.28"
+45.33.32.156 - - [16/Sep/2026:12:30:05 +0000] "GET /admin HTTP/1.1" 403 397 "-" "curl/7.68.0"
+172.16.0.10 - - [16/Sep/2026:12:30:05 +0000] "GET /index.html HTTP/1.1" 200 2993 "-" "python-requests/2.28"
