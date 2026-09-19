@@ -1,20 +1,23 @@
-192.168.0.50 - - [18/Sep/2026:12:08:31 +0000] "GET /contact HTTP/1.1" 200 3156 "-" "sqlmap/1.7"
-Sep 18 12:05:31 webserver sshd[1697]: Failed password for root from 10.0.0.99 port 52783 ssh2
-Sep 18 12:07:31 webserver sshd[8957]: Failed password for root from 10.0.0.99 port 45967 ssh2
-172.16.0.10 - - [18/Sep/2026:12:08:31 +0000] "GET /index.html HTTP/1.1" 200 1533 "-" "sqlmap/1.7"
-194.165.16.11 - - [18/Sep/2026:12:08:31 +0000] "GET /login HTTP/1.1" 401 359 "-" "Mozilla/5.0"
-Sep 18 12:07:31 webserver sshd[7463]: Failed password for root from 10.0.0.99 port 64333 ssh2
-Sep 18 12:03:31 webserver sudo[6036]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-194.165.16.11 - - [18/Sep/2026:12:08:31 +0000] "GET /login HTTP/1.1" 401 2576 "-" "Mozilla/5.0"
-Sep 18 12:00:31 webserver sshd[1041]: Accepted publickey for deploy from 192.168.1.10 port 40476 ssh2
-Sep 18 12:07:31 webserver sshd[4403]: Failed password for nagios from 10.0.0.99 port 46515 ssh2
-194.165.16.11 - - [18/Sep/2026:12:08:31 +0000] "GET /admin HTTP/1.1" 403 4615 "-" "masscan/1.0"
-Sep 18 12:07:31 webserver sshd[9819]: Failed password for admin from 10.0.0.99 port 58657 ssh2
-192.168.1.10 - - [18/Sep/2026:12:08:31 +0000] "GET /about HTTP/1.1" 200 2905 "-" "Nikto/2.1.6"
-194.165.16.11 - - [18/Sep/2026:12:08:31 +0000] "GET /login HTTP/1.1" 401 3578 "-" "Mozilla/5.0"
-Sep 18 12:04:31 webserver sshd[4051]: Invalid user oracle from 10.0.0.99
-Sep 18 12:05:31 webserver sshd[9056]: Failed password for root from 10.0.0.99 port 42245 ssh2
-194.165.16.11 - - [18/Sep/2026:12:08:31 +0000] "GET /../etc/passwd HTTP/1.1" 400 3453 "-" "python-requests/2.28"
-Sep 18 12:06:31 webserver sshd[7211]: Failed password for root from 10.0.0.99 port 57238 ssh2
-198.20.69.74 - - [18/Sep/2026:12:08:31 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4087 "-" "sqlmap/1.7"
-Sep 18 12:08:31 webserver sshd[3785]: Failed password for nagios from 10.0.0.99 port 62932 ssh2
+10.0.0.99 - - [19/Sep/2026:11:50:57 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1752 "-" "sqlmap/1.7"
+192.168.1.100 - - [19/Sep/2026:11:50:57 +0000] "GET /login HTTP/1.1" 401 772 "-" "Mozilla/5.0"
+Sep 19 11:49:57 webserver sshd[4956]: Failed password for root from 198.20.69.74 port 63971 ssh2
+Sep 19 11:43:57 webserver sshd[4995]: Accepted publickey for deploy from 172.16.0.10 port 45260 ssh2
+Sep 19 11:50:57 webserver sshd[4993]: Failed password for root from 198.20.69.74 port 61409 ssh2
+Sep 19 11:50:57 webserver sshd[4319]: Failed password for root from 198.20.69.74 port 51577 ssh2
+Sep 19 11:47:57 webserver sshd[9797]: Invalid user ftpuser from 198.20.69.74
+192.168.1.10 - - [19/Sep/2026:11:50:57 +0000] "GET /index.html HTTP/1.1" 200 1828 "-" "python-requests/2.28"
+Sep 19 11:50:57 webserver sshd[3255]: Failed password for jenkins from 198.20.69.74 port 56014 ssh2
+Sep 19 11:48:57 webserver sshd[3058]: Invalid user nagios from 198.20.69.74
+Sep 19 11:46:57 webserver sshd[2710]: Invalid user ftpuser from 198.20.69.74
+192.168.1.100 - - [19/Sep/2026:11:50:57 +0000] "GET /../etc/passwd HTTP/1.1" 400 1179 "-" "masscan/1.0"
+192.168.1.100 - - [19/Sep/2026:11:50:57 +0000] "GET /admin HTTP/1.1" 403 805 "-" "Nikto/2.1.6"
+192.168.1.100 - - [19/Sep/2026:11:50:57 +0000] "GET /login HTTP/1.1" 401 3419 "-" "Mozilla/5.0"
+192.168.1.10 - - [19/Sep/2026:11:50:57 +0000] "GET /contact HTTP/1.1" 200 4102 "-" "sqlmap/1.7"
+Sep 19 11:44:57 webserver sudo[2905]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+192.168.1.100 - - [19/Sep/2026:11:50:57 +0000] "GET /login HTTP/1.1" 401 3247 "-" "Mozilla/5.0"
+Sep 19 11:50:57 webserver sshd[6706]: Failed password for root from 198.20.69.74 port 44024 ssh2
+192.168.1.10 - - [19/Sep/2026:11:50:57 +0000] "GET /about HTTP/1.1" 200 2959 "-" "Nikto/2.1.6"
+Sep 19 11:50:57 webserver kernel: program[1415]: segfault at 0 ip 00007f rsp 00007f error 4
+Sep 19 11:50:57 webserver sshd[2940]: Failed password for user from 198.20.69.74 port 60029 ssh2
+Sep 19 11:49:57 webserver sshd[9366]: Failed password for test from 198.20.69.74 port 62527 ssh2
+Sep 19 11:50:57 webserver sshd[1895]: Failed password for deploy from 198.20.69.74 port 48308 ssh2
