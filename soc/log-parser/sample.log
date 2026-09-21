@@ -1,20 +1,23 @@
-Sep 20 12:01:29 webserver sudo[3498]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Sep 20 12:07:29 webserver sshd[1630]: Failed password for deploy from 89.248.167.131 port 46729 ssh2
-Sep 20 12:08:29 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
-10.0.0.5 - - [20/Sep/2026:12:08:29 +0000] "GET /about HTTP/1.1" 200 823 "-" "Mozilla/5.0"
-10.0.0.5 - - [20/Sep/2026:12:08:29 +0000] "GET /contact HTTP/1.1" 200 1086 "-" "python-requests/2.28"
-Sep 20 12:08:29 webserver kernel: program[4327]: segfault at 0 ip 00007f rsp 00007f error 4
-Sep 20 12:06:29 webserver sshd[5990]: Failed password for root from 89.248.167.131 port 63659 ssh2
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /login HTTP/1.1" 401 3247 "-" "Mozilla/5.0"
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /../etc/passwd HTTP/1.1" 400 757 "-" "Nikto/2.1.6"
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1883 "-" "sqlmap/1.7"
-Sep 20 12:07:29 webserver sshd[1990]: Failed password for deploy from 89.248.167.131 port 40959 ssh2
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /login HTTP/1.1" 401 2702 "-" "Mozilla/5.0"
-Sep 20 11:58:29 webserver sshd[3114]: Accepted publickey for deploy from 192.168.1.10 port 47465 ssh2
-Sep 20 12:08:29 webserver sshd[3670]: Failed password for git from 89.248.167.131 port 47267 ssh2
-Sep 20 12:05:29 webserver sshd[2265]: Invalid user oracle from 89.248.167.131
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /login HTTP/1.1" 401 2454 "-" "Mozilla/5.0"
-194.165.16.11 - - [20/Sep/2026:12:08:29 +0000] "GET /admin HTTP/1.1" 403 4990 "-" "sqlmap/1.7"
-Sep 20 12:07:29 webserver sshd[9198]: Failed password for nagios from 89.248.167.131 port 51022 ssh2
-172.16.0.10 - - [20/Sep/2026:12:08:29 +0000] "GET /index.html HTTP/1.1" 200 377 "-" "python-requests/2.28"
-Sep 20 12:04:29 webserver sshd[7334]: Invalid user oracle from 89.248.167.131
+Sep 21 13:36:44 webserver sshd[8128]: Invalid user oracle from 89.248.167.131
+192.168.1.10 - - [21/Sep/2026:13:46:44 +0000] "GET /about HTTP/1.1" 200 4695 "-" "python-requests/2.28"
+Sep 21 13:42:44 webserver sshd[7017]: Failed password for root from 89.248.167.131 port 63831 ssh2
+185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /admin HTTP/1.1" 403 1489 "-" "sqlmap/1.7"
+Sep 21 13:40:44 webserver sshd[4324]: Failed password for root from 89.248.167.131 port 62247 ssh2
+Sep 21 13:41:44 webserver sshd[5012]: Failed password for root from 89.248.167.131 port 45633 ssh2
+Sep 21 13:44:44 webserver sshd[7911]: Failed password for root from 89.248.167.131 port 63860 ssh2
+185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /../etc/passwd HTTP/1.1" 400 4174 "-" "sqlmap/1.7"
+Sep 21 13:45:44 webserver sshd[3226]: Failed password for user from 89.248.167.131 port 54836 ssh2
+10.0.0.5 - - [21/Sep/2026:13:46:44 +0000] "GET /index.html HTTP/1.1" 200 2274 "-" "sqlmap/1.7"
+Sep 21 13:37:44 webserver sshd[7532]: Invalid user jenkins from 89.248.167.131
+Sep 21 13:43:44 webserver sshd[5921]: Failed password for root from 89.248.167.131 port 59904 ssh2
+185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 1643 "-" "Mozilla/5.0"
+Sep 21 13:33:44 webserver sshd[8866]: Accepted publickey for deploy from 172.16.0.10 port 54975 ssh2
+Sep 21 13:38:44 webserver sshd[8911]: Invalid user jenkins from 89.248.167.131
+Sep 21 13:39:44 webserver sshd[5052]: Failed password for jenkins from 89.248.167.131 port 52626 ssh2
+192.168.1.100 - - [21/Sep/2026:13:46:44 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4900 "-" "sqlmap/1.7"
+Sep 21 13:34:44 webserver sudo[8277]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 817 "-" "Mozilla/5.0"
+10.0.0.5 - - [21/Sep/2026:13:46:44 +0000] "GET /contact HTTP/1.1" 200 4324 "-" "Mozilla/5.0"
+Sep 21 13:40:44 webserver sshd[3054]: Failed password for root from 89.248.167.131 port 60110 ssh2
+Sep 21 13:46:44 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 1763 "-" "Mozilla/5.0"
