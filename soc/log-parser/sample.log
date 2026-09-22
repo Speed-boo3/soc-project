@@ -1,23 +1,20 @@
-Sep 21 13:36:44 webserver sshd[8128]: Invalid user oracle from 89.248.167.131
-192.168.1.10 - - [21/Sep/2026:13:46:44 +0000] "GET /about HTTP/1.1" 200 4695 "-" "python-requests/2.28"
-Sep 21 13:42:44 webserver sshd[7017]: Failed password for root from 89.248.167.131 port 63831 ssh2
-185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /admin HTTP/1.1" 403 1489 "-" "sqlmap/1.7"
-Sep 21 13:40:44 webserver sshd[4324]: Failed password for root from 89.248.167.131 port 62247 ssh2
-Sep 21 13:41:44 webserver sshd[5012]: Failed password for root from 89.248.167.131 port 45633 ssh2
-Sep 21 13:44:44 webserver sshd[7911]: Failed password for root from 89.248.167.131 port 63860 ssh2
-185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /../etc/passwd HTTP/1.1" 400 4174 "-" "sqlmap/1.7"
-Sep 21 13:45:44 webserver sshd[3226]: Failed password for user from 89.248.167.131 port 54836 ssh2
-10.0.0.5 - - [21/Sep/2026:13:46:44 +0000] "GET /index.html HTTP/1.1" 200 2274 "-" "sqlmap/1.7"
-Sep 21 13:37:44 webserver sshd[7532]: Invalid user jenkins from 89.248.167.131
-Sep 21 13:43:44 webserver sshd[5921]: Failed password for root from 89.248.167.131 port 59904 ssh2
-185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 1643 "-" "Mozilla/5.0"
-Sep 21 13:33:44 webserver sshd[8866]: Accepted publickey for deploy from 172.16.0.10 port 54975 ssh2
-Sep 21 13:38:44 webserver sshd[8911]: Invalid user jenkins from 89.248.167.131
-Sep 21 13:39:44 webserver sshd[5052]: Failed password for jenkins from 89.248.167.131 port 52626 ssh2
-192.168.1.100 - - [21/Sep/2026:13:46:44 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 4900 "-" "sqlmap/1.7"
-Sep 21 13:34:44 webserver sudo[8277]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 817 "-" "Mozilla/5.0"
-10.0.0.5 - - [21/Sep/2026:13:46:44 +0000] "GET /contact HTTP/1.1" 200 4324 "-" "Mozilla/5.0"
-Sep 21 13:40:44 webserver sshd[3054]: Failed password for root from 89.248.167.131 port 60110 ssh2
-Sep 21 13:46:44 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
-185.220.101.45 - - [21/Sep/2026:13:46:44 +0000] "GET /login HTTP/1.1" 401 1763 "-" "Mozilla/5.0"
+198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 1872 "-" "Mozilla/5.0"
+Sep 22 12:26:36 webserver sshd[8645]: Failed password for jenkins from 45.33.32.156 port 64886 ssh2
+Sep 22 12:20:36 webserver sudo[1337]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+Sep 22 12:25:36 webserver sshd[1645]: Failed password for root from 45.33.32.156 port 63525 ssh2
+Sep 22 12:25:36 webserver sshd[8009]: Failed password for git from 45.33.32.156 port 50894 ssh2
+Sep 22 12:23:36 webserver sshd[5164]: Invalid user nagios from 45.33.32.156
+Sep 22 12:22:36 webserver sshd[7675]: Invalid user elasticsearch from 45.33.32.156
+198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 2019 "-" "Mozilla/5.0"
+192.168.1.10 - - [22/Sep/2026:12:28:36 +0000] "GET /about HTTP/1.1" 200 283 "-" "Mozilla/5.0"
+Sep 22 12:17:36 webserver sshd[2164]: Accepted publickey for deploy from 192.168.0.50 port 61622 ssh2
+198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /../etc/passwd HTTP/1.1" 400 2927 "-" "python-requests/2.28"
+Sep 22 12:25:36 webserver sshd[7624]: Failed password for root from 45.33.32.156 port 49966 ssh2
+10.0.0.5 - - [22/Sep/2026:12:28:36 +0000] "GET /index.html HTTP/1.1" 200 4957 "-" "Mozilla/5.0"
+Sep 22 12:25:36 webserver sshd[1548]: Failed password for ubuntu from 45.33.32.156 port 63509 ssh2
+198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 936 "-" "Mozilla/5.0"
+198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /admin HTTP/1.1" 403 277 "-" "Mozilla/5.0"
+172.16.0.10 - - [22/Sep/2026:12:28:36 +0000] "GET /contact HTTP/1.1" 200 4516 "-" "python-requests/2.28"
+194.165.16.11 - - [22/Sep/2026:12:28:36 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2383 "-" "sqlmap/1.7"
+Sep 22 12:24:36 webserver sshd[9064]: Failed password for root from 45.33.32.156 port 57958 ssh2
+Sep 22 12:27:36 webserver sshd[5356]: Failed password for postgres from 45.33.32.156 port 54334 ssh2
