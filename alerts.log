@@ -13124,3 +13124,107 @@
   MITRE ATT&CK : T1110 - Brute Force (Credential Access)
   Action       : alert
   Log entry    : Source IP 45.33.32.156 had 9 failed login attempts
+
+=== Run: 2026-09-23 12:39:22 ===
+
+20 alert(s) triggered:
+
+[HIGH] Directory Traversal Attempt (RULE-010)
+  MITRE ATT&CK : T1083 - File and Directory Discovery (Discovery)
+  Action       : alert
+  Log entry    : GET /../etc/passwd HTTP/1.1
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 62036 ssh2
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user oracle from 194.165.16.11
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 58274 ssh2
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1004
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 59949 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 59949 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for ubuntu from 194.165.16.11 port 43233 ssh2
+
+[HIGH] Credential Stuffing Attempt (RULE-004)
+  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
+  Action       : alert
+  Log entry    : GET /login HTTP/1.1
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 43150 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 43150 ssh2
+
+[MEDIUM] Admin Path Probe (RULE-005)
+  MITRE ATT&CK : T1190 - Exploit Public-Facing Application (Initial Access)
+  Action       : log
+  Log entry    : GET /admin HTTP/1.1
+
+[MEDIUM] Port Scan Detected (RULE-008)
+  MITRE ATT&CK : T1046 - Network Service Discovery (Discovery)
+  Action       : log
+  Log entry    : [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for oracle from 194.165.16.11 port 55258 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for admin from 194.165.16.11 port 64443 ssh2
+
+[MEDIUM] Segfault Detected (RULE-006)
+  MITRE ATT&CK : T1203 - Exploitation for Client Execution (Execution)
+  Action       : alert
+  Log entry    : program[3654]: segfault at 0 ip 00007f rsp 00007f error 4
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 57743 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 194.165.16.11 port 57743 ssh2
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user hadoop from 194.165.16.11
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 194.165.16.11 had 10 failed login attempts

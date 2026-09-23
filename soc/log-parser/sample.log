@@ -1,20 +1,23 @@
-198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 1872 "-" "Mozilla/5.0"
-Sep 22 12:26:36 webserver sshd[8645]: Failed password for jenkins from 45.33.32.156 port 64886 ssh2
-Sep 22 12:20:36 webserver sudo[1337]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Sep 22 12:25:36 webserver sshd[1645]: Failed password for root from 45.33.32.156 port 63525 ssh2
-Sep 22 12:25:36 webserver sshd[8009]: Failed password for git from 45.33.32.156 port 50894 ssh2
-Sep 22 12:23:36 webserver sshd[5164]: Invalid user nagios from 45.33.32.156
-Sep 22 12:22:36 webserver sshd[7675]: Invalid user elasticsearch from 45.33.32.156
-198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 2019 "-" "Mozilla/5.0"
-192.168.1.10 - - [22/Sep/2026:12:28:36 +0000] "GET /about HTTP/1.1" 200 283 "-" "Mozilla/5.0"
-Sep 22 12:17:36 webserver sshd[2164]: Accepted publickey for deploy from 192.168.0.50 port 61622 ssh2
-198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /../etc/passwd HTTP/1.1" 400 2927 "-" "python-requests/2.28"
-Sep 22 12:25:36 webserver sshd[7624]: Failed password for root from 45.33.32.156 port 49966 ssh2
-10.0.0.5 - - [22/Sep/2026:12:28:36 +0000] "GET /index.html HTTP/1.1" 200 4957 "-" "Mozilla/5.0"
-Sep 22 12:25:36 webserver sshd[1548]: Failed password for ubuntu from 45.33.32.156 port 63509 ssh2
-198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /login HTTP/1.1" 401 936 "-" "Mozilla/5.0"
-198.20.69.74 - - [22/Sep/2026:12:28:36 +0000] "GET /admin HTTP/1.1" 403 277 "-" "Mozilla/5.0"
-172.16.0.10 - - [22/Sep/2026:12:28:36 +0000] "GET /contact HTTP/1.1" 200 4516 "-" "python-requests/2.28"
-194.165.16.11 - - [22/Sep/2026:12:28:36 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2383 "-" "sqlmap/1.7"
-Sep 22 12:24:36 webserver sshd[9064]: Failed password for root from 45.33.32.156 port 57958 ssh2
-Sep 22 12:27:36 webserver sshd[5356]: Failed password for postgres from 45.33.32.156 port 54334 ssh2
+172.16.0.10 - - [23/Sep/2026:12:39:22 +0000] "GET /index.html HTTP/1.1" 200 2146 "-" "masscan/1.0"
+185.220.101.45 - - [23/Sep/2026:12:39:22 +0000] "GET /../etc/passwd HTTP/1.1" 400 313 "-" "curl/7.68.0"
+Sep 23 12:38:22 webserver sshd[9434]: Failed password for root from 194.165.16.11 port 62036 ssh2
+Sep 23 12:34:22 webserver sshd[2817]: Invalid user oracle from 194.165.16.11
+Sep 23 12:39:22 webserver sshd[1332]: Failed password for root from 194.165.16.11 port 58274 ssh2
+185.220.101.45 - - [23/Sep/2026:12:39:22 +0000] "GET /login HTTP/1.1" 401 2241 "-" "Mozilla/5.0"
+Sep 23 12:30:22 webserver sudo[9406]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Sep 23 12:36:22 webserver sshd[4575]: Failed password for root from 194.165.16.11 port 59949 ssh2
+Sep 23 12:35:22 webserver sshd[6642]: Failed password for ubuntu from 194.165.16.11 port 43233 ssh2
+185.220.101.45 - - [23/Sep/2026:12:39:22 +0000] "GET /login HTTP/1.1" 401 3583 "-" "Mozilla/5.0"
+45.33.32.156 - - [23/Sep/2026:12:39:22 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3721 "-" "sqlmap/1.7"
+185.220.101.45 - - [23/Sep/2026:12:39:22 +0000] "GET /login HTTP/1.1" 401 3164 "-" "Mozilla/5.0"
+Sep 23 12:36:22 webserver sshd[7216]: Failed password for root from 194.165.16.11 port 43150 ssh2
+192.168.1.10 - - [23/Sep/2026:12:39:22 +0000] "GET /about HTTP/1.1" 200 3839 "-" "masscan/1.0"
+185.220.101.45 - - [23/Sep/2026:12:39:22 +0000] "GET /admin HTTP/1.1" 403 2502 "-" "Nikto/2.1.6"
+Sep 23 12:39:22 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+10.0.0.5 - - [23/Sep/2026:12:39:22 +0000] "GET /contact HTTP/1.1" 200 4920 "-" "masscan/1.0"
+Sep 23 12:29:22 webserver sshd[3159]: Accepted publickey for deploy from 192.168.0.50 port 61239 ssh2
+Sep 23 12:39:22 webserver sshd[1026]: Failed password for oracle from 194.165.16.11 port 55258 ssh2
+Sep 23 12:36:22 webserver sshd[6200]: Failed password for admin from 194.165.16.11 port 64443 ssh2
+Sep 23 12:39:22 webserver kernel: program[3654]: segfault at 0 ip 00007f rsp 00007f error 4
+Sep 23 12:37:22 webserver sshd[9312]: Failed password for root from 194.165.16.11 port 57743 ssh2
+Sep 23 12:33:22 webserver sshd[9723]: Invalid user hadoop from 194.165.16.11
