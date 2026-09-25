@@ -1,20 +1,23 @@
-Sep 24 12:37:52 webserver sshd[6239]: Failed password for deploy from 185.220.101.45 port 50782 ssh2
-45.33.32.156 - - [24/Sep/2026:12:37:52 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2282 "-" "sqlmap/1.7"
-Sep 24 12:35:52 webserver sshd[1183]: Failed password for jenkins from 185.220.101.45 port 45614 ssh2
-Sep 24 12:34:52 webserver sshd[9322]: Invalid user ftpuser from 185.220.101.45
-Sep 24 12:30:52 webserver sudo[6042]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Sep 24 12:36:52 webserver sshd[7052]: Failed password for jenkins from 185.220.101.45 port 55099 ssh2
-Sep 24 12:35:52 webserver sshd[6019]: Failed password for root from 185.220.101.45 port 41810 ssh2
-Sep 24 12:35:52 webserver sshd[6661]: Failed password for ubuntu from 185.220.101.45 port 44600 ssh2
-185.220.101.45 - - [24/Sep/2026:12:37:52 +0000] "GET /login HTTP/1.1" 401 2925 "-" "Mozilla/5.0"
-Sep 24 12:37:52 webserver kernel: program[2919]: segfault at 0 ip 00007f rsp 00007f error 4
-185.220.101.45 - - [24/Sep/2026:12:37:52 +0000] "GET /login HTTP/1.1" 401 3215 "-" "Mozilla/5.0"
-Sep 24 12:35:52 webserver sshd[6516]: Failed password for root from 185.220.101.45 port 53443 ssh2
-185.220.101.45 - - [24/Sep/2026:12:37:52 +0000] "GET /login HTTP/1.1" 401 1718 "-" "Mozilla/5.0"
-185.220.101.45 - - [24/Sep/2026:12:37:52 +0000] "GET /../etc/passwd HTTP/1.1" 400 4302 "-" "masscan/1.0"
-Sep 24 12:28:52 webserver sshd[6895]: Accepted publickey for deploy from 172.16.0.10 port 60960 ssh2
-10.0.0.5 - - [24/Sep/2026:12:37:52 +0000] "GET /about HTTP/1.1" 200 2742 "-" "sqlmap/1.7"
-Sep 24 12:35:52 webserver sshd[9867]: Failed password for admin from 185.220.101.45 port 42379 ssh2
-10.0.0.5 - - [24/Sep/2026:12:37:52 +0000] "GET /index.html HTTP/1.1" 200 1075 "-" "sqlmap/1.7"
-185.220.101.45 - - [24/Sep/2026:12:37:52 +0000] "GET /admin HTTP/1.1" 403 3782 "-" "Nikto/2.1.6"
-172.16.0.10 - - [24/Sep/2026:12:37:52 +0000] "GET /contact HTTP/1.1" 200 1480 "-" "masscan/1.0"
+Sep 25 12:24:59 webserver sshd[9958]: Accepted publickey for deploy from 192.168.1.10 port 57370 ssh2
+192.168.1.10 - - [25/Sep/2026:12:38:59 +0000] "GET /index.html HTTP/1.1" 200 2286 "-" "python-requests/2.28"
+Sep 25 12:33:59 webserver sshd[8702]: Failed password for jenkins from 185.220.101.45 port 49566 ssh2
+Sep 25 12:31:59 webserver sshd[4662]: Invalid user oracle from 185.220.101.45
+Sep 25 12:38:59 webserver kernel: [UFW BLOCK] IN=eth0 SRC=89.248.167.131 SCAN flags=S
+Sep 25 12:36:59 webserver sshd[4125]: Failed password for user from 185.220.101.45 port 45307 ssh2
+185.220.101.45 - - [25/Sep/2026:12:38:59 +0000] "GET /../etc/passwd HTTP/1.1" 400 3471 "-" "Nikto/2.1.6"
+185.220.101.45 - - [25/Sep/2026:12:38:59 +0000] "GET /login HTTP/1.1" 401 4624 "-" "Mozilla/5.0"
+185.220.101.45 - - [25/Sep/2026:12:38:59 +0000] "GET /login HTTP/1.1" 401 1881 "-" "Mozilla/5.0"
+185.220.101.45 - - [25/Sep/2026:12:38:59 +0000] "GET /login HTTP/1.1" 401 625 "-" "Mozilla/5.0"
+Sep 25 12:35:59 webserver sshd[2749]: Failed password for admin from 185.220.101.45 port 51396 ssh2
+Sep 25 12:27:59 webserver sudo[3041]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
+172.16.0.10 - - [25/Sep/2026:12:38:59 +0000] "GET /about HTTP/1.1" 200 297 "-" "masscan/1.0"
+185.220.101.45 - - [25/Sep/2026:12:38:59 +0000] "GET /admin HTTP/1.1" 403 757 "-" "sqlmap/1.7"
+89.248.167.131 - - [25/Sep/2026:12:38:59 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3151 "-" "sqlmap/1.7"
+Sep 25 12:37:59 webserver sshd[8999]: Failed password for admin from 185.220.101.45 port 51497 ssh2
+Sep 25 12:34:59 webserver sshd[9126]: Failed password for root from 185.220.101.45 port 63884 ssh2
+Sep 25 12:32:59 webserver sshd[1347]: Failed password for root from 185.220.101.45 port 60819 ssh2
+Sep 25 12:33:59 webserver sshd[8090]: Failed password for root from 185.220.101.45 port 45639 ssh2
+Sep 25 12:33:59 webserver sshd[9199]: Failed password for jenkins from 185.220.101.45 port 43895 ssh2
+Sep 25 12:38:59 webserver sshd[7535]: Failed password for root from 185.220.101.45 port 46151 ssh2
+10.0.0.5 - - [25/Sep/2026:12:38:59 +0000] "GET /contact HTTP/1.1" 200 1516 "-" "python-requests/2.28"
+Sep 25 12:38:59 webserver kernel: program[5212]: segfault at 0 ip 00007f rsp 00007f error 4
