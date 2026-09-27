@@ -1,23 +1,21 @@
-192.168.1.100 - - [26/Sep/2026:12:07:29 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2242 "-" "sqlmap/1.7"
-Sep 26 12:03:29 webserver sshd[3766]: Failed password for deploy from 185.220.101.45 port 50008 ssh2
-Sep 26 12:05:29 webserver sshd[8524]: Failed password for nagios from 185.220.101.45 port 54440 ssh2
-10.0.0.99 - - [26/Sep/2026:12:07:29 +0000] "GET /login HTTP/1.1" 401 4457 "-" "Mozilla/5.0"
-10.0.0.99 - - [26/Sep/2026:12:07:29 +0000] "GET /admin HTTP/1.1" 403 3605 "-" "python-requests/2.28"
-Sep 26 12:07:29 webserver kernel: program[4785]: segfault at 0 ip 00007f rsp 00007f error 4
-Sep 26 12:07:29 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
-Sep 26 12:03:29 webserver sshd[1533]: Failed password for admin from 185.220.101.45 port 51693 ssh2
-10.0.0.99 - - [26/Sep/2026:12:07:29 +0000] "GET /../etc/passwd HTTP/1.1" 400 2956 "-" "Mozilla/5.0"
-192.168.0.50 - - [26/Sep/2026:12:07:29 +0000] "GET /about HTTP/1.1" 200 3895 "-" "Mozilla/5.0"
-Sep 26 12:07:29 webserver sshd[1946]: Failed password for root from 185.220.101.45 port 41922 ssh2
-192.168.1.10 - - [26/Sep/2026:12:07:29 +0000] "GET /contact HTTP/1.1" 200 3723 "-" "Mozilla/5.0"
-10.0.0.99 - - [26/Sep/2026:12:07:29 +0000] "GET /login HTTP/1.1" 401 2271 "-" "Mozilla/5.0"
-Sep 26 12:06:29 webserver sshd[6195]: Failed password for postgres from 185.220.101.45 port 57061 ssh2
-Sep 26 12:04:29 webserver sshd[7837]: Failed password for jenkins from 185.220.101.45 port 49598 ssh2
-192.168.1.10 - - [26/Sep/2026:12:07:29 +0000] "GET /index.html HTTP/1.1" 200 2793 "-" "python-requests/2.28"
-Sep 26 11:56:29 webserver sshd[8353]: Accepted publickey for deploy from 192.168.1.10 port 64712 ssh2
-Sep 26 12:03:29 webserver sshd[6791]: Failed password for oracle from 185.220.101.45 port 57025 ssh2
-Sep 26 11:57:29 webserver sudo[7543]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Sep 26 12:01:29 webserver sshd[2977]: Invalid user ftpuser from 185.220.101.45
-Sep 26 12:07:29 webserver sshd[6332]: Failed password for root from 185.220.101.45 port 59491 ssh2
-Sep 26 12:02:29 webserver sshd[8931]: Failed password for jenkins from 185.220.101.45 port 42239 ssh2
-10.0.0.99 - - [26/Sep/2026:12:07:29 +0000] "GET /login HTTP/1.1" 401 1122 "-" "Mozilla/5.0"
+Sep 27 12:48:37 webserver sshd[6817]: Invalid user nagios from 192.168.1.100
+Sep 27 12:46:37 webserver sshd[5506]: Invalid user jenkins from 192.168.1.100
+Sep 27 12:42:37 webserver sudo[5697]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /../etc/passwd HTTP/1.1" 400 4041 "-" "Mozilla/5.0"
+Sep 27 12:47:37 webserver sshd[5588]: Invalid user oracle from 192.168.1.100
+192.168.1.10 - - [27/Sep/2026:12:52:37 +0000] "GET /index.html HTTP/1.1" 200 455 "-" "sqlmap/1.7"
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /admin HTTP/1.1" 403 3794 "-" "sqlmap/1.7"
+Sep 27 12:50:37 webserver sshd[8232]: Failed password for root from 192.168.1.100 port 50516 ssh2
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 784 "-" "sqlmap/1.7"
+Sep 27 12:52:37 webserver sshd[8043]: Failed password for root from 192.168.1.100 port 55907 ssh2
+Sep 27 12:51:37 webserver sshd[9755]: Failed password for nagios from 192.168.1.100 port 47139 ssh2
+Sep 27 12:50:37 webserver sshd[5812]: Failed password for root from 192.168.1.100 port 42574 ssh2
+192.168.1.10 - - [27/Sep/2026:12:52:37 +0000] "GET /about HTTP/1.1" 200 701 "-" "sqlmap/1.7"
+Sep 27 12:49:37 webserver sshd[7857]: Failed password for root from 192.168.1.100 port 60569 ssh2
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /login HTTP/1.1" 401 3648 "-" "Mozilla/5.0"
+Sep 27 12:52:37 webserver sshd[4324]: Failed password for user from 192.168.1.100 port 40196 ssh2
+192.168.0.50 - - [27/Sep/2026:12:52:37 +0000] "GET /contact HTTP/1.1" 200 3631 "-" "sqlmap/1.7"
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /login HTTP/1.1" 401 1584 "-" "Mozilla/5.0"
+Sep 27 12:39:37 webserver sshd[4729]: Accepted publickey for deploy from 192.168.0.50 port 46446 ssh2
+Sep 27 12:49:37 webserver sshd[5458]: Failed password for root from 192.168.1.100 port 53089 ssh2
+89.248.167.131 - - [27/Sep/2026:12:52:37 +0000] "GET /login HTTP/1.1" 401 3345 "-" "Mozilla/5.0"
