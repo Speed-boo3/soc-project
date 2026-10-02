@@ -1,21 +1,22 @@
-Oct 01 14:15:44 webserver sshd[4548]: Failed password for oracle from 10.0.0.99 port 55221 ssh2
-Oct 01 14:16:44 webserver sshd[1683]: Failed password for root from 10.0.0.99 port 42115 ssh2
-192.168.1.10 - - [01/Oct/2026:14:19:44 +0000] "GET /contact HTTP/1.1" 200 3064 "-" "sqlmap/1.7"
-185.220.101.45 - - [01/Oct/2026:14:19:44 +0000] "GET /login HTTP/1.1" 401 4433 "-" "Mozilla/5.0"
-Oct 01 14:18:44 webserver sshd[7665]: Failed password for root from 10.0.0.99 port 61922 ssh2
-10.0.0.99 - - [01/Oct/2026:14:19:44 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 206 "-" "sqlmap/1.7"
-10.0.0.5 - - [01/Oct/2026:14:19:44 +0000] "GET /index.html HTTP/1.1" 200 2593 "-" "Mozilla/5.0"
-10.0.0.5 - - [01/Oct/2026:14:19:44 +0000] "GET /about HTTP/1.1" 200 1843 "-" "Mozilla/5.0"
-Oct 01 14:11:44 webserver sudo[3246]: pam_unix(sudo:auth): authentication failure; logname= uid=1003
-Oct 01 14:18:44 webserver sshd[9589]: Failed password for ubuntu from 10.0.0.99 port 62004 ssh2
-Oct 01 14:13:44 webserver sshd[2626]: Invalid user ftpuser from 10.0.0.99
-185.220.101.45 - - [01/Oct/2026:14:19:44 +0000] "GET /../etc/passwd HTTP/1.1" 400 4029 "-" "masscan/1.0"
-Oct 01 14:15:44 webserver sshd[3704]: Failed password for root from 10.0.0.99 port 51363 ssh2
-185.220.101.45 - - [01/Oct/2026:14:19:44 +0000] "GET /login HTTP/1.1" 401 2678 "-" "Mozilla/5.0"
-Oct 01 14:08:44 webserver sshd[4820]: Accepted publickey for deploy from 10.0.0.5 port 41457 ssh2
-Oct 01 14:14:44 webserver sshd[8144]: Invalid user ftpuser from 10.0.0.99
-Oct 01 14:17:44 webserver sshd[4192]: Failed password for deploy from 10.0.0.99 port 41572 ssh2
-185.220.101.45 - - [01/Oct/2026:14:19:44 +0000] "GET /admin HTTP/1.1" 403 1141 "-" "Mozilla/5.0"
-Oct 01 14:15:44 webserver sshd[8318]: Failed password for root from 10.0.0.99 port 52988 ssh2
-185.220.101.45 - - [01/Oct/2026:14:19:44 +0000] "GET /login HTTP/1.1" 401 448 "-" "Mozilla/5.0"
-Oct 01 14:12:44 webserver sshd[7266]: Invalid user elasticsearch from 10.0.0.99
+172.16.0.10 - - [02/Oct/2026:13:41:46 +0000] "GET /about HTTP/1.1" 200 4819 "-" "curl/7.68.0"
+198.20.69.74 - - [02/Oct/2026:13:41:46 +0000] "GET /login HTTP/1.1" 401 3064 "-" "Mozilla/5.0"
+Oct 02 13:41:46 webserver kernel: [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+Oct 02 13:37:46 webserver sshd[8198]: Failed password for test from 192.168.1.100 port 64294 ssh2
+172.16.0.10 - - [02/Oct/2026:13:41:46 +0000] "GET /contact HTTP/1.1" 200 2384 "-" "sqlmap/1.7"
+198.20.69.74 - - [02/Oct/2026:13:41:46 +0000] "GET /admin HTTP/1.1" 403 1691 "-" "python-requests/2.28"
+Oct 02 13:36:46 webserver sshd[8378]: Failed password for root from 192.168.1.100 port 52312 ssh2
+198.20.69.74 - - [02/Oct/2026:13:41:46 +0000] "GET /../etc/passwd HTTP/1.1" 400 1537 "-" "Nikto/2.1.6"
+Oct 02 13:35:46 webserver sshd[7995]: Invalid user elasticsearch from 192.168.1.100
+Oct 02 13:38:46 webserver sshd[6111]: Failed password for root from 192.168.1.100 port 57792 ssh2
+Oct 02 13:39:46 webserver sshd[2138]: Failed password for oracle from 192.168.1.100 port 52297 ssh2
+Oct 02 13:36:46 webserver sshd[8126]: Failed password for git from 192.168.1.100 port 56209 ssh2
+Oct 02 13:40:46 webserver sshd[6530]: Failed password for root from 192.168.1.100 port 60600 ssh2
+Oct 02 13:37:46 webserver sshd[1579]: Failed password for test from 192.168.1.100 port 56698 ssh2
+Oct 02 13:33:46 webserver sudo[6898]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+198.20.69.74 - - [02/Oct/2026:13:41:46 +0000] "GET /login HTTP/1.1" 401 272 "-" "Mozilla/5.0"
+198.20.69.74 - - [02/Oct/2026:13:41:46 +0000] "GET /login HTTP/1.1" 401 2122 "-" "Mozilla/5.0"
+192.168.1.10 - - [02/Oct/2026:13:41:46 +0000] "GET /index.html HTTP/1.1" 200 1339 "-" "curl/7.68.0"
+Oct 02 13:34:46 webserver sshd[3035]: Invalid user ftpuser from 192.168.1.100
+Oct 02 13:31:46 webserver sshd[8440]: Accepted publickey for deploy from 192.168.0.50 port 59718 ssh2
+89.248.167.131 - - [02/Oct/2026:13:41:46 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1144 "-" "sqlmap/1.7"
+Oct 02 13:36:46 webserver sshd[4733]: Failed password for jenkins from 192.168.1.100 port 62974 ssh2

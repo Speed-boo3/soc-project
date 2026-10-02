@@ -13900,3 +13900,92 @@
   MITRE ATT&CK : T1110 - Brute Force (Credential Access)
   Action       : alert
   Log entry    : Source IP 10.0.0.99 had 10 failed login attempts
+
+=== Run: 2026-10-02 13:41:46 ===
+
+17 alert(s) triggered:
+
+[MEDIUM] Port Scan Detected (RULE-008)
+  MITRE ATT&CK : T1046 - Network Service Discovery (Discovery)
+  Action       : log
+  Log entry    : [UFW BLOCK] IN=eth0 SRC=185.220.101.45 SCAN flags=S
+
+[MEDIUM] Admin Path Probe (RULE-005)
+  MITRE ATT&CK : T1190 - Exploit Public-Facing Application (Initial Access)
+  Action       : log
+  Log entry    : GET /admin HTTP/1.1
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 192.168.1.100 port 52312 ssh2
+
+[HIGH] Directory Traversal Attempt (RULE-010)
+  MITRE ATT&CK : T1083 - File and Directory Discovery (Discovery)
+  Action       : alert
+  Log entry    : GET /../etc/passwd HTTP/1.1
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user elasticsearch from 192.168.1.100
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 192.168.1.100 port 57792 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 192.168.1.100 port 57792 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for oracle from 192.168.1.100 port 52297 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for git from 192.168.1.100 port 56209 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 192.168.1.100 port 60600 ssh2
+
+[HIGH] Root Login Attempt (RULE-007)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for root from 192.168.1.100 port 60600 ssh2
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for test from 192.168.1.100 port 56698 ssh2
+
+[MEDIUM] Sudo Authentication Failure (RULE-003)
+  MITRE ATT&CK : T1078 - Valid Accounts (Privilege Escalation)
+  Action       : log
+  Log entry    : pam_unix(sudo:auth): authentication failure; logname= uid=1001
+
+[HIGH] Credential Stuffing Attempt (RULE-004)
+  MITRE ATT&CK : T1110.004 - Credential Stuffing (Credential Access)
+  Action       : alert
+  Log entry    : GET /login HTTP/1.1
+
+[MEDIUM] Invalid User Login Attempt (RULE-002)
+  MITRE ATT&CK : T1078 - Valid Accounts (Initial Access)
+  Action       : log
+  Log entry    : Invalid user ftpuser from 192.168.1.100
+
+[HIGH] SSH Brute Force (RULE-001)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Failed password for jenkins from 192.168.1.100 port 62974 ssh2
+
+[HIGH] Brute Force Detected (RULE-BF)
+  MITRE ATT&CK : T1110 - Brute Force (Credential Access)
+  Action       : alert
+  Log entry    : Source IP 192.168.1.100 had 10 failed login attempts
