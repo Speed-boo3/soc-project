@@ -1,23 +1,21 @@
-Oct 07 14:08:52 webserver sshd[7841]: Accepted publickey for deploy from 10.0.0.5 port 46804 ssh2
-198.20.69.74 - - [07/Oct/2026:14:19:52 +0000] "GET /admin HTTP/1.1" 403 1533 "-" "sqlmap/1.7"
-Oct 07 14:18:52 webserver sshd[1167]: Failed password for admin from 198.20.69.74 port 56356 ssh2
-198.20.69.74 - - [07/Oct/2026:14:19:52 +0000] "GET /login HTTP/1.1" 401 3562 "-" "Mozilla/5.0"
-198.20.69.74 - - [07/Oct/2026:14:19:52 +0000] "GET /login HTTP/1.1" 401 3380 "-" "Mozilla/5.0"
-198.20.69.74 - - [07/Oct/2026:14:19:52 +0000] "GET /../etc/passwd HTTP/1.1" 400 2620 "-" "python-requests/2.28"
-Oct 07 14:12:52 webserver sshd[6272]: Invalid user oracle from 198.20.69.74
-Oct 07 14:10:52 webserver sudo[6273]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
-10.0.0.5 - - [07/Oct/2026:14:19:52 +0000] "GET /about HTTP/1.1" 200 4486 "-" "masscan/1.0"
-Oct 07 14:19:52 webserver sshd[7205]: Failed password for root from 198.20.69.74 port 63797 ssh2
-Oct 07 14:16:52 webserver sshd[3765]: Failed password for jenkins from 198.20.69.74 port 49465 ssh2
-Oct 07 14:15:52 webserver sshd[4887]: Failed password for ubuntu from 198.20.69.74 port 41226 ssh2
-Oct 07 14:14:52 webserver sshd[7349]: Failed password for oracle from 198.20.69.74 port 42334 ssh2
-Oct 07 14:19:52 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
-Oct 07 14:19:52 webserver kernel: program[4408]: segfault at 0 ip 00007f rsp 00007f error 4
-Oct 07 14:13:52 webserver sshd[3677]: Failed password for root from 198.20.69.74 port 41983 ssh2
-198.20.69.74 - - [07/Oct/2026:14:19:52 +0000] "GET /login HTTP/1.1" 401 943 "-" "Mozilla/5.0"
-10.0.0.5 - - [07/Oct/2026:14:19:52 +0000] "GET /contact HTTP/1.1" 200 3937 "-" "Nikto/2.1.6"
-Oct 07 14:14:52 webserver sshd[5413]: Failed password for git from 198.20.69.74 port 54876 ssh2
-185.220.101.45 - - [07/Oct/2026:14:19:52 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2953 "-" "sqlmap/1.7"
-Oct 07 14:19:52 webserver sshd[5522]: Failed password for root from 198.20.69.74 port 50592 ssh2
-Oct 07 14:17:52 webserver sshd[7161]: Failed password for root from 198.20.69.74 port 44470 ssh2
-192.168.0.50 - - [07/Oct/2026:14:19:52 +0000] "GET /index.html HTTP/1.1" 200 1978 "-" "Nikto/2.1.6"
+10.0.0.5 - - [08/Oct/2026:14:27:58 +0000] "GET /index.html HTTP/1.1" 200 4809 "-" "sqlmap/1.7"
+Oct 08 14:27:58 webserver sshd[3682]: Failed password for oracle from 194.165.16.11 port 54637 ssh2
+Oct 08 14:27:58 webserver sshd[2145]: Failed password for admin from 194.165.16.11 port 42255 ssh2
+185.220.101.45 - - [08/Oct/2026:14:27:58 +0000] "GET /login HTTP/1.1" 401 4630 "-" "Mozilla/5.0"
+185.220.101.45 - - [08/Oct/2026:14:27:58 +0000] "GET /admin HTTP/1.1" 403 651 "-" "masscan/1.0"
+Oct 08 14:27:58 webserver kernel: program[2510]: segfault at 0 ip 00007f rsp 00007f error 4
+Oct 08 14:18:58 webserver sshd[7057]: Accepted publickey for deploy from 10.0.0.5 port 59658 ssh2
+Oct 08 14:22:58 webserver sshd[3081]: Invalid user nagios from 194.165.16.11
+185.220.101.45 - - [08/Oct/2026:14:27:58 +0000] "GET /../etc/passwd HTTP/1.1" 400 3407 "-" "sqlmap/1.7"
+172.16.0.10 - - [08/Oct/2026:14:27:58 +0000] "GET /about HTTP/1.1" 200 1153 "-" "sqlmap/1.7"
+Oct 08 14:23:58 webserver sshd[5293]: Invalid user jenkins from 194.165.16.11
+Oct 08 14:25:58 webserver sshd[2290]: Failed password for root from 194.165.16.11 port 58093 ssh2
+Oct 08 14:24:58 webserver sshd[6566]: Invalid user ftpuser from 194.165.16.11
+Oct 08 14:26:58 webserver sshd[6709]: Failed password for root from 194.165.16.11 port 60093 ssh2
+192.168.1.10 - - [08/Oct/2026:14:27:58 +0000] "GET /contact HTTP/1.1" 200 3512 "-" "masscan/1.0"
+Oct 08 14:27:58 webserver sshd[7927]: Failed password for user from 194.165.16.11 port 56738 ssh2
+185.220.101.45 - - [08/Oct/2026:14:27:58 +0000] "GET /login HTTP/1.1" 401 2293 "-" "Mozilla/5.0"
+Oct 08 14:27:58 webserver sshd[4945]: Failed password for ubuntu from 194.165.16.11 port 52405 ssh2
+Oct 08 14:20:58 webserver sudo[2479]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+185.220.101.45 - - [08/Oct/2026:14:27:58 +0000] "GET /login HTTP/1.1" 401 619 "-" "Mozilla/5.0"
+89.248.167.131 - - [08/Oct/2026:14:27:58 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3791 "-" "sqlmap/1.7"
