@@ -1,20 +1,22 @@
-Oct 09 14:07:51 webserver sshd[4356]: Accepted publickey for deploy from 192.168.0.50 port 63913 ssh2
-45.33.32.156 - - [09/Oct/2026:14:14:51 +0000] "GET /../etc/passwd HTTP/1.1" 400 2421 "-" "Mozilla/5.0"
-172.16.0.10 - - [09/Oct/2026:14:14:51 +0000] "GET /contact HTTP/1.1" 200 1339 "-" "Mozilla/5.0"
-192.168.1.10 - - [09/Oct/2026:14:14:51 +0000] "GET /index.html HTTP/1.1" 200 2441 "-" "curl/7.68.0"
-Oct 09 14:14:51 webserver sshd[6550]: Failed password for root from 89.248.167.131 port 64446 ssh2
-Oct 09 14:13:51 webserver sshd[6587]: Failed password for postgres from 89.248.167.131 port 40591 ssh2
-Oct 09 14:14:51 webserver kernel: [UFW BLOCK] IN=eth0 SRC=192.168.1.100 SCAN flags=S
-Oct 09 14:14:51 webserver sshd[6846]: Failed password for root from 89.248.167.131 port 52017 ssh2
-Oct 09 14:14:51 webserver sshd[2430]: Failed password for root from 89.248.167.131 port 48544 ssh2
-Oct 09 14:11:51 webserver sshd[9428]: Failed password for root from 89.248.167.131 port 62046 ssh2
-45.33.32.156 - - [09/Oct/2026:14:14:51 +0000] "GET /admin HTTP/1.1" 403 3046 "-" "Nikto/2.1.6"
-Oct 09 14:12:51 webserver sshd[6271]: Failed password for root from 89.248.167.131 port 41114 ssh2
-45.33.32.156 - - [09/Oct/2026:14:14:51 +0000] "GET /login HTTP/1.1" 401 2628 "-" "Mozilla/5.0"
-45.33.32.156 - - [09/Oct/2026:14:14:51 +0000] "GET /login HTTP/1.1" 401 2337 "-" "Mozilla/5.0"
-198.20.69.74 - - [09/Oct/2026:14:14:51 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 3108 "-" "sqlmap/1.7"
-45.33.32.156 - - [09/Oct/2026:14:14:51 +0000] "GET /login HTTP/1.1" 401 2512 "-" "Mozilla/5.0"
-Oct 09 14:10:51 webserver sshd[5008]: Invalid user hadoop from 89.248.167.131
-10.0.0.5 - - [09/Oct/2026:14:14:51 +0000] "GET /about HTTP/1.1" 200 4501 "-" "python-requests/2.28"
-Oct 09 14:08:51 webserver sudo[6492]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-Oct 09 14:11:51 webserver sshd[9964]: Failed password for root from 89.248.167.131 port 47905 ssh2
+10.0.0.99 - - [10/Oct/2026:13:26:33 +0000] "GET /login HTTP/1.1" 401 4135 "-" "Mozilla/5.0"
+10.0.0.99 - - [10/Oct/2026:13:26:33 +0000] "GET /../etc/passwd HTTP/1.1" 400 501 "-" "curl/7.68.0"
+Oct 10 13:24:33 webserver sshd[4789]: Failed password for root from 194.165.16.11 port 57475 ssh2
+Oct 10 13:26:33 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
+10.0.0.99 - - [10/Oct/2026:13:26:33 +0000] "GET /login HTTP/1.1" 401 4562 "-" "Mozilla/5.0"
+Oct 10 13:21:33 webserver sshd[6664]: Invalid user ftpuser from 194.165.16.11
+192.168.1.100 - - [10/Oct/2026:13:26:33 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2708 "-" "sqlmap/1.7"
+Oct 10 13:23:33 webserver sshd[9036]: Failed password for oracle from 194.165.16.11 port 63094 ssh2
+Oct 10 13:25:33 webserver sshd[2148]: Failed password for root from 194.165.16.11 port 42237 ssh2
+172.16.0.10 - - [10/Oct/2026:13:26:33 +0000] "GET /contact HTTP/1.1" 200 1824 "-" "masscan/1.0"
+Oct 10 13:24:33 webserver sshd[9544]: Failed password for root from 194.165.16.11 port 40415 ssh2
+192.168.1.10 - - [10/Oct/2026:13:26:33 +0000] "GET /about HTTP/1.1" 200 263 "-" "curl/7.68.0"
+Oct 10 13:26:33 webserver kernel: program[6385]: segfault at 0 ip 00007f rsp 00007f error 4
+10.0.0.99 - - [10/Oct/2026:13:26:33 +0000] "GET /admin HTTP/1.1" 403 268 "-" "Nikto/2.1.6"
+Oct 10 13:19:33 webserver sshd[9185]: Accepted publickey for deploy from 172.16.0.10 port 60485 ssh2
+Oct 10 13:22:33 webserver sshd[1321]: Invalid user ftpuser from 194.165.16.11
+Oct 10 13:25:33 webserver sshd[5804]: Failed password for ubuntu from 194.165.16.11 port 54456 ssh2
+Oct 10 13:20:33 webserver sudo[6387]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Oct 10 13:25:33 webserver sshd[8656]: Failed password for root from 194.165.16.11 port 46765 ssh2
+10.0.0.99 - - [10/Oct/2026:13:26:33 +0000] "GET /login HTTP/1.1" 401 910 "-" "Mozilla/5.0"
+192.168.1.10 - - [10/Oct/2026:13:26:33 +0000] "GET /index.html HTTP/1.1" 200 2261 "-" "Mozilla/5.0"
+Oct 10 13:23:33 webserver sshd[8100]: Failed password for root from 194.165.16.11 port 51500 ssh2
