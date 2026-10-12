@@ -1,18 +1,23 @@
-Oct 11 13:52:14 webserver sshd[3784]: Failed password for root from 192.168.1.100 port 43121 ssh2
-198.20.69.74 - - [11/Oct/2026:13:52:14 +0000] "GET /login HTTP/1.1" 401 3142 "-" "Mozilla/5.0"
-Oct 11 13:52:14 webserver sshd[3557]: Failed password for oracle from 192.168.1.100 port 62292 ssh2
-45.33.32.156 - - [11/Oct/2026:13:52:14 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2375 "-" "sqlmap/1.7"
-10.0.0.5 - - [11/Oct/2026:13:52:14 +0000] "GET /about HTTP/1.1" 200 4562 "-" "masscan/1.0"
-Oct 11 13:51:14 webserver sshd[8193]: Failed password for postgres from 192.168.1.100 port 43317 ssh2
-198.20.69.74 - - [11/Oct/2026:13:52:14 +0000] "GET /login HTTP/1.1" 401 3936 "-" "Mozilla/5.0"
-Oct 11 13:49:14 webserver sshd[8215]: Invalid user hadoop from 192.168.1.100
-198.20.69.74 - - [11/Oct/2026:13:52:14 +0000] "GET /../etc/passwd HTTP/1.1" 400 1102 "-" "sqlmap/1.7"
-192.168.1.10 - - [11/Oct/2026:13:52:14 +0000] "GET /contact HTTP/1.1" 200 2666 "-" "masscan/1.0"
-192.168.1.10 - - [11/Oct/2026:13:52:14 +0000] "GET /index.html HTTP/1.1" 200 936 "-" "Nikto/2.1.6"
-198.20.69.74 - - [11/Oct/2026:13:52:14 +0000] "GET /login HTTP/1.1" 401 3160 "-" "Mozilla/5.0"
-Oct 11 13:52:14 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
-Oct 11 13:50:14 webserver sshd[7534]: Invalid user elasticsearch from 192.168.1.100
-Oct 11 13:51:14 webserver sshd[9101]: Failed password for root from 192.168.1.100 port 53331 ssh2
-Oct 11 13:46:14 webserver sudo[4251]: pam_unix(sudo:auth): authentication failure; logname= uid=1002
-198.20.69.74 - - [11/Oct/2026:13:52:14 +0000] "GET /admin HTTP/1.1" 403 1912 "-" "Nikto/2.1.6"
-Oct 11 13:43:14 webserver sshd[8385]: Accepted publickey for deploy from 192.168.1.10 port 43623 ssh2
+172.16.0.10 - - [12/Oct/2026:16:36:24 +0000] "GET /index.html HTTP/1.1" 200 4059 "-" "masscan/1.0"
+Oct 12 16:34:24 webserver sshd[8696]: Invalid user elasticsearch from 89.248.167.131
+Oct 12 16:29:24 webserver sudo[5930]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
+Oct 12 16:36:24 webserver sshd[9385]: Failed password for admin from 89.248.167.131 port 53321 ssh2
+192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /../etc/passwd HTTP/1.1" 400 705 "-" "masscan/1.0"
+192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 3983 "-" "Mozilla/5.0"
+Oct 12 16:27:24 webserver sshd[5557]: Accepted publickey for deploy from 10.0.0.5 port 59996 ssh2
+192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 4302 "-" "Mozilla/5.0"
+Oct 12 16:36:24 webserver kernel: program[9452]: segfault at 0 ip 00007f rsp 00007f error 4
+Oct 12 16:35:24 webserver sshd[5376]: Failed password for admin from 89.248.167.131 port 50479 ssh2
+10.0.0.5 - - [12/Oct/2026:16:36:24 +0000] "GET /about HTTP/1.1" 200 2499 "-" "curl/7.68.0"
+Oct 12 16:35:24 webserver sshd[9154]: Failed password for test from 89.248.167.131 port 60580 ssh2
+Oct 12 16:36:24 webserver sshd[1381]: Failed password for root from 89.248.167.131 port 56540 ssh2
+Oct 12 16:35:24 webserver sshd[3804]: Failed password for test from 89.248.167.131 port 56800 ssh2
+192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 2887 "-" "Mozilla/5.0"
+192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /admin HTTP/1.1" 403 3330 "-" "curl/7.68.0"
+Oct 12 16:36:24 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
+Oct 12 16:33:24 webserver sshd[8664]: Invalid user elasticsearch from 89.248.167.131
+Oct 12 16:35:24 webserver sshd[2350]: Failed password for root from 89.248.167.131 port 60282 ssh2
+192.168.0.50 - - [12/Oct/2026:16:36:24 +0000] "GET /contact HTTP/1.1" 200 2386 "-" "curl/7.68.0"
+198.20.69.74 - - [12/Oct/2026:16:36:24 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1682 "-" "sqlmap/1.7"
+Oct 12 16:32:24 webserver sshd[6457]: Invalid user oracle from 89.248.167.131
+Oct 12 16:35:24 webserver sshd[4528]: Failed password for root from 89.248.167.131 port 44702 ssh2
