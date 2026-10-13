@@ -1,23 +1,21 @@
-172.16.0.10 - - [12/Oct/2026:16:36:24 +0000] "GET /index.html HTTP/1.1" 200 4059 "-" "masscan/1.0"
-Oct 12 16:34:24 webserver sshd[8696]: Invalid user elasticsearch from 89.248.167.131
-Oct 12 16:29:24 webserver sudo[5930]: pam_unix(sudo:auth): authentication failure; logname= uid=1001
-Oct 12 16:36:24 webserver sshd[9385]: Failed password for admin from 89.248.167.131 port 53321 ssh2
-192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /../etc/passwd HTTP/1.1" 400 705 "-" "masscan/1.0"
-192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 3983 "-" "Mozilla/5.0"
-Oct 12 16:27:24 webserver sshd[5557]: Accepted publickey for deploy from 10.0.0.5 port 59996 ssh2
-192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 4302 "-" "Mozilla/5.0"
-Oct 12 16:36:24 webserver kernel: program[9452]: segfault at 0 ip 00007f rsp 00007f error 4
-Oct 12 16:35:24 webserver sshd[5376]: Failed password for admin from 89.248.167.131 port 50479 ssh2
-10.0.0.5 - - [12/Oct/2026:16:36:24 +0000] "GET /about HTTP/1.1" 200 2499 "-" "curl/7.68.0"
-Oct 12 16:35:24 webserver sshd[9154]: Failed password for test from 89.248.167.131 port 60580 ssh2
-Oct 12 16:36:24 webserver sshd[1381]: Failed password for root from 89.248.167.131 port 56540 ssh2
-Oct 12 16:35:24 webserver sshd[3804]: Failed password for test from 89.248.167.131 port 56800 ssh2
-192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /login HTTP/1.1" 401 2887 "-" "Mozilla/5.0"
-192.168.1.100 - - [12/Oct/2026:16:36:24 +0000] "GET /admin HTTP/1.1" 403 3330 "-" "curl/7.68.0"
-Oct 12 16:36:24 webserver kernel: [UFW BLOCK] IN=eth0 SRC=45.33.32.156 SCAN flags=S
-Oct 12 16:33:24 webserver sshd[8664]: Invalid user elasticsearch from 89.248.167.131
-Oct 12 16:35:24 webserver sshd[2350]: Failed password for root from 89.248.167.131 port 60282 ssh2
-192.168.0.50 - - [12/Oct/2026:16:36:24 +0000] "GET /contact HTTP/1.1" 200 2386 "-" "curl/7.68.0"
-198.20.69.74 - - [12/Oct/2026:16:36:24 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1682 "-" "sqlmap/1.7"
-Oct 12 16:32:24 webserver sshd[6457]: Invalid user oracle from 89.248.167.131
-Oct 12 16:35:24 webserver sshd[4528]: Failed password for root from 89.248.167.131 port 44702 ssh2
+172.16.0.10 - - [13/Oct/2026:14:53:23 +0000] "GET /contact HTTP/1.1" 200 3609 "-" "Nikto/2.1.6"
+Oct 13 14:51:23 webserver sshd[9218]: Failed password for postgres from 198.20.69.74 port 45911 ssh2
+192.168.1.100 - - [13/Oct/2026:14:53:23 +0000] "GET /../etc/passwd HTTP/1.1" 400 1421 "-" "Mozilla/5.0"
+192.168.1.100 - - [13/Oct/2026:14:53:23 +0000] "GET /admin HTTP/1.1" 403 4339 "-" "python-requests/2.28"
+Oct 13 14:47:23 webserver sshd[1716]: Invalid user elasticsearch from 198.20.69.74
+10.0.0.5 - - [13/Oct/2026:14:53:23 +0000] "GET /index.html HTTP/1.1" 200 1355 "-" "masscan/1.0"
+192.168.1.100 - - [13/Oct/2026:14:53:23 +0000] "GET /login HTTP/1.1" 401 2782 "-" "Mozilla/5.0"
+Oct 13 14:51:23 webserver sshd[8024]: Failed password for admin from 198.20.69.74 port 44579 ssh2
+192.168.1.100 - - [13/Oct/2026:14:53:23 +0000] "GET /login HTTP/1.1" 401 1577 "-" "Mozilla/5.0"
+192.168.1.100 - - [13/Oct/2026:14:53:23 +0000] "GET /login HTTP/1.1" 401 1649 "-" "Mozilla/5.0"
+Oct 13 14:46:23 webserver sshd[2730]: Invalid user oracle from 198.20.69.74
+Oct 13 14:49:23 webserver sshd[4941]: Failed password for root from 198.20.69.74 port 45569 ssh2
+192.168.0.50 - - [13/Oct/2026:14:53:23 +0000] "GET /about HTTP/1.1" 200 598 "-" "sqlmap/1.7"
+Oct 13 14:40:23 webserver sshd[6210]: Accepted publickey for deploy from 10.0.0.5 port 44432 ssh2
+Oct 13 14:50:23 webserver sshd[2979]: Failed password for root from 198.20.69.74 port 51260 ssh2
+Oct 13 14:43:23 webserver sudo[5837]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
+Oct 13 14:52:23 webserver sshd[2064]: Failed password for root from 198.20.69.74 port 58722 ssh2
+10.0.0.99 - - [13/Oct/2026:14:53:23 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2284 "-" "sqlmap/1.7"
+Oct 13 14:51:23 webserver sshd[8789]: Failed password for test from 198.20.69.74 port 48648 ssh2
+Oct 13 14:48:23 webserver sshd[2967]: Failed password for root from 198.20.69.74 port 54491 ssh2
+Oct 13 14:53:23 webserver kernel: [UFW BLOCK] IN=eth0 SRC=10.0.0.99 SCAN flags=S
