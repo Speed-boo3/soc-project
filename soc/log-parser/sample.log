@@ -1,21 +1,21 @@
-192.168.0.50 - - [14/Oct/2026:12:45:17 +0000] "GET /contact HTTP/1.1" 200 3118 "-" "Nikto/2.1.6"
-192.168.1.10 - - [14/Oct/2026:12:45:17 +0000] "GET /about HTTP/1.1" 200 3739 "-" "python-requests/2.28"
-Oct 14 12:45:17 webserver kernel: program[1568]: segfault at 0 ip 00007f rsp 00007f error 4
-Oct 14 12:41:17 webserver sshd[6526]: Invalid user oracle from 89.248.167.131
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /../etc/passwd HTTP/1.1" 400 1862 "-" "python-requests/2.28"
-Oct 14 12:44:17 webserver sshd[4428]: Failed password for admin from 89.248.167.131 port 41219 ssh2
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /admin HTTP/1.1" 403 1751 "-" "curl/7.68.0"
-Oct 14 12:44:17 webserver sshd[5390]: Failed password for root from 89.248.167.131 port 48039 ssh2
-Oct 14 12:38:17 webserver sudo[5342]: pam_unix(sudo:auth): authentication failure; logname= uid=1005
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 2424 "-" "sqlmap/1.7"
-Oct 14 12:43:17 webserver sshd[2750]: Failed password for root from 89.248.167.131 port 44530 ssh2
-Oct 14 12:44:17 webserver sshd[3550]: Failed password for nagios from 89.248.167.131 port 49259 ssh2
-Oct 14 12:42:17 webserver sshd[2922]: Invalid user ftpuser from 89.248.167.131
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /login HTTP/1.1" 401 4738 "-" "Mozilla/5.0"
-Oct 14 12:40:17 webserver sshd[8729]: Invalid user jenkins from 89.248.167.131
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /login HTTP/1.1" 401 3404 "-" "Mozilla/5.0"
-Oct 14 12:44:17 webserver sshd[6989]: Failed password for postgres from 89.248.167.131 port 64138 ssh2
-Oct 14 12:37:17 webserver sshd[5195]: Accepted publickey for deploy from 10.0.0.5 port 41481 ssh2
-10.0.0.99 - - [14/Oct/2026:12:45:17 +0000] "GET /login HTTP/1.1" 401 254 "-" "Mozilla/5.0"
-192.168.0.50 - - [14/Oct/2026:12:45:17 +0000] "GET /index.html HTTP/1.1" 200 4087 "-" "sqlmap/1.7"
-Oct 14 12:44:17 webserver sshd[7392]: Failed password for root from 89.248.167.131 port 63572 ssh2
+Oct 15 12:25:56 webserver sudo[5213]: pam_unix(sudo:auth): authentication failure; logname= uid=1004
+Oct 15 12:26:56 webserver sshd[8425]: Invalid user oracle from 194.165.16.11
+Oct 15 12:28:56 webserver sshd[8086]: Failed password for root from 194.165.16.11 port 46918 ssh2
+Oct 15 12:23:56 webserver sshd[3464]: Accepted publickey for deploy from 192.168.0.50 port 54356 ssh2
+192.168.1.10 - - [15/Oct/2026:12:31:56 +0000] "GET /index.html HTTP/1.1" 200 3777 "-" "python-requests/2.28"
+192.168.0.50 - - [15/Oct/2026:12:31:56 +0000] "GET /about HTTP/1.1" 200 590 "-" "sqlmap/1.7"
+Oct 15 12:27:56 webserver sshd[6631]: Invalid user oracle from 194.165.16.11
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /admin HTTP/1.1" 403 3606 "-" "python-requests/2.28"
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /login HTTP/1.1" 401 3583 "-" "Mozilla/5.0"
+192.168.0.50 - - [15/Oct/2026:12:31:56 +0000] "GET /contact HTTP/1.1" 200 4523 "-" "Nikto/2.1.6"
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /search?q=1' OR '1'='1 HTTP/1.1" 200 1955 "-" "sqlmap/1.7"
+Oct 15 12:31:56 webserver sshd[6831]: Failed password for root from 194.165.16.11 port 54874 ssh2
+Oct 15 12:29:56 webserver sshd[9601]: Failed password for test from 194.165.16.11 port 46129 ssh2
+Oct 15 12:31:56 webserver sshd[2566]: Failed password for root from 194.165.16.11 port 43816 ssh2
+Oct 15 12:30:56 webserver sshd[4953]: Failed password for root from 194.165.16.11 port 53548 ssh2
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /login HTTP/1.1" 401 4202 "-" "Mozilla/5.0"
+Oct 15 12:31:56 webserver kernel: program[9313]: segfault at 0 ip 00007f rsp 00007f error 4
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /login HTTP/1.1" 401 1751 "-" "Mozilla/5.0"
+Oct 15 12:30:56 webserver sshd[4957]: Failed password for nagios from 194.165.16.11 port 46375 ssh2
+Oct 15 12:30:56 webserver sshd[8114]: Failed password for test from 194.165.16.11 port 57307 ssh2
+185.220.101.45 - - [15/Oct/2026:12:31:56 +0000] "GET /../etc/passwd HTTP/1.1" 400 776 "-" "sqlmap/1.7"
